@@ -1,3 +1,4 @@
+'use strict';
 app.controller('LoginCtrl', function ($scope, AuthService, $state) {
 
     $scope.login = {};

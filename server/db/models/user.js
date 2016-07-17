@@ -1,9 +1,10 @@
 'use strict';
-var crypto = require('crypto');
-var mongoose = require('mongoose');
-var _ = require('lodash');
 
-var schema = new mongoose.Schema({
+const crypto = require('crypto');
+const mongoose = require('mongoose');
+const _ = require('lodash');
+
+const schema = new mongoose.Schema({
     email: {
         type: String
     },
@@ -34,12 +35,12 @@ schema.methods.sanitize =  function () {
 
 // generateSalt, encryptPassword and the pre 'save' and 'correctPassword' operations
 // are all used for local authentication security.
-var generateSalt = function () {
+const generateSalt = function () {
     return crypto.randomBytes(16).toString('base64');
 };
 
-var encryptPassword = function (plainText, salt) {
-    var hash = crypto.createHash('sha1');
+const encryptPassword = function (plainText, salt) {
+    const hash = crypto.createHash('sha1');
     hash.update(plainText);
     hash.update(salt);
     return hash.digest('hex');
