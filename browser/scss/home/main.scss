@@ -85,13 +85,14 @@ section {
 }
 
 .btns-problem {
-	margin-top: 30px;
+	margin-top: 60px;
 }
 
 .btn-problem {
 	margin: 0 40px;
-	padding: 30px 0px;
+	padding: 40px 0px;
 	width: 190px;
+	min-height: 35px;
 }
 
 .confused-man {
@@ -133,22 +134,21 @@ section {
 	text-align: center;
 }
 
-.what-is-row > div > p {
-	padding: 10px 120px;
-}
-
 .research > .underline {
-	margin: 15px 190px;
+	margin: 20px auto;
+	width: 64px;
 	border-bottom: 1px solid red;
 }
 
 .design > .underline {
-	margin: 15px 184px;
+	margin: 20px auto;
+	width: 50px;
 	border-bottom: 1px solid rgb(36, 209, 86);
 }
 
 .implementation > .underline {
-	margin: 15px 152px;
+	margin: 20px auto;
+	width: 110px;
 	border-bottom: 1px solid rgb(45, 253, 253);
 }
 
