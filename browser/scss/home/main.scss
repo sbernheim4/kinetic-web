@@ -1,4 +1,6 @@
+
 /************* RESETTERS AND HELPERS ***********/
+
 div {
 	/*border:1px solid green;*/
 }
@@ -19,6 +21,7 @@ div {
 	z-index: 100;
 
 }
+
 /************* Common Attributes **************/
 
 .buttons {
@@ -50,6 +53,7 @@ div {
 }
 
 /*************** Section 1 ***************/
+
 .main {
 	height: 100vh;
 	background-image: url('implementation-photo.jpg');
@@ -71,6 +75,7 @@ div {
 	color: white;
 	padding-top: 200px;
 }
+
 /************ Section 2 -- The Problem ************/
 
 .problem {
@@ -135,6 +140,7 @@ div {
 }
 
 /*********** Section 4 -- What Is ***********/
+
 .what-is {
 	color: white;
 	background-color: rgb(27, 121, 167);
@@ -194,4 +200,44 @@ div {
 .button-what-is {
 	padding: 10px 100px;
 	font-size: 18pt;
+}
+
+/************* Section 7 -- Get Involved ******************/
+.get-involved {
+	height: 60vh;
+}
+
+.square {
+	width: 150px;
+	height: 150px;
+	border: 2px solid white;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.square-orange {
+	background-color: rgb(243, 131, 49);
+}
+
+.square-blue {
+	background-color: rgb(27, 121, 167);
+}
+
+.square-aqua {
+	background-color: rgb(99, 171, 181);
+}
+
+.square-green {
+	background-color: rgb(96, 191, 59);
+}
+
+.tag-line-get-involved {
+	font-size: 14pt;
+	margin-bottom: 50px;
+}
+
+.header-get-involved {
+	margin-top: 60px;
 }
