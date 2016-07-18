@@ -43,12 +43,6 @@ section {
 	cursor: pointer;
 }
 
-.tag-line {
-	text-align: center;
-	font-size: 18pt;
-	font-weight: bold;
-}
-
 /*************** Section 1 ***************/
 
 .main {
@@ -68,22 +62,12 @@ section {
 	text-transform: uppercase;
 }
 
-.tag-line-main {
-	color: white;
-	padding-top: 200px;
-}
-
 /************ Section 2 -- The Problem ************/
 
 .problem {
 	height: 60vh;
 	background-color: rgb(27, 121, 167);
 	text-align: center;
-	color: white;
-}
-
-.tag-line-problem {
-	padding-top: 70px;
 	color: white;
 }
 
@@ -110,16 +94,6 @@ section {
 	color: black;
 }
 
-.tag-line-solution {
-	padding-top: 80px;
-	color: black;
-}
-
-
-.right-half {
-	height: 60vh;
-}
-
 .buttons-solution {
 	padding-top: 50px;
 }
@@ -133,17 +107,6 @@ section {
 .what-is {
 	color: white;
 	background-color: rgb(27, 121, 167);
-}
-
-.tag-line-what-is {
-	padding-top: 60px;
-	margin: 0 100px;
-	font-size: 14pt;
-	font-weight: 400;
-}
-
-.tag-line-what-is-2 {
-	padding-top: 30px;
 }
 
 .what-is-row {
@@ -209,9 +172,4 @@ section {
 
 .square-green {
 	background-color: rgb(96, 191, 59);
-}
-
-.tag-line-get-involved {
-	font-size: 14pt;
-	margin-bottom: 50px;
 }
