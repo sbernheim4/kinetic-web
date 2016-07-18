@@ -4,3 +4,6 @@ npm-debug.log
 public
 .DS_Store
 coverage
+*.swp
+*.swo
+.DS_Store
