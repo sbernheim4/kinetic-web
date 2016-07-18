@@ -22,6 +22,10 @@ div {
 
 }
 
+section {
+	padding-top: 30px;
+}
+
 /************* Common Attributes **************/
 
 .buttons {
@@ -40,18 +44,18 @@ div {
 }
 
 .header {
-	text-align: center;
-	font-weight: bold;
-	font-size: 40pt;
+	font-size: 35pt;
 	text-transform: uppercase;
 }
 
 .tag-line {
-	text-align: center;
-	font-size: 18pt;
-	font-weight: bold;
+	padding-top: 30px;
+	font-size: 14pt;
 }
 
+.white {
+	color: white;
+}
 /*************** Section 1 ***************/
 
 .main {
@@ -76,7 +80,6 @@ div {
 .problem {
 	height: 60vh;
 	background-color: rgb(27, 121, 167);
-	padding-top: 30px;
 	text-align: center;
 	color: white;
 }
@@ -117,21 +120,6 @@ div {
 .what-is {
 	color: white;
 	background-color: rgb(27, 121, 167);
-}
-
-.header-what-is {
-	padding-top: 50px;
-}
-
-.tag-line-what-is {
-	padding-top: 60px;
-	margin: 0 100px;
-	font-size: 14pt;
-	font-weight: 400;
-}
-
-.tag-line-what-is-2 {
-	padding-top: 30px;
 }
 
 .what-is-row {
@@ -197,13 +185,4 @@ div {
 
 .square-green {
 	background-color: rgb(96, 191, 59);
-}
-
-.tag-line-get-involved {
-	font-size: 14pt;
-	margin-bottom: 50px;
-}
-
-.header-get-involved {
-	margin-top: 60px;
 }
