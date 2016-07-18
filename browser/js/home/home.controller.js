@@ -1,5 +1,5 @@
 'use strict';
 
-app.controller('HomeCtrl', function($scope) {
-	$scope.hello = 'world';
+app.controller('HomeCtrl', function($scope, AuthService) {
+	$scope.isLoggedIn = AuthService.isAuthenticated();
 });
