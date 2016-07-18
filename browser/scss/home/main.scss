@@ -22,15 +22,19 @@ div {
 
 }
 
+section {
+	padding-top: 30px;
+}
+
 /************* Common Attributes **************/
 
-.buttons {
+.btns {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.button {
+.btn {
 	background-color: rgb(253, 178, 59);
 	border-radius: 5px;
 	border: 2px solid white;
@@ -40,18 +44,18 @@ div {
 }
 
 .header {
-	text-align: center;
-	font-weight: bold;
-	font-size: 40pt;
+	font-size: 35pt;
 	text-transform: uppercase;
 }
 
 .tag-line {
-	text-align: center;
-	font-size: 18pt;
-	font-weight: bold;
+	padding-top: 30px;
+	font-size: 14pt;
 }
 
+.white {
+	color: white;
+}
 /*************** Section 1 ***************/
 
 .main {
@@ -61,19 +65,14 @@ div {
 	background-repeat: no-repeat;
 }
 
-.buttons-main {
+.btns-main {
 	margin-top: 20vh;
 }
 
-.button-main{
+.btn-main{
 	margin: 0px 25px;
 	padding: 8px 40px;
 	text-transform: uppercase;
-}
-
-.tag-line-main {
-	color: white;
-	padding-top: 200px;
 }
 
 /************ Section 2 -- The Problem ************/
@@ -81,21 +80,15 @@ div {
 .problem {
 	height: 60vh;
 	background-color: rgb(27, 121, 167);
-	padding-top: 30px;
 	text-align: center;
 	color: white;
 }
 
-.tag-line-problem {
-	padding-top: 70px;
-	color: white;
-}
-
-.buttons-problem {
+.btns-problem {
 	margin-top: 30px;
 }
 
-.button-problem {
+.btn-problem {
 	margin: 0 40px;
 	padding: 30px 0px;
 	width: 190px;
@@ -114,28 +107,16 @@ div {
 	color: black;
 }
 
-.left-half {
-	padding-top: 70px;
-	width: 50%;
-	float: left;
+.right > img {
+	background-color: blue;
+	max-height:60vh;
 }
 
-.tag-line-solution {
-	padding-top: 80px;
-	color: black;
-}
-
-
-.right-half {
-	height: 60vh;
-	float: right;
-}
-
-.buttons-solution {
+.btns-solution {
 	padding-top: 50px;
 }
 
-.button-solution {
+.btn-solution {
 	padding: 10px 60px;
 }
 
@@ -144,21 +125,6 @@ div {
 .what-is {
 	color: white;
 	background-color: rgb(27, 121, 167);
-}
-
-.header-what-is {
-	padding-top: 50px;
-}
-
-.tag-line-what-is {
-	padding-top: 60px;
-	margin: 0 100px;
-	font-size: 14pt;
-	font-weight: 400;
-}
-
-.tag-line-what-is-2 {
-	padding-top: 30px;
 }
 
 .what-is-row {
@@ -186,18 +152,11 @@ div {
 	border-bottom: 1px solid rgb(45, 253, 253);
 }
 
-.what-is-row > div > img {
-	width: 100px;
-	height: 100px;
-	border: 1px solid black;
-	border-radius: 100%;
-}
-
-.buttons-what-is {
+.btns-what-is {
 	padding: 30px 0px;
 }
 
-.button-what-is {
+.btn-what-is {
 	padding: 10px 100px;
 	font-size: 18pt;
 }
@@ -231,13 +190,4 @@ div {
 
 .square-green {
 	background-color: rgb(96, 191, 59);
-}
-
-.tag-line-get-involved {
-	font-size: 14pt;
-	margin-bottom: 50px;
-}
-
-.header-get-involved {
-	margin-top: 60px;
 }
