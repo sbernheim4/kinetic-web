@@ -22,6 +22,10 @@ div {
 
 }
 
+section {
+	padding-top: 30px;
+}
+
 /************* Common Attributes **************/
 
 .buttons {
@@ -37,13 +41,6 @@ div {
 	text-align: center;
 	color: white;
 	cursor: pointer;
-}
-
-.header {
-	text-align: center;
-	font-weight: bold;
-	font-size: 40pt;
-	text-transform: uppercase;
 }
 
 .tag-line {
@@ -81,7 +78,6 @@ div {
 .problem {
 	height: 60vh;
 	background-color: rgb(27, 121, 167);
-	padding-top: 30px;
 	text-align: center;
 	color: white;
 }
@@ -137,10 +133,6 @@ div {
 .what-is {
 	color: white;
 	background-color: rgb(27, 121, 167);
-}
-
-.header-what-is {
-	padding-top: 50px;
 }
 
 .tag-line-what-is {
@@ -222,8 +214,4 @@ div {
 .tag-line-get-involved {
 	font-size: 14pt;
 	margin-bottom: 50px;
-}
-
-.header-get-involved {
-	margin-top: 60px;
 }
