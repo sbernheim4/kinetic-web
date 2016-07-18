@@ -114,12 +114,6 @@ div {
 	color: black;
 }
 
-.left-half {
-	padding-top: 70px;
-	width: 50%;
-	float: left;
-}
-
 .tag-line-solution {
 	padding-top: 80px;
 	color: black;
@@ -128,7 +122,6 @@ div {
 
 .right-half {
 	height: 60vh;
-	float: right;
 }
 
 .buttons-solution {
@@ -184,13 +177,6 @@ div {
 .implementation > .underline {
 	margin: 15px 152px;
 	border-bottom: 1px solid rgb(45, 253, 253);
-}
-
-.what-is-row > div > img {
-	width: 100px;
-	height: 100px;
-	border: 1px solid black;
-	border-radius: 100%;
 }
 
 .buttons-what-is {
