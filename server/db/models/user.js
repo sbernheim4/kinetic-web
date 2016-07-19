@@ -11,6 +11,18 @@ const schema = new mongoose.Schema({
     password: {
         type: String
     },
+    firstName: {
+        type: String
+    },
+    lastName: {
+        type: String
+    },
+    school: {
+        type: String
+    },
+    year: {
+        type: String
+    },
     salt: {
         type: String
     },
