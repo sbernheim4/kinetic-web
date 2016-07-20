@@ -159,7 +159,6 @@ section {
 
 /************* Section 7 -- Get Involved ******************/
 .get-involved {
-	height: 60vh;
 }
 
 .square {
@@ -170,6 +169,7 @@ section {
 	color: white;
 	cursor: pointer;
 	display: inline-block;
+	font-size: 14pt;
 }
 
 .square-orange {
@@ -189,5 +189,7 @@ section {
 }
 
 .square > p {
-	margin-top: 60px;
+	padding-top: 55px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
