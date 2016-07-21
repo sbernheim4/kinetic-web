@@ -53,6 +53,7 @@ section {
 }
 
 .tag-line {
+	margin: 0 auto;
 	padding-top: 30px;
 	font-size: 14pt;
 }
@@ -82,10 +83,18 @@ section {
 /************ Section 2 -- The Problem ************/
 
 .problem {
-	height: 60vh;
+	position: relative;
+	height: 50vh;
 	background-color: rgb(27, 121, 167);
 	text-align: center;
 	color: white;
+}
+
+.btns-problem {
+	position: absolute;
+	bottom: 40px;
+	left: 0;
+	right: 0;
 }
 
 .btn-problem {
@@ -102,15 +111,16 @@ section {
 /*********** Section 3 -- The Solution ***************/
 
 .solution{
-	height:60vh;
+	height:50vh;
 	background-color: white;
 	text-align: center;
 	color: black;
 }
 
 .right > img {
-	background-color: blue;
-	max-height:60vh;
+	position: absolute;
+	max-height: 50vh;
+	right: 0;
 }
 
 .btns-solution {
@@ -128,27 +138,30 @@ section {
 	background-color: rgb(27, 121, 167);
 }
 
+.tag-line-what-is {
+	max-width: 1200px;
+}
+
 .what-is-row {
 	padding-top: 50px;
-	display: flex;
 	text-align: center;
 }
 
 .research > .underline {
 	margin: 20px auto;
-	width: 64px;
+	width: 85px;
 	border-bottom: 1px solid red;
 }
 
 .design > .underline {
 	margin: 20px auto;
-	width: 50px;
+	width: 60px;
 	border-bottom: 1px solid rgb(36, 209, 86);
 }
 
 .implementation > .underline {
 	margin: 20px auto;
-	width: 110px;
+	width: 140px;
 	border-bottom: 1px solid rgb(45, 253, 253);
 }
 
@@ -163,7 +176,6 @@ section {
 
 /************* Section 7 -- Get Involved ******************/
 .get-involved {
-	height: 60vh;
 }
 
 .square {
@@ -174,6 +186,7 @@ section {
 	color: white;
 	cursor: pointer;
 	display: inline-block;
+	font-size: 14pt;
 }
 
 .square-orange {
@@ -193,5 +206,7 @@ section {
 }
 
 .square > p {
-	margin-top: 60px;
+	padding-top: 55px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
