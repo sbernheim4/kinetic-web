@@ -1,4 +1,8 @@
-
+$mobile: new-breakpoint(max-width em(767px));
+$mobileTablet: new-breakpoint(max-width em(1024px));
+$tablet: new-breakpoint(min-width em(768px) max-width em(1024));
+$tabletUp: new-breakpoint(min-width em(768px));
+$desktop: new-breakpoint(min-width em(1025px));
 /************* RESETTERS AND HELPERS ***********/
 
 div {
