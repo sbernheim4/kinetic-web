@@ -44,6 +44,7 @@ section {
 
 .header {
 	font-size: 35pt;
+	text-align: center;
 	text-transform: uppercase;
 }
 
@@ -122,7 +123,6 @@ section {
 }
 
 .btns-problem {
-	width: 60%;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-around;
