@@ -39,6 +39,7 @@ section {
 	text-align: center;
 	color: white;
 	cursor: pointer;
+	font-size: 14px;
 }
 
 .header {
@@ -58,6 +59,10 @@ section {
 /*************** Section 1 ***************/
 
 .main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	height: 100vh;
 	background-image: url('implementation-photo.jpg');
 	background-size: cover;
@@ -77,14 +82,14 @@ section {
 	}
 }
 
-@media all and (max-width: 1199px) and (min-width: 768px) {
+@media all and (max-width: 1199px) and (min-width: 826px) {
 	.btns-main {
 		width: 80%;
 		justify-content: space-around;
 	}
 } 
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 825px) {
 	.btns-main {
 		flex-direction: column;
 	}
@@ -102,25 +107,47 @@ section {
 
 .problem {
 	position: relative;
-	height: 50vh;
+	height: 350px;
 	background-color: rgb(27, 121, 167);
 	text-align: center;
 	color: white;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .btns-problem {
-	position: absolute;
-	bottom: 40px;
-	left: 0;
-	right: 0;
+	width: 60%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
 }
 
 .btn-problem {
 	margin: 0 40px;
-	padding: 40px 0px;
-	width: 190px;
-	max-height: 35px;
+	width: 150px;
+	height: 70px;
 }
+
+@media all and (max-width: 780px) {
+	.problem {
+		height: 600px;
+	}
+	.btns-problem {
+		width: 60%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		height: 350px;
+	}
+	.btn-problem {
+		margin: 0 40px;
+		width: 150px;
+		height: 70px;
+	}
+}
+
+
 
 .confused-man {
 	width: 85px;
