@@ -116,6 +116,11 @@ section {
 	flex-direction: column;
 }
 
+.tag-line-problem {
+	padding-left: 13px;
+	padding-right: 13px;
+}
+
 .btns-problem {
 	width: 60%;
 	margin: 0 auto;
@@ -185,43 +190,60 @@ section {
 
 .what-is {
 	color: white;
+	text-align: center;
 	background-color: rgb(27, 121, 167);
 }
 
 .tag-line-what-is {
+	padding-left: 20px;
+	padding-right: 20px;
 	max-width: 1200px;
 }
 
 .what-is-row {
-	padding-top: 50px;
+	padding-top: 20px;
 	text-align: center;
 }
 
+.what-is-row > div {
+	padding-top: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
 .research > .underline {
-	margin: 20px auto;
+	margin: 10px auto;
 	width: 85px;
 	border-bottom: 1px solid red;
 }
 
 .design > .underline {
-	margin: 20px auto;
+	margin: 10px auto;
 	width: 60px;
 	border-bottom: 1px solid rgb(36, 209, 86);
 }
 
 .implementation > .underline {
-	margin: 20px auto;
+	margin: 10px auto;
 	width: 140px;
 	border-bottom: 1px solid rgb(45, 253, 253);
 }
 
 .btns-what-is {
-	padding: 30px 0px;
+	padding: 30px 20px;
+	display: flex;
 }
 
 .btn-what-is {
-	padding: 10px 100px;
-	font-size: 18pt;
+	padding: 10px 90px;
+	font-size: 17pt;
+}
+
+
+@media all and (max-width: 767px) {
+	.btn-what-is {
+		padding: 10px 15px;
+	}
 }
 
 /************* Section 7 -- Get Involved ******************/
