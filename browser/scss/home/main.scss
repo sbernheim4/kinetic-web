@@ -147,25 +147,30 @@ section {
 	}
 }
 
-
-
 .confused-man {
 	width: 85px;
 }
 
 /*********** Section 3 -- The Solution ***************/
 
-.solution{
-	height:50vh;
+.solution {
+	padding: 0px;
+	height: 450px;
 	background-color: white;
-	text-align: center;
 	color: black;
+	// text-align: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header-container {
+	text-align: center;
 }
 
-.right > img {
-	position: absolute;
-	max-height: 50vh;
-	right: 0;
+.right-container img {
+	// position: absolute;
+	height: 449px;
+	// right: 0;
 }
 
 .btns-solution {
