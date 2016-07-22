@@ -60,20 +60,24 @@ section {
 /*************** Section 1 ***************/
 
 .main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	padding-top: 150px;
 	height: 100vh;
 	background-image: url('implementation-photo.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tag-line-main {
+	font-size: 20pt;
 }
 
 .btns-main {
 	display: flex;
 	margin: 0 auto;
-	margin-top: 20px;
+	margin-top: 70px;
 }
 @media all and (min-width: 1200px) {
 	.btns-main {
@@ -249,9 +253,35 @@ section {
 
 /************* Section 7 -- Get Involved ******************/
 .get-involved {
+	text-align: center;
+}
+
+.tag-line-get-involved {
+	padding-left: 2rem;
+	padding-right: 2rem;
+	text-align: bold;
+	text-transform: bold;
+}
+
+.square-container {
+	margin-top: 2rem;
+	margin-left: 2rem;
+	margin-right: 2rem;
+	text-align: center;
+}
+
+.square-container > div {
+	margin-top: 2rem;
+}
+
+.description {
+	margin-top: 1rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
 
 .square {
+	margin-bottom: 1rem;
 	width: 150px;
 	height: 150px;
 	border: 2px solid white;
