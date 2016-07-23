@@ -267,7 +267,7 @@ section {
 /*********** Section 5 -- About Us ***********/
 
 .header-about-us {
-	padding-bottom: 70px;
+	padding-bottom: 60px;
 }
 
 .header-text {
@@ -276,7 +276,16 @@ section {
 	font-weight: bold;
 }
 
+.btns-about-us {
+	display: flex;
+	flex-direction: column;
+}
 
+ .btn-about-us{
+	margin-top: 30px;
+	width: 295px;
+	height: 50px;
+}
 
 
 
