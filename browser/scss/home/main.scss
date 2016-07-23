@@ -35,11 +35,12 @@ section {
 .btn {
 	background-color: rgb(253, 178, 59);
 	border-radius: 5px;
-	border: 2px solid white;
+	border: 1px solid white;
 	text-align: center;
 	color: white;
 	cursor: pointer;
-	font-size: 14px;
+	font-size: 12pt;
+	text-decoration: none;
 }
 
 .header {
@@ -89,9 +90,10 @@ section {
 	margin: 0 auto;
 	margin-top: 70px;
 }
+
 @media all and (min-width: 1200px) {
 	.btns-main {
-		width: 60%;
+		width: 80%;
 		flex-direction: row;
 		justify-content: space-around;
 	}
@@ -99,10 +101,10 @@ section {
 
 @media all and (max-width: 1199px) and (min-width: 826px) {
 	.btns-main {
-		width: 80%;
+		width: 90%;
 		justify-content: space-around;
 	}
-} 
+}
 
 @media all and (max-width: 825px) {
 	.btns-main {
@@ -114,7 +116,7 @@ section {
 }
 
 .btn-main{
-	width: 220px;
+	width: 245px;
 	padding: 8px 40px;
 	text-transform: uppercase;
 }
@@ -146,7 +148,7 @@ section {
 
 .btn-problem {
 	margin: 0 40px;
-	width: 150px;
+	width: 180px;
 	height: 70px;
 }
 
@@ -281,13 +283,14 @@ section {
 /*********** Section 7 -- Get Involved ***********/
 .get-involved {
 	text-align: center;
+	margin-bottom: 120px;
 }
 
 .tag-line-get-involved {
 	padding-left: 2rem;
 	padding-right: 2rem;
-	text-align: bold;
-	text-transform: bold;
+	text-align: center;
+	font-weight: bolder;
 }
 
 .square-container {
@@ -339,4 +342,30 @@ section {
 	padding-top: 55px;
 	padding-left: 10px;
 	padding-right: 10px;
+}
+
+/************* Footer ******************/
+.footer {
+	padding-top: 0px;
+	height: 70px;
+	background-color: rgb(105, 105, 105);
+	display: flex;
+	align-items: center;
+}
+
+.btns-footer {
+	margin-left: 70px;
+}
+
+.btn-footer {
+	width: 180px;
+	height: 45px;
+	margin-left: 20px;
+	background-color: #1b79a7;
+}
+
+.footer-connect {
+	padding-left: 50px;
+	color: white;
+	font-weight: bolder;
 }
