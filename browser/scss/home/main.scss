@@ -185,23 +185,35 @@ section {
 /*********** Section 3 -- The Solution ***************/
 
 .solution {
+	min-height: 340px;;
 	padding: 0px;
-	height: 450px;
 	background-color: white;
 	color: black;
-	// text-align: center;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 .header-container {
 	margin: 0 auto;
+	padding: 0 20px;
 	text-align: center;
 }
 
 .right-container img {
-	height: 450px;
+	width: calc(50vw - 74px);
 	display: block;
+}
+
+@media all and (max-width: 1165px) {
+	.right-container {
+		padding: 20px	
+	}
+}
+
+@media all and (max-width: 640px) {
+	.right-container {
+		display: none;
+	}
 }
 
 .btns-solution {
