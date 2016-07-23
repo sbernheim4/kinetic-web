@@ -50,7 +50,6 @@ section {
 }
 
 .tag-line {
-	margin: 0 auto;
 	padding-top: 30px;
 	font-size: 14pt;
 }
@@ -73,7 +72,9 @@ section {
 }
 
 .big-main {
+	padding: 0 50px;
 	color: white;
+	text-align: center;
 	font-size: 35pt;
 }
 
@@ -87,9 +88,16 @@ section {
 
 .btns-main {
 	display: flex;
-	margin: 0 auto;
 	margin-top: 70px;
 }
+
+
+.btn-main{
+	width: 245px;
+	padding: 8px 40px;
+	text-transform: uppercase;
+}
+
 
 @media all and (min-width: 1200px) {
 	.btns-main {
@@ -111,14 +119,14 @@ section {
 		flex-direction: column;
 	}
 	.btn-main {
-		margin-top: 20px;
+		margin-top: 30px;
 	}
 }
 
-.btn-main{
-	width: 245px;
-	padding: 8px 40px;
-	text-transform: uppercase;
+@media all and (max-width: 485px) {
+	.btns-main {
+		margin-top: 0px;
+	}
 }
 
 /************ Section 2 -- The Problem ************/
@@ -191,9 +199,8 @@ section {
 }
 
 .right-container img {
-	// position: absolute;
-	height: 449px;
-	// right: 0;
+	height: 450px;
+	display: block;
 }
 
 .btns-solution {
@@ -265,6 +272,19 @@ section {
 }
 
 /*********** Section 5 -- About Us ***********/
+.about-us {
+	height: 641px;
+	padding-top: 0px;
+}
+
+.images-about-us > img {
+	display: block;
+	width: 50vw;
+}
+
+.right-about-us {
+	padding-top: 30px;
+}
 
 .header-about-us {
 	padding-bottom: 60px;
