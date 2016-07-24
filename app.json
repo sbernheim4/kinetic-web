@@ -3,7 +3,9 @@
   "scripts": {
   },
   "env": {
-    "NODE_ENV": "staging",
+    "NODE_ENV": {
+      "required": true
+    },
     "SESSION_SECRET": {
       "required": true
     },
