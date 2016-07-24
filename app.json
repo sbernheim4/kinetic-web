@@ -1,0 +1,29 @@
+{
+  "name": "kinetic-web",
+  "scripts": {
+  },
+  "env": {
+    "NODE_ENV": {
+      "required": true
+    },
+    "SESSION_SECRET": {
+      "required": true
+    },
+    "STAGING_MONGOLAB_URI": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
