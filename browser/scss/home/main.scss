@@ -208,7 +208,7 @@ section {
 
 @media all and (max-width: 1165px) {
 	.right-container {
-		padding: 20px	
+		padding: 20px
 	}
 }
 
@@ -259,19 +259,19 @@ section {
 
 .research > .underline {
 	margin: 10px auto;
-	width: 85px;
+	width: 63px;
 	border-bottom: 1px solid red;
 }
 
 .design > .underline {
 	margin: 10px auto;
-	width: 60px;
+	width: 46px;
 	border-bottom: 1px solid rgb(36, 209, 86);
 }
 
 .implementation > .underline {
 	margin: 10px auto;
-	width: 140px;
+	width: 110px;
 	border-bottom: 1px solid rgb(45, 253, 253);
 }
 
@@ -357,13 +357,16 @@ section {
 	display: flex;
 	flex-direction: column;
 	padding-bottom: 30px;
+
 	.text-content {
 		margin: 30px auto;
 		width: 80%;
+		font-size: 14pt;
 		@media all and (max-width: 780px) {
 			width: 90%;
 		}
 	}
+
 	.cause-images {
 		width: 80%;
 		display: flex;
@@ -373,42 +376,41 @@ section {
 			width: 100%;
 			flex-direction: column;
 		}
+
 		.cause {
 			width: 33%;
 			@media all and (max-width: 780px) {
 				width: auto;
 			}
-			hr {
-				margin: 5px auto;
-				width: 50%;
-			}
-			#environment {
-				border-color: #00ff00;
-				background-color: #00ff00;
-			}
-			#food-insecurity {
-				border-color: #00ffff;
-				background-color: #00ffff;
-			}
 
 			#homelessness {
-				border-color: #ff0000;
-				background-color: #ff0000;
+				margin: 10px auto;
+				width: 114px;
+				border-bottom: 1px solid rgb(45, 253, 253);
 			}
+
+			#food-insecurity {
+				margin: 10px auto;
+				width: 124px;
+				border-bottom: 1px solid rgb(36, 209, 86);
+			}
+
+			#environment {
+				margin: 10px auto;
+				width: 142px;
+				border-bottom: 1px solid red;
+			}
+
 			img {
-				max-width: 300px;
-				max-height: 225px;
+				max-width: 250px;
 			}
 		}
 	}
 
-	.header {
-		padding: 0;
-	}
 	.btn-sponsored {
 		margin-top: 30px;
 		padding: 10px 90px;
-		font-size: 17px;
+		font-size: 14pt;
 	}
 }
 
