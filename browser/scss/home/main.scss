@@ -327,6 +327,70 @@ section {
 	height: 50px;
 }
 
+/*********** Section 6 -- Sponsored Causes ***********/
+.sponsored {
+	// height: 400px;
+	background-color: rgb(27, 121, 167);
+	text-align: center;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 30px;
+	.text-content {
+		margin: 30px auto;
+		width: 80%;
+		@media all and (max-width: 780px) {
+			width: 90%;
+		}
+	}
+	.cause-images {
+		width: 80%;
+		display: flex;
+		flex-direction: row;
+		margin: 0 auto;
+		@media all and (max-width: 780px) {
+			width: 100%;
+			flex-direction: column;
+		}
+		.cause {
+			width: 33%;
+			@media all and (max-width: 780px) {
+				width: auto;
+			}
+			hr {
+				margin: 5px auto;
+				width: 50%;
+			}
+			#environment {
+				border-color: #00ff00;
+				background-color: #00ff00;
+			}
+			#food-insecurity {
+				border-color: #00ffff;
+				background-color: #00ffff;
+			}
+
+			#homelessness {
+				border-color: #ff0000;
+				background-color: #ff0000;
+			}
+			img {
+				max-width: 300px;
+				max-height: 225px;
+			}
+		}
+	}
+
+	.header {
+		padding: 0;
+	}
+	.btn-sponsored {
+		margin-top: 30px;
+		padding: 10px 90px;
+		font-size: 17px;
+	}
+}
+
 
 /*********** Section 7 -- Get Involved ***********/
 
