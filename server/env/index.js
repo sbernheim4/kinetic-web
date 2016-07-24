@@ -8,7 +8,7 @@ console.log('\n\n\n\n\n\nENV IS', process.env.NODE_ENV)
 if (process.env.NODE_ENV === 'production') {
     module.exports = require(productionConfigPath);
 } else if (process.env.NODE_ENV === 'staging') {
-    module.exports = require(productionConfigPath);
+    module.exports = require(stagingConfigPath);
 } else {
     module.exports = require(devConfigPath);
 }
