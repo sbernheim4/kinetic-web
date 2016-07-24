@@ -489,8 +489,6 @@ section {
 
 .btns-footer {
 	margin-left: 50px;
-    display: flex;
-    justify-content: space-around;
 }
 
 .btn-footer {
@@ -511,18 +509,30 @@ section {
 	color: rgb(66, 66, 66);
 }
 
-@media all and (max-width: 1030px) {
+@media all and (max-width: 1007px) {
 	.footer {
-		height: 120px;
+		justify-content: center;
+	}
+
+	.btns-footer {
+		margin: 0;
 	}
 
 	.btn-footer {
-		margin-left: 0;
-		margin-right: 20px;
+    	margin: 0 25px;
 	}
+
+	.footer-connect {
+		display: none;
+	}
+
+	.fa {
+		display: none !important;
+	}
+
 }
 
-@media all and (max-width: 960px) {
+/*@media all and (max-width: 960px) {
 	.btns-footer {
 		flex-direction: column;
 	}
@@ -531,3 +541,4 @@ section {
 		margin: 5px 0;
 	}
 }
+*/
