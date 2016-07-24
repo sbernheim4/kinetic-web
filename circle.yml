@@ -1,0 +1,9 @@
+machine:
+  timezone:
+    America/New_York
+
+test:
+  override:
+    - nvm install stable && nvm alias default stable
+    - mocha tests/server/models
+    - mocha tests/server/routes
