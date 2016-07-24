@@ -1,7 +1,5 @@
 test:
   override:
     - nvm install stable && nvm alias default stable
-    - npm install pm2 -g
-    - pm2 start server/start.js
     - mocha tests/server/models
     - mocha tests/server/routes
