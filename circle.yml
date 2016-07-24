@@ -2,8 +2,8 @@ machine:
   post:
     - ./daemon:
           background: true
-    - npm start
-    - sleep 5
+    - npm install pm2 -g
+    - pm2 start start.js
 
 test:
   override:
