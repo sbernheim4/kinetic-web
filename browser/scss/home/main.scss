@@ -140,6 +140,10 @@ section {
 	flex-direction: column;
 }
 
+.header-problem {
+	padding: 0 30px;
+}
+
 .tag-line-problem {
 	padding-left: 13px;
 	padding-right: 13px;
@@ -234,11 +238,11 @@ section {
 	margin: 0 auto;
 	padding-left: 20px;
 	padding-right: 20px;
-	width: 945px;
+	max-width: 945px;
 }
 
 .tag-line-what-is-sub {
-	width: 550px;
+	max-width: 550px;
 }
 
 
@@ -249,8 +253,8 @@ section {
 
 .what-is-row > div {
 	padding-top: 30px;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 .research > .underline {
@@ -290,10 +294,11 @@ section {
 
 /*********** Section 5 -- About Us ***********/
 .about-us {
-	height: 641px;
 	padding-top: 0px;
+	display: flex;
+	align-items: center;
+	// margin-bottom: 30px;
 }
-
 
 .images-about-us > img {
 	display: block;
@@ -301,17 +306,21 @@ section {
 	max-width: 640px;
 }
 
+@media all and (max-width: 1277px) {
+	.images-about-us > img {
+		padding: 0px 0px 10px 20px;
+	}
+}
+
 .right-about-us {
-	padding-top: 30px;
-	max-width: 640px;
+	padding: 30px 30px;
 }
 
 .header-about-us {
-	padding-bottom: 60px;
+	padding-bottom: 30px;
 }
 
 .header-text {
-	padding: 0 116px;
 	text-align: center;
 	font-weight: bold;
 }
@@ -325,6 +334,18 @@ section {
 	margin-top: 30px;
 	width: 295px;
 	height: 50px;
+}
+
+@media all and (max-width: 831px){
+	.images-about-us > img {
+		display: none;
+	}
+}
+
+@media all and (max-width: 330px) {
+	.right-about-us {
+		padding: 30px 12px;
+	}
 }
 
 /*********** Section 6 -- Sponsored Causes ***********/
@@ -390,7 +411,6 @@ section {
 		font-size: 17px;
 	}
 }
-
 
 /*********** Section 7 -- Get Involved ***********/
 
