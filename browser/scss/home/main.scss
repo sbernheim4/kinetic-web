@@ -340,6 +340,8 @@ section {
 	margin-left: 2rem;
 	margin-right: 2rem;
 	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .square-container > div {
