@@ -5,7 +5,7 @@ machine:
     - npm install pm2 -g
     - pwd
     - ls
-    - pm2 start server/start.js
+    - pm2 start kinetic-web/server/start.js
 
 test:
   override:
