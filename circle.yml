@@ -2,6 +2,7 @@ test:
   override:
     - nvm install stable && nvm alias default stable
     - npm install pm2 -g
+    - ls
     - pm2 start kinetic-web/server/start.js
     - mocha tests/server/models
     - mocha tests/server/routes
