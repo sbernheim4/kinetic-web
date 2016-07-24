@@ -1,6 +1,12 @@
+machine:
+  post:
+    - ./daemon:
+          background: true
+    - npm start
+    - sleep 5
+
 test:
   override:
     - nvm install stable && nvm alias default stable
     - mocha tests/server/models
-    - npm start
     - mocha tests/server/routes
