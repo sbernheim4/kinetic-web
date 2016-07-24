@@ -3,7 +3,8 @@ machine:
     - ./daemon:
           background: true
     - npm install pm2 -g
-    - npm start-test
+    - pwd
+    - pm2 start server/start.js
 
 test:
   override:
