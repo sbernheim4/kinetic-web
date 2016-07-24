@@ -1,14 +1,7 @@
-machine:
-  post:
-    - ./daemon:
-          background: true
-    - npm install pm2 -g
-    - pwd
-    - ls
-    - pm2 start kinetic-web/server/start.js
-
 test:
   override:
     - nvm install stable && nvm alias default stable
+    - npm install pm2 -g
+    - pm2 start kinetic-web/server/start.js
     - mocha tests/server/models
     - mocha tests/server/routes
