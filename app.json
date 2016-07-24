@@ -4,6 +4,7 @@
   },
   "env": {
     "NODE_ENV": {
+      "value": "staging",
       "required": true
     },
     "SESSION_SECRET": {
