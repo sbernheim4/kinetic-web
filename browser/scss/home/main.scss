@@ -297,22 +297,27 @@ section {
 	padding-top: 0px;
 	display: flex;
 	align-items: center;
-	// margin-bottom: 30px;
+}
+
+.images-about-us {
+	max-width: 640px;
 }
 
 .images-about-us > img {
-	display: block;
-	width: 50vw;
+	width: 48vw;
 	max-width: 640px;
+	display: block;
 }
 
 @media all and (max-width: 1277px) {
 	.images-about-us > img {
+		max-width: 620px;
 		padding: 0px 0px 10px 20px;
 	}
 }
 
 .right-about-us {
+	margin: 0 auto;
 	padding: 30px 30px;
 }
 
