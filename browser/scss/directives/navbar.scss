@@ -1,3 +1,9 @@
+@media all and (max-width: 767px) {
+    .navbar {
+        display: none;
+    }
+}
+
 navbar {
     display: block;
     background: white;
