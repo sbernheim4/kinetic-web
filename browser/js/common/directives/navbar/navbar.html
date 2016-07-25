@@ -1,17 +1,30 @@
 <nav class="navbar navbar-static-top">
     <div class="container">
-        <div class="navbar-header">
-            <fullstack-logo></fullstack-logo>
-        </div>
-        <ul class="nav navbar-nav">
-            <li ng-repeat="item in items" ng-show="!item.auth || isLoggedIn()">
-                <a ui-sref-active="active" ui-sref="{{ item.state }}">{{ item.label }}</a>
+        <ul>
+            <li>
+                <a href="#problem"> The Problem </a>
             </li>
+
+            <li>
+                <a href="solution"> Our Solution </a>
+            </li>
+
+            <li>
+                <a href="what-is"> What is Kinetic </a>
+            </li>
+
+            <li>
+                <a href="about-us"> About Us </a>
+            </li>
+
+            <li>
+                <a href="sponsored"> Sponsored Causes </a>
+            </li>
+
+            <li>
+                <a href="get-involved"> Get Involved </a>
+            </li>
+
         </ul>
-        <button ng-show="!user" ui-sref="login" class="btn login-button">Login</button>
-        <div ng-show="user" class="welcome">
-            <span>Welcome, {{ user.email }}!</span>
-            <a ng-click="logout()">Logout</a>
-        </div>
     </div>
 </nav>
