@@ -4,7 +4,18 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state) 
         restrict: 'E',
         scope: {},
         templateUrl: 'js/common/directives/navbar/navbar.html',
+
         link: function (scope) {
+
+            if(smoothScroll) {
+                console.log('exists');
+            } else {
+                console.log('nope');
+            }
+
+            scope.goToSection = function(val) {
+                smoothScroll(document.querySelector(val));
+            };
 
             scope.items = [
                 { label: 'Home', state: 'home' },
@@ -21,7 +32,7 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state) 
 
             scope.logout = function () {
                 AuthService.logout().then(function () {
-                   $state.go('home');
+                    $state.go('home');
                 });
             };
 
