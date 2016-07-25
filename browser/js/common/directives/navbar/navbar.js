@@ -13,11 +13,9 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state) 
                 console.log('nope');
             }
 
-            var myEl = angular.element($document.querySelector('#problem-nav'));
-            myEl.on('click', function() {
-                console.log("BTN CLICKED");
-                smoothScroll(document.querySelector('.problem'));
-            })
+            scope.goToSection = function(val) {
+                smoothScroll(document.querySelector(val));
+            };
 
             scope.items = [
                 { label: 'Home', state: 'home' },

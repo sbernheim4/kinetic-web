@@ -17,6 +17,7 @@ navbar {
 
                 a {
                     text-decoration: none;
+                    cursor: pointer;
 
                     &:hover {
                         transition: color .15s linear;
