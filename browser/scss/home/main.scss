@@ -160,6 +160,10 @@ section {
 	margin: 0 40px;
 	width: 180px;
 	height: 70px;
+	cursor: default;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 @media all and (max-width: 780px) {
