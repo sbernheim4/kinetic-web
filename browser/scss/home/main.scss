@@ -85,35 +85,38 @@ section {
 }
 
 .btns-main {
+	margin-top: auto;
 	display: flex;
-	margin-top:40px;
+	flex-direction: row;
 }
 
 
 .btn-main{
-	width: 245px;
 	padding: 8px 40px;
+	width: 245px;
 	text-transform: uppercase;
 }
 
 
 @media all and (min-width: 1200px) {
 	.btns-main {
+		padding-bottom: 140px;
 		width: 80%;
-		flex-direction: row;
 		justify-content: space-around;
 	}
 }
 
 @media all and (max-width: 1199px) and (min-width: 826px) {
 	.btns-main {
-		width: 90%;
+		padding-bottom: 140px;
+		width: 100%;
 		justify-content: space-around;
 	}
 }
 
-@media all and (max-width: 825px) {
+@media all and (max-width: 825px) and (min-width: 486px) {
 	.btns-main {
+		padding-bottom: 140px;
 		flex-direction: column;
 	}
 	.btn-main {
@@ -123,7 +126,14 @@ section {
 
 @media all and (max-width: 485px) {
 	.btns-main {
-		margin-top: 0px;
+		margin-top: auto;
+		margin-bottom: auto;
+		flex-direction: column;
+	}
+
+	.btn-main {
+		margin-top: 7px;
+		margin-bottom: 7px;
 	}
 }
 
