@@ -62,7 +62,7 @@ section {
 .main {
 	padding-top: 0px;
 	height: 100vh;
-	min-height: 370px; /* this is for phones and tablets in landscape mode to make sure there is spacing below the buttons */
+	min-height: 700px; /* this is for phones and tablets in landscape and portrait mode to make sure there is spacing below the buttons */
 	background-image: url('implementation-photo.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
