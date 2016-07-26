@@ -66,7 +66,6 @@ section {
 .main {
 	padding-top: 0px;
 	height: calc(100vh-59px);
-	min-height: 700px; /* this is for phones and tablets in landscape and portrait mode to make sure there is spacing below the buttons */
 	background-image: url('implementation-photo.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -83,7 +82,7 @@ section {
 }
 
 .tag-line-main {
-	padding: 18% 35px 0px 35px;
+	padding: 10% 35px 0px 35px;
 	font-size: 20pt;
 	text-align: center;
 	color: white;
@@ -130,6 +129,10 @@ section {
 }
 
 @media all and (max-width: 485px) {
+	.main {
+		min-height: 700px;
+	}
+
 	.btns-main {
 		margin-top: auto;
 		margin-bottom: auto;
@@ -141,6 +144,14 @@ section {
 		margin-bottom: 7px;
 	}
 }
+
+@media all and (max-width: 400px) {
+	.big-main {
+		padding: 50px 50px 0px 50px;
+	}
+}
+
+
 
 /************ Section 2 -- The Problem ************/
 
