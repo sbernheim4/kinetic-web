@@ -395,6 +395,9 @@ section {
 		width: 80%;
 		display: flex;
 		flex-direction: row;
+		@media all and (max-width: 930px) {
+			width: 100%;
+		}
 		@media all and (max-width: 780px) {
 			width: 100%;
 			flex-direction: column;
