@@ -65,7 +65,7 @@ section {
 
 .main {
 	padding-top: 0px;
-	height: calc(100vh-59px);
+	height: 100vh;
 	background-image: url('implementation-photo.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -129,10 +129,6 @@ section {
 }
 
 @media all and (max-width: 485px) {
-	.main {
-		min-height: 700px;
-	}
-
 	.btns-main {
 		margin-top: auto;
 		margin-bottom: auto;
