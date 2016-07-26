@@ -191,6 +191,10 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	&:hover {
+		background-color: rgb(253, 178, 59);
+	}
 }
 
 @media all and (max-width: 780px) {
