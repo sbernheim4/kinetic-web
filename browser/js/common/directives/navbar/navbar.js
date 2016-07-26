@@ -7,22 +7,9 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state) 
 
         link: function (scope) {
 
-            if(smoothScroll) {
-                console.log('exists');
-            } else {
-                console.log('nope');
-            }
-
             scope.goToSection = function(val) {
                 smoothScroll(document.querySelector(val));
             };
-
-            scope.items = [
-                { label: 'Home', state: 'home' },
-                { label: 'About', state: 'about' },
-                { label: 'Documentation', state: 'docs' },
-                { label: 'Members Only', state: 'membersOnly', auth: true }
-            ];
 
             scope.user = null;
 
@@ -36,13 +23,14 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state) 
                 });
             };
 
-            var setUser = function () {
-                AuthService.getLoggedInUser().then(function (user) {
+            const setUser = function () {
+                AuthService.getLoggedInUser()
+                .then(function (user) {
                     scope.user = user;
                 });
             };
 
-            var removeUser = function () {
+            const removeUser = function () {
                 scope.user = null;
             };
 
