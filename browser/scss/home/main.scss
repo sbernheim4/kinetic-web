@@ -25,6 +25,11 @@ section {
 	padding-top: 30px;
 }
 
+a {
+	text-decoration: none;
+	color: rgb(66,66,66);
+}
+
 /************* Common Attributes **************/
 
 .btns {
@@ -531,7 +536,7 @@ section {
 	align-items: center;
 }
 
-.fa-container > .fa {
+.fa {
 	padding: 0 15px;
 	color: rgb(66, 66, 66);
 }
@@ -552,13 +557,13 @@ section {
 	}
 }
 
-@media all and (max-width: 850px) {
+@media all and (max-width: 950px) {
 	.footer-text {
 		display: none;
 	}
 }
 
-@media all and (max-width: 606px) {
+@media all and (max-width: 650px) {
 	.footer {
 		justify-content: center;
 	}
@@ -566,12 +571,12 @@ section {
 	.btn-footer {
 		margin: 0 10px;
 	}
-	.fa-container > .fa {
+	.fa-container {
 		display: none;
 	}
 }
 
-@media all and (max-width: 403px) {
+@media all and (max-width: 420px) {
 	.footer {
 		height: 130px;
 		justify-content: center;
