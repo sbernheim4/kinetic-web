@@ -65,7 +65,7 @@ section {
 
 .main {
 	padding-top: 0px;
-	height: 100vh;
+	height: calc(100vh-59px);
 	min-height: 700px; /* this is for phones and tablets in landscape and portrait mode to make sure there is spacing below the buttons */
 	background-image: url('implementation-photo.jpg');
 	background-size: cover;
@@ -511,17 +511,30 @@ section {
 	height: 70px;
 	background-color: rgb(105, 105, 105);
 	display: flex;
+	justify-content: space-around;
 	align-items: center;
 }
 
-.btns-footer {
-	margin-left: 50px;
+.fa-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.fa-container > .fa {
+	padding: 0 15px;
+	color: rgb(66, 66, 66);
+}
+
+.footer-text {
+	padding-left: 0 15px;
+	color: white;
 }
 
 .btn-footer {
+	margin-left: 20px;
 	width: 180px;
 	height: 45px;
-	margin-left: 20px;
 	background-color: #1b79a7;
 
 	&:hover {
@@ -529,51 +542,40 @@ section {
 	}
 }
 
-.footer-connect {
-	padding-left: 50px;
-	color: white;
-	font-weight: bolder;
+@media all and (max-width: 850px) {
+	.footer-text {
+		display: none;
+	}
 }
 
-.footer-icons {
-	padding: 0 25px;
-	color: rgb(66, 66, 66);
-}
-
-@media all and (max-width: 1007px) {
+@media all and (max-width: 606px) {
 	.footer {
 		justify-content: center;
 	}
 
-	.btns-footer {
-		margin: 0;
-	}
-
 	.btn-footer {
-		margin: 0 25px;
+		margin: 0 10px;
 	}
-
-	.footer-connect {
+	.fa-container > .fa {
 		display: none;
-	}
-
-	.fa {
-		display: none !important;
 	}
 }
 
-@media all and (max-width: 463px) {
+@media all and (max-width: 403px) {
 	.footer {
-		height: 125px;
-	}
-
-	.btns-footer {
-		margin: 0;
-		display: flex;
+		height: 130px;
+		justify-content: center;
 		flex-direction: column;
 	}
 
+	.btns-footer {
+		width: 200px;
+	}
+
 	.btn-footer {
-		margin: 5px 25px;
+		margin: 5px 10px;
+	}
+	.fa-container > .fa {
+		display: none;
 	}
 }
