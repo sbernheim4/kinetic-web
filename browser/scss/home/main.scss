@@ -292,6 +292,11 @@ a {
 	padding-right: 30px;
 }
 
+.circle {
+	border: 1px solid black;
+}
+
+
 .research > .underline {
 	margin: 10px auto;
 	width: 63px;
@@ -361,8 +366,9 @@ a {
 }
 
 .header-text {
-	text-align: center;
-	font-weight: bold;
+	margin: 0 auto;
+	text-align: justify;
+	max-width: 500px;
 }
 
 .btns-about-us {
@@ -400,6 +406,8 @@ a {
 	.text-content {
 		margin: 30px auto;
 		width: 80%;
+		max-width: 800px;
+		text-align: justify;
 		font-size: 14pt;
 		@media all and (max-width: 780px) {
 			width: 90%;
