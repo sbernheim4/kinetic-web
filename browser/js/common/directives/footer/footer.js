@@ -1,4 +1,4 @@
-app.directive('footer'), function ($rootScope, AuthService, AUTH_EVENTS, $state) {
+app.directive('footer', function ($rootScope, AuthService, AUTH_EVENTS, $state) {
 
     return {
         restrict: 'E',
@@ -37,5 +37,7 @@ app.directive('footer'), function ($rootScope, AuthService, AUTH_EVENTS, $state)
             $rootScope.$on(AUTH_EVENTS.sessionTimeout, removeUser);
 
         }
-    }
-}
+
+    };
+
+});
