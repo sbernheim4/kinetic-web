@@ -1,5 +1,5 @@
-'use strict'
+'use strict';
 
-app.controller('HistoryController', function ($scope) {
+app.controller('HistoryCtrl', function ($scope) {
 
-})
+});
