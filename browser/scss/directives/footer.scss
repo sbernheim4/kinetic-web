@@ -23,16 +23,20 @@
 	color: white;
 }
 
-.btn-footer {
-	margin-left: 20px;
-	width: 180px;
-	height: 45px;
-	background-color: #1b79a7;
+.btns-footer {
+	.btn-footer {
+		margin-left: 20px;
+		width: 180px;
+		height: 45px;
+		background-color: #1b79a7;
 
-	&:hover {
-		background-color: darken(#1b79a7, 10%);
+		&:hover {
+			background-color: darken(#1b79a7, 10%);
+		}
 	}
 }
+
+
 
 @media all and (max-width: 950px) {
 	.footer-text {
