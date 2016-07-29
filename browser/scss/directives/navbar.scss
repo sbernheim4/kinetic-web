@@ -1,9 +1,10 @@
 .container {
-    padding-right: 50px;
+    margin-right: 100px;
     display: flex;
     justify-content: flex-end;
 
     .dropdown {
+		width: 181px;
         position: relative;
         display: inline-block;
 
@@ -15,10 +16,11 @@
         }
 
         .dropdown-title {
+            padding: 16px 0px;
             background-color: white;
+			text-align: center;
             color: black;
-            padding: 16px;
-            font-size: 16px;
+            font-size: 17pt;
             border: none;
             cursor: pointer;
         }
