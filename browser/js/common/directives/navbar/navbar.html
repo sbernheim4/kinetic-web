@@ -1,30 +1,19 @@
-<nav class="navbar navbar-static-top">
-    <div class="container">
-        <ul>
-            <li>
-                <a ng-click=goToSection(".problem")> The Problem </a>
-            </li>
+<div class='navbar navbar-static-top'>
+    <div class='container'>
 
-            <li>
-                <a ng-click=goToSection(".solution")> Our Solution </a>
-            </li>
+        <div class='dropdown'>
+            <button class='dropdown-btn'> What We Do </button>
+            <div class='dropdown-content'>
+                <div class='list-container'>
+                    <a ng-click=goToSection('.problem')> The Problem </a>
+                    <a ng-click=goToSection('.solution')> Our Solution </a>
+                    <a ng-click=goToSection('.what-is')> What is Kinetic </a>
+                    <a ng-click=goToSection('.about-us')> About Us </a>
+                    <a ng-click=goToSection('.sponsored')> Sponsored Causes </a>
+                    <a ng-click=goToSection('.get-involved')> Get Involved </a>
+                </div>
+            </div>
+        </div>
 
-            <li>
-                <a ng-click=goToSection(".what-is")> What is Kinetic </a>
-            </li>
-
-            <li>
-                <a ng-click=goToSection(".about-us")> About Us </a>
-            </li>
-
-            <li>
-                <a ng-click=goToSection(".sponsored")> Sponsored Causes </a>
-            </li>
-
-            <li>
-                <a ng-click=goToSection(".get-involved")> Get Involved </a>
-            </li>
-
-        </ul>
     </div>
-</nav>
+</div>
