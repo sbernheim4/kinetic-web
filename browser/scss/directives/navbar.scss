@@ -10,10 +10,11 @@
         &:hover {
             .dropdown-content {
                 display: block;
+                border-top: 2px solid #fdb23b;
             }
         }
 
-        .dropdown-btn {
+        .dropdown-title {
             background-color: white;
             color: black;
             padding: 16px;
@@ -28,6 +29,10 @@
             background-color: #f9f9f9;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+            &:hover {
+                border-top: 2px solid #fdb23b;
+            }
 
             .list-container {
                 display: flex;
