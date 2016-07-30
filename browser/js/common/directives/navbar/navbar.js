@@ -7,8 +7,12 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state) 
 
         link: function (scope) {
 
-            scope.goToSection = function(val) {
-                smoothScroll(document.querySelector(val));
+            scope.goToSection = function(val, state) {
+                // go to the state passed in through ng-click and then wait 100ms and then scroll to the right section
+                // using setTimeout to override Node's asynchronosity and ensure that smoothScroll is only called after we have changed states
+                // setTimeout should be at least 10ms to ensure it works on all computers
+                $state.go(state)
+                setTimeout( function() { smoothScroll(document.querySelector(val)) }, 100);
             };
 
             scope.user = null;
