@@ -11,6 +11,12 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state) 
                 // go to the state passed in through ng-click and then wait 100ms and then scroll to the right section
                 // using setTimeout to override Node's asynchronosity and ensure that smoothScroll is only called after we have changed states
                 // setTimeout should be at least 10ms to ensure it works on all computers
+
+                // TODO: remove when all pages are built and a tags have correct params
+                // if no state is passed in, go to the home page. This is just for development purposes
+                if (state === null) {
+                    state = 'home';
+                }
                 $state.go(state)
                 setTimeout( function() { smoothScroll(document.querySelector(val)) }, 100);
             };
