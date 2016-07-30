@@ -6,7 +6,7 @@ app.config(function ($stateProvider) {
     $stateProvider.state('campuses', {
         url: '/campuses',
         controller: 'CampusesCtrl',
-        templateUrl: 'js/about/campuses.template.html'
+        templateUrl: 'js/campuses/campuses.template.html'
     });
 
 });

@@ -1,0 +1,46 @@
+.campuses {
+
+    .container {
+        margin: 0 auto;
+        padding: 30px 0;
+        width: 70%;
+
+        .header {
+            padding: 20px 0;
+            font-size: 40pt;
+            text-transform: uppercase;
+        }
+
+        .paragraph {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .list {
+            margin: 0 auto;
+        }
+    }
+
+    &-btns {
+        padding: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-btn{
+            padding: 15px 110px;
+            background-color: rgb(253, 178, 59);
+            border-radius: 5px;
+            border: 1px solid white;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            font-size: 16pt;
+            text-decoration: none;
+
+            &:hover {
+                background-color: darken(rgb(253, 178, 59), 10%)
+            }
+        }
+    }
+}
