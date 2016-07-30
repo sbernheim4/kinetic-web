@@ -1,0 +1,22 @@
+.history {
+	.header {
+		font-size: 35pt;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	p {
+		margin: 0 auto;
+		padding: 15px 0px 15px 0px;
+		width: 80%;
+		line-height: 20px;
+		word-spacing: 4px;
+		&:first-child {
+			padding-top: 30px;
+		}
+
+		&:last-child {
+			padding-bottom: 30px;
+		}
+	}
+}
