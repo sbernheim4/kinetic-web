@@ -71,8 +71,14 @@
 	}
 }
 
+@media all and (min-width: 869px) {
+	.mobile-nav-bar {
+		display: none;
+	}
+}
+
 @media all and (max-width: 870px) {
-	.container {
+	.navbar {
 		display: none;
 	}
 
