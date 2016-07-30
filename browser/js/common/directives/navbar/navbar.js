@@ -1,4 +1,4 @@
-app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state) {
+app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state, $window) {
 
 	return {
 		restrict: 'E',
@@ -6,7 +6,7 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state) 
 		templateUrl: 'js/common/directives/navbar/navbar.html',
 
 		link: function (scope) {
-
+			var temp = 0;
 			scope.goToSection = function(val, state) {
 				Promise.resolve()
 				.then( () => {
@@ -20,7 +20,14 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state) 
 					}
 				})
 				.then( () => {
+					temp = $window.pageYOffset;
+					$window.pageYOffset -= 58;
 					smoothScroll(document.querySelector(val));
+				})
+				.then( () => {
+					setTimeout(function() {
+						$window.pageYOffset = window.scrollY;
+					} , 500);
 				});
 			};
 

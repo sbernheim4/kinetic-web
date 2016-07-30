@@ -1,71 +1,74 @@
-.container {
-	width: 100%;
-	position: fixed;
-	background-color: white;
-	z-index: 100;
-    display: flex;
-    justify-content: flex-end;
+.navbar {
+	height: 59px;
+	.container {
+		width: 100%;
+		position: fixed;
+		background-color: white;
+		z-index: 100;
+		display: flex;
+		justify-content: flex-end;
 
-	.dropdown {
-		width: 181px;
-		position: relative;
-        display: inline-block;
+		.dropdown {
+			width: 181px;
+			position: relative;
+			display: inline-block;
 
-        &:hover {
-            .dropdown-content {
-                display: block;
-                border-top: 2px solid #fdb23b;
-            }
-        }
+			&:hover {
+				.dropdown-content {
+					display: block;
+					border-top: 2px solid #fdb23b;
+				}
+			}
 
-        .dropdown-title {
-            padding: 16px 0px;
-            background-color: white;
-			text-align: center;
-            color: black;
-            font-size: 17pt;
-			text-transform: uppercase;
-			font-weight: bold;
-            border: none;
-            cursor: pointer;
-        }
+			.dropdown-title {
+				padding: 16px 0px;
+				background-color: white;
+				text-align: center;
+				color: black;
+				font-size: 17pt;
+				text-transform: uppercase;
+				font-weight: bold;
+				border: none;
+				cursor: pointer;
+			}
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f9f9f9;
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 
-            &:hover {
-                border-top: 2px solid #fdb23b;
-            }
+				&:hover {
+					border-top: 2px solid #fdb23b;
+				}
 
-            .list-container {
-				padding: 0px 10px;
-				width: 161px;
-				display: flex;
-                justify-content: center;
-                flex-direction: column;
+				.list-container {
+					padding: 0px 10px;
+					width: 161px;
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
 
-                a {
-                    margin: 0 auto;
-                    widows: auto;
-                    padding: 7px 0px;
-                    display: block;
-                    color: black;
-                    text-decoration: none;
-                    font-weight: bold;
-                    cursor: pointer;
+					a {
+						margin: 0 auto;
+						widows: auto;
+						padding: 7px 0px;
+						display: block;
+						color: black;
+						text-decoration: none;
+						font-weight: bold;
+						cursor: pointer;
 
-                    &:hover {
-                        color: rgb(253,178,59);
-                        transition: color .05s linear;
-                    }
-                }
-            }
-        }
-    }
+						&:hover {
+							color: rgb(253,178,59);
+							transition: color .05s linear;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 @media all and (max-width: 870px) {
