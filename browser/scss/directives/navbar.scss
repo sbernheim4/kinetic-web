@@ -1,6 +1,5 @@
 .container {
-    padding-right: 100px;
-	width: 95%;
+	width: 100%;
 	position: fixed;
 	background-color: white;
 	z-index: 100;
@@ -8,8 +7,8 @@
     justify-content: flex-end;
 
 	.dropdown {
-		padding: 0px 10px;
-        position: relative;
+		width: 181px;
+		position: relative;
         display: inline-block;
 
         &:hover {
