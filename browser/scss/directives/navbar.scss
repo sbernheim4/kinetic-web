@@ -24,6 +24,8 @@
 			text-align: center;
             color: black;
             font-size: 17pt;
+			text-transform: uppercase;
+			font-weight: bold;
             border: none;
             cursor: pointer;
         }
@@ -64,4 +66,22 @@
             }
         }
     }
+}
+
+@media all and (max-width: 870px) {
+	.container {
+		display: none;
+	}
+
+	.mobile-nav-bar {
+		height: 58px;
+		color: black;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		.mobile-container {
+			padding-right: 30px;
+		}
+	}
 }
