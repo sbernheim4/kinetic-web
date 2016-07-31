@@ -2,9 +2,9 @@
 	height: 59px;
 	.container {
 		width: 100%;
-		position: fixed;
+		position: relative;
 		background-color: white;
-		z-index: 100;
+		z-index: 1000;
 		display: flex;
 		justify-content: flex-end;
 

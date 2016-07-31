@@ -20,15 +20,15 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state, 
 					}
 				})
 				.then( () => {
-					temp = $window.pageYOffset;
-					$window.pageYOffset -= 58;
+					// temp = $window.pageYOffset;
+					// $window.pageYOffset -= 58;
 					smoothScroll(document.querySelector(val));
-				})
-				.then( () => {
-					setTimeout(function() {
-						$window.pageYOffset = window.scrollY;
-					} , 500);
 				});
+				// .then( () => {
+					// setTimeout(function() {
+						// $window.pageYOffset = window.scrollY;
+					// } , 500);
+				// });
 			};
 
 			scope.user = null;
