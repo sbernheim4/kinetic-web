@@ -8,27 +8,31 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state, 
 		link: function (scope) {
 			var temp = 0;
 			scope.goToSection = function(val, state) {
-				Promise.resolve()
-				.then( () => {
-					if (!state) {
-						state = 'home';
-					}
-					if($state.current.name === state) {
-						return;
-					} else {
-					return $state.go(state);
-					}
-				})
-				.then( () => {
-					// temp = $window.pageYOffset;
-					// $window.pageYOffset -= 58;
-					smoothScroll(document.querySelector(val));
-				});
-				// .then( () => {
-					// setTimeout(function() {
-						// $window.pageYOffset = window.scrollY;
-					// } , 500);
-				// });
+				if (val !== 'null') {
+					Promise.resolve()
+					.then( () => {
+						if (!state) {
+							state = 'home';
+						}
+						if($state.current.name === state) {
+							return;
+						} else {
+						return $state.go(state);
+						}
+					})
+					.then( () => {
+						// temp = $window.pageYOffset;
+						// $window.pageYOffset -= 58;
+						smoothScroll(document.querySelector(val));
+					});
+					// .then( () => {
+						// setTimeout(function() {
+							// $window.pageYOffset = window.scrollY;
+						// } , 500);
+					// });
+				} else {
+					$state.go(state);
+				}
 			};
 
 			scope.user = null;
