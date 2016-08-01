@@ -1,15 +1,15 @@
 .campuses {
 
+    .header {
+        padding: 15px 15px 0 15px;
+        font-size: 40pt;
+        text-transform: uppercase;
+    }
+
     .container {
         margin: 0 auto;
         padding: 30px 0;
         width: 70%;
-
-        .header {
-            padding: 20px 0;
-            font-size: 40pt;
-            text-transform: uppercase;
-        }
 
         .paragraph {
             padding: 20px 0;
@@ -17,26 +17,28 @@
 
         .list {
             margin: 0 auto;
-			padding-top: 30px;
+            padding-top: 30px;
 
-			ul {
-				padding-top: 20px;
+            ul {
+                padding-top: 20px;
 
-				li {
-					padding: 3px 0px;
-				}
-			}
-		}
+                li {
+                    padding: 3px 0px;
+                }
+            }
+        }
     }
 
     &-btns {
-        padding: 60px;
+        padding: 30px 0px;
         display: flex;
         justify-content: center;
         align-items: center;
 
         &-btn{
-            padding: 15px 110px;
+            width: 450px;
+            max-width: 90%;
+            height: 60px;
             background-color: rgb(253, 178, 59);
             border-radius: 5px;
             border: 1px solid white;
