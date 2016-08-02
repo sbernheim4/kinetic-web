@@ -4,8 +4,6 @@ window.app = angular.module('KineticApp', ['fsaPreBuilt', 'ui.router', 'ui.boots
 app.config(function ($urlRouterProvider, $locationProvider) {
     // This turns off hashbang urls (/#about) and changes it to something normal (/about)
     $locationProvider.html5Mode(true);
-    // If we go to a URL that ui-router doesn't have registered, go to the "/" url.
-    $urlRouterProvider.otherwise('/construction');
 });
 
 // This app.run is for controlling access to specific states.
@@ -15,6 +13,13 @@ app.run(function ($rootScope, AuthService, $state) {
     var destinationStateRequiresAuth = function (state) {
         return state.data && state.data.authenticate;
     };
+	
+	// if the $stateNotFound event is broadcasted either as the result of either 
+	// a ui-sref call or $state.go from anywhere, then redirect the user to the 
+	// under construction page
+	$rootScope.$on('$stateNotFound', function() {
+		$state.go('construction');
+	});
 
     // $stateChangeStart is an event fired
     // whenever the process of changing a state begins.
