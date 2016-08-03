@@ -3,7 +3,7 @@
 app.config(function ($stateProvider) {
 	$stateProvider.state('support', {
 		url: '/support',
-		templateUrl: 'js/support/support.html',
-		controller: 'SupportCtrl'
+		controller: 'SupportCtrl',
+		templateUrl: 'js/support/support.template.html'
 	});
 });
