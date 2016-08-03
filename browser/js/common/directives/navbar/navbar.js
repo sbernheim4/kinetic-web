@@ -27,7 +27,7 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state, 
 					if(typeof trackJs !== 'undefined') {
 						trackJs.track(err);
 					}
-					console.error(err)
+					console.error(err);
 				});
 			};
 
