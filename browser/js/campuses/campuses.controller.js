@@ -1,6 +1,5 @@
 'use strict'
 
-app.controller('CampusesCtrl', function ($scope, AuthService) {
-	$scope.isLoggedIn = AuthService.isAuthenticated();
+app.controller('CampusesCtrl', function ($scope) {
 
 });
