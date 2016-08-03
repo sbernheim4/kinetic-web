@@ -1,41 +1,99 @@
-@media all and (max-width: 767px) {
-    .navbar {
-        display: none;
-    }
+.navbar {
+	.container {
+		width: 100%;
+		position: relative;
+		background-color: white;
+		z-index: 1000;
+		display: flex;
+		justify-content: flex-end;
+
+		.dropdown {
+			width: 184px;
+			position: relative;
+			display: inline-block;
+
+			&:hover {
+				.dropdown-content {
+					display: block;
+					border-top: 2px solid #fdb23b;
+				}
+			}
+
+			.dropdown-title {
+				padding: 16px 0px;
+				background-color: white;
+				text-align: center;
+				color: black;
+				font-size: 12pt;
+				text-transform: uppercase;
+				font-weight: bold;
+				border: none;
+				cursor: pointer;
+			}
+
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f9f9f9;
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+				&:hover {
+					border-top: 2px solid #fdb23b;
+				}
+
+				.list-container {
+					padding: 0px 10px;
+					width: 164px;
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+
+					a {
+						margin: 0 auto;
+						widows: auto;
+						padding: 7px 0px;
+						display: block;
+						color: black;
+						text-decoration: none;
+						font-weight: bold;
+						cursor: pointer;
+
+						&:hover {
+							color: rgb(253,178,59);
+							transition: color .05s linear;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-navbar {
-    display: block;
-    background: white;
+@media all and (min-width: 869px) {
+	.mobile-nav-bar {
+		display: none;
+	}
+}
 
-    .container {
-        padding: 20px 20px;
+@media all and (max-width: 870px) {
+	.navbar {
+		display: none;
+	}
 
+	.mobile-nav-bar {
+		height: 58px;
+		color: black;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
 
-        ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: flex-end;
-            flex-direction: row;
+		.mobile-container {
+			padding-right: 30px;
 
-            li {
-                padding: 0 10px;
-
-                a {
-                    text-decoration: none;
-                    cursor: pointer;
-
-                    &:hover {
-                        transition: color .15s linear;
-                        color: rgb(253,178,59);
-                    }
-
-                }
-            }
-        }
-    }
-
-    a {
-        color: black;
-    }
+			button {
+				cursor: pointer;
+			}
+		}
+	}
 }
