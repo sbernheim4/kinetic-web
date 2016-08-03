@@ -6,33 +6,29 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state, 
 		templateUrl: 'js/common/directives/navbar/navbar.html',
 
 		link: function (scope) {
-			var temp = 0;
 			scope.goToSection = function(val, state) {
-				if (val !== 'null') {
-					Promise.resolve()
-					.then( () => {
-						if (!state) {
-							state = 'home';
-						}
-						if($state.current.name === state) {
-							return;
-						} else {
-						return $state.go(state);
-						}
-					})
-					.then( () => {
-						// temp = $window.pageYOffset;
-						// $window.pageYOffset -= 58;
+				Promise.resolve()
+				.then( () => {
+					if (!state) {
+						state = 'home';
+					}
+					if($state.current.name === state) {
+						return;
+					} else {
+					return $state.go(state);
+					}
+				})
+				.then( () => {
+					if(val !== 'null') {
 						smoothScroll(document.querySelector(val));
-					});
-					// .then( () => {
-						// setTimeout(function() {
-							// $window.pageYOffset = window.scrollY;
-						// } , 500);
-					// });
-				} else {
-					$state.go(state);
-				}
+					}
+				})
+				.catch( err => {
+					if(typeof trackJs !== 'undefined') {
+						trackJs.track(err);
+					}
+					console.error(err)
+				});
 			};
 
 			scope.user = null;
