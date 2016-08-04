@@ -80,10 +80,11 @@
             // Make request GET /session.
             // If it returns a user, call onSuccessfulLogin with the response.
             // If it returns a 401 response, we catch it and instead resolve to null.
-            return $http.get('/session').then(onSuccessfulLogin).catch(function () {
-                return null;
-            });
-
+            // return $http.get('/session').then(onSuccessfulLogin).catch(function () {
+            //     return null;
+            // });
+            //TODO: REMOVE WHEN WE START ACTUALLY USING SESSIONS
+            return Promise.resolve();
         };
 
         this.login = function (credentials) {
