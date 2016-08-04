@@ -38,11 +38,6 @@
 				}
 			}
 
-			.flex-custom {
-				display: flex;
-				align-items: center;
-			}
-
 			&-blue {
 				width: 500px;
 				height: 200px;
@@ -85,4 +80,15 @@
 		}
 	}
 
+}
+
+// TODO: Remove this css when removing the temp text for the financial donations part of the page
+.box-blue-btns-temp {
+	padding: 30px;
+	color: white;
+
+	a{
+		color: white;
+		text-decoration: none;
+	}
 }
