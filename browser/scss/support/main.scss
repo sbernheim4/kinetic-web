@@ -14,11 +14,16 @@
 			text-align: justify;
 		}
 	}
-
+	
 	.box-container {
 		display: flex;
 		justify-content: center;
 		flex-direction: row;
+		align-items: center;
+	
+		@media all and (max-width: 1080px) {
+			flex-direction: column;
+		}
 
 		.box {
 			height: 400px;
