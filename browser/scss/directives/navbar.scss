@@ -1,7 +1,7 @@
 .navbar {
 	.container {
 		width: 100%;
-		height: 85px;
+		height: 100px;
 		position: relative;
 		background-color: white;
 		z-index: 1000;
@@ -10,11 +10,26 @@
 
 		.logo {
 			position: absolute;
-			padding: 9px 30px;
+			padding: 16px 30px;
 			left: 0;
 
 			img {
 				width: 100px;
+			}
+		}
+
+		.btns-logo {
+			position: absolute;
+			padding: 15px 50px;
+			right: 0px;
+			display: flex;
+			align-items: flex-start;
+
+			.btn-logo {
+
+				width: 145px;
+				height: 30px;
+				border-radius: 0px;
 			}
 		}
 
