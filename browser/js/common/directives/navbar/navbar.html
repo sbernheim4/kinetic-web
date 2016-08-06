@@ -1,9 +1,22 @@
 <nav id='navbar' class='navbar navbar-static-top'>
 	<div class='container'>
-		<div class='dropdown'>
-			<div class='dropdown-title'>
-				What is Kinetic
-			</div>
+
+		<div class='logo'>
+			<a ui-sref='home'>
+				<img src="https://s3.amazonaws.com/kineticglobal-prod/kinetic-logo.png">
+			</a>
+		</div>
+
+		<div class="btns btns-logo">
+			<button ui-sref='support' class="btn btn-logo" type="button"> Support Kinetic </button>
+		</div>
+
+		<div class='dropdown-lists'>
+
+			<div class='dropdown'>
+				<div class='dropdown-title'>
+					What is Kinetic
+				</div>
 				<div class='dropdown-content'>
 					<div class='list-container'>
 						<a ng-click='goToSection(".problem", "home")'> The Problem </a>
@@ -14,13 +27,13 @@
 						<a ng-click='goToSection(".get-involved", "home")'> Get Involved </a>
 					</div>
 				</div>
-		</div>
-
-		<!-- TODO Add in a second parameter for all the ng-click vals for the state where each of these links should go to -->
-		<!--<div class='dropdown'>
-			<div class='dropdown-title'>
-				Get Involved
 			</div>
+
+			<!-- TODO Add in a second parameter for all the ng-click vals for the state where each of these links should go to -->
+			<!-- <div class='dropdown'>
+				<div class='dropdown-title'>
+					Get Involved
+				</div>
 				<div class='dropdown-content'>
 					<div class='list-container'>
 						<a ng-click="goToSection('.launch')"> Launch a Chapter </a>
@@ -29,12 +42,12 @@
 						<a ng-click="goToSection('.support')"> Support Kinetic Global </a>
 					</div>
 				</div>
-		</div>-->
+			</div> -->
 
-		<div class='dropdown'>
-			<div class='dropdown-title'>
-				Resources
-			</div>
+			<div class='dropdown'>
+				<div class='dropdown-title'>
+					Resources
+				</div>
 				<div class='dropdown-content'>
 					<div class='list-container'>
 						<!--<a ng-click="goToSection('.expert')"> Advisory Network </a>-->
@@ -42,31 +55,33 @@
 						<!--<a ng-click="goToSection('.handbook')">  Get a Handbook </a>-->
 					</div>
 				</div>
-		</div>
-
-		<!--<div class='dropdown'>
-			<div class='dropdown-title'>
-				Stories
 			</div>
+
+			<!-- <div class='dropdown'>
+				<div class='dropdown-title'>
+					Stories
+				</div>
 				<div class='dropdown-content'>
 					<div class='list-container'>
 						<a ng-click="gotosection('.projects')"> Projects </a>
 						<a ng-click="gotosection('.blog')"> KG Blog </a>
 					</div>
 				</div>
-		</div>-->
+			</div> -->
 
-		<!--<div class='dropdown'>
-			<div class='dropdown-title'>
-				Login
-			</div>
+			<!-- <div class='dropdown'>
+				<div class='dropdown-title'>
+					Login
+				</div>
 				<div class='dropdown-content'>
 					<div class='list-container'>
 						<a ui-sref="login"> Login </a>
 						<a ui-sref="signup"> Create Account </a>
 					</div>
 				</div>
-		</div>-->
+			</div> -->
+
+		</div>
 	</div>
 </nav>
 
