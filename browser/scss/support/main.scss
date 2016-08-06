@@ -1,0 +1,114 @@
+.support {
+
+	.header {
+		padding: 15px;
+	}
+
+	.text-container {
+		margin: 0 auto;
+		padding: 30px;
+		max-width: 1145px;
+
+		p {
+			padding: 15px 0px;
+			text-align: justify;
+		}
+	}
+
+	.box-container {
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		align-items: center;
+
+		@media all and (max-width: 1080px) {
+			flex-direction: column;
+		}
+
+		.box {
+			height: 400px;
+			padding: 30px;
+
+			&-gray {
+				width: 500px;
+				height: 150px;
+				font-size: 35pt;
+				background-color: rgb(206, 206, 206);
+				@media all and (max-width: 559px) {
+					margin: 0 auto;
+					max-width: 85vw;
+					text-align: left;
+				}
+
+				&-title {
+					margin: 0 auto;
+					padding: 19px 0px;
+					text-align: center;
+					font-size: 35pt;
+				}
+			}
+
+			&-blue {
+				width: 500px;
+				height: 200px;
+				background-color: rgb(27, 121, 167);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				@media all and (max-width: 559px) {
+					margin: 0 auto;
+					max-width: 85vw;
+				}
+
+				&-text {
+					margin: 0 auto;
+					padding: 30px;
+					width: 430px;
+					color: white;
+					// text-align: justify;
+
+					a {
+						color: white;
+						text-decoration: none;
+					}
+				}
+
+				&-btns {
+
+					&-btn {
+						margin: 5px;
+						width: 270px;
+						height: 60px;
+						font-size: 16pt;
+						background-color: rgb(253, 178, 59);
+						border-radius: 5px;
+						border: 1px solid white;
+						text-align: center;
+						color: white;
+						cursor: pointer;
+						text-decoration: none;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						&:hover {
+							background-color: darken(rgb(253, 178, 59), 10%)
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+// TODO: Remove this css when removing the temp text for the financial donations part of the page
+.box-blue-btns-temp {
+	padding: 30px;
+	color: white;
+
+	a{
+		color: white;
+		text-decoration: none;
+	}
+}
