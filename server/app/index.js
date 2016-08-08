@@ -28,6 +28,9 @@ app.use(function (req, res, next) {
     }
 
 });
+app.get('/sitemap', function (req, res) {
+	res.sendFile(path.join(__dirname + '/sitemap.xml'));
+});
 
 app.get('/*', function (req, res) {
     res.sendFile(app.get('indexHTMLPath'));
