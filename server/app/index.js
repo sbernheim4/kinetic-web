@@ -12,21 +12,27 @@ require('./configure')(app);
 // /api so they are isolated from our GET /* wildcard.
 app.use('/api', require('./routes'));
 
-
 /*
  This middleware will catch any URLs resembling a file extension
  for example: .js, .html, .css
  This allows for proper 404s instead of the wildcard '/*' catching
  URLs that bypass express.static because the given file does not exist.
+
+ Adding in two exceptions for /sitemap.xml and /robots.txt since both should be
+ accessible to bots and crawlers for SEO purposes
  */
 app.use(function (req, res, next) {
-
-    if (path.extname(req.path).length > 0) {
-        res.status(404).end();
-    } else {
-        next(null);
-    }
-
+	if (req.path === '/robots.txt'){
+		res.sendFile(path.join(__dirname + '/robots.txt'));
+	} else if (req.path === '/sitemap.xml') {
+		res.sendFile(path.join(__dirname + '/sitemap.xml'));
+	} else {
+		if (path.extname(req.path).length > 0) {
+	        res.status(404).end();
+	    } else {
+	        next(null);
+	    }
+	}
 });
 
 app.get('/*', function (req, res) {
