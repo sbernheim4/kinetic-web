@@ -1,0 +1,37 @@
+.launch {
+	background-image: url('https://s3.amazonaws.com/kineticglobal-prod/about-us-photo-3.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	height: calc(100vh - 200px);
+
+	.header {
+		padding: 0px 15px 15px 15px;
+		font-size: 35pt;
+		text-transform: uppercase;
+		text-align: center;
+		color: white;
+	}
+
+	form {
+		margin: 0 auto;
+		width: 306px;
+		color: white;
+
+		input {
+			width: 300px;
+			text-align: center;
+		}
+
+		select {
+			width: 306px;
+		}
+
+		textarea {
+			width: 300px;
+			max-width: 300px;
+		}
+
+	}
+
+}
