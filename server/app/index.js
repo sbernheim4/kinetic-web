@@ -28,8 +28,17 @@ app.use(function (req, res, next) {
     }
 
 });
+
+// route to access the sitemap.xml file
+// TODO: Consider using /sitemap.xml as the file path instead of just /sitemap.
 app.get('/sitemap', function (req, res) {
 	res.sendFile(path.join(__dirname + '/sitemap.xml'));
+});
+
+
+// route to access the robots.txt file to tell search engines they can all pages
+app.get('/robots.txt', function(req, res) {
+	res.sendFile(path.join(__dirname + '/robots.txt'));
 });
 
 app.get('/*', function (req, res) {
