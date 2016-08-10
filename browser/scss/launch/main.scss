@@ -1,9 +1,9 @@
 .launch {
-	background-image: url('https://s3.amazonaws.com/kineticglobal-prod/about-us-photo-3.jpg');
-	background-repeat: no-repeat;
+	//TODO: upload a large version of this image so that it will fit on all screens.
+	background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('https://s3.amazonaws.com/kineticglobal-prod/about-us-photo-3.jpg');
 	background-attachment: fixed;
 	background-position: center;
-	height: calc(100vh - 200px);
+	min-height: calc(100vh - 200px);
 
 	.header {
 		padding: 0px 15px 15px 15px;
@@ -15,23 +15,56 @@
 
 	form {
 		margin: 0 auto;
-		width: 306px;
+		width: 300px;
 		color: white;
 
-		input {
-			width: 300px;
-			text-align: center;
-		}
+		div {
 
-		select {
-			width: 306px;
-		}
+			padding-bottom: 10px;
 
-		textarea {
-			width: 300px;
-			max-width: 300px;
-		}
+			input {
+				width: 294px;;
+				height: 30px;
+				border-radius: 4px;
+			}
+			input[placeholder] {
+				font-size: 16pt;
+			}
 
+			select {
+				width: 300px;
+			}
+
+			textarea {
+				width: 294px;
+				max-width: 294px;
+				max-height: 194px;
+				border-radius: 5px;
+			}
+		}
 	}
 
+	.btns {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.btn {
+		width: 300px;
+		height: 50px;
+		margin: 15px 0px 30px 0px;
+		background-color: rgb(253, 178, 59);
+		border-radius: 5px;
+		border: 1px solid white;
+		text-align: center;
+		color: white;
+		cursor: pointer;
+		font-size: 12pt;
+		text-decoration: none;
+
+		&:hover {
+			background-color: darken(rgb(253, 178, 59), 10%)
+		}
+	}
 }

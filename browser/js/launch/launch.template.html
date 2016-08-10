@@ -2,24 +2,40 @@
 	<h1 class='header'>Bring Kinetic</br>to Your Campus!</h1>
 
 	<form>
-		Name:<br>
-		<input type='text' ng-model='user.name'/> <br>
-		Email:<br>
-		<input type='email' ng-model='user.email'> <br>
-		Scool:<br>
-		<input type='school' ng-model='user.school'> <br>
+		<div>
+			Name:<br>
+			<input type='text' placeholder='John Smith'  ng-model='user.name'/> <br>
+		</div>
 
-		Class Year:<br>
-		<select name='year'>
-			<option value='2017'> 2017 </option>
-			<option value='2018'> 2018 </option>
-			<option value='2019'> 2019 </option>
-			<option value='2020'> 2020 </option>
-		</select><br>
+		<div>
+			Email:<br>
+			<input type='email' placeholder='john.smith@gmail.com' ng-model='user.email'> <br>
+		</div>
 
-		Questions:<br>
-		<textarea>
-		</textarea>
+		<div>
+			Scool:<br>
+			<input type='school' placeholder='Williams College' ng-model='user.school'> <br>
+		</div>
+
+		<div>
+			Class Year:<br>
+			<select name='year'>
+				<option value='2017'> 2017 </option>
+				<option value='2018'> 2018 </option>
+				<option value='2019'> 2019 </option>
+				<option value='2020'> 2020 </option>
+			</select><br>
+		</div>
+
+		<div>
+			Questions:<br>
+		<textarea rows='4' cols='46'></textarea>
+		</div'
+
 	</form>
+
+	<div class='btns'>
+		<input type='submit' class=btn value='Submit'>
+	</div>
 
 </section>
