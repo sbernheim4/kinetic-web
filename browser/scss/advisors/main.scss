@@ -28,11 +28,17 @@
 		}
 
 		.advisor {
-			padding: 30px 60px;
+			padding: 30px 30px;
 			text-align: center;
 
-			.info {
+			.name {
 				font-weight: bolder;
+				text-decoration: underline;
+			}
+
+			.about {
+				margin: 0 auto;
+				width: 300px;
 			}
 		}
 	}
