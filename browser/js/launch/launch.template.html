@@ -1,7 +1,7 @@
 <section class='launch'>
 	<h1 class='header'>Bring Kinetic</br>to Your Campus!</h1>
 
-	<form>
+	<form ng-submit='submitFunc()'>
 		<div>
 			Name:<br>
 			<input type='text' placeholder='John Smith'  ng-model='user.name'/> <br>
@@ -19,7 +19,7 @@
 
 		<div>
 			Class Year:<br>
-			<select name='year'>
+			<select name='year' ng-model='user.classYear'>
 				<option value='2017'> 2017 </option>
 				<option value='2018'> 2018 </option>
 				<option value='2019'> 2019 </option>
@@ -32,16 +32,16 @@
 			<textarea rows='4' cols='46'></textarea>
 		</div>
 
+		<div class='checkboxes'>
+			<label for='newsletter'><input type="checkbox" ng-model='user.newsletter'/> <span>I would like to receive the Kinetic Newsletter.</span></label>
+		</div>
+
+
+		<p>Thank you for your interest. Someone will reach out shortly.</p>
+
+		<div class='btns'>
+			<input type='submit' class=btn value='Submit'>
+		</div>
 	</form>
-
-	<div class='checkboxes'>
-		<label for='newsletter'><input type="checkbox" id='newsletter'/> <span>I would like to receive the Kinetic Newsletter.</span></label>
-	</div>
-
-	<p>Thank you for your interest. Someone will reach out shortly.</p>
-
-	<div class='btns'>
-		<input type='submit' class=btn value='Submit'>
-	</div>
 
 </section>
