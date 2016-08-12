@@ -27,4 +27,4 @@ const LaunchSchema = new mongoose.Schema({
 	}
 });
 
-mongoose.model('LaunchSchema', LaunchSchema);
+mongoose.model('Launch', LaunchSchema);

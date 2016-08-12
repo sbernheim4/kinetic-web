@@ -1,25 +1,25 @@
 <section class='launch'>
 	<h1 class='header'>Bring Kinetic</br>to Your Campus!</h1>
 
-	<form ng-submit='submitFunc()'>
+	<form ng-submit='submitForm(user)'>
 		<div>
 			Name:<br>
-			<input type='text' placeholder='John Smith'  ng-model='user.name'/> <br>
+			<input type='text' ng-model='user.name' placeholder='John Smith'  ng-model='user.name'/> <br>
 		</div>
 
 		<div>
 			Email:<br>
-			<input type='email' placeholder='john.smith@gmail.com' ng-model='user.email'> <br>
+			<input type='email' ng-model='user.email' placeholder='john.smith@gmail.com' ng-model='user.email'> <br>
 		</div>
 
 		<div>
-			Scool:<br>
-			<input type='school' placeholder='Williams College' ng-model='user.school'> <br>
+			School:<br>
+			<input type='school' ng-model='user.school' placeholder='Williams College' ng-model='user.school'> <br>
 		</div>
 
 		<div>
 			Class Year:<br>
-			<select name='year' ng-model='user.classYear'>
+			<select ng-model='user.classYear' name='year' ng-model='user.classYear'>
 				<option value='2017'> 2017 </option>
 				<option value='2018'> 2018 </option>
 				<option value='2019'> 2019 </option>
@@ -29,11 +29,11 @@
 
 		<div>
 			Questions:<br>
-			<textarea rows='4' cols='46'></textarea>
+			<textarea ng-model='user.questions' rows='4' cols='46'></textarea>
 		</div>
 
 		<div class='checkboxes'>
-			<label> <input type="checkbox" ng-model='user.newsletter'/> <span>I would like to receive the Kinetic Newsletter.</span></label>
+			<label> <input type='checkbox' ng-model='user.newsletter'/> <span>I would like to receive the Kinetic Newsletter.</span></label>
 		</div>
 
 

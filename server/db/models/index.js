@@ -3,3 +3,5 @@
 // anywhere the User model needs to be used.
 require('./user');
 require('./launch');
+require('./email');
+require('./question');

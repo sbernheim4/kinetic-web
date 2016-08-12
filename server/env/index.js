@@ -1,9 +1,9 @@
-var path = require('path');
-var devConfigPath = path.join(__dirname, './development.js');
-var productionConfigPath = path.join(__dirname, './production.js');
-var stagingConfigPath = path.join(__dirname, './staging.js');
+'use strict';
 
-console.log('\n\n\n\n\n\nENV IS', process.env.NODE_ENV)
+const path = require('path');
+const devConfigPath = path.join(__dirname, './development.js');
+const productionConfigPath = path.join(__dirname, './production.js');
+const stagingConfigPath = path.join(__dirname, './staging.js');
 
 if (process.env.NODE_ENV === 'production') {
     module.exports = require(productionConfigPath);
