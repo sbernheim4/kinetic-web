@@ -3,17 +3,17 @@
 const mongoose = require('mongoose');
 const _ = require('lodash');
 
-const QuestionSchema = new mongoose.Schema({
+const QuestionsSchema = new mongoose.Schema({
 	name: {
 		type: String
 	},
 	email: {
 		type: String
 	},
-	question: {
+	questions: {
 		type: String,
 		required: true
 	}
 });
 
-mongoose.model('Question', QuestionSchema);
+mongoose.model('Questions', QuestionsSchema);

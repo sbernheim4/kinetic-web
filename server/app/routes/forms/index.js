@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const User = mongoose.model('User');
 const EmailSignup = mongoose.model('EmailSignup');
 const Launch = mongoose.model('Launch');
-const Question = mongoose.model('Question');
+const Questions = mongoose.model('Questions');
 const Bluebird = require('bluebird');
 
 module.exports = router;
@@ -13,21 +13,25 @@ module.exports = router;
 router.post('/launch-a-chapter', (req, res, next) => {
 	//creates a user and sends it back if successful
 	//throws a 500 and sends back the error if unsuccessful
+	// const promisedCreations = [];
 	Bluebird.resolve()
 	.then( () => {
-		if(req.body.email) {
-			return EmailSignup(req.body);
+		if(req.body.email && req.body.newsletter) {
+			return EmailSignup.create(req.body);
+			//there should be a post-save hook on the email form that adds them to our mailing list
 		}
 		return;
 	})
 	.then( (e) => {
-		Launch.create(req.body);
+		return Launch.create(req.body);
 	})
 	.then( () => {
-		if(req.body.question){
-			return Question.create(req.body);
+		if(req.body.questions){
+			return Questions.create(req.body);
+			//if there is a question, we should email the admins with that question and the contact info of the user
 		}
 		return;
+	//after all of this, we should send them an email confirmation
 	})
 	.then( () => res.send())
 	.catch(err => res.status(500).send(err));
