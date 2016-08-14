@@ -1,3 +1,7 @@
+/*
+* Schema for people who want to be added to the Kinetic Global newsletter listserv
+*/
+
 'use strict';
 
 const mongoose = require('mongoose');
@@ -19,6 +23,11 @@ EmailSchema.post('save', function (doc, next) {
   if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'staging') {
     return next();
   }
+  /*
+  * sendgrid accepts an array for its info so when adding a new contact, we
+  * create an array of length one initially with just the email. Then we add on
+  * the users first and last name. 
+  */
   const newContact = [
   	{
     	email: this.email,

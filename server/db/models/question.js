@@ -1,3 +1,10 @@
+/*
+* Schema for sending an email if a user enters info into the questions box in
+* the launch a chapter form. An email is sent to the user saying thanks and
+* we'll get back to you soon. Another email is sent to the admin with the
+* person's name, email and questions.
+*/
+
 'use strict';
 
 const mongoose = require('mongoose');
@@ -63,7 +70,7 @@ function formatClientEmail(doc) {
 
 function formatAdminEmail(doc) {
   const from_email = new helper.Email('noreply-questions@kineticglobal.org');
-  const to_email = new helper.Email('daniel@kineticglobal.org'); //swap with actual admin email
+  const to_email = new helper.Email('sam@kineticglobal.org'); //swap with actual admin email
   const subject = 'New question!';
   const clientName = doc.name;
   const clientEmailAddress = doc.email;

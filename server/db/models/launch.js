@@ -1,3 +1,10 @@
+/*
+ * Schema used for people who want to launch a chapter of Kinetic on their campus.
+ * Info comes from the form on the launch state: www.kineticglobal.org/launch-a-chapeter
+ * An email is sent out to both the user saying thank you and to the admin email
+ * with the info of who wanted to join.
+*/
+
 'use strict';
 
 const mongoose = require('mongoose');
@@ -6,10 +13,6 @@ const Bluebird = require('bluebird');
 const helper = require('sendgrid').mail;
 const apiKey = require('../../env/').SENDGRID.API_KEY;
 const Sendgrid = require('sendgrid')(apiKey);
-
-
-// Schema used for people who want to launch a chapter of Kinetic on their campus.
-// Info comes from the form on the launch state: www.kineticglobal.org/launch-a-chapeter
 
 const LaunchSchema = new mongoose.Schema({
   name: {
@@ -46,6 +49,7 @@ LaunchSchema.post('save', function (doc, next) {
   .catch(next);
 });
 
+// function that actually sends the email
 function sendEmail(message) {
   const request = Sendgrid.emptyRequest({
     method: 'POST',
@@ -56,6 +60,7 @@ function sendEmail(message) {
   return Sendgrid.API(request);
 }
 
+// Create the Email to send to the client
 function formatClientEmail(doc) {
   const from_email = new helper.Email('thanks@kineticglobal.org');
   const to_email = new helper.Email(doc.email.toLowerCase());
@@ -72,6 +77,7 @@ function formatClientEmail(doc) {
   return mail;
 }
 
+// Create the Email to send to the Admin
 function formatAdminEmail(doc) {
   const from_email = new helper.Email('noreply-launch-interest@kineticglobal.org');
   const to_email = new helper.Email('daniel@kineticglobal.org');
