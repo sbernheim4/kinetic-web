@@ -48,7 +48,7 @@ function formatClientEmail(doc) {
   const to_email = new helper.Email(doc.email.toLowerCase());
   const subject = 'Thanks for your question!';
   const name = doc.name.split(' ')[0];
-  const content = new helper.Content('text/html', 
+  const content = new helper.Content('text/html',
   	`<p>Hi ${name},</p>
 
   	<p>Thanks for your question about launching a chapter of Kinetic Global. We'll get back to you as soon as possible with an answer.</p>
@@ -65,7 +65,7 @@ function formatAdminEmail(doc) {
   const subject = 'New question!';
   const clientName = doc.name;
   const clientEmailAddress = doc.email;
-  const content = new helper.Content('text/html', 
+  const content = new helper.Content('text/html',
   	`<p>Hi,</p>
 
   	<p>${clientName}, a user who displayed interested in launching a chapter of Kinetic Global, had the following question:</p>

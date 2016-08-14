@@ -15,7 +15,6 @@ const EmailSchema = new mongoose.Schema({
 	}
 });
 
-
 EmailSchema.post('save', function(doc, next) {
 	const newContact = [
 		{
@@ -25,7 +24,7 @@ EmailSchema.post('save', function(doc, next) {
 
 	const firstName = this.name.split(' ')[0];
 	if(firstName) {
-		newContact[0].first_name = firstName; 
+		newContact[0].first_name = firstName;
 	}
 
 	const lastName = this.name.split(' ')[this.name.split(' ').length-1]; //last elem in the array of names
@@ -37,7 +36,7 @@ EmailSchema.post('save', function(doc, next) {
 	.then( res => {
 		next();
 	})
-	.then(next);
+	.catch(next);
 });
 
 function addContact(newContact) {

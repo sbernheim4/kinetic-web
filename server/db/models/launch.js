@@ -43,11 +43,11 @@ LaunchSchema.post('save', function(doc, next) {
   .catch(next);
 });
 
-function sendEmail(mail) {
+function sendEmail(message) {
 	const request = Sendgrid.emptyRequest({
     method: 'POST',
     path: '/v3/mail/send',
-    body: mail.toJSON()
+    body: message.toJSON()
   });
 
   return Sendgrid.API(request);
@@ -58,7 +58,7 @@ function formatClientEmail(doc) {
   const to_email = new helper.Email(doc.email.toLowerCase());
   const subject = 'Thanks for your interest!';
   const name = doc.name.split(' ')[0];
-  const content = new helper.Content('text/html', 
+  const content = new helper.Content('text/html',
   	`<p>Hi ${name},</p>
 
   	<p>Thanks for expressing your interest in launching a chapter of Kinetic Global at ${doc.school}! We'll be reaching out to you shortly to follow up. In the meantime, if you have any questions, email us at admin@kineticglobal.org.</p>
@@ -75,7 +75,7 @@ function formatAdminEmail(doc) {
   const subject = 'New interest in launching a Kinetic Global chapter!';
   const clientName = doc.name;
   const clientEmail = doc.email;
-  const content = new helper.Content('text/html', 
+  const content = new helper.Content('text/html',
   	`<p>Hi,</p>
 
   	<p>${clientName} has just expressed interest in launching a chapter of Kinetic Global at ${doc.school}.</p>
@@ -86,6 +86,6 @@ function formatAdminEmail(doc) {
   	<p>The team at Kinetic Global</p>`);
   const mail = new helper.Mail(from_email, subject, to_email, content);
   return mail;
-} 
+}
 
 mongoose.model('LaunchAChapter', LaunchSchema);
