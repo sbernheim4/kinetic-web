@@ -68,7 +68,7 @@ function formatAdminEmail(doc) {
   const content = new helper.Content('text/html', 
   	`<p>Hi,</p>
 
-  	<p>${clientName}, a user who displayed interested in launching a chapter of Kinetic Global had the following question:</p>
+  	<p>${clientName}, a user who displayed interested in launching a chapter of Kinetic Global, had the following question:</p>
 
   	<p>${doc.questions}</p>
 
