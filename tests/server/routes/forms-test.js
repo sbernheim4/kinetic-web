@@ -35,7 +35,7 @@ describe('Form routes', function () {
 			newsletter: true,
 			questions: "Why does my hair smell like sunflower seeds",
 			school: "Saul University"
-		}
+		};
 
 		beforeEach('Create guest agent', function () {
 			userAgent = supertest.agent(app);
@@ -50,7 +50,7 @@ describe('Form routes', function () {
 				LaunchAChapter.find()
 				.then(function(interests) {
 					expect(interests.length).to.equal(1);
-					expect(interests[0].email).to.equal('test@test.com')
+					expect(interests[0].email).to.equal('test@test.com');
 					done();
 				})
 				.catch(done);
@@ -66,7 +66,7 @@ describe('Form routes', function () {
 				Questions.find()
 				.then(function(questions) {
 					expect(questions.length).to.equal(1);
-					expect(questions[0].questions).to.equal('Why does my hair smell like sunflower seeds')
+					expect(questions[0].questions).to.equal('Why does my hair smell like sunflower seeds');
 					done();
 				})
 				.catch(done);
@@ -80,7 +80,7 @@ describe('Form routes', function () {
 			newsletter: true,
 			questions: "",
 			school: "Saul University"
-		}
+		};
 
 		it('should NOT create an entry in the questiondb', function (done) {
 			userAgent.post('/api/forms/launch-a-chapter')
@@ -106,7 +106,7 @@ describe('Form routes', function () {
 				EmailSignup.find()
 				.then(function(emailList) {
 					expect(emailList.length).to.equal(1);
-					expect(emailList[0].email).to.equal('test@test.com')
+					expect(emailList[0].email).to.equal('test@test.com');
 					done();
 				})
 				.catch(done);
@@ -120,7 +120,7 @@ describe('Form routes', function () {
 			newsletter: false,
 			questions: "Why does my hair smell like sunflower seeds",
 			school: "Saul University"
-		}
+		};
 
 		it('should NOT add entries to emaildb if user does not subscribe to newsletter', function (done) {
 			userAgent.post('/api/forms/launch-a-chapter')
@@ -137,6 +137,6 @@ describe('Form routes', function () {
 			});
 		});
 
-	})
+	});
 
-})
+});
