@@ -22,6 +22,9 @@ const QuestionsSchema = new mongoose.Schema({
 });
 
 QuestionsSchema.post('save', function(doc, next) {
+	if(process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'staging') {
+		return next();
+	}
 	const clientEmail = formatClientEmail(this);
 	const adminEmail = formatAdminEmail(this);
 
