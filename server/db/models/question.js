@@ -47,7 +47,7 @@ function formatClientEmail(doc) {
 	const from_email = new helper.Email('thanks@kineticglobal.org');
   const to_email = new helper.Email(doc.email.toLowerCase());
   const subject = 'Thanks for your question!';
-  const name = doc.name.split(' ');
+  const name = doc.name.split(' ')[0];
   const content = new helper.Content('text/html', 
   	`<p>Hi ${name},</p>
 
