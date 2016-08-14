@@ -13,13 +13,10 @@ module.exports = router;
 router.post('/launch-a-chapter', (req, res, next) => {
 	//creates a user and sends it back if successful
 	//throws a 500 and sends back the error if unsuccessful
-	// const promisedCreations = [];
 	Bluebird.resolve()
 	.then( () => {
 		if(req.body.email && req.body.newsletter) {
 			return EmailSignup.create(req.body);
-			//there should be a post-save hook on the email form that adds them to our mailing list
-			// Use Zapier (MongoDB + Mailchimp integration) or look into mailchimp's own API
 		}
 		return;
 	})

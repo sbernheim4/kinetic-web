@@ -16,6 +16,9 @@ const EmailSchema = new mongoose.Schema({
 });
 
 EmailSchema.post('save', function(doc, next) {
+	if(process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'staging') {
+		return next();
+	}
 	const newContact = [
 		{
 			email: this.email,
