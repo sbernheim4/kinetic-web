@@ -40,6 +40,7 @@
 				width: 184px;
 				position: relative;
 				display: inline-block;
+				z-index: 100;
 
 				&:hover {
 					.dropdown-content {
