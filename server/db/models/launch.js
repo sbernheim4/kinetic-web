@@ -3,16 +3,14 @@
  * Info comes from the form on the launch state: www.kineticglobal.org/launch-a-chapeter
  * An email is sent out to both the user saying thank you and to the admin email
  * with the info of who wanted to join.
-*/
+ */
 
 'use strict';
 
 const mongoose = require('mongoose');
 const _ = require('lodash');
 const Bluebird = require('bluebird');
-const helper = require('sendgrid').mail;
-const apiKey = require('../../env/').SENDGRID.API_KEY;
-const Sendgrid = require('sendgrid')(apiKey);
+const sendEmail = require('../../modules/sendAnEmail.js').formatAndSendEmail;
 
 const LaunchSchema = new mongoose.Schema({
   name: {
@@ -39,53 +37,40 @@ LaunchSchema.post('save', function (doc, next) {
   if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'staging') {
     return next();
   }
-  const clientEmail = formatClientEmail(this);
-  const adminEmail = formatAdminEmail(this);
 
-  Bluebird.all([sendEmail(clientEmail), sendEmail(adminEmail)])
-  .then(() => {
-    next();
-  })
-  .catch(next);
+  Bluebird.all([sendClientEmail(this), sendAdminEmail(this)])
+    .then(() => {
+      next();
+    })
+    .catch(next);
 });
 
-// function that actually sends the email
-function sendEmail(message) {
-  const request = Sendgrid.emptyRequest({
-    method: 'POST',
-    path: '/v3/mail/send',
-    body: message.toJSON()
-  });
-
-  return Sendgrid.API(request);
-}
-
-// Create the Email to send to the client
-function formatClientEmail(doc) {
-  const from_email = new helper.Email('thanks@kineticglobal.org');
-  const to_email = new helper.Email(doc.email.toLowerCase());
-  const subject = 'Thanks for your interest!';
+function sendClientEmail(doc) {
   const name = doc.name.split(' ')[0];
-  const content = new helper.Content('text/html',
-    `<p>Hi ${name},</p>
+
+  const emailInfo = {
+    from: 'thanks@kineticglobal.org',
+    to: doc.email.toLowerCase(),
+    subject: 'Thanks for your interest!',
+    content: `<p>Hi ${name},</p>
 
     <p>Thanks for expressing your interest in launching a chapter of Kinetic Global at ${doc.school}! We'll be reaching out to you shortly to follow up. In the meantime, if you have any questions, email us at admin@kineticglobal.org.</p>
 
     <p>Best,</p>
-    <p>The team at Kinetic Global</p>`);
-  const mail = new helper.Mail(from_email, subject, to_email, content);
-  return mail;
+    <p>The team at Kinetic Global</p>`
+  };
+
+  return sendEmail(emailInfo);
 }
 
-// Create the Email to send to the Admin
-function formatAdminEmail(doc) {
-  const from_email = new helper.Email('noreply-launch-interest@kineticglobal.org');
-  const to_email = new helper.Email('daniel@kineticglobal.org');
-  const subject = 'New interest in launching a Kinetic Global chapter!';
+function sendAdminEmail(doc) {
   const clientName = doc.name;
   const clientEmail = doc.email;
-  const content = new helper.Content('text/html',
-    `<p>Hi,</p>
+  const emailInfo = {
+    from: 'noreply-launch-interest@kineticglobal.org',
+    to: 'daniel@kineticglobal.org',
+    subject: 'New interest in launching a Kinetic Global chapter!',
+    content: `<p>Hi,</p>
 
     <p>${clientName} has just expressed interest in launching a chapter of Kinetic Global at ${doc.school}.</p>
 
@@ -93,9 +78,10 @@ function formatAdminEmail(doc) {
 
     <p>Best,</p>
     <p>The team at Kinetic Global</p>`
-  );
-  const mail = new helper.Mail(from_email, subject, to_email, content);
-  return mail;
+
+  };
+
+  return sendEmail(emailInfo);
 }
 
 mongoose.model('LaunchAChapter', LaunchSchema);

@@ -1,19 +1,16 @@
 /*
-* Schema for sending an email if a user enters info into the questions box in
-* the launch a chapter form. An email is sent to the user saying thanks and
-* we'll get back to you soon. Another email is sent to the admin with the
-* person's name, email and questions.
-*/
+ * Schema for sending an email if a user enters info into the questions box in
+ * the launch a chapter form. An email is sent to the user saying thanks and
+ * we'll get back to you soon. Another email is sent to the admin with the
+ * person's name, email and questions.
+ */
 
 'use strict';
 
 const mongoose = require('mongoose');
 const _ = require('lodash');
 const Bluebird = require('bluebird');
-const helper = require('sendgrid').mail;
-const apiKey = require('../../env/').SENDGRID.API_KEY;
-const Sendgrid = require('sendgrid')(apiKey);
-
+const sendEmail = require('../../modules/sendAnEmail.js').formatAndSendEmail;
 
 const QuestionsSchema = new mongoose.Schema({
   name: {
@@ -32,61 +29,53 @@ QuestionsSchema.post('save', function (doc, next) {
   if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'staging') {
     return next();
   }
-  const clientEmail = formatClientEmail(this);
-  const adminEmail = formatAdminEmail(this);
 
-  Bluebird.all([sendEmail(clientEmail), sendEmail(adminEmail)])
-  .then(() => {
-    next();
-  })
-  .catch(next);
+  Bluebird.all([sendClientEmail(this), sendAdminEmail(this)])
+    .then(() => {
+      next();
+    })
+    .catch(next);
 });
 
-function sendEmail(mail) {
-  const request = Sendgrid.emptyRequest({
-    method: 'POST',
-    path: '/v3/mail/send',
-    body: mail.toJSON()
-  });
-
-  return Sendgrid.API(request);
-}
-
-function formatClientEmail(doc) {
-  const from_email = new helper.Email('thanks@kineticglobal.org');
-  const to_email = new helper.Email(doc.email.toLowerCase());
-  const subject = 'Thanks for your question!';
+function sendClientEmail(doc) {
   const name = doc.name.split(' ')[0];
-  const content = new helper.Content('text/html',
-    `<p>Hi ${name},</p>
+
+  const emailInfo = {
+    from: 'thanks@kineticglobal.org',
+    to: doc.email.toLowerCase(),
+    subject: 'Thanks for your question!',
+    content: `<p>Hi ${name},</p>
 
     <p>Thanks for your question about launching a chapter of Kinetic Global. We'll get back to you as soon as possible with an answer.</p>
 
     <p>Best,</p>
-    <p>The team at Kinetic Global</p>`);
-  const clientEmail = new helper.Mail(from_email, subject, to_email, content);
-  return clientEmail;
+    <p>The team at Kinetic Global</p>`
+  };
+
+  return sendEmail(emailInfo);
 }
 
-function formatAdminEmail(doc) {
-  const from_email = new helper.Email('noreply-questions@kineticglobal.org');
-  const to_email = new helper.Email('sam@kineticglobal.org'); //swap with actual admin email
-  const subject = 'New question!';
+function sendAdminEmail(doc) {
+  const questions = doc.questions;
   const clientName = doc.name;
   const clientEmailAddress = doc.email;
-  const content = new helper.Content('text/html',
-    `<p>Hi,</p>
+
+  const emailInfo = {
+    from: 'noreply-questions@kineticglobal.org',
+    to: 'sam@kineticglobal.org',
+    subject: 'New question!',
+    content: `<p>Hi,</p>
 
     <p>${clientName}, a user who displayed interested in launching a chapter of Kinetic Global, had the following question:</p>
 
-    <p>${doc.questions}</p>
+    <p>${questions}</p>
 
     <p>You can reply to ${clientName} at ${clientEmailAddress}.</p>
 
     <p>Best,</p>
-    <p>The team at Kinetic Global</p>`);
-  const clientEmail = new helper.Mail(from_email, subject, to_email, content);
-  return clientEmail;
+    <p>The team at Kinetic Global</p>`
+  };
+  return sendEmail(emailInfo);
 }
 
 mongoose.model('Questions', QuestionsSchema);
