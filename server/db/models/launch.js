@@ -39,10 +39,10 @@ LaunchSchema.post('save', function (doc, next) {
   }
 
   Bluebird.all([sendClientEmail(this), sendAdminEmail(this)])
-    .then(() => {
-      next();
-    })
-    .catch(next);
+  .then(() => {
+    next();
+  })
+  .catch(next);
 });
 
 function sendClientEmail(doc) {
