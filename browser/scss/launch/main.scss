@@ -51,13 +51,14 @@ section {
 		margin: 0 auto;
 		width: 300px;
 		font-size: 10pt;
-		padding: 10px;
+		padding: 10px 0px;
 
 		label {
 			display: block;
 			color: white;
 
 			input {
+				width: 15px;
 				vertical-align: middle;
 			}
 		}
