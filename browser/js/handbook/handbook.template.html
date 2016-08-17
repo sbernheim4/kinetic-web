@@ -1,0 +1,51 @@
+<section class='handbook'>
+
+	<div class='left-half'>
+		<h1>Get the<br>Kinetic Handbook</h1>
+		<br>
+		<p>Are you interested in who we are and how we work</p>
+		<br>
+		<p>There's no better way than to get a copy of our Kinetic Handbook, the comprehensive guide to all things Kinetic</p>
+		<br>
+		<p>Fill out the form below and we'll email you a copy. Don't worry, we never send spam!</p>
+
+		<form ng-submit='submitGetHandbook(user)'>
+			<div>
+				Name:<br>
+				<input type='text' placeholder='John Doe' ng-model='user.name'><br>
+			</div>
+
+			<div>
+				Email:<br>
+				<input type='text' placeholder='john.doe@gmail.com' ng-model='user.email'><br>
+			</div>
+
+			<div>
+				Profession:<br>
+				<input type='text' placeholder='Student' ng-model='user.profession'><br>
+			</div>
+
+			<p>Why are you interested in a handbook?</p>
+
+			<div>
+				<label> <input type='checkbox' ng-model='user.member'> <span>I'm a Kinetic member</span> </label>
+				<label> <input type='checkbox' ng-model='user.interest'> <span>I'm interested in starting a chapter</span> </label>
+				<label> <input type='checkbox' ng-model='user.curious'> <span>I'm just curious</span> </label>
+				<label> <input type='checkbox' ng-model='user.work-at-university'> <span>I work at a University</span> </label> 
+			</div>
+
+			<div>
+				<input type='checkbox' ng-model=user.newsletter> I would like to receive the Kinetic Newsletter
+			</div>
+
+			<div class='btns'>
+				<button type='button' class=btn> Get the Kinetic Handbook </button>
+			</div>
+
+		</form>
+	</div>
+
+	<div>
+	</div>
+
+</section>
