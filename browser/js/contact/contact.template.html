@@ -7,32 +7,46 @@
 	<p>
 		Please excuse any shortcomings our website may have while it is still under construction.
 	</p>
-	<br>
+
 	<p>
 		Contact us directly with any questions or for more information!
 	</p>
 
 	<form>
 
-		Name
-		<input type="text" name="name">
+		<div>
+			Name <br>
+			<input type="text" name="name" placeholder="John Doe">
+		</div>
 
-		E-mail
-		<input type="text" name="email">
+		<div>
+			E-mail <br>
+			<input type="text" name="email" placeholder="johndoe@gmail.com">
+		</div>
 
-		Select your role
-		<select>
-			<option value="student">Student</option>
-			<option value="educator">Educator</option>
-			<option value="parent">Parent</option>
-			<option value="donor">Donor</option>
-			<option value="other">Other</option>
-		</select>
+		<div>
+			Select your role <br>
+			<select>
+				<option value="student">Student</option>
+				<option value="educator">Educator</option>
+				<option value="parent">Parent</option>
+				<option value="donor">Donor</option>
+				<option value="other">Other</option>
+			</select>
+		</div>
 
-		Message
-		<input type="text" name="message">
+		<div>
+			Message <br>
+			<input type="text" name="message">
+		</div>
 
-		<input type="submit" value="Submit">
+		<div class='checkboxes'>
+			<label> <input type='checkbox'> <span>I would like to receive the Kinetic Newsletter.</span></label>
+		</div>
+
+		<div class='btns'>
+			<input type="submit" class='btn' value="Submit">
+		</div>
 
 	</form>
 
