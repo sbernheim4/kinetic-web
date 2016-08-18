@@ -69,7 +69,7 @@ a {
 
 .home {
 	padding: 0px;
-	
+
 	.main {
 		padding-top: 0px;
 		min-height: 400px;
@@ -272,6 +272,17 @@ a {
 		background-color: rgb(27, 121, 167);
 	}
 
+	.what-is-row {
+		padding-top: 20px;
+		text-align: center;
+		display: flex;
+		flex-direction: row;
+
+		@media all and (max-width: 767px) {
+			flex-direction: column
+		}
+	}
+
 	.tag-line-what-is {
 		margin: 0 auto;
 		padding-left: 20px;
@@ -290,10 +301,15 @@ a {
 		padding-right: 30px;
 	}
 
+	.research > .underline {
+		margin: 10px auto;
+		width: 63px;
+		border-bottom: 1px solid red;
+	}
+	
 	.circle {
 		border: 1px solid black;
 	}
-
 
 	.research > .underline {
 		margin: 10px auto;
