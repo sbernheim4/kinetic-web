@@ -490,16 +490,16 @@ a {
 	.tag-line-get-involved {
 		margin: 0 auto;
 		max-width: 570px;
-		padding-left: 2rem;
-		padding-right: 2rem;
+		padding-left: 40px;
+		padding-right: 40px;
 		text-align: center;
 		font-weight: bolder;
 	}
 
 	.square-container {
-		margin-top: 2rem;
-		margin-left: 2rem;
-		margin-right: 2rem;
+		margin-top: 40px;
+		margin-left: 40px;
+		margin-right: 40px;
 		text-align: center;
 		display: flex;
 		flex-wrap: wrap;
@@ -507,7 +507,7 @@ a {
 	}
 
 	.square-container > div {
-		margin-top: 2rem;
+		margin-top: 40px;
 		width: 250px;
 		display: flex;
 		flex-direction: column;
@@ -526,13 +526,13 @@ a {
 	}
 
 	.description {
-		margin-top: 1rem;
-		margin-left: 1rem;
-		margin-right: 1rem;
+		margin-top: 20px;
+		margin-left: 20px;
+		margin-right: 20px;
 	}
 
 	.square {
-		margin-bottom: 1rem;
+		margin-bottom: 20px;
 		width: 150px;
 		height: 150px;
 		border: 2px solid white;
