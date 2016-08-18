@@ -1,25 +1,49 @@
 <section class='launch'>
+	<title>Create Kinetic Chapter on your Campus</title>
+	<meta name="description" content="Launch a Kinetic Chapter on your campus and start impacting change in creative ways.">
 	<h1 class='header'>Bring Kinetic</br>to Your Campus!</h1>
 
-	<form>
-		Name:<br>
-		<input type='text' ng-model='user.name'/> <br>
-		Email:<br>
-		<input type='email' ng-model='user.email'> <br>
-		Scool:<br>
-		<input type='school' ng-model='user.school'> <br>
+	<form ng-submit='submitForm(user)'>
+		<div>
+			Name:<br>
+			<input type='text' ng-model='user.name' placeholder='John Smith'  ng-model='user.name'/> <br>
+		</div>
 
-		Class Year:<br>
-		<select name='year'>
-			<option value='2017'> 2017 </option>
-			<option value='2018'> 2018 </option>
-			<option value='2019'> 2019 </option>
-			<option value='2020'> 2020 </option>
-		</select><br>
+		<div>
+			Email:<br>
+			<input type='email' ng-model='user.email' placeholder='john.smith@gmail.com' ng-model='user.email'> <br>
+		</div>
 
-		Questions:<br>
-		<textarea>
-		</textarea>
+		<div>
+			School:<br>
+			<input type='school' ng-model='user.school' placeholder='Williams College' ng-model='user.school'> <br>
+		</div>
+
+		<div>
+			Class Year:<br>
+			<select ng-model='user.classYear' name='year' ng-model='user.classYear'>
+				<option value='2017'> 2017 </option>
+				<option value='2018'> 2018 </option>
+				<option value='2019'> 2019 </option>
+				<option value='2020'> 2020 </option>
+			</select><br>
+		</div>
+
+		<div>
+			Questions:<br>
+			<textarea ng-model='user.questions' rows='4' cols='46'></textarea>
+		</div>
+
+		<div class='checkboxes'>
+			<label> <input type='checkbox' ng-model='user.newsletter'/> <span>I would like to receive the Kinetic Newsletter.</span></label>
+		</div>
+
+
+		<p>Thank you for your interest. Someone will reach out shortly.</p>
+
+		<div class='btns'>
+			<input type='submit' class=btn value='Submit'>
+		</div>
 	</form>
 
 </section>

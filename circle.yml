@@ -5,5 +5,6 @@ machine:
 test:
   override:
     - nvm install stable && nvm alias default stable
+    - export NODE_ENV=development
     - mocha tests/server/models
     - mocha tests/server/routes
