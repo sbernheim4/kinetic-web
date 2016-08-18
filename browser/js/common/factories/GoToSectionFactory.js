@@ -20,9 +20,6 @@ app.factory('GoToSectionFactory', function($state) {
 				}
 			})
 			.catch( err => {
-				if(typeof trackJs !== 'undefined') {
-					trackJs.track(err);
-				}
 				console.error(err);
 			});
 		}
