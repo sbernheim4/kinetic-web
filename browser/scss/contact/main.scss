@@ -1,79 +1,99 @@
+/*width and adjusted width for the form, use adjusted for input and textarea*/
+$form-width: 300px;
+$adjusted-width: 294px;
+
 .contact {
 
 	background-color: rgb(27, 121, 167);
 
-	.header {
-		padding: 0px 15px 15px 15px;
-		font-size: 35pt;
-		text-transform: uppercase;
-		text-align: center;
-		color: white;
-	}
-
-	p {
-		padding: 20px;
-		text-align: center;
-		color: white;
-
-	}
-
-	form {
+	.container {
 		margin: 0 auto;
-		width: 300px;
-		color: white;
+		max-width: 600px;
 
-		.btns {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+		.header {
+			padding: 0px 15px 15px 15px;
+			font-size: 35pt;
+			text-transform: uppercase;
+			text-align: center;
+			color: white;
+		}
 
-			.btn {
-				width: 300px;
-				height: 50px;
-				margin: 15px 0px 30px 0px;
-				background-color: rgb(253, 178, 59);
-				border-radius: 5px;
-				border: 1px solid white;
-				text-align: center;
-				color: white;
-				cursor: pointer;
-				font-size: 12pt;
-				text-decoration: none;
+		p {
+			padding: 20px;
+			text-align: center;
+			color: white;
 
-				&:hover {
-					background-color: darken(rgb(253, 178, 59), 10%)
+		}
+
+		form {
+			margin: 0 auto;
+			width: $form-width;
+			color: white;
+
+			div {
+				padding-bottom: 10px;
+
+				input {
+					width: $adjusted-width;
+					height: 30px;
+					border-radius: 5px;
+				}
+
+				input[placeholder] {
+					font-size: 14pt;
+				}
+
+				select {
+					width: $form-width;
+					border-radius: 5px;
+				}
+
+				textarea {
+					width: $adjusted-width;
+					max-width: $adjusted-width;
+					max-height: 200px;
+					border-radius: 5px;
+				}
+
+				label {
+
+					input {
+						width: 15px;
+						vertical-align: middle;
+					}
+
+					span {
+						font-size: 10pt;
+						vertical-align: middle;
+					}
+				}
+
+			}
+
+			.btns {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				.btn {
+					width: $form-width;
+					height: 50px;
+					margin: 15px 0px 30px 0px;
+					background-color: rgb(253, 178, 59);
+					border-radius: 5px;
+					border: 1px solid white;
+					text-align: center;
+					color: white;
+					cursor: pointer;
+					font-size: 12pt;
+					text-decoration: none;
+
+					&:hover {
+						background-color: darken(rgb(253, 178, 59), 10%)
+					}
 				}
 			}
-		}
-
-
-		div {
-			padding-bottom: 10px;
-
-			input {
-				width: 294px;;
-				height: 30px;
-				border-radius: 5px;
-			}
-
-			input[placeholder] {
-				font-size: 14pt;
-			}
-
-			select {
-				width: 300px;
-				border-radius: 5px;
-			}
-
-			textarea {
-				width: 294px;
-				max-width: 294px;
-				max-height: 194px;
-				border-radius: 5px;
-			}
 
 		}
-
 	}
-
 }
