@@ -278,6 +278,12 @@ a {
 .what-is-row {
 	padding-top: 20px;
 	text-align: center;
+	display: flex;
+	flex-direction: row;
+
+	@media all and (max-width: 767px) {
+		flex-direction: column
+	}
 }
 
 .what-is-row > div {
@@ -289,6 +295,7 @@ a {
 .circle {
 	border: 1px solid black;
 }
+
 
 
 .research > .underline {
