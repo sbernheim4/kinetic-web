@@ -6,22 +6,22 @@
 	<form ng-submit='submitForm(user)'>
 		<div>
 			Name:<br>
-			<input type='text' placeholder='John Smith'  ng-model='user.name' required> <br>
+			<input type='text' placeholder='John Smith'  ng-model='user.name' ng-required> <br>
 		</div>
 
 		<div>
 			Email:<br>
-			<input type='email' placeholder='john.smith@college.edu' ng-model='user.email' required> <br>
+			<input type='email' placeholder='john.smith@college.edu' ng-model='user.email' ng-required> <br>
 		</div>
 
 		<div>
 			School:<br>
-			<input type='school' required placeholder='Williams College' ng-model='user.school' required> <br>
+			<input type='school' ng-required placeholder='Williams College' ng-model='user.school' ng-required> <br>
 		</div>
 
 		<div>
 			Class Year:<br>
-			<select name='year' ng-model='user.classYear' required>
+			<select name='year' ng-model='user.classYear' ng-required>
 				<option value='2017'> 2017 </option>
 				<option value='2018'> 2018 </option>
 				<option value='2019'> 2019 </option>
