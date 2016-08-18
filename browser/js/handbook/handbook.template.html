@@ -1,6 +1,7 @@
 <section class='handbook'>
 
 	<div class='left-half'>
+
 		<h1>Get the<br>Kinetic Handbook</h1>
 		<br>
 		<p>Are you interested in who we are and how we work</p>
@@ -8,6 +9,7 @@
 		<p>There's no better way than to get a copy of our Kinetic Handbook, the comprehensive guide to all things Kinetic</p>
 		<br>
 		<p>Fill out the form below and we'll email you a copy. Don't worry, we never send spam!</p>
+		<br>
 
 		<form ng-submit='submitGetHandbook(user)'>
 			<div>
@@ -27,15 +29,17 @@
 
 			<p>Why are you interested in a handbook?</p>
 
-			<div>
+			<br>
+
+			<div class='checkboxes columns'>
 				<label> <input type='checkbox' ng-model='user.member'> <span>I'm a Kinetic member</span> </label>
 				<label> <input type='checkbox' ng-model='user.interest'> <span>I'm interested in starting a chapter</span> </label>
 				<label> <input type='checkbox' ng-model='user.curious'> <span>I'm just curious</span> </label>
-				<label> <input type='checkbox' ng-model='user.work-at-university'> <span>I work at a University</span> </label> 
+				<label> <input type='checkbox' ng-model='user.work-at-university'> <span>I work at a University</span> </label>
 			</div>
 
-			<div>
-				<input type='checkbox' ng-model=user.newsletter> I would like to receive the Kinetic Newsletter
+			<div class='checkboxes'>
+				<label> <input type='checkbox' ng-model=user.newsletter> <span>I would like to receive the Kinetic Newsletter</span> </label>
 			</div>
 
 			<div class='btns'>

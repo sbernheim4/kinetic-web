@@ -1,3 +1,6 @@
+// Width for the form and text inputs
+$width: 500px;
+
 .handbook {
 
 	padding: 0px;
@@ -6,12 +9,53 @@
 
 		background-color: rgb(17,121,167);
 		color: white;
-		text-align: center;
 
 		h1 {
 			padding-top: 15px;
 			font-size: 40pt;
 			text-transform: uppercase;
+			text-align: center;
+		}
+
+		p {
+			text-align: center;
+		}
+
+		.left {
+			text-align: left;
+		}
+
+
+		form {
+			margin: 0 auto;
+			max-width: $width;
+
+			div {
+				padding-bottom: 15px;
+
+				input{
+					width: $width;
+					height: 20px;
+					border-radius: 5px;
+				}
+			}
+
+			.columns {
+				columns: 2;
+			}
+
+			.checkboxes {
+
+				label {
+					display: block;
+					float: left;
+
+					input {
+						width: 15px;
+						vertical-align: middle;
+					}
+				}
+			}
 		}
 	}
 }
