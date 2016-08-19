@@ -10,13 +10,18 @@ $adjusted-width: 64%;
 		color: white;
 
 		h1 {
-			padding-top: 15px;
+			padding: 15px;
 			font-size: 40pt;
 			text-transform: uppercase;
 			text-align: center;
+
+			@media all and (max-width: 320px) {
+				font-size: 35pt;
+			}
 		}
 
 		p {
+			padding: 15px;
 			text-align: center;
 		}
 
@@ -27,7 +32,7 @@ $adjusted-width: 64%;
 		form {
 			margin: 0 auto;
 			width: $width;
-
+			max-width: 700px;
 
 			div {
 				padding-bottom: 15px;
@@ -50,7 +55,6 @@ $adjusted-width: 64%;
 
 				label {
 					width: 315px;
-					min-width: 50%;
 
 					input {
 						width: 15px;
