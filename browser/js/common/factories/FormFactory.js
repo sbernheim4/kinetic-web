@@ -8,5 +8,4 @@ app.factory('FormFactory', function($http) {
 			.then(res => res.data);
 		}
 	};
-
 });
