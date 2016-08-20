@@ -18,17 +18,17 @@
 
 			<div>
 				Name <br>
-				<input type='text' ng-model='user.name' name='name' placeholder='John Doe'>
+				<input type='text' ng-required ng-model='user.name' name='name' placeholder='John Doe'>
 			</div>
 
 			<div>
 				E-mail <br>
-				<input type='email' ng-model='user.email' name='email' placeholder='john.doe@gmail.com'>
+				<input type='email' ng-required ng-model='user.email' name='email' placeholder='john.doe@gmail.com'>
 			</div>
 
 			<div>
 				Select your role <br>
-				<select ng-model='user.role'>
+				<select ng-model='user.role' ng-required>
 					<option value='student'>Student</option>
 					<option value='educator'>Educator</option>
 					<option value='parent'>Parent</option>
@@ -39,7 +39,7 @@
 
 			<div>
 				Message <br>
-				<textarea rows='4' ng-model='user.message'> </textarea>
+				<textarea rows='4' ng-required ng-model='user.message'> </textarea>
 			</div>
 
 			<div class='checkboxes'>
