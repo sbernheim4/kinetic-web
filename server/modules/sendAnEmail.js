@@ -19,7 +19,12 @@ module.exports = {
     const content = new helper.Content('text/html', emailInfo.content);
     const subject = emailInfo.subject;
 
-    const email = new helper.Mail(fromEmail, subject, toEmail, content);
+    var email = new helper.Mail(fromEmail, subject, toEmail, content);
+
+    if (emailInfo.alsoTo !== undefined ) {
+      email.personalizations[0].addTo(emailInfo.alsoTo);
+    }
+
     return sendEmail(email);
   }
 };
