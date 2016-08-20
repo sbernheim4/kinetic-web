@@ -38,7 +38,6 @@ router.post('/launch-a-chapter', (req, res, next) => {
 
 // post request for get-the-handbook form
 router.post('/get-the-handbook', (req, res, next) => {
-  console.log('in forms>index.js');
   Bluebird.resolve()
   .then(() => {
     if (req.body.email && req.body.newsletter) {
