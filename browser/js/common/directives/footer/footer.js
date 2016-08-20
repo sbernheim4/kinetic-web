@@ -1,4 +1,4 @@
-app.directive('footer', function ($rootScope, AuthService, AUTH_EVENTS, $state) {
+app.directive('footer', function ($rootScope, AuthService, AUTH_EVENTS, $state, GoToSectionFactory) {
 
     return {
         restrict: 'E',
@@ -6,7 +6,8 @@ app.directive('footer', function ($rootScope, AuthService, AUTH_EVENTS, $state) 
         templateUrl: 'js/common/directives/footer/footer.html',
 
         link: function (scope) {
-
+            scope.goToSection = GoToSectionFactory.goToSection;
+            
             scope.user = null;
 
             scope.isLoggedIn = function () {
