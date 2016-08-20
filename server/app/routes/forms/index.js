@@ -6,6 +6,7 @@ const User = mongoose.model('User');
 const EmailSignup = mongoose.model('EmailSignup');
 const LaunchAChapter = mongoose.model('LaunchAChapter');
 const Questions = mongoose.model('Questions');
+const GetTheHandbook = mongoose.model('GetTheHandbook');
 const Bluebird = require('bluebird');
 
 module.exports = router;
@@ -42,5 +43,8 @@ router.post('/get-the-handbook', (req, res, next) => {
       return EmailSignup.create(req.body);
     }
     return;
+  })
+  .then(() => {
+    return GetTheHandbook.create(req.body);
   })
 });

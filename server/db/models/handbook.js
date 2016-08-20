@@ -8,6 +8,7 @@
 const mongoose = require('mongoose');
 const _ = require('lodash');
 const Bluebird = require('bluebird');
+const sendEmail = require('../../modules/sendAnEmail.js').formatAndSendEmail;
 
 const HandbookSchema = new mongoose.Schema({
   name: {
@@ -36,12 +37,59 @@ const HandbookSchema = new mongoose.Schema({
   }
 });
 
-LaunchSchema.post('save', function (doc, next) {
+HandbookSchema.post('save', function (doc, next) {
 	// Post save hook for mongoDB
-
   if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'staging') {
     return next();
   }
+
+  Bluebird.all([sendClientEmail(this), sendAdminEmail(this)])
+  .then(() => {
+    next();
+  })
+  .catch(next);
 });
+
+function sendClientEmail(doc) {
+  const name = doc.name.split(' ')[0];
+
+  const emailInfo = {
+    from: 'thanks@kineticglobal.org',
+    to: doc.email.toLowerCase(),
+    subject: 'Your copy of the Kinetic Handbook!',
+    content: `<p>Hi ${name},</p>
+
+    <p>Thank you for expressing interest in obtaining a copy of the Kinetic Handbook. Please click the link below to download your copy.</p>
+
+    <p>INSERT LINK HERE</p>
+
+    <p>Best,</p>
+    <p>The team at Kinetic Global</p>`
+  };
+
+  return sendEmail(emailInfo);
+}
+
+function sendAdminEmail(doc) {
+
+  const clientName = doc.name;
+  const clientEmail = doc.email;
+
+  const emailInfo = {
+    from: 'noreply@kineticglobal.org',
+    to: 'sam@kineticglobal.org',
+    subject: 'New request for the Kinetic Handbook',
+    content: `<p> Hi, </p>
+      <p>${clientName} has just requested a copy of the Kinetic Handbook.</p>
+
+      <p>You can reach out to them at ${clientEmail}</p>
+
+      <p>Best, </p>
+      </p>The team at Kinetic Global</p>`
+
+  };
+
+  return sendEmail(emailInfo)
+}
 
 mongoose.model('GetTheHandbook', HandbookSchema);
