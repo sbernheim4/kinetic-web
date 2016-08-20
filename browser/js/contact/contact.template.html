@@ -7,28 +7,28 @@
 	</h1>
 
 	<p>
-		Please excuse any shortcomings our website may have while it is still under construction.
+		Please excuse any shortcomings with our website, as it's still under construction.
 	</p>
 
 	<p>
 		Contact us directly with any questions or for more information!
 	</p>
 
-	<form>
+	<form ng-submit='submitForm(user)'>
 
 		<div>
 			Name <br>
-			<input type='text' name='name' placeholder=' John Doe'>
+			<input type='text' ng-model='user.name' name='name' placeholder='John Doe'>
 		</div>
 
 		<div>
 			E-mail <br>
-			<input type='text' name='email' placeholder=' john.doe@gmail.com'>
+			<input type='email' ng-model='user.email' name='email' placeholder='john.doe@gmail.com'>
 		</div>
 
 		<div>
 			Select your role <br>
-			<select>
+			<select ng-model='user.role'>
 				<option value='student'>Student</option>
 				<option value='educator'>Educator</option>
 				<option value='parent'>Parent</option>
@@ -39,11 +39,11 @@
 
 		<div>
 			Message <br>
-			<textarea rows='4'> </textarea>
+			<textarea rows='4' ng-model='user.message'> </textarea>
 		</div>
 
 		<div class='checkboxes'>
-			<label> <input type='checkbox'> <span>I would like to receive the Kinetic Newsletter.</span></label>
+			<label> <input type='checkbox' ng-model='user.newsletter'> <span>I would like to receive the Kinetic Newsletter.</span></label>
 		</div>
 
 		<div class='btns'>
