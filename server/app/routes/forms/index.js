@@ -48,4 +48,6 @@ router.post('/get-the-handbook', (req, res, next) => {
   .then(() => {
     return GetTheHandbook.create(req.body);
   })
+  .then(() => res.send())
+  .catch(err => res.status(500).send(err))
 });
