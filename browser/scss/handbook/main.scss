@@ -1,6 +1,5 @@
 // Width for the form and text inputs
-$width: 65%;
-$adjusted-width: 64%;
+$width: 80%;
 
 .handbook {
 	padding: 0px;
@@ -38,8 +37,10 @@ $adjusted-width: 64%;
 				padding-bottom: 15px;
 
 				input{
-					width: 100%;
-					height: 20px;
+					width: 93%;
+					height: 25px;
+					padding: 5px;
+					font-size: 17pt;
 					border-radius: 5px;
 				}
 			}
@@ -54,10 +55,15 @@ $adjusted-width: 64%;
 			.checkboxes {
 
 				label {
-					width: 315px;
+					width: 320px;
 
 					input {
 						width: 15px;
+						vertical-align: middle;
+					}
+
+					span {
+						padding-left: 5px;
 						vertical-align: middle;
 					}
 				}
@@ -69,8 +75,10 @@ $adjusted-width: 64%;
 				justify-content: center;
 
 				.btn {
-					width: 300px;
-					height: 40px;
+					width: 100%;
+					max-width: 500px;
+					padding: 12px 10px;
+					font-size: 20pt;
 				}
 			}
 		}
