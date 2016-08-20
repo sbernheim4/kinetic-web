@@ -1,5 +1,5 @@
 'use strict'
 
-app.controller('CampusesCtrl', function ($scope) {
-
+app.controller('CampusesCtrl', function ($scope, GoToSectionFactory) {
+	$scope.goToSection = GoToSectionFactory.goToSection;
 });
