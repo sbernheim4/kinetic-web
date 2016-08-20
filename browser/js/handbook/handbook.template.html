@@ -51,12 +51,14 @@
 			</div>
 
 			<div class='checkboxes'>
-				<label> <input type='checkbox' ng-model=user.newsletter> <span>I would like to receive the Kinetic Newsletter</span> </label>
+				<label> <input type='checkbox' ng-model='user.newsletter'> <span>I would like to receive the Kinetic Newsletter</span> </label>
 			</div>
 
 			<div class='btns'>
-				<button type='button' class=btn> Get the Kinetic Handbook </button>
+				<button type='button' class=btn ng-click='submitGetHandbook(user)' ng-show=show> Get the Kinetic Handbook </button>
+				<h3 ng-hide=show>Thank you for your interest! Please check your email for a copy of the Handbook</h3>
 			</div>
+
 
 		</form>
 	</div>
