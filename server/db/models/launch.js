@@ -68,7 +68,7 @@ function sendAdminEmail(doc) {
   const clientEmail = doc.email;
   const emailInfo = {
     from: 'noreply-launch-interest@kineticglobal.org',
-    to: 'daniel@kineticglobal.org',
+    to: 'sam@kineticglobal.org',
     subject: 'New interest in launching a Kinetic Global chapter!',
     content: `<p>Hi,</p>
 
