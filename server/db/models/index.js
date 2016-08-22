@@ -5,3 +5,4 @@ require('./user');
 require('./launch');
 require('./email');
 require('./question');
+require('./nominate')
