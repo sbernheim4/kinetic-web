@@ -12,7 +12,6 @@ section.nominate {
 		}
 		display: flex;
 		flex-direction: column;
-		// justify-content: center;
 		&.img-half {
 			@media all and (max-width: 767px) {
 				order: 2;
