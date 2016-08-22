@@ -17,7 +17,7 @@ app.controller('LaunchCtrl', function($scope, FormFactory) {
 			console.log(data)
 		})
 		.catch( e => {
-			console.log(e);
+			console.error(e);
 		});
 
 	}
