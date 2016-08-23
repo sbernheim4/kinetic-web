@@ -2,10 +2,10 @@
 
 app.config(function ($stateProvider) {
 
-    $stateProvider.state('nominate', {
-        url: '/nominate-an-expert',
-        templateUrl: 'js/nominate/nominate.template.html',
-        controller: 'NominateCtrl'
-    });
+  $stateProvider.state('nominate', {
+    url: '/nominate-an-expert',
+    templateUrl: 'js/nominate/nominate.template.html',
+    controller: 'NominateCtrl'
+  });
 
 });

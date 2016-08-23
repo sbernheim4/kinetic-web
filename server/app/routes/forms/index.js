@@ -53,15 +53,15 @@ router.post('/nominate-expert', (req, res, next) => {
       nominatorEmail: req.body.email,
       nomineeExpertise: req.body.nomineeExpertise,
       relationship: req.body.relationship
-    }
+    };
 
     return Nominate.create(nominationData);
   })
   .then(() => {
-    res.send()
+    res.send();
   })
   .catch(err => {
-    console.error(err)
-    res.status(500).send(err)
+    console.error(err);
+    res.status(500).send(err);
   });
 });
