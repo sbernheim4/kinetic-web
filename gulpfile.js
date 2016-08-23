@@ -109,10 +109,12 @@ gulp.task('buildCSSProduction', function () {
 
 gulp.task('buildJSProduction', function () {
     return gulp.src(['./browser/js/app.js', './browser/js/**/*.js'])
+        .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
         .pipe(babel())
         .pipe(ngAnnotate())
         .pipe(uglify())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('./public'));
 });
 
