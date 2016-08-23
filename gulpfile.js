@@ -114,7 +114,7 @@ gulp.task('buildJSProduction', function () {
         .pipe(babel())
         .pipe(ngAnnotate())
         .pipe(uglify())
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./public'));
 });
 
