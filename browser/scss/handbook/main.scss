@@ -98,6 +98,10 @@ $width: 80%;
 		@media all and (max-width: 999px) {
 			width: 0px;
 		}
+
+		img {
+			width: 50vw;
+		}
 	}
 
 }
