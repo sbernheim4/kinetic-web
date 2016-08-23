@@ -5,8 +5,14 @@ $width: 80%;
 	padding: 0px;
 
 	.left-half {
+		display: block;
+		width: 50vw;
 		background-color: rgb(17,121,167);
 		color: white;
+		float: left;
+		@media all and (max-width: 999px){
+			width: 100vw;
+		}
 
 		h1 {
 			padding: 15px;
@@ -84,4 +90,14 @@ $width: 80%;
 			}
 		}
 	}
+
+	.right-half {
+		display: block;
+		width: 50vw;
+		float: right;
+		@media all and (max-width: 999px) {
+			width: 0px;
+		}
+	}
+
 }
