@@ -38,10 +38,6 @@ const HandbookSchema = new mongoose.Schema({
 });
 
 HandbookSchema.post('save', function (doc, next) {
-	// Post save hook for mongoDB
-  // if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'staging') {
-  //   return next();
-  // }
 
   Bluebird.all([sendClientEmail(this), sendAdminEmail(this)])
   .then(() => {
@@ -77,8 +73,7 @@ function sendAdminEmail(doc) {
 
   const emailInfo = {
     from: 'noreply@kineticglobal.org',
-    to: 'sam@kineticglobal.org',
-    alsoTo: 'bernheim@brandeis.edu',
+    to: ['sam@kineticglobal.org', 'bernheim@brandeis.edu'],
     subject: 'New request for the Kinetic Handbook',
     content: `<p> Hi, </p>
       <p>${clientName} has just requested a copy of the Kinetic Handbook.</p>

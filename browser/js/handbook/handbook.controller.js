@@ -16,7 +16,7 @@ app.controller('HandbookCtrl', function ($scope, FormFactory) {
 			$scope.show = false;
 		})
 		.catch (e => {
-			console.log(e);
+			console.error(e);
 		});
 
 	}
