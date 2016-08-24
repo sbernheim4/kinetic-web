@@ -14,10 +14,9 @@ app.controller('HandbookCtrl', function ($scope, FormFactory) {
 		FormFactory.submitGetHandbookForm(user)
 		.then ( () => {
 			$scope.show = false;
-			console.log('WEEEE s')
 		})
 		.catch (e => {
-			console.log(e);
+			console.error(e);
 		});
 
 	}
