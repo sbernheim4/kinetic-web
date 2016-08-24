@@ -38,10 +38,6 @@ const HandbookSchema = new mongoose.Schema({
 });
 
 HandbookSchema.post('save', function (doc, next) {
-	// Post save hook for mongoDB
-  // if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'staging') {
-  //   return next();
-  // }
 
   Bluebird.all([sendClientEmail(this), sendAdminEmail(this)])
   .then(() => {
