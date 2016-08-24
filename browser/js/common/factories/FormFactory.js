@@ -8,7 +8,6 @@ app.factory('FormFactory', function($http) {
 			.then(res => res.data);
 		},
 		submitGetHandbookForm: (user) => {
-			console.log('in FormFactory');
 			return $http.post('/api/forms/get-the-handbook', user)
 			.then(res => res.data);
 		}
