@@ -38,11 +38,9 @@
 			<label> <input type='checkbox' ng-model='user.newsletter'/> <span>I would like to receive the Kinetic Newsletter.</span></label>
 		</div>
 
-
-		<p>Thank you for your interest. Someone will reach out shortly.</p>
-
 		<div class='btns'>
-			<input type='submit' class=btn value='Submit'>
+			<button type='submit' value='submit' class='btn' ng-show='show'>Submit</button>
+			<h3 ng-show='!show'>Thank you for your interest. Someone will reach out shortly.</h3>
 		</div>
 	</form>
 
