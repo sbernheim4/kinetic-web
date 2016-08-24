@@ -73,7 +73,7 @@ function sendAdminEmail(doc) {
 
   const emailInfo = {
     from: 'noreply@kineticglobal.org',
-    to: ['sam@kineticglobal.org', 'bernheim@brandeis.edu'],
+    to: ['jessica.bernheim@kineticglobal.org', 'bryan.jones@kineticglobal.org'],
     subject: 'New request for the Kinetic Handbook',
     content: `<p> Hi, </p>
       <p>${clientName} has just requested a copy of the Kinetic Handbook.</p>

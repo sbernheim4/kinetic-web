@@ -34,7 +34,7 @@ module.exports = {
       personalization.addTo(new helper.Email(emailInfo.to));
     }
     mail.addPersonalization(personalization);
-    
+
     return sendEmail(mail);
   }
 };
