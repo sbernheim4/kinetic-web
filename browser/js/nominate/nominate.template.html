@@ -1,0 +1,59 @@
+<section class='nominate'>
+  <div class='col img-half'>
+    <h1>Key Causes<br>&amp;<br>Expert Areas</h1>
+    <img ng-src='https://s3.amazonaws.com/kineticglobal-prod/causes-and-expert-areas.png'> 
+  </div>
+
+  <div class='col form-half'>
+    <div ng-hide='formSubmitted'>
+      <h1>Nominate An Expert To Kinetic</h1>
+      <p>Do you know someone who is a leader working on one of our key causes?</p>
+      <p>Or someone who would be a great expert advisor in another field?</p>
+      <p>Nominate them (or yourself!) to be join our Expert Network.</p>
+
+      <form ng-submit='submitForm(nomination)'>
+        <span>
+          <p>Name</p>
+          <input type='text' ng-model='nomination.name' placeholder='Jane Doe'>
+        </span>
+        <br>
+        <span>
+          <p>E-mail*</p>
+          <input type='email' ng-model='nomination.email' placeholder='jane.doe@example.com'>
+        </span>
+        <br>
+        <span>
+          <p>Name of Expert Nomination</p>
+          <input type='text' ng-model='nomination.nomineeName' placeholder='Jane Doe'>
+        </span>
+        <br>
+        <span>
+          <p>Nomination’s Area of Expertise</p>
+          <select ng-init='nomination.nomineeExpertise="Food Insecurity"' ng-model='nomination.nomineeExpertise'>
+            <option value='Food Insecurity'>Food Insecurity</option>
+            <option value='Homelessness'>Homelessness</option>
+            <option value='Environment'>Environment</option>
+            <option value='Other'>Other</option>
+          </select>
+        </span>
+        <br><br>
+        <span>
+          <input type='radio' value='knowsNominee' ng-model='nomination.relationship'> I know the expert personally and would love to connect (please do not check if you are the expert).
+        </span>
+        <span>
+          <input type='radio' value='doesNotKnowNominee' ng-model='nomination.relationship'> I do not know the nominee.
+        </span>
+        <span>
+          <input type='radio' value='isNominee' ng-model='nomination.relationship'> I am the expert. Sign me up!
+        </span>
+        <span>
+          <input type='checkbox' ng-model='nomination.newsletter'> I would like to receive the Kinetic Newsletter.
+        </span>
+        <button type='submit' value='submit' class='btn'>Submit</button>
+      </form>
+    </div>
+    <h3 ng-show='formSubmitted'>Thank you for your interest. Someone will reach out shortly.</h3>
+  </div>
+
+
+</section>
