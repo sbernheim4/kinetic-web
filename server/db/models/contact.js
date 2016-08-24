@@ -42,7 +42,7 @@ function sendClientEmail(doc) {
     subject: 'We\'ve received your request',
     content: `<p>${ doc.name ? 'Hi '+ name : 'Hi'},</p>
 
-    <p>We've received your request for contact and have passed it on to one of our team members. We'll be reaching out to you shortly to follow up.</p>
+    <p>We have received your request for contact and have passed it on to one of our team members. We'll be reaching out to you shortly to follow up.</p>
 
     <p>Best,</p>
     <p>The team at Kinetic Global</p>`
@@ -59,8 +59,8 @@ function sendAdminEmail(doc) {
   const clientEmail = doc.email;
   const emailInfo = {
     from: 'noreply-contact-us@kineticglobal.org',
-    to: 'daniel@kineticglobal.org',
-    subject: 'New interest in launching a Kinetic Global chapter!',
+    to: 'bryan.jones@kineticglobal.org',
+    subject: 'New Question/Comment from Contact Us Page',
     content: `<p>Hi,</p>
 
     <p>${clientName} ${role}has just requested that a member of the Kinetic Global team contact them.</p>
