@@ -1,6 +1,5 @@
 /*width and adjusted width for the form, use adjusted for input and textarea*/
 $form-width: 300px;
-$adjusted-width: 294px;
 
 .contact {
 
@@ -30,17 +29,20 @@ $adjusted-width: 294px;
 			width: $form-width;
 			color: white;
 
+
 			div {
 				padding-bottom: 10px;
 
 				input {
-					width: $adjusted-width;
+					width: $form-width;
 					height: 30px;
 					border-radius: 5px;
-				}
+					box-sizing: border-box;
+					padding: 5px;
 
-				input[placeholder] {
-					font-size: 14pt;
+					&[placeholder] {
+						font-size: 14pt;
+					}
 				}
 
 				select {
@@ -49,10 +51,11 @@ $adjusted-width: 294px;
 				}
 
 				textarea {
-					width: $adjusted-width;
-					max-width: $adjusted-width;
+					width: $form-width;
+					max-width: $form-width;
 					max-height: 200px;
 					border-radius: 5px;
+					box-sizing: border-box;
 				}
 
 				label {

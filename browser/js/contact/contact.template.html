@@ -17,17 +17,17 @@
 		<form ng-submit='submitForm(user)' ng-hide='wasFormSubmitted'>
 
 			<div>
-				Name <br>
+				Name: <br>
 				<input type='text' ng-required ng-model='user.name' name='name' placeholder='John Doe'>
 			</div>
 
 			<div>
-				E-mail <br>
+				E-mail: <br>
 				<input type='email' ng-required ng-model='user.email' name='email' placeholder='john.doe@gmail.com'>
 			</div>
 
 			<div>
-				Select your role <br>
+				Select your role: <br>
 				<select ng-model='user.role' ng-required>
 					<option value='student'>Student</option>
 					<option value='educator'>Educator</option>
@@ -38,7 +38,7 @@
 			</div>
 
 			<div>
-				Message <br>
+				Message: <br>
 				<textarea rows='4' ng-required ng-model='user.message'> </textarea>
 			</div>
 
