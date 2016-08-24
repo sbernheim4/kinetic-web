@@ -5,38 +5,39 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-}
 
-.fa-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
+	.btns-footer {
+		.btn-footer {
+			margin-left: 10px;
+			margin-right: 10px;
+			width: 180px;
+			height: 45px;
+			background-color: #1b79a7;
 
-.fa {
-	padding: 0 15px;
-	color: rgb(66, 66, 66);
-}
+			&:hover {
+				background-color: darken(#1b79a7, 10%);
+			}
+		}
+	}
 
-.footer-text {
-	padding-left: 0 15px;
-	color: white;
-}
+	.fa-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-.btns-footer {
-	.btn-footer {
-		margin-left: 20px;
-		width: 180px;
-		height: 45px;
-		background-color: #1b79a7;
+	.footer-text {
+		padding-left: 0 15px;
+		color: white;
+	}
 
-		&:hover {
-			background-color: darken(#1b79a7, 10%);
+	a {
+		.fa {
+			padding: 0 15px;
+			color: rgb(66, 66, 66);
 		}
 	}
 }
-
-
 
 @media all and (max-width: 950px) {
 	.footer-text {
