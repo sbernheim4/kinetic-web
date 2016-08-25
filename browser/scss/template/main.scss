@@ -1,0 +1,27 @@
+section.template {
+	display: flex;
+	flex-direction: column;
+	h1.header {
+		margin-bottom: 20px;
+	}
+	div.text-container {
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 80%;
+		p {
+			margin-bottom: 30px;
+		}
+	}
+	div.iframe-container {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-bottom: 200px;
+		iframe {
+			width: 700px;
+			height: 300px;
+		}
+	}
+}
