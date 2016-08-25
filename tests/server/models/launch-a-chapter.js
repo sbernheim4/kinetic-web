@@ -33,11 +33,12 @@ describe('LaunchAChapter model', function () {
           newsletter: true,
           questions: "",
           school: "Saul University"
-        }
+        };
+
         LaunchAChapter.create(invalidForm)
         .then(done)
         .catch((err) => {
-          expect(err.message).to.equal('LaunchAChapter validation failed')
+          expect(err.message).to.equal('LaunchAChapter validation failed');
           done();
         });
       });
@@ -52,7 +53,8 @@ describe('LaunchAChapter model', function () {
           newsletter: true,
           questions: "",
           school: "Saul University"
-        }
+        };
+        
         LaunchAChapter.create(validForm)
         .then( (results) => {
           expect(results).to.exist;
