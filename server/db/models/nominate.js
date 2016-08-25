@@ -15,7 +15,7 @@ const sendEmail = require('../../modules/sendAnEmail.js').formatAndSendEmail;
 const NominateSchema = new mongoose.Schema({
   nomineeName: {
     type: String,
-    require: true
+    required: true
   },
   nominatorEmail: {
     type: String,
