@@ -33,7 +33,10 @@ router.post('/launch-a-chapter', (req, res, next) => {
   // When everything has completed we should redirect them to a page saying so
   // or add a confirmation popup or something dynamic like this
   .then(() => res.send())
-  .catch(err => res.status(500).send(err));
+  .catch(err => {
+    console.error(err);
+    res.status(500).send(err);
+  });
 });
 
 router.post('/nominate-expert', (req, res, next) => {
