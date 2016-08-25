@@ -33,11 +33,11 @@ describe('Nominate model', function () {
           nominatorName: 'Nominator Testee',
           nomineeExpertise: 'Building pianos for leopards', //not valid
           relationship: 'knowsNominee'
-        }
+        };
         Nominate.create(invalidForm)
         .then(done)
         .catch((err) => {
-          expect(err.message).to.equal('Nominate validation failed')
+          expect(err.message).to.equal('Nominate validation failed');
           done();
         });
       });
@@ -51,7 +51,8 @@ describe('Nominate model', function () {
           nominatorName: 'Nominator Testee',
           nomineeExpertise: 'Homelessness',
           relationship: 'knowsNominee'
-        }
+        };
+        
         Nominate.create(validForm)
         .then( (results) => {
           expect(results).to.exist;
