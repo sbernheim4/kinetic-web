@@ -6,3 +6,4 @@ require('./launch');
 require('./email');
 require('./question');
 require('./contact');
+require('./nominate');
