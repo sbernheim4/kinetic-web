@@ -8,9 +8,7 @@ app.controller('HandbookCtrl', function ($scope, FormFactory) {
 		if(typeof user === 'undefined') {
 			return;
 		}
-
 		user.newsletter = !!user.newsletter;
-
 		FormFactory.submitGetHandbookForm(user)
 		.then ( () => {
 			$scope.show = false;

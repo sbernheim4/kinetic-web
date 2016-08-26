@@ -14,10 +14,12 @@ const sendEmail = require('../../modules/sendAnEmail.js').formatAndSendEmail;
 
 const LaunchSchema = new mongoose.Schema({
   name: {
-    type: String
+    type: String,
+    required: true
   },
   email: {
-    type: String
+    type: String,
+    required: true
   },
   school: {
     type: String
