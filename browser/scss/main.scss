@@ -1,3 +1,6 @@
+#main {
+	min-height: calc(100vh - 170px);
+}
 @import 'directives/main';
 @import 'home/main';
 @import 'about/main';
@@ -10,3 +13,4 @@
 @import 'advisors/main';
 @import 'launch/main';
 @import 'handbook/main';
+@import 'nominate/main';
