@@ -64,482 +64,504 @@ a {
 .white {
 	color: white;
 }
+
 /*************** Section 1 ***************/
 
-.main {
-	padding-top: 0px;
-	min-height: 400px;
-	height: 100vh;
-	background-image: url('https://s3.amazonaws.com/kineticglobal-prod/implementation-photo.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+.home {
+	padding: 0px;
 
-.big-main {
-	padding: 120px 50px 0px 50px;
-	color: white;
-	text-align: center;
-	font-size: 35pt;
-}
-
-.tag-line-main {
-	padding: 10% 35px 0px 35px;
-	font-size: 20pt;
-	text-align: center;
-	color: white;
-}
-
-.btns-main {
-	margin-top: auto;
-	display: flex;
-	flex-direction: row;
-}
-
-
-.btn-main{
-	padding: 8px 40px;
-	width: 245px;
-	text-transform: uppercase;
-}
-
-
-@media all and (min-width: 1200px) {
-	.btns-main {
-		padding-bottom: 140px;
-		width: 80%;
-		justify-content: space-around;
-	}
-}
-
-@media all and (max-width: 1199px) and (min-width: 826px) {
-	.btns-main {
-		padding-bottom: 140px;
-		width: 100%;
-		justify-content: space-around;
-	}
-}
-
-@media all and (max-width: 825px) and (min-width: 486px) {
-	.btns-main {
-		padding-bottom: 140px;
+	.main {
+		padding-top: 0px;
+		min-height: 400px;
+		height: 100vh;
+		background-image: url('https://s3.amazonaws.com/kineticglobal-prod/implementation-photo.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		display: flex;
 		flex-direction: column;
+		align-items: center;
 	}
-	.btn-main {
-		margin-top: 20px;
-	}
-}
 
-@media all and (max-width: 485px) {
+	.big-main {
+		padding: 120px 50px 0px 50px;
+		color: white;
+		text-align: center;
+		font-size: 35pt;
+	}
+
+	.tag-line-main {
+		padding: 10% 35px 0px 35px;
+		font-size: 20pt;
+		text-align: center;
+		color: white;
+	}
+
 	.btns-main {
 		margin-top: auto;
-		margin-bottom: auto;
-		flex-direction: column;
-	}
-
-	.btn-main {
-		margin-top: 7px;
-		margin-bottom: 7px;
-	}
-}
-
-@media all and (max-width: 400px) {
-	.big-main {
-		padding: 50px 50px 0px 50px;
-	}
-}
-
-
-
-/************ Section 2 -- The Problem ************/
-
-.problem {
-	position: relative;
-	height: 350px;
-	background-color: rgb(27, 121, 167);
-	text-align: center;
-	color: white;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-}
-
-.header-problem {
-	padding: 0 30px;
-}
-
-.tag-line-problem {
-	padding-left: 13px;
-	padding-right: 13px;
-}
-
-.btns-problem {
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-around;
-	padding-top: 50px;
-}
-
-.btn-problem {
-	margin: 0 40px;
-	width: 180px;
-	height: 70px;
-	cursor: default;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	&:hover {
-		background-color: rgb(253, 178, 59);
-	}
-}
-
-@media all and (max-width: 780px) {
-	.problem {
-		height: 600px;
-	}
-	.btns-problem {
-		width: 60%;
-		margin: 0 auto;
-		display: flex;
-		flex-direction: column;
-		height: 350px;
-	}
-	.btn-problem {
-		margin: 0 40px;
-		width: 150px;
-		height: 70px;
-	}
-}
-
-.confused-man {
-	width: 85px;
-}
-
-/*********** Section 3 -- The Solution ***************/
-
-.solution {
-	min-height: 340px;;
-	padding: 0px;
-	background-color: white;
-	color: black;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-.header-container {
-	margin: 0 auto;
-	padding: 0 20px;
-	text-align: center;
-}
-
-.right-container img {
-	width: calc(50vw - 74px);
-	display: block;
-}
-
-@media all and (max-width: 1165px) {
-	.right-container {
-		padding: 20px
-	}
-}
-
-@media all and (max-width: 640px) {
-	.right-container {
-		display: none;
-	}
-}
-
-.btns-solution {
-	padding-top: 50px;
-}
-
-.btn-solution {
-	padding: 10px 60px;
-}
-
-/*********** Section 4 -- What Is ***********/
-
-.what-is {
-	color: white;
-	text-align: center;
-	background-color: rgb(27, 121, 167);
-}
-
-.tag-line-what-is {
-	margin: 0 auto;
-	padding-left: 20px;
-	padding-right: 20px;
-	max-width: 945px;
-}
-
-.what-is-row {
-	padding-top: 20px;
-	text-align: center;
-}
-
-.what-is-row > div {
-	padding-top: 30px;
-	padding-left: 30px;
-	padding-right: 30px;
-}
-
-.circle {
-	border: 1px solid black;
-}
-
-
-.research > .underline {
-	margin: 10px auto;
-	width: 63px;
-	border-bottom: 1px solid red;
-}
-
-.design > .underline {
-	margin: 10px auto;
-	width: 46px;
-	border-bottom: 1px solid rgb(36, 209, 86);
-}
-
-.implementation > .underline {
-	margin: 10px auto;
-	width: 110px;
-	border-bottom: 1px solid rgb(45, 253, 253);
-}
-
-.btns-what-is {
-	padding: 30px 20px;
-	display: flex;
-}
-
-.btn-what-is {
-	padding: 10px 90px;
-	font-size: 17pt;
-}
-
-
-@media all and (max-width: 767px) {
-	.btn-what-is {
-		padding: 10px 15px;
-	}
-}
-
-/*********** Section 5 -- About Us ***********/
-.about-us {
-	padding-top: 0px;
-	display: flex;
-	align-items: center;
-}
-
-.images-about-us {
-	max-width: 640px;
-}
-
-.images-about-us > img {
-	width: 50vw;
-	max-width: 640px;
-	display: block;
-}
-
-@media all and (max-width: 1277px) {
-	.images-about-us > img {
-		max-width: 620px;
-		padding: 0px 0px 10px 20px;
-	}
-}
-
-.right-about-us {
-	margin: 0 auto;
-	padding: 30px 30px;
-}
-
-.header-about-us {
-	padding-bottom: 30px;
-}
-
-.header-text {
-	margin: 0 auto;
-	text-align: justify;
-	max-width: 500px;
-}
-
-.btns-about-us {
-	display: flex;
-	flex-direction: column;
-}
-
-.btn-about-us{
-	margin-top: 30px;
-	width: 295px;
-	height: 50px;
-}
-
-@media all and (max-width: 831px){
-	.images-about-us > img {
-		display: none;
-	}
-}
-
-@media all and (max-width: 330px) {
-	.right-about-us {
-		padding: 30px 12px;
-	}
-}
-
-/*********** Section 6 -- Sponsored Causes ***********/
-.sponsored {
-	padding-bottom: 30px;
-	background-color: rgb(27, 121, 167);
-	text-align: center;
-	color: white;
-	display: flex;
-	flex-direction: column;
-
-	.text-content {
-		margin: 30px auto;
-		width: 80%;
-		max-width: 800px;
-		text-align: justify;
-		font-size: 14pt;
-		@media all and (max-width: 780px) {
-			width: 90%;
-		}
-	}
-
-	.cause-images {
-		margin: 0 auto;
-		width: 80%;
 		display: flex;
 		flex-direction: row;
-		@media all and (max-width: 930px) {
-			width: 100%;
+	}
+
+
+	.btn-main{
+		padding: 8px 40px;
+		width: 245px;
+		text-transform: capitalize;
+	}
+
+
+	@media all and (min-width: 1200px) {
+		.btns-main {
+			padding-bottom: 140px;
+			width: 80%;
+			justify-content: space-around;
 		}
-		@media all and (max-width: 780px) {
+	}
+
+	@media all and (max-width: 1199px) and (min-width: 826px) {
+		.btns-main {
+			padding-bottom: 140px;
 			width: 100%;
+			justify-content: space-around;
+		}
+	}
+
+	@media all and (max-width: 825px) and (min-width: 486px) {
+		.btns-main {
+			padding-bottom: 140px;
+			flex-direction: column;
+		}
+		.btn-main {
+			margin-top: 20px;
+		}
+	}
+
+	@media all and (max-width: 485px) {
+		.btns-main {
+			margin-top: auto;
+			margin-bottom: auto;
 			flex-direction: column;
 		}
 
-		.cause {
-			width: 33%;
-			@media all and (max-width: 780px) {
-				width: auto;
-			}
-
-			#homelessness {
-				margin: 10px auto;
-				width: 114px;
-				border-bottom: 1px solid rgb(45, 253, 253);
-			}
-
-			#food-insecurity {
-				margin: 10px auto;
-				width: 124px;
-				border-bottom: 1px solid rgb(36, 209, 86);
-			}
-
-			#environment {
-				margin: 10px auto;
-				width: 142px;
-				border-bottom: 1px solid red;
-			}
-
-			img {
-				max-width: 250px;
-				max-height: 193px;
-			}
+		.btn-main {
+			margin-top: 7px;
+			margin-bottom: 7px;
 		}
 	}
 
-	.btn-sponsored {
-		margin-top: 30px;
-		width: 295px;
-		height: 50px;
-		font-size: 14pt;
+	@media all and (max-width: 400px) {
+		.big-main {
+			padding: 50px 50px 0px 50px;
+		}
 	}
-}
 
-/*********** Section 7 -- Get Involved ***********/
 
-.get-involved {
-	margin-bottom: 120px;
-	text-align: center;
-}
 
-.tag-line-get-involved {
-	margin: 0 auto;
-	max-width: 570px;
-	padding-left: 2rem;
-	padding-right: 2rem;
-	text-align: center;
-	font-weight: bolder;
-}
+	/************ Section 2 -- The Problem ************/
 
-.square-container {
-	margin-top: 2rem;
-	margin-left: 2rem;
-	margin-right: 2rem;
-	text-align: center;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
+	.problem {
+		position: relative;
+		height: 350px;
+		background-color: rgb(27, 121, 167);
+		text-align: center;
+		color: white;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
 
-.square-container > div {
-	margin-top: 2rem;
-	width: 250px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	flex-wrap: wrap;
-
-	@media all and (max-width: 1079px) {
-		width: 350px;
+	.header-problem {
 		padding: 0 30px;
 	}
 
-	@media all and (max-width: 900px) {
-		width: 300px;
+	.tag-line-problem {
+		padding-left: 13px;
+		padding-right: 13px;
 	}
 
-}
+	.btns-problem {
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-around;
+		padding-top: 50px;
+	}
 
-.description {
-	margin-top: 1rem;
-	margin-left: 1rem;
-	margin-right: 1rem;
-}
+	.btn-problem {
+		margin: 0 40px;
+		width: 180px;
+		height: 70px;
+		cursor: default;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-.square {
-	margin-bottom: 1rem;
-	width: 150px;
-	height: 150px;
-	border: 2px solid white;
-	text-align: center;
-	color: white;
-	cursor: pointer;
-	display: inline-block;
-	font-size: 14pt;
-}
+		&:hover {
+			background-color: rgb(253, 178, 59);
+		}
+	}
 
-.square-orange {
-	background-color: rgb(243, 131, 49);
-}
+	@media all and (max-width: 780px) {
+		.problem {
+			height: 600px;
+		}
+		.btns-problem {
+			width: 60%;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			height: 350px;
+		}
+		.btn-problem {
+			margin: 0 40px;
+			width: 150px;
+			height: 70px;
+		}
+	}
 
-.square-blue {
-	background-color: rgb(27, 121, 167);
-}
+	.confused-man {
+		width: 85px;
+	}
 
-.square-aqua {
-	background-color: rgb(99, 171, 181);
-}
+	/*********** Section 3 -- The Solution ***************/
 
-.square-green {
-	background-color: rgb(96, 191, 59);
-}
+	.solution {
+		min-height: 340px;;
+		padding: 0px;
+		background-color: white;
+		color: black;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.header-container {
+		margin: 0 auto;
+		padding: 0 20px;
+		text-align: center;
+	}
 
-.square > p {
-	padding-left: 10px;
-	padding-right: 10px;
+	.right-container img {
+		width: calc(50vw - 74px);
+		display: block;
+	}
+
+	@media all and (max-width: 1165px) {
+		.right-container {
+			padding: 20px
+		}
+	}
+
+	@media all and (max-width: 640px) {
+		.right-container {
+			display: none;
+		}
+	}
+
+	.btns-solution {
+		padding-top: 50px;
+	}
+
+	.btn-solution {
+		padding: 10px 60px;
+	}
+
+	/*********** Section 4 -- What Is ***********/
+
+	.what-is {
+		color: white;
+		text-align: center;
+		background-color: rgb(27, 121, 167);
+	}
+
+	.what-is-row {
+		padding-top: 20px;
+		text-align: center;
+		display: flex;
+		flex-direction: row;
+
+		@media all and (max-width: 767px) {
+			flex-direction: column
+		}
+	}
+
+	.tag-line-what-is {
+		margin: 0 auto;
+		padding-left: 20px;
+		padding-right: 20px;
+		max-width: 945px;
+	}
+
+	.what-is-row {
+		padding-top: 20px;
+		text-align: center;
+	}
+
+	.what-is-row > div {
+		padding-top: 30px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	.research > .underline {
+		margin: 10px auto;
+		width: 63px;
+		border-bottom: 1px solid red;
+	}
+	
+	.circle {
+		border: 1px solid black;
+	}
+
+	.research > .underline {
+		margin: 10px auto;
+		width: 63px;
+		border-bottom: 1px solid red;
+	}
+
+	.design > .underline {
+		margin: 10px auto;
+		width: 46px;
+		border-bottom: 1px solid rgb(36, 209, 86);
+	}
+
+	.implementation > .underline {
+		margin: 10px auto;
+		width: 110px;
+		border-bottom: 1px solid rgb(45, 253, 253);
+	}
+
+	.btns-what-is {
+		padding: 30px 20px;
+		display: flex;
+	}
+
+	.btn-what-is {
+		padding: 10px 90px;
+		font-size: 17pt;
+	}
+
+
+	@media all and (max-width: 767px) {
+		.btn-what-is {
+			padding: 10px 15px;
+		}
+	}
+
+	/*********** Section 5 -- About Us ***********/
+	.about-us {
+		padding-top: 0px;
+		display: flex;
+		align-items: center;
+	}
+
+	.images-about-us {
+		max-width: 640px;
+	}
+
+	.images-about-us > img {
+		width: 50vw;
+		max-width: 640px;
+		display: block;
+	}
+
+	@media all and (max-width: 1277px) {
+		.images-about-us > img {
+			max-width: 620px;
+			padding: 0px 0px 10px 20px;
+		}
+	}
+
+	.right-about-us {
+		margin: 0 auto;
+		padding: 30px 30px;
+	}
+
+	.header-about-us {
+		padding-bottom: 30px;
+	}
+
+	.header-text {
+		margin: 0 auto;
+		text-align: justify;
+		max-width: 500px;
+	}
+
+	.btns-about-us {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.btn-about-us{
+		margin-top: 30px;
+		width: 295px;
+		height: 50px;
+	}
+
+	@media all and (max-width: 831px){
+		.images-about-us > img {
+			display: none;
+		}
+	}
+
+	@media all and (max-width: 330px) {
+		.right-about-us {
+			padding: 30px 12px;
+		}
+	}
+
+	/*********** Section 6 -- Sponsored Causes ***********/
+	.sponsored {
+		padding-bottom: 30px;
+		background-color: rgb(27, 121, 167);
+		text-align: center;
+		color: white;
+		display: flex;
+		flex-direction: column;
+
+		.text-content {
+			margin: 30px auto;
+			width: 80%;
+			max-width: 800px;
+			text-align: justify;
+			font-size: 14pt;
+			@media all and (max-width: 780px) {
+				width: 90%;
+			}
+		}
+
+		.cause-images {
+			margin: 0 auto;
+			width: 80%;
+			display: flex;
+			flex-direction: row;
+			@media all and (max-width: 930px) {
+				width: 100%;
+			}
+			@media all and (max-width: 780px) {
+				width: 100%;
+				flex-direction: column;
+			}
+
+			.cause {
+				width: 33%;
+				@media all and (max-width: 780px) {
+					width: auto;
+				}
+
+				#homelessness {
+					margin: 10px auto;
+					width: 114px;
+					border-bottom: 1px solid rgb(45, 253, 253);
+				}
+
+				#food-insecurity {
+					margin: 10px auto;
+					width: 124px;
+					border-bottom: 1px solid rgb(36, 209, 86);
+				}
+
+				#environment {
+					margin: 10px auto;
+					width: 142px;
+					border-bottom: 1px solid red;
+				}
+
+				img {
+					max-width: 250px;
+					max-height: 193px;
+				}
+			}
+		}
+
+		.btn-sponsored {
+			margin-top: 30px;
+			width: 295px;
+			height: 50px;
+			font-size: 14pt;
+		}
+	}
+
+	/*********** Section 7 -- Get Involved ***********/
+
+	.get-involved {
+		margin-bottom: 120px;
+		text-align: center;
+	}
+
+	.tag-line-get-involved {
+		margin: 0 auto;
+		max-width: 570px;
+		padding-left: 40px;
+		padding-right: 40px;
+		text-align: center;
+		font-weight: bolder;
+	}
+
+	.square-container {
+		margin-top: 40px;
+		margin-left: 40px;
+		margin-right: 40px;
+		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.square-container > div {
+		margin-top: 40px;
+		width: 250px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: wrap;
+
+		@media all and (max-width: 1079px) {
+			width: 350px;
+			padding: 0 30px;
+		}
+
+		@media all and (max-width: 900px) {
+			width: 300px;
+		}
+
+	}
+
+	.description {
+		margin-top: 20px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.square {
+		margin-bottom: 20px;
+		width: 150px;
+		height: 150px;
+		border: 2px solid white;
+		text-align: center;
+		color: white;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 14pt;
+	}
+
+	.square-orange {
+		background-color: rgb(243, 131, 49);
+	}
+
+	.square-blue {
+		background-color: rgb(27, 121, 167);
+	}
+
+	.square-aqua {
+		background-color: rgb(99, 171, 181);
+	}
+
+	.square-green {
+		background-color: rgb(96, 191, 59);
+	}
+
+	.square > p {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
 }

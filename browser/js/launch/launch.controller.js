@@ -2,18 +2,26 @@
 
 app.controller('LaunchCtrl', function($scope, FormFactory) {
 
-	$scope.submitForm = function (user) {
-		// Evaluates the truthfulness of user.newsletter
-		user.newsletter = !!user.newsletter;
+  $scope.show = true;
 
-		// send all the data to our FormFactory and then log it in the console.
-		FormFactory.submitLaunchAChapterForm(user)
-		.then( data => {
-			console.log(data)
-		})
-		.catch( e => {
-			console.log(e);
-		});
+  $scope.submitForm = function (user) {
+    // Evaluates the truthfulness of user.newsletter
+    if(typeof user === 'undefined') {
+      return;
+    }
+    user.newsletter = !!user.newsletter;
 
-	}
+    // send all the data to our FormFactory and then log it in the console.
+    FormFactory.submitLaunchAChapterForm(user)
+    .then( () => {
+      $scope.show = false;
+    })
+    .then( data => {
+      console.log(data)
+    })
+    .catch( e => {
+      console.error(e);
+    });
+
+  }
 });

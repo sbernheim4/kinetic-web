@@ -8,3 +8,4 @@ coverage
 *.swo
 .DS_Store
 .jshintrc
+newrelic_agent.log

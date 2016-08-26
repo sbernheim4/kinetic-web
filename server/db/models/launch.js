@@ -14,10 +14,12 @@ const sendEmail = require('../../modules/sendAnEmail.js').formatAndSendEmail;
 
 const LaunchSchema = new mongoose.Schema({
   name: {
-    type: String
+    type: String,
+    required: true
   },
   email: {
-    type: String
+    type: String,
+    required: true
   },
   school: {
     type: String
@@ -68,7 +70,7 @@ function sendAdminEmail(doc) {
   const clientEmail = doc.email;
   const emailInfo = {
     from: 'noreply-launch-interest@kineticglobal.org',
-    to: 'daniel@kineticglobal.org',
+    to: 'sam@kineticglobal.org',
     subject: 'New interest in launching a Kinetic Global chapter!',
     content: `<p>Hi,</p>
 
