@@ -4,6 +4,7 @@ $form-width: 300px;
 .contact {
 
 	background-color: rgb(27, 121, 167);
+	// height: calc(100vh - 170px);
 
 	.container {
 		margin: 0 auto;
@@ -97,6 +98,10 @@ $form-width: 300px;
 				}
 			}
 
+		}
+		.submitText {
+			height: calc(100vh - 170px);
+			background-color: rgb(27, 121, 167);
 		}
 	}
 }
