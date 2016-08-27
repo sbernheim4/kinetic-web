@@ -1,6 +1,7 @@
 const helper = require('sendgrid').mail;
 const apiKey = require('../env/').SENDGRID.API_KEY;
 const Sendgrid = require('sendgrid')(apiKey);
+const Bluebird = require('bluebird');
 
 function sendEmail(mail) {
   const request = Sendgrid.emptyRequest({
@@ -8,7 +9,9 @@ function sendEmail(mail) {
     path: '/v3/mail/send',
     body: mail.toJSON()
   });
-
+  if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'staging') {
+    return Bluebird.resolve();
+  }
   return Sendgrid.API(request);
 }
 

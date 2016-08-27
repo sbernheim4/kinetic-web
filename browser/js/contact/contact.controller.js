@@ -1,23 +1,22 @@
 'use strict';
 
 app.controller('ContactCtrl', function ($scope, FormFactory) {
-	$scope.wasFormSubmitted = false;
+  $scope.wasFormSubmitted = false;
 
   $scope.submitForm = function (user) {
-  	if(!user || !user.email || !user.message) {
-  		return;
-  	}
+    if(!user || !user.email || !user.message) {
+      return;
+    }
 
-  	user.newsletter = !!user.newsletter;
+    user.newsletter = !!user.newsletter;
 
-  	FormFactory.submitContactUsForm(user)
-  	.then( res => {
-  		console.log(res)
-  		$scope.wasFormSubmitted = true;
-  	})
-  	.catch( err => {
-  		console.error(err);
-  	});
+    FormFactory.submitContactUsForm(user)
+    .then( res => {
+      $scope.wasFormSubmitted = true;
+    })
+    .catch( err => {
+      console.error(err);
+    });
 
   };
 });

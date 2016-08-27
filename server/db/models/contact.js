@@ -4,27 +4,24 @@ const Bluebird = require('bluebird');
 const sendEmail = require('../../modules/sendAnEmail.js').formatAndSendEmail;
 
 const ContactSchema = new mongoose.Schema({
-	name: {
-		type: String
-	},
-	email: {
-		type: String,
-		required: true
-	},
-	message: {
-		type: String,
-		required: true
-	},
-	role: {
-		type: String
-	}
+  name: {
+    type: String
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  message: {
+    type: String,
+    required: true
+  },
+  role: {
+    type: String
+  }
 });
 
 
 ContactSchema.post('save', function (doc, next) {
-  if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'staging') {
-    return next();
-  }
 
   Bluebird.all([sendClientEmail(this), sendAdminEmail(this)])
   .then(() => {
