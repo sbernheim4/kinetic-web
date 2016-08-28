@@ -1,5 +1,8 @@
 #main {
 	min-height: calc(100vh - 170px);
+	@media all and (max-width: 870px) {
+		min-height: calc(100vh - 70px);
+	}
 }
 @import 'directives/main';
 @import 'home/main';
@@ -14,3 +17,5 @@
 @import 'launch/main';
 @import 'handbook/main';
 @import 'nominate/main';
+@import 'template/main';
+@import 'supporters/main';
