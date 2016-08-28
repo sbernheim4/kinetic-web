@@ -2,7 +2,7 @@
 
 app.config(function ($stateProvider) {
     $stateProvider.state('mentors', {
-        url: '/issue-team-mentors',
+        url: '/issue-mentors',
         templateUrl: 'js/mentors/mentors.template.html',
         controller: 'MentorsCtrl'
     });
