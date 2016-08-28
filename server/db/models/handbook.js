@@ -12,16 +12,19 @@ const sendEmail = require('../../modules/sendAnEmail.js').formatAndSendEmail;
 
 const HandbookSchema = new mongoose.Schema({
   name: {
-    type: String
+    type: String,
+		required: true
   },
   email: {
-    type: String
+    type: String,
+		required: true
   },
   profession: {
     type: String
   },
   member: {
-		type: Boolean
+		type: Boolean,
+		required: true
 	},
 	interested: {
 		type: Boolean
