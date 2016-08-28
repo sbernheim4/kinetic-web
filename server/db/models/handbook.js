@@ -60,7 +60,7 @@ function sendClientEmail(doc) {
 
     <p>Thank you for expressing interest in obtaining a copy of the Kinetic Handbook. Please click the link below to download your copy.</p>
 
-    <p>INSERT LINK HERE</p>
+    <p>https://drive.google.com/file/d/0B4NnXbzOu-EuSDZoSkJScld6SHc/view</p>
 
     <p>Best,</p>
     <p>The team at Kinetic Global</p>`
