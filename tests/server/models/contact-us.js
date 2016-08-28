@@ -8,9 +8,9 @@ const mongoose = require('mongoose');
 // Require in all models.
 require('../../../server/db/models');
 
-const LaunchAChapter = mongoose.model('LaunchAChapter');
+const ContactRequest = mongoose.model('ContactRequest');
 
-describe('LaunchAChapter model', function () {
+describe('ContactUs model', function () {
   beforeEach('Establish DB connection', function (done) {
     if (mongoose.connection.db) return done();
     mongoose.connect(dbURI, done);
@@ -19,8 +19,9 @@ describe('LaunchAChapter model', function () {
   afterEach('Clear test database', function (done) {
     clearDB(done);
   });
+
   it('should exist', function () {
-    expect(LaunchAChapter).to.be.a('function');
+    expect(ContactRequest).to.be.a('function');
   });
 
   describe('model validation', function () {
@@ -28,37 +29,55 @@ describe('LaunchAChapter model', function () {
     describe('invalid entry', function () {
       it('should not add document to collection', function (done) {
         const invalidForm = {
-          classYear: "2018",
           name: "Testy McTesterson",
+          role: "educator",
+          message: "What is Kinetic",
           newsletter: true,
-          questions: "",
-          school: "Saul University"
         };
 
-        LaunchAChapter.create(invalidForm)
+        ContactRequest.create(invalidForm)
         .then(done)
         .catch((err) => {
-          expect(err.message).to.equal('LaunchAChapter validation failed');
+          expect(err.message).to.equal('ContactRequest validation failed');
           done();
         });
       });
     });
 
+    describe('invalid entry', function () {
+      it('should not add document to collection', function (done) {
+        const invalidForm = {
+          name: "Testy McTesterson",
+          email: "testy@gmail.com",
+          role: "educator",
+          newsletter: true,
+        };
+
+        ContactRequest.create(invalidForm)
+        .then(done)
+        .catch((err) => {
+          expect(err.message).to.equal('ContactRequest validation failed');
+          done();
+        });
+      });
+    });
+
+
+
     describe('valid entry', function () {
       it('should add document to collection', function (done) {
         const validForm = {
-          classYear: "2018",
-          email: "test@test.com",
           name: "Testy McTesterson",
+          email: "test@test.com",
+          role: "educator",
+          message: "What is Kinetic",
           newsletter: true,
-          questions: "",
-          school: "Saul University"
         };
 
-        LaunchAChapter.create(validForm)
+        ContactRequest.create(validForm)
         .then( (results) => {
           expect(results).to.exist;
-          return LaunchAChapter.find();
+          return ContactRequest.find();
         })
         .then( (found) => {
           expect(found.length).to.equal(1);

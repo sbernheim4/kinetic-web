@@ -13,28 +13,28 @@ const sendEmail = require('../../modules/sendAnEmail.js').formatAndSendEmail;
 const HandbookSchema = new mongoose.Schema({
   name: {
     type: String,
-		required: true
+    required: true
   },
   email: {
     type: String,
-		required: true
+    required: true
   },
   profession: {
     type: String
   },
   member: {
-		type: Boolean,
-		required: true
-	},
-	interested: {
-		type: Boolean
-	},
-	curious: {
-		type: Boolean
-	},
-	workAtUniversity: {
-		type: Boolean
-	},
+    type: Boolean,
+    required: true
+  },
+  interested: {
+    type: Boolean
+  },
+  curious: {
+    type: Boolean
+  },
+  workAtUniversity: {
+    type: Boolean
+  },
   newsletter: {
     type: Boolean
   }
@@ -88,7 +88,7 @@ function sendAdminEmail(doc) {
 
   };
 
-  return sendEmail(emailInfo)
+  return sendEmail(emailInfo);
 }
 
 mongoose.model('GetTheHandbook', HandbookSchema);

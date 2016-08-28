@@ -12,7 +12,7 @@ function sendEmail(mail) {
   if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'staging') {
     return Bluebird.resolve();
   }
-
+  
   return Sendgrid.API(request);
 }
 
