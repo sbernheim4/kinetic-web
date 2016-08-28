@@ -1,0 +1,46 @@
+.mentors {
+
+	.header {
+		padding: 30px;
+		font-size: 35pt;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.text {
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 15px;
+		font-size: 12pt;
+		text-align: center;
+		line-height: 150%;
+	}
+
+	.mentor-list {
+		padding: 30px 0;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		flex-basis: 100%;
+		@media all and (max-width: 767px) {
+			padding: 0px;
+			flex-direction: column;
+		}
+
+		.mentor {
+			padding: 30px 0px;
+			text-align: center;
+			flex-basis: 32%;
+
+			img {
+				width: 200px;
+				height: 200px;
+			}
+
+			.info {
+				font-weight: bolder;
+			}
+
+		}
+	}
+}
