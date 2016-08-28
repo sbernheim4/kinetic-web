@@ -72,8 +72,7 @@ a {
 
 	.main {
 		padding-top: 0px;
-		min-height: 400px;
-		height: 100vh;
+		min-height: 100vh;
 		background-image: url('https://s3.amazonaws.com/kineticglobal-prod/implementation-photo.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -107,45 +106,34 @@ a {
 		padding: 8px 40px;
 		width: 245px;
 		text-transform: capitalize;
-	}
-
-
-	@media all and (min-width: 1200px) {
-		.btns-main {
-			padding-bottom: 140px;
-			width: 80%;
-			justify-content: space-around;
-		}
-	}
-
-	@media all and (max-width: 1199px) and (min-width: 826px) {
-		.btns-main {
-			padding-bottom: 140px;
-			width: 100%;
-			justify-content: space-around;
-		}
-	}
-
-	@media all and (max-width: 825px) and (min-width: 486px) {
-		.btns-main {
-			padding-bottom: 140px;
-			flex-direction: column;
-		}
-		.btn-main {
+		@media all and (max-width: 825px) and (min-width: 486px) {
 			margin-top: 20px;
 		}
+		@media all and (max-width: 485px) {
+			margin-top: 7px;
+			margin-bottom: 7px;
+		}
+
+
 	}
 
-	@media all and (max-width: 485px) {
-		.btns-main {
+	.btns-main {
+		padding-bottom: 140px;
+		justify-content: space-around;
+		padding-top: 140px;
+		@media all and (min-width: 1200px) {
+			width: 80%;
+		}
+		@media all and (max-width: 1199px) and (min-width: 826px) {
+			width: 100%;
+		}
+		@media all and (max-width: 825px) and (min-width: 486px) {
+			flex-direction: column;
+		}
+		@media all and (max-width: 485px) {
 			margin-top: auto;
 			margin-bottom: auto;
 			flex-direction: column;
-		}
-
-		.btn-main {
-			margin-top: 7px;
-			margin-bottom: 7px;
 		}
 	}
 
