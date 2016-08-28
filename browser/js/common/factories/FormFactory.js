@@ -15,7 +15,6 @@ app.factory('FormFactory', function($http) {
       .then(res => res.data);
     },
     submitGetHandbookForm: (info) => {
-      console.log('Inside FormFactory.js');
       return $http.post('/api/forms/get-the-handbook', info)
       .then(res => res.data);
     }
