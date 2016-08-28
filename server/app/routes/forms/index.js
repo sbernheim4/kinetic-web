@@ -36,8 +36,8 @@ router.post('/launch-a-chapter', (req, res, next) => {
   // or add a confirmation popup or something dynamic like this
   .then(() => res.send())
   .catch(err => {
-    console.error(err)
-    res.status(500).send(err)
+    console.error(err);
+    res.status(500).send(err);
   });
 });
 
@@ -56,7 +56,7 @@ router.post('/get-the-handbook', (req, res, next) => {
   .then(() => res.send())
   .catch(err => {
     console.error(err);
-    res.status(500).send(err)
+    res.status(500).send(err);
   });
 });
 
