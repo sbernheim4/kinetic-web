@@ -1,4 +1,4 @@
-app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state, $window) {
+app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state, $window, GoToSectionFactory) {
 
 	return {
 		restrict: 'E',
@@ -6,30 +6,7 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state, 
 		templateUrl: 'js/common/directives/navbar/navbar.html',
 
 		link: function (scope) {
-			scope.goToSection = function(val, state) {
-				Promise.resolve()
-				.then( () => {
-					if (!state) {
-						state = 'home';
-					}
-					if($state.current.name === state) {
-						return;
-					} else {
-					return $state.go(state);
-					}
-				})
-				.then( () => {
-					if(val !== 'null') {
-						smoothScroll(document.querySelector(val));
-					}
-				})
-				.catch( err => {
-					if(typeof trackJs !== 'undefined') {
-						trackJs.track(err);
-					}
-					console.error(err);
-				});
-			};
+			scope.goToSection = GoToSectionFactory.goToSection;
 
 			scope.user = null;
 
