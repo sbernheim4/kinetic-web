@@ -2,7 +2,7 @@
 
 app.controller('HandbookCtrl', function ($scope, FormFactory) {
 
-	$scope.show = true;
+	$scope.displayForm = true;
 
 	$scope.submitGetHandbook = function (user) {
 		if(typeof user === 'undefined') {
@@ -11,7 +11,7 @@ app.controller('HandbookCtrl', function ($scope, FormFactory) {
 		user.newsletter = !!user.newsletter;
 		FormFactory.submitGetHandbookForm(user)
 		.then ( () => {
-			$scope.show = false;
+			$scope.displayForm = false;
 		})
 		.catch (e => {
 			console.error(e);
