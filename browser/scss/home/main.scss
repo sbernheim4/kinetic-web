@@ -127,13 +127,10 @@ a {
 		@media all and (max-width: 1199px) and (min-width: 826px) {
 			width: 100%;
 		}
-		@media all and (max-width: 825px) and (min-width: 486px) {
+		@media all and (max-width: 825px) {
 			flex-direction: column;
-		}
-		@media all and (max-width: 485px) {
-			margin-top: auto;
-			margin-bottom: auto;
-			flex-direction: column;
+			padding-bottom: 80px;
+			padding-top: 80px;
 		}
 	}
 
