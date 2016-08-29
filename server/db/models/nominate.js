@@ -38,9 +38,6 @@ const NominateSchema = new mongoose.Schema({
 });
 
 NominateSchema.post('save', function (doc, next) {
-  if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'staging') {
-    return next();
-  }
 
   Bluebird.all([sendClientEmail(this), sendAdminEmail(this)])
   .then(() => {

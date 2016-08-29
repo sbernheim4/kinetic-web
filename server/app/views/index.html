@@ -4,8 +4,6 @@
 	<base href="/" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-	<!-- <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.css" /> -->
-	<link href="/basscss/css/basscss.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/style.css" />
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -32,15 +30,6 @@
 	;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"115e14aef1",applicationID:"21982176",sa:1}
 	</script>
 	<!-- End New Relic -->
-	<script>
-		!function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
-				arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
-		d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
-			insertBefore(d,q)}(window,document,'script','_gs');
-
-			_gs('GSN-470783-S');
-	</script>
-
 	<script src="/angular/angular.min.js"></script>
 	<script src="/angular-animate/angular-animate.min.js"></script>
 	<script src="/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -56,7 +45,7 @@
 <body ng-app="KineticApp">
 	<navbar></navbar>
 	<div id="main" ui-view> </div>
-	<footer></footer>
+	<footer style='display: inline-block; width: 100vw;'> </footer>
 </body>
 
 </html>

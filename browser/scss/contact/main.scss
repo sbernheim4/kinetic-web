@@ -1,0 +1,107 @@
+/*width and adjusted width for the form, use adjusted for input and textarea*/
+$form-width: 300px;
+
+.contact {
+
+	background-color: rgb(27, 121, 167);
+	// height: calc(100vh - 170px);
+
+	.container {
+		margin: 0 auto;
+		max-width: 600px;
+
+		.header {
+			padding: 0px 15px 15px 15px;
+			font-size: 35pt;
+			text-transform: uppercase;
+			text-align: center;
+			color: white;
+		}
+
+		p {
+			padding: 20px;
+			text-align: center;
+			color: white;
+
+		}
+
+		form {
+			margin: 0 auto;
+			width: $form-width;
+			color: white;
+
+
+			div {
+				padding-bottom: 10px;
+
+				input {
+					width: $form-width;
+					height: 30px;
+					border-radius: 5px;
+					box-sizing: border-box;
+					padding: 5px;
+
+					&[placeholder] {
+						font-size: 14pt;
+					}
+				}
+
+				select {
+					width: $form-width;
+					border-radius: 5px;
+				}
+
+				textarea {
+					width: $form-width;
+					max-width: $form-width;
+					max-height: 200px;
+					border-radius: 5px;
+					box-sizing: border-box;
+				}
+
+				label {
+
+					input {
+						width: 15px;
+						vertical-align: middle;
+					}
+
+					span {
+						font-size: 10pt;
+						vertical-align: middle;
+					}
+				}
+
+			}
+
+			.btns {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				.btn {
+					width: $form-width;
+					height: 50px;
+					margin: 15px 0px 30px 0px;
+					background-color: rgb(253, 178, 59);
+					border-radius: 5px;
+					border: 1px solid white;
+					text-align: center;
+					color: white;
+					cursor: pointer;
+					font-size: 12pt;
+					text-decoration: none;
+
+					&:hover {
+						background-color: darken(rgb(253, 178, 59), 10%)
+					}
+				}
+			}
+
+		}
+		.submitText {
+			height: calc(100vh - 170px);
+			background-color: rgb(27, 121, 167);
+		}
+	}
+}
