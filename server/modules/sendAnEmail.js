@@ -12,17 +12,29 @@ function sendEmail(mail) {
   if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'staging') {
     return Bluebird.resolve();
   }
+  
   return Sendgrid.API(request);
 }
 
 module.exports = {
   formatAndSendEmail: function (emailInfo) {
-    const fromEmail = new helper.Email(emailInfo.from);
-    const toEmail = new helper.Email(emailInfo.to);
-    const content = new helper.Content('text/html', emailInfo.content);
-    const subject = emailInfo.subject;
+    const mail = new helper.Mail();
+    const personalization = new helper.Personalization();
 
-    const email = new helper.Mail(fromEmail, subject, toEmail, content);
-    return sendEmail(email);
+    mail.setFrom(new helper.Email(emailInfo.from));
+    mail.setSubject(emailInfo.subject);
+    mail.addContent(new helper.Content('text/html', emailInfo.content));
+
+    if (Array.isArray(emailInfo.to)) {
+      emailInfo.to.forEach((email) => {
+        personalization.addTo(new helper.Email(email));
+      });
+
+    } else {
+      personalization.addTo(new helper.Email(emailInfo.to));
+    }
+    mail.addPersonalization(personalization);
+
+    return sendEmail(mail);
   }
 };

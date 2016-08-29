@@ -36,9 +36,6 @@ const LaunchSchema = new mongoose.Schema({
 });
 
 LaunchSchema.post('save', function (doc, next) {
-  if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'staging') {
-    return next();
-  }
 
   Bluebird.all([sendClientEmail(this), sendAdminEmail(this)])
   .then(() => {
