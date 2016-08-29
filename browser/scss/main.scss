@@ -4,6 +4,7 @@
 		min-height: calc(100vh - 70px);
 	}
 }
+@import 'global';
 @import 'directives/main';
 @import 'home/main';
 @import 'about/main';

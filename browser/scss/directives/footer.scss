@@ -11,20 +11,19 @@
 
 	@media all and (max-width: 420px) {
 		height: 130px;
-		justify-content: center;
-		flex-direction: column;
 	}
 
 	.btns-footer {
 		@media all and (max-width: 420px) {
 			width: 200px;
+			flex-direction: column;
 		}
 
 		.btn-footer {
-			margin-left: 10px;
-			margin-right: 10px;
 			width: 180px;
 			height: 45px;
+			margin-left: 10px;
+			margin-right: 10px;
 			background-color: #1b79a7;
 			@media all and (max-width: 650px) {
 				margin: 0 10px;

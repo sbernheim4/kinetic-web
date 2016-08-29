@@ -1,68 +1,8 @@
-/************* RESETTERS AND HELPERS ***********/
 
-div {
-	/*border:1px solid green;*/
-}
-
-@font-face{
-	font-family: Lato;
-	src: url('fonts/lato-regular.ttf');
-}
-
-@font-face {
-	font-family: Open-Sans;
-	src: url('fonts/open-sans-regular.ttf');
-}
-
-* {
-	margin: 0;
-	font-family: 'Lato', 'open-sans';
-}
-
-section {
-	padding-top: 30px;
-}
-
-a {
-	text-decoration: none;
-	color: rgb(66,66,66);
-}
-
-/************* Common Attributes **************/
-
-.btns {
-	justify-content: center;
-	align-items: center;
-}
-
-.btn {
-	background-color: rgb(253, 178, 59);
-	border-radius: 5px;
-	border: 1px solid white;
-	text-align: center;
-	color: white;
-	cursor: pointer;
-	font-size: 12pt;
-	text-decoration: none;
-
-	&:hover {
-		background-color: darken(rgb(253, 178, 59), 10%)
-	}
-}
-
-.header {
-	font-size: 35pt;
-	text-align: center;
-	text-transform: uppercase;
-}
-
+// Each section uses a default tag-line with some modifications
 .tag-line {
 	padding-top: 30px;
 	font-size: 14pt;
-}
-
-.white {
-	color: white;
 }
 
 /*************** Section 1 ***************/
@@ -97,10 +37,8 @@ a {
 
 	.btns-main {
 		margin-top: auto;
-		display: flex;
 		flex-direction: row;
 	}
-
 
 	.btn-main{
 		padding: 8px 40px;
@@ -113,8 +51,6 @@ a {
 			margin-top: 7px;
 			margin-bottom: 7px;
 		}
-
-
 	}
 
 	.btns-main {
@@ -166,9 +102,8 @@ a {
 
 	.btns-problem {
 		margin: 0 auto;
-		display: flex;
-		justify-content: space-around;
 		padding-top: 50px;
+		justify-content: space-around;
 	}
 
 	.btn-problem {
@@ -191,10 +126,9 @@ a {
 		}
 		.btns-problem {
 			width: 60%;
-			margin: 0 auto;
-			display: flex;
-			flex-direction: column;
 			height: 350px;
+			margin: 0 auto;
+			flex-direction: column;
 		}
 		.btn-problem {
 			margin: 0 40px;
@@ -221,7 +155,6 @@ a {
 	.header-container {
 		margin: 0 auto;
 		padding: 0 20px;
-		text-align: center;
 	}
 
 	.right-container img {
@@ -311,7 +244,6 @@ a {
 
 	.btns-what-is {
 		padding: 30px 20px;
-		display: flex;
 	}
 
 	.btn-what-is {
@@ -366,14 +298,13 @@ a {
 	}
 
 	.btns-about-us {
-		display: flex;
 		flex-direction: column;
 	}
 
 	.btn-about-us{
-		margin-top: 30px;
 		width: 295px;
 		height: 50px;
+		margin-top: 30px;
 	}
 
 	@media all and (max-width: 831px){
@@ -453,9 +384,9 @@ a {
 		}
 
 		.btn-sponsored {
-			margin-top: 30px;
 			width: 295px;
 			height: 50px;
+			margin-top: 30px;
 			font-size: 14pt;
 		}
 	}
