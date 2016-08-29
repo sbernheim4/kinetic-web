@@ -6,6 +6,7 @@ const User = mongoose.model('User');
 const EmailSignup = mongoose.model('EmailSignup');
 const LaunchAChapter = mongoose.model('LaunchAChapter');
 const Questions = mongoose.model('Questions');
+const GetTheHandbook = mongoose.model('GetTheHandbook');
 const ContactRequest = mongoose.model('ContactRequest');
 const Nominate = mongoose.model('Nominate');
 const Bluebird = require('bluebird');
@@ -33,6 +34,25 @@ router.post('/launch-a-chapter', (req, res, next) => {
   })
   // When everything has completed we should redirect them to a page saying so
   // or add a confirmation popup or something dynamic like this
+  .then(() => res.send())
+  .catch(err => {
+    console.error(err);
+    res.status(500).send(err);
+  });
+});
+
+// post request for get-the-handbook form
+router.post('/get-the-handbook', (req, res, next) => {
+  Bluebird.resolve()
+  .then(() => {
+    if (req.body.email && req.body.newsletter) {
+      return EmailSignup.create(req.body);
+    }
+    return;
+  })
+  .then(() => {
+    return GetTheHandbook.create(req.body);
+  })
   .then(() => res.send())
   .catch(err => {
     console.error(err);
