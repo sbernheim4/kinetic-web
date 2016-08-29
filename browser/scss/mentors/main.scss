@@ -16,6 +16,11 @@
 		line-height: 150%;
 	}
 
+	h3 {
+		font-size: 25pt;
+		text-align: center;
+	}
+
 	.mentor-list {
 		padding: 30px 0;
 		display: flex;
@@ -24,7 +29,6 @@
 		flex-basis: 100%;
 
 		.mentor {
-			margin: 0 auto;
 			width: 200px;
 			padding: 30px 30px;
 			text-align: center;
@@ -36,10 +40,24 @@
 			}
 
 			.info {
-				font-weight: bolder;
 				font-size: 12pt;
-			}
 
+				p {
+					padding: 5px 0px;
+				}
+
+				.name {
+					text-decoration: underline;
+				}
+
+				.profession {
+					font-weight: bold;
+				}
+
+				.bio {
+					padding: 15px 0px;
+				}
+			}
 		}
 	}
 }
