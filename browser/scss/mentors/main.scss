@@ -29,9 +29,9 @@
 		flex-basis: 100%;
 
 		.mentor {
-			width: 275px;
-			padding: 30px 30px;
+			padding: 15px 30px;
 			text-align: center;
+			flex-basis: calc(50% - 60px);
 
 			img {
 				width: 200px;
@@ -39,6 +39,8 @@
 			}
 
 			.info {
+				width: 275px;
+				margin: 0 auto;
 				font-size: 12pt;
 
 				p {
