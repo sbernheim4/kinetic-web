@@ -37,14 +37,15 @@
 		}
 
 		.dropdown-lists {
-
+			margin-right: 41px;
 			display: flex;
 			align-items: flex-end;
 
 			.dropdown {
-				width: 184px;
+				margin: 0px 10px;
 				position: relative;
-				display: inline-block;
+				display: flex;
+				justify-content: center;
 				z-index: 100;
 
 				&:hover {
@@ -67,6 +68,7 @@
 				}
 
 				.dropdown-content {
+					margin-top: 51px;
 					display: none;
 					position: absolute;
 					background-color: #f9f9f9;
