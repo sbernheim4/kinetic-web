@@ -29,10 +29,9 @@
 		flex-basis: 100%;
 
 		.mentor {
-			width: 200px;
+			width: 275px;
 			padding: 30px 30px;
 			text-align: center;
-			flex-basis: 25%;
 
 			img {
 				width: 200px;
@@ -56,6 +55,11 @@
 
 				.bio {
 					padding: 15px 0px;
+				}
+
+				ul.schools {
+					padding: 0;
+					list-style: inside;
 				}
 			}
 		}
