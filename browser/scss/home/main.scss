@@ -6,7 +6,6 @@
 }
 
 /*************** Section 1 ***************/
-
 .home {
 	padding: 0px;
 
@@ -75,7 +74,6 @@
 	}
 
 	/************ Section 2 -- The Problem ************/
-
 	.problem {
 		position: relative;
 		height: 350px;
@@ -144,7 +142,6 @@
 
 
 	/*********** Section 3 -- The Solution ***************/
-
 	.solution {
 		min-height: 340px;;
 		padding: 0px;
@@ -189,7 +186,6 @@
 	}
 
 	/*********** Section 4 -- What Is ***********/
-
 	.what-is {
 		color: white;
 		text-align: center;
@@ -260,58 +256,50 @@
 		padding-top: 0px;
 		display: flex;
 		align-items: center;
-	}
 
-	.images-about-us {
-		max-width: 640px;
-	}
+		.images-about-us {
+			max-width: 640px;
 
-	.images-about-us > img {
-		width: 50vw;
-		max-width: 640px;
-		display: block;
-	}
+			img {
+				width: 50vw;
+				max-width: 640px;
+				display: block;
+				@media all and (max-width: 1277px) {
+					max-width: 620px;
+					padding: 0px 0px 10px 20px;
+				}
 
-	@media all and (max-width: 1277px) {
-		.images-about-us > img {
-			max-width: 620px;
-			padding: 0px 0px 10px 20px;
+				@media all and (max-width: 831px){
+					display: none;
+				}
+			}
 		}
-	}
 
-	.right-about-us {
-		margin: 0 auto;
-		padding: 30px 30px;
-	}
-
-	.header-about-us {
-		padding-bottom: 30px;
-	}
-
-	p {
-		margin: 0 auto;
-		max-width: 500px;
-	}
-
-	.btns-about-us {
-		flex-direction: column;
-	}
-
-	.btn-about-us{
-		width: 295px;
-		height: 50px;
-		margin-top: 30px;
-	}
-
-	@media all and (max-width: 831px){
-		.images-about-us > img {
-			display: none;
-		}
-	}
-
-	@media all and (max-width: 330px) {
 		.right-about-us {
-			padding: 30px 12px;
+			margin: 0 auto;
+			padding: 30px 30px;
+			@media all and (max-width: 330px) {
+				padding: 30px 12px;
+			}
+
+			.header-about-us {
+				padding-bottom: 30px;
+			}
+
+			p {
+				margin: 0 auto;
+				max-width: 500px;
+			}
+
+			.btns-about-us {
+				flex-direction: column;
+
+				.btn-about-us{
+					width: 295px;
+					height: 50px;
+					margin-top: 30px;
+				}
+			}
 		}
 	}
 
@@ -388,87 +376,84 @@
 	}
 
 	/*********** Section 7 -- Get Involved ***********/
-
 	.get-involved {
 		margin-bottom: 120px;
 		text-align: center;
-	}
 
-	.tag-line-get-involved {
-		margin: 0 auto;
-		max-width: 570px;
-		padding-left: 40px;
-		padding-right: 40px;
-		text-align: center;
-		font-weight: bolder;
-	}
-
-	.square-container {
-		margin-top: 40px;
-		margin-left: 40px;
-		margin-right: 40px;
-		text-align: center;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-
-	.square-container > div {
-		margin-top: 40px;
-		width: 250px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		flex-wrap: wrap;
-
-		@media all and (max-width: 1079px) {
-			width: 350px;
-			padding: 0 30px;
+		.tag-line-get-involved {
+			margin: 0 auto;
+			max-width: 570px;
+			padding-left: 40px;
+			padding-right: 40px;
+			text-align: center;
+			font-weight: bolder;
 		}
 
-		@media all and (max-width: 900px) {
-			width: 300px;
+		.square-container {
+			margin-top: 40px;
+			margin-left: 40px;
+			margin-right: 40px;
+			text-align: center;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			div {
+				margin-top: 40px;
+				width: 250px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				flex-wrap: wrap;
+
+				@media all and (max-width: 1079px) {
+					width: 350px;
+					padding: 0 30px;
+				}
+
+				@media all and (max-width: 900px) {
+					width: 300px;
+				}
+
+				.square {
+					margin-bottom: 20px;
+					width: 150px;
+					height: 150px;
+					border: 2px solid white;
+					text-align: center;
+					color: white;
+					cursor: pointer;
+					display: inline-block;
+					font-size: 14pt;
+
+					p {
+						padding-left: 10px;
+						padding-right: 10px;
+					}
+				}
+
+				.square-orange {
+					background-color: rgb(243, 131, 49);
+				}
+
+				.square-blue {
+					background-color: rgb(27, 121, 167);
+				}
+
+				.square-aqua {
+					background-color: rgb(99, 171, 181);
+				}
+
+				.square-green {
+					background-color: rgb(96, 191, 59);
+				}
+
+				.description {
+					margin-top: 20px;
+					margin-left: 20px;
+					margin-right: 20px;
+				}
+			}
 		}
-
 	}
-
-	.description {
-		margin-top: 20px;
-		margin-left: 20px;
-		margin-right: 20px;
-	}
-
-	.square {
-		margin-bottom: 20px;
-		width: 150px;
-		height: 150px;
-		border: 2px solid white;
-		text-align: center;
-		color: white;
-		cursor: pointer;
-		display: inline-block;
-		font-size: 14pt;
-	}
-
-	.square-orange {
-		background-color: rgb(243, 131, 49);
-	}
-
-	.square-blue {
-		background-color: rgb(27, 121, 167);
-	}
-
-	.square-aqua {
-		background-color: rgb(99, 171, 181);
-	}
-
-	.square-green {
-		background-color: rgb(96, 191, 59);
-	}
-
-	.square > p {
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-
 }
