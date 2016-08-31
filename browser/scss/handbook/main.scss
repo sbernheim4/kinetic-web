@@ -14,13 +14,6 @@
 
 		h1 {
 			padding: 15px;
-			font-size: 30pt;
-			text-transform: uppercase;
-			text-align: center;
-
-			@media all and (max-width: 320px) {
-				font-size: 35pt;
-			}
 		}
 
 		p {
