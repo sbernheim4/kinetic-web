@@ -19,64 +19,60 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-	}
 
-	.big-main {
-		padding: 120px 50px 0px 50px;
-		color: white;
-		text-align: center;
-		font-size: 35pt;
-	}
+		.text-container {
 
-	.tag-line-main {
-		padding: 10% 35px 0px 35px;
-		font-size: 20pt;
-		text-align: center;
-		color: white;
-	}
+			h1 {
+				padding: 120px 50px 0px 50px;
+				color: white;
+				text-align: center;
+				font-size: 35pt;
+				@media all and (max-width: 400px) {
+					padding: 50px 50px 0px 50px;
+				}
+			}
 
-	.btns-main {
-		margin-top: auto;
-		flex-direction: row;
-	}
-
-	.btn-main{
-		padding: 8px 40px;
-		width: 245px;
-		text-transform: capitalize;
-		@media all and (max-width: 825px) and (min-width: 486px) {
-			margin-top: 20px;
+			h3 {
+				padding: 10% 35px 0px 35px;
+				font-size: 20pt;
+				text-align: center;
+				color: white;
+			}
 		}
-		@media all and (max-width: 485px) {
-			margin-top: 7px;
-			margin-bottom: 7px;
-		}
-	}
 
-	.btns-main {
-		padding-bottom: 140px;
-		justify-content: space-around;
-		padding-top: 140px;
-		@media all and (min-width: 1200px) {
-			width: 80%;
-		}
-		@media all and (max-width: 1199px) and (min-width: 826px) {
-			width: 100%;
-		}
-		@media all and (max-width: 825px) {
-			flex-direction: column;
-			padding-bottom: 80px;
-			padding-top: 80px;
-		}
-	}
+		.btns-main {
+			margin-top: auto;
+			padding: 140px 0px;
+			justify-content: space-around;
+			flex-direction: row;
+			@media all and (min-width: 1200px) {
+				width: 80%;
+			}
 
-	@media all and (max-width: 400px) {
-		.big-main {
-			padding: 50px 50px 0px 50px;
+			@media all and (max-width: 1199px) and (min-width: 826px) {
+				width: 100%;
+			}
+
+			@media all and (max-width: 825px) {
+				flex-direction: column;
+				padding-bottom: 80px;
+				padding-top: 80px;
+			}
+
+			.btn-main{
+				padding: 8px 40px;
+				width: 245px;
+				text-transform: capitalize;
+				@media all and (max-width: 825px) and (min-width: 486px) {
+					margin-top: 20px;
+				}
+				@media all and (max-width: 485px) {
+					margin-top: 7px;
+					margin-bottom: 7px;
+				}
+			}
 		}
 	}
-
-
 
 	/************ Section 2 -- The Problem ************/
 
@@ -89,47 +85,56 @@
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
-	}
+		@media all and (max-width: 780px) {
+			height: 600px;
+		}
 
-	.header-problem {
-		padding: 0 30px;
-	}
+		.header-problem {
+			padding: 0 30px;
+		}
 
-	.tag-line-problem {
-		padding-left: 13px;
-		padding-right: 13px;
-	}
+		.tag-line-problem {
+			padding-left: 13px;
+			padding-right: 13px;
+		}
 
-	.btns-problem {
-		margin: 0 auto;
-		padding-top: 50px;
-		justify-content: space-around;
-	}
+		.btns-problem {
+			margin: 0 auto;
+			padding-top: 50px;
+			justify-content: space-around;
+			@media all and (max-width: 780px) {
+				width: 60%;
+				height: 350px;
+				margin: 0 auto;
+				flex-direction: column;
+			}
 
-	.btn-problem {
-		margin: 0 40px;
-		width: 180px;
-		height: 70px;
-		cursor: default;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+			.btn-problem {
+				margin: 0 40px;
+				width: 180px;
+				height: 70px;
+				cursor: default;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				&:hover {
+					background-color: rgb(253, 178, 59);
+				}
+				@media all and (max-width: 780px) {
+					margin: 0 40px;
+					width: 150px;
+					height: 70px;
+				}
+			}
 
-		&:hover {
-			background-color: rgb(253, 178, 59);
+			img {
+				width: 85px;
+			}
+
 		}
 	}
 
 	@media all and (max-width: 780px) {
-		.problem {
-			height: 600px;
-		}
-		.btns-problem {
-			width: 60%;
-			height: 350px;
-			margin: 0 auto;
-			flex-direction: column;
-		}
 		.btn-problem {
 			margin: 0 40px;
 			width: 150px;
@@ -137,9 +142,6 @@
 		}
 	}
 
-	.confused-man {
-		width: 85px;
-	}
 
 	/*********** Section 3 -- The Solution ***************/
 
@@ -151,35 +153,39 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-	}
-	.header-container {
-		margin: 0 auto;
-		padding: 0 20px;
-	}
 
-	.right-container img {
-		width: calc(50vw - 74px);
-		display: block;
-	}
+		.header-container {
+			margin: 0 auto;
+			padding: 0 20px;
 
-	@media all and (max-width: 1165px) {
-		.right-container {
-			padding: 20px
+			p {
+				text-align: center;
+			}
+
+			.btns-solution {
+				padding-top: 50px;
+
+				.btn-solution {
+					padding: 10px 60px;
+				}
+			}
 		}
-	}
 
-	@media all and (max-width: 640px) {
+
 		.right-container {
-			display: none;
+			@media all and (max-width: 1165px) {
+				padding: 20px
+			}
+
+			@media all and (max-width: 640px) {
+				display: none;
+			}
+
+			img {
+				width: calc(50vw - 74px);
+				display: block;
+			}
 		}
-	}
-
-	.btns-solution {
-		padding-top: 50px;
-	}
-
-	.btn-solution {
-		padding: 10px 60px;
 	}
 
 	/*********** Section 4 -- What Is ***********/
@@ -188,73 +194,64 @@
 		color: white;
 		text-align: center;
 		background-color: rgb(27, 121, 167);
-	}
 
-	.what-is-row {
-		padding-top: 20px;
-		text-align: center;
-		display: flex;
-		flex-direction: row;
-
-		@media all and (max-width: 767px) {
-			flex-direction: column
+		.tag-line-what-is {
+			margin: 0 auto;
+			padding-left: 20px;
+			padding-right: 20px;
+			max-width: 945px;
 		}
-	}
 
-	.tag-line-what-is {
-		margin: 0 auto;
-		padding-left: 20px;
-		padding-right: 20px;
-		max-width: 945px;
-	}
+		.what-is-row {
+			padding-top: 20px;
+			text-align: center;
+			display: flex;
+			flex-direction: row;
+			@media all and (max-width: 767px) {
+				flex-direction: column
+			}
 
-	.what-is-row {
-		padding-top: 20px;
-		text-align: center;
-	}
+			div {
+				padding-top: 30px;
+				padding-left: 30px;
+				padding-right: 30px;
 
-	.what-is-row > div {
-		padding-top: 30px;
-		padding-left: 30px;
-		padding-right: 30px;
-	}
+				.circle {
+					border-radius: 100%;
+					border: 1px solid black;
+				}
+			}
 
-	.circle {
-		border-radius: 100%;
-		border: 1px solid black;
-	}
+			div.research > .underline {
+				width: 82px;
+				margin: 10px auto;
+				padding: 0px;
+				border-bottom: 1px solid red;
+			}
 
-	.research > .underline {
-		margin: 10px auto;
-		width: 82px;
-		border-bottom: 1px solid red;
-	}
+			div.design > .underline {
+				width: 60px;
+				margin: 10px auto;
+				padding: 0px;
+				border-bottom: 1px solid rgb(36, 209, 86);
+			}
 
-	.design > .underline {
-		margin: 10px auto;
-		width: 60px;
-		border-bottom: 1px solid rgb(36, 209, 86);
-	}
+			div.implementation > .underline {
+				width: 140px;
+				margin: 10px auto;
+				padding: 0px;
+				border-bottom: 1px solid rgb(45, 253, 253);
+			}
 
-	.implementation > .underline {
-		margin: 10px auto;
-		width: 140px;
-		border-bottom: 1px solid rgb(45, 253, 253);
-	}
+		}
+		.btns-what-is {
+			padding: 30px 20px;
 
-	.btns-what-is {
-		padding: 30px 20px;
-	}
-
-	.btn-what-is {
-		padding: 10px 90px;
-		font-size: 17pt;
-	}
-
-
-	@media all and (max-width: 767px) {
-		.btn-what-is {
-			padding: 10px 15px;
+			.btn-what-is {
+				width: 450px;
+				height: 50px;
+				font-size: 20pt;
+			}
 		}
 	}
 
@@ -291,9 +288,8 @@
 		padding-bottom: 30px;
 	}
 
-	.header-text {
+	p {
 		margin: 0 auto;
-		text-align: justify;
 		max-width: 500px;
 	}
 
