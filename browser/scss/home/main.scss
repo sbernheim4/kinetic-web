@@ -247,6 +247,9 @@
 				width: 450px;
 				height: 50px;
 				font-size: 20pt;
+				@media all and (max-width: 354px) {
+					height: 80px;
+				}
 			}
 		}
 	}
