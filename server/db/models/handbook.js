@@ -23,8 +23,7 @@ const HandbookSchema = new mongoose.Schema({
     type: String
   },
   member: {
-    type: Boolean,
-    required: true
+    type: Boolean
   },
   interested: {
     type: Boolean
