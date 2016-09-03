@@ -1,72 +1,11 @@
-/************* RESETTERS AND HELPERS ***********/
 
-div {
-	/*border:1px solid green;*/
-}
-
-@font-face{
-	font-family: Lato;
-	src: url('fonts/lato-regular.ttf');
-}
-
-@font-face {
-	font-family: Open-Sans;
-	src: url('fonts/open-sans-regular.ttf');
-}
-
-* {
-	margin: 0;
-	font-family: 'Lato', 'open-sans';
-}
-
-section {
-	padding-top: 30px;
-}
-
-a {
-	text-decoration: none;
-	color: rgb(66,66,66);
-}
-
-/************* Common Attributes **************/
-
-.btns {
-	justify-content: center;
-	align-items: center;
-}
-
-.btn {
-	background-color: rgb(253, 178, 59);
-	border-radius: 5px;
-	border: 1px solid white;
-	text-align: center;
-	color: white;
-	cursor: pointer;
-	font-size: 12pt;
-	text-decoration: none;
-
-	&:hover {
-		background-color: darken(rgb(253, 178, 59), 10%)
-	}
-}
-
-.header {
-	font-size: 35pt;
-	text-align: center;
-	text-transform: uppercase;
-}
-
+// Each section uses a default tag-line with some modifications
 .tag-line {
 	padding-top: 30px;
 	font-size: 14pt;
 }
 
-.white {
-	color: white;
-}
-
 /*************** Section 1 ***************/
-
 .home {
 	padding: 0px;
 
@@ -79,71 +18,62 @@ a {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-	}
 
-	.big-main {
-		padding: 120px 50px 0px 50px;
-		color: white;
-		text-align: center;
-		font-size: 35pt;
-	}
+		.text-container {
 
-	.tag-line-main {
-		padding: 10% 35px 0px 35px;
-		font-size: 20pt;
-		text-align: center;
-		color: white;
-	}
+			h1 {
+				padding: 120px 50px 0px 50px;
+				color: white;
+				text-align: center;
+				font-size: 35pt;
+				@media all and (max-width: 400px) {
+					padding: 50px 50px 0px 50px;
+				}
+			}
 
-	.btns-main {
-		margin-top: auto;
-		display: flex;
-		flex-direction: row;
-	}
-
-
-	.btn-main{
-		padding: 8px 40px;
-		width: 245px;
-		text-transform: capitalize;
-		@media all and (max-width: 825px) and (min-width: 486px) {
-			margin-top: 20px;
-		}
-		@media all and (max-width: 485px) {
-			margin-top: 7px;
-			margin-bottom: 7px;
+			h3 {
+				padding: 10% 35px 0px 35px;
+				font-size: 20pt;
+				text-align: center;
+				color: white;
+			}
 		}
 
+		.btns-main {
+			margin-top: auto;
+			padding: 140px 0px;
+			justify-content: space-around;
+			flex-direction: row;
+			@media all and (min-width: 1200px) {
+				width: 80%;
+			}
 
+			@media all and (max-width: 1199px) and (min-width: 826px) {
+				width: 100%;
+			}
+
+			@media all and (max-width: 825px) {
+				flex-direction: column;
+				padding-bottom: 80px;
+				padding-top: 80px;
+			}
+
+			.btn-main{
+				padding: 8px 40px;
+				width: 245px;
+				text-transform: capitalize;
+				@media all and (max-width: 825px) and (min-width: 486px) {
+					margin-top: 20px;
+				}
+				@media all and (max-width: 485px) {
+					margin-top: 7px;
+					margin-bottom: 7px;
+				}
+			}
+		}
 	}
-
-	.btns-main {
-		padding-bottom: 140px;
-		justify-content: space-around;
-		padding-top: 140px;
-		@media all and (min-width: 1200px) {
-			width: 80%;
-		}
-		@media all and (max-width: 1199px) and (min-width: 826px) {
-			width: 100%;
-		}
-		@media all and (max-width: 825px) {
-			flex-direction: column;
-			padding-bottom: 80px;
-			padding-top: 80px;
-		}
-	}
-
-	@media all and (max-width: 400px) {
-		.big-main {
-			padding: 50px 50px 0px 50px;
-		}
-	}
-
-
 
 	/************ Section 2 -- The Problem ************/
-
 	.problem {
 		position: relative;
 		height: 350px;
@@ -153,49 +83,56 @@ a {
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
-	}
+		@media all and (max-width: 780px) {
+			height: 600px;
+		}
 
-	.header-problem {
-		padding: 0 30px;
-	}
+		.header-problem {
+			padding: 0 30px;
+		}
 
-	.tag-line-problem {
-		padding-left: 13px;
-		padding-right: 13px;
-	}
+		.tag-line-problem {
+			padding-left: 13px;
+			padding-right: 13px;
+		}
 
-	.btns-problem {
-		margin: 0 auto;
-		display: flex;
-		justify-content: space-around;
-		padding-top: 50px;
-	}
+		.btns-problem {
+			margin: 0 auto;
+			padding-top: 50px;
+			justify-content: space-around;
+			@media all and (max-width: 780px) {
+				width: 60%;
+				height: 350px;
+				margin: 0 auto;
+				flex-direction: column;
+			}
 
-	.btn-problem {
-		margin: 0 40px;
-		width: 180px;
-		height: 70px;
-		cursor: default;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+			.btn-problem {
+				margin: 0 40px;
+				width: 180px;
+				height: 70px;
+				cursor: default;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				&:hover {
+					background-color: rgb(253, 178, 59);
+				}
+				@media all and (max-width: 780px) {
+					margin: 0 40px;
+					width: 150px;
+					height: 70px;
+				}
+			}
 
-		&:hover {
-			background-color: rgb(253, 178, 59);
+			img {
+				width: 85px;
+			}
+
 		}
 	}
 
 	@media all and (max-width: 780px) {
-		.problem {
-			height: 600px;
-		}
-		.btns-problem {
-			width: 60%;
-			margin: 0 auto;
-			display: flex;
-			flex-direction: column;
-			height: 350px;
-		}
 		.btn-problem {
 			margin: 0 40px;
 			width: 150px;
@@ -203,12 +140,8 @@ a {
 		}
 	}
 
-	.confused-man {
-		width: 85px;
-	}
 
 	/*********** Section 3 -- The Solution ***************/
-
 	.solution {
 		min-height: 340px;;
 		padding: 0px;
@@ -217,112 +150,107 @@ a {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-	}
-	.header-container {
-		margin: 0 auto;
-		padding: 0 20px;
-		text-align: center;
-	}
 
-	.right-container img {
-		width: calc(50vw - 74px);
-		display: block;
-	}
+		.header-container {
+			margin: 0 auto;
+			padding: 0 20px;
 
-	@media all and (max-width: 1165px) {
-		.right-container {
-			padding: 20px
+			p {
+				text-align: center;
+			}
+
+			.btns-solution {
+				padding-top: 50px;
+
+				.btn-solution {
+					padding: 10px 60px;
+				}
+			}
 		}
-	}
 
-	@media all and (max-width: 640px) {
+
 		.right-container {
-			display: none;
+			@media all and (max-width: 1165px) {
+				padding: 20px
+			}
+
+			@media all and (max-width: 640px) {
+				display: none;
+			}
+
+			img {
+				width: calc(50vw - 74px);
+				display: block;
+			}
 		}
-	}
-
-	.btns-solution {
-		padding-top: 50px;
-	}
-
-	.btn-solution {
-		padding: 10px 60px;
 	}
 
 	/*********** Section 4 -- What Is ***********/
-
 	.what-is {
 		color: white;
 		text-align: center;
 		background-color: rgb(27, 121, 167);
-	}
 
-	.what-is-row {
-		padding-top: 20px;
-		text-align: center;
-		display: flex;
-		flex-direction: row;
-
-		@media all and (max-width: 767px) {
-			flex-direction: column
+		.tag-line-what-is {
+			margin: 0 auto;
+			padding-left: 20px;
+			padding-right: 20px;
+			max-width: 945px;
 		}
-	}
 
-	.tag-line-what-is {
-		margin: 0 auto;
-		padding-left: 20px;
-		padding-right: 20px;
-		max-width: 945px;
-	}
+		.what-is-row {
+			padding-top: 20px;
+			text-align: center;
+			display: flex;
+			flex-direction: row;
+			@media all and (max-width: 767px) {
+				flex-direction: column
+			}
 
-	.what-is-row {
-		padding-top: 20px;
-		text-align: center;
-	}
+			div {
+				padding-top: 30px;
+				padding-left: 30px;
+				padding-right: 30px;
 
-	.what-is-row > div {
-		padding-top: 30px;
-		padding-left: 30px;
-		padding-right: 30px;
-	}
+				.circle {
+					border-radius: 100%;
+					border: 1px solid black;
+				}
+			}
 
-	.circle {
-		border-radius: 100%;
-		border: 1px solid black;
-	}
+			div.research > .underline {
+				width: 82px;
+				margin: 10px auto;
+				padding: 0px;
+				border-bottom: 1px solid red;
+			}
 
-	.research > .underline {
-		margin: 10px auto;
-		width: 82px;
-		border-bottom: 1px solid red;
-	}
+			div.design > .underline {
+				width: 60px;
+				margin: 10px auto;
+				padding: 0px;
+				border-bottom: 1px solid rgb(36, 209, 86);
+			}
 
-	.design > .underline {
-		margin: 10px auto;
-		width: 60px;
-		border-bottom: 1px solid rgb(36, 209, 86);
-	}
+			div.implementation > .underline {
+				width: 140px;
+				margin: 10px auto;
+				padding: 0px;
+				border-bottom: 1px solid rgb(45, 253, 253);
+			}
 
-	.implementation > .underline {
-		margin: 10px auto;
-		width: 140px;
-		border-bottom: 1px solid rgb(45, 253, 253);
-	}
+		}
+		.btns-what-is {
+			padding: 30px 20px;
 
-	.btns-what-is {
-		padding: 30px 20px;
-		display: flex;
-	}
-
-	.btn-what-is {
-		padding: 10px 90px;
-		font-size: 17pt;
-	}
-
-
-	@media all and (max-width: 767px) {
-		.btn-what-is {
-			padding: 10px 15px;
+			.btn-what-is {
+				width: 450px;
+				height: 50px;
+				font-size: 20pt;
+				@media all and (max-width: 354px) {
+					height: 80px;
+				}
+			}
 		}
 	}
 
@@ -331,60 +259,50 @@ a {
 		padding-top: 0px;
 		display: flex;
 		align-items: center;
-	}
 
-	.images-about-us {
-		max-width: 640px;
-	}
+		.images-about-us {
+			max-width: 640px;
 
-	.images-about-us > img {
-		width: 50vw;
-		max-width: 640px;
-		display: block;
-	}
+			img {
+				width: 50vw;
+				max-width: 640px;
+				display: block;
+				@media all and (max-width: 1277px) {
+					max-width: 620px;
+					padding: 0px 0px 10px 20px;
+				}
 
-	@media all and (max-width: 1277px) {
-		.images-about-us > img {
-			max-width: 620px;
-			padding: 0px 0px 10px 20px;
+				@media all and (max-width: 831px){
+					display: none;
+				}
+			}
 		}
-	}
 
-	.right-about-us {
-		margin: 0 auto;
-		padding: 30px 30px;
-	}
-
-	.header-about-us {
-		padding-bottom: 30px;
-	}
-
-	.header-text {
-		margin: 0 auto;
-		text-align: justify;
-		max-width: 500px;
-	}
-
-	.btns-about-us {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.btn-about-us{
-		margin-top: 30px;
-		width: 295px;
-		height: 50px;
-	}
-
-	@media all and (max-width: 831px){
-		.images-about-us > img {
-			display: none;
-		}
-	}
-
-	@media all and (max-width: 330px) {
 		.right-about-us {
-			padding: 30px 12px;
+			margin: 0 auto;
+			padding: 30px 30px;
+			@media all and (max-width: 330px) {
+				padding: 30px 12px;
+			}
+
+			.header-about-us {
+				padding-bottom: 30px;
+			}
+
+			p {
+				margin: 0 auto;
+				max-width: 500px;
+			}
+
+			.btns-about-us {
+				flex-direction: column;
+
+				.btn-about-us{
+					width: 295px;
+					height: 50px;
+					margin-top: 30px;
+				}
+			}
 		}
 	}
 
@@ -453,95 +371,92 @@ a {
 		}
 
 		.btn-sponsored {
-			margin-top: 30px;
 			width: 295px;
 			height: 50px;
+			margin-top: 30px;
 			font-size: 14pt;
 		}
 	}
 
 	/*********** Section 7 -- Get Involved ***********/
-
 	.get-involved {
 		margin-bottom: 120px;
 		text-align: center;
-	}
 
-	.tag-line-get-involved {
-		margin: 0 auto;
-		max-width: 570px;
-		padding-left: 40px;
-		padding-right: 40px;
-		text-align: center;
-		font-weight: bolder;
-	}
-
-	.square-container {
-		margin-top: 40px;
-		margin-left: 40px;
-		margin-right: 40px;
-		text-align: center;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-
-	.square-container > div {
-		margin-top: 40px;
-		width: 250px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		flex-wrap: wrap;
-
-		@media all and (max-width: 1079px) {
-			width: 350px;
-			padding: 0 30px;
+		.tag-line-get-involved {
+			margin: 0 auto;
+			max-width: 570px;
+			padding-left: 40px;
+			padding-right: 40px;
+			text-align: center;
+			font-weight: bolder;
 		}
 
-		@media all and (max-width: 900px) {
-			width: 300px;
+		.square-container {
+			margin-top: 40px;
+			margin-left: 40px;
+			margin-right: 40px;
+			text-align: center;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			div {
+				margin-top: 40px;
+				width: 250px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				flex-wrap: wrap;
+
+				@media all and (max-width: 1079px) {
+					width: 350px;
+					padding: 0 30px;
+				}
+
+				@media all and (max-width: 900px) {
+					width: 300px;
+				}
+
+				.square {
+					margin-bottom: 20px;
+					width: 150px;
+					height: 150px;
+					border: 2px solid white;
+					text-align: center;
+					color: white;
+					cursor: pointer;
+					display: inline-block;
+					font-size: 14pt;
+
+					p {
+						padding-left: 10px;
+						padding-right: 10px;
+					}
+				}
+
+				.square-orange {
+					background-color: rgb(243, 131, 49);
+				}
+
+				.square-blue {
+					background-color: rgb(27, 121, 167);
+				}
+
+				.square-aqua {
+					background-color: rgb(99, 171, 181);
+				}
+
+				.square-green {
+					background-color: rgb(96, 191, 59);
+				}
+
+				.description {
+					margin-top: 20px;
+					margin-left: 20px;
+					margin-right: 20px;
+				}
+			}
 		}
-
 	}
-
-	.description {
-		margin-top: 20px;
-		margin-left: 20px;
-		margin-right: 20px;
-	}
-
-	.square {
-		margin-bottom: 20px;
-		width: 150px;
-		height: 150px;
-		border: 2px solid white;
-		text-align: center;
-		color: white;
-		cursor: pointer;
-		display: inline-block;
-		font-size: 14pt;
-	}
-
-	.square-orange {
-		background-color: rgb(243, 131, 49);
-	}
-
-	.square-blue {
-		background-color: rgb(27, 121, 167);
-	}
-
-	.square-aqua {
-		background-color: rgb(99, 171, 181);
-	}
-
-	.square-green {
-		background-color: rgb(96, 191, 59);
-	}
-
-	.square > p {
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-
 }
