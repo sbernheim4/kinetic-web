@@ -1,0 +1,49 @@
+.leadership {
+	.people {
+		padding: 30px;
+		.person {
+			margin: 0 auto;
+			padding: 30px 0px 0px 0px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			@media all and (max-width: 889px) {
+				flex-direction: column
+			}
+
+			.img-container {
+				img {
+				}
+			}
+
+			.text-container {
+				width: 75%;
+				max-width: 600px;
+				padding: 15px;
+
+				.title {
+					font-weight: bold;
+				}
+
+				.description {
+
+				}
+			}
+		}
+	}
+
+	.btns {
+
+		padding: 30px;
+
+		.btn {
+			width: 400px;
+			height: 20px;
+
+			padding: 15px 0px;
+		}
+	}
+}
