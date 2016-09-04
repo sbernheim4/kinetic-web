@@ -437,18 +437,34 @@
 
 				.square-orange {
 					background-color: rgb(243, 131, 49);
+
+					&:hover {
+						background-color: darken(rgb(243, 131, 49), 10%);
+					}
 				}
 
 				.square-blue {
 					background-color: rgb(27, 121, 167);
+
+					&:hover {
+						background-color: darken(rgb(27, 121, 167), 10%);
+					}
 				}
 
 				.square-aqua {
 					background-color: rgb(99, 171, 181);
+
+					&:hover {
+						background-color: darken(rgb(99, 171, 181), 10%);
+					}
 				}
 
 				.square-green {
 					background-color: rgb(96, 191, 59);
+
+					&:hover {
+						background-color: darken(rgb(96, 191, 59), 10%);
+					}
 				}
 
 				.description {
