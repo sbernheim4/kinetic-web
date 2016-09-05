@@ -73,6 +73,29 @@
 		}
 	}
 
+	section.overview {
+		padding-top: 0;
+		.header {
+			margin: 30px 20px;
+			@media all and (max-width: 485px) {
+				margin: 20px 5px;
+			}
+		}
+		.video-container { // shout out to https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+			position: relative;
+			padding-bottom: 56.25%; /* 16:9 */
+			padding-top: 25px;
+			height: 0;
+		}
+		.video-container iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
 	/************ Section 2 -- The Problem ************/
 	.problem {
 		position: relative;
