@@ -4,55 +4,70 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
 	http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-	<url>
-		<loc>http://www.kineticglobal.org/</loc>
-		<lastmod>2016-08-07T20:48:00+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.8</priority>
-	</url>
 
 	<url>
-		<loc>http://www.kineticglobal.org/about</loc>
-		<lastmod>2016-08-08T00:02:37+00:00</lastmod>
+		<loc>http://www.kineticglobal.org/</loc>
+		  <lastmod>2016-08-30T19:45:22+00:00</lastmod>
 	</url>
 
 	<url>
 		<loc>http://www.kineticglobal.org/issue-advisors</loc>
-		<lastmod>2016-08-08T00:02:37+00:00</lastmod>
+		  <lastmod>2016-08-30T19:45:22+00:00</lastmod>
 	</url>
 
 	<url>
 		<loc>http://www.kineticglobal.org/campuses</loc>
-		<lastmod>2016-08-08T00:02:37+00:00</lastmod>
+		  <lastmod>2016-08-30T19:45:22+00:00</lastmod>
+	</url>
+
+	<url>
+		<loc>http://www.kineticglobal.org/contact-us</loc>
+		  <lastmod>2016-08-30T19:45:22+00:00</lastmod>
+	</url>
+
+	<url>
+		<loc>http://www.kineticglobal.org/get-the-kinetic-handbook</loc>
+		  <lastmod>2016-08-30T19:45:22+00:00</lastmod>
 	</url>
 
 	<url>
 		<loc>http://www.kineticglobal.org/history</loc>
-		<lastmod>2016-08-08T00:02:37+00:00</lastmod>
-	</url>
-
-	<url>
-		<loc>http://www.kineticglobal.org/login</loc>
-		<lastmod>2016-08-08T00:02:37+00:00</lastmod>
-	</url>
-
-	<url>
-		<loc>http://www.kineticglobal.org/mission</loc>
-		<lastmod>2016-08-08T00:02:37+00:00</lastmod>
-	</url>
-
-	<url>
-		<loc>http://www.kineticglobal.org/signup</loc>
-		<lastmod>2016-08-08T00:02:37+00:00</lastmod>
-	</url>
-
-	<url>
-		<loc>http://www.kineticglobal.org/support</loc>
-		<lastmod>2016-08-08T00:02:37+00:00</lastmod>
+		  <lastmod>2016-08-30T19:45:22+00:00</lastmod>
 	</url>
 
 	<url>
 		<loc>http://www.kineticglobal.org/launch-a-chapter</loc>
-		<lastmod>2016-08-16T04:39:59+00:00</lastmod>
+		  <lastmod>2016-08-30T19:45:22+00:00</lastmod>
 	</url>
+
+	<url>
+		<loc>http://www.kineticglobal.org/issue-mentors</loc>
+		  <lastmod>2016-08-30T19:45:22+00:00</lastmod>
+	</url>
+
+	<url>
+		<loc>http://www.kineticglobal.org/mission</loc>
+		  <lastmod>2016-08-30T19:45:22+00:00</lastmod>
+	</url>
+
+	<url>
+		<loc>http://www.kineticglobal.org/nominate-an-expert</loc>
+		  <lastmod>2016-08-30T19:45:22+00:00</lastmod>
+	</url>
+
+	<url>
+		<loc>http://www.kineticglobal.org/support</loc>
+		  <lastmod>2016-08-30T19:45:22+00:00</lastmod>
+	</url>
+
+	<url>
+		<loc>http://www.kineticglobal.org/our-supporters</loc>
+		  <lastmod>2016-08-30T19:45:22+00:00</lastmod>
+	</url>
+
+	<url>
+		<loc>http://www.kineticglobal.org/kinetic-template</loc>
+		  <lastmod>2016-08-30T19:45:22+00:00</lastmod>
+	</url>
+
 </urlset>

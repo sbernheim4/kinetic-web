@@ -67,27 +67,6 @@ describe('GetTheHandbook model', function () {
 			});
 		});
 
-		describe('invalid entry', function () {
-			it('should not add document to collection', function (done) {
-				const invalidForm = {
-					name: "Testy McTesterson",
-					email: "test@test.com",
-					profession: "Student",
-					interested: false,
-					curious: false,
-					workAtUniversity: false,
-					newsletter: true,
-				};
-
-				GetTheHandbook.create(invalidForm)
-				.then(done)
-				.catch((err) => {
-					expect(err.message).to.equal('GetTheHandbook validation failed');
-					done();
-				});
-			});
-		});
-
 		describe('valid entry', function () {
 			it('should add document to collection', function (done) {
 				const validForm = {

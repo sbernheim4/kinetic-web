@@ -1,0 +1,51 @@
+// Resseters and standards for the entire website
+
+// Useful for development
+div {
+	/*border:1px solid green;*/
+}
+
+* {
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+}
+
+section {
+	padding-top: 30px;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(66,66,66);
+}
+
+/************* Common Attributes **************/
+
+// For all groups of buttons, they should be centered using flexbox
+.btns {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn {
+	background-color: rgb(253, 178, 59);
+	border-radius: 5px;
+	border: none;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-size: 12pt;
+	text-decoration: none;
+
+	&:hover {
+		background-color: darken(rgb(253, 178, 59), 10%)
+	}
+}
+
+// All headers should be 35pt, Centered, and in Uppercase
+.header {
+	font-size: 35pt;
+	text-align: center;
+	text-transform: uppercase;
+}

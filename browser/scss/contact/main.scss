@@ -12,9 +12,6 @@ $form-width: 300px;
 
 		.header {
 			padding: 0px 15px 15px 15px;
-			font-size: 35pt;
-			text-transform: uppercase;
-			text-align: center;
 			color: white;
 		}
 
@@ -75,26 +72,11 @@ $form-width: 300px;
 			}
 
 			.btns {
-				display: flex;
-				justify-content: center;
-				align-items: center;
 
 				.btn {
 					width: $form-width;
 					height: 50px;
 					margin: 15px 0px 30px 0px;
-					background-color: rgb(253, 178, 59);
-					border-radius: 5px;
-					border: 1px solid white;
-					text-align: center;
-					color: white;
-					cursor: pointer;
-					font-size: 12pt;
-					text-decoration: none;
-
-					&:hover {
-						background-color: darken(rgb(253, 178, 59), 10%)
-					}
 				}
 			}
 
