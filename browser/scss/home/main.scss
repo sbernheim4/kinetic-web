@@ -171,13 +171,14 @@
 		background-color: white;
 		color: black;
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
 
 		.header-container {
 			margin: 0 auto;
-			padding: 0 20px;
-
+			padding: 30px 20px;
+			display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+			flex-basis: calc(50% - 40px);
 			p {
 				text-align: center;
 			}
@@ -193,17 +194,18 @@
 
 
 		.right-container {
-			@media all and (max-width: 1165px) {
-				padding: 20px
-			}
-
+			display: flex;
+			flex-basis: 50%;
+			flex-direction: column;
 			@media all and (max-width: 640px) {
 				display: none;
 			}
 
-			img {
-				width: calc(50vw - 74px);
-				display: block;
+			div.img {
+				flex-basis: 100%;
+				height: 100%;
+				background-size: cover;
+				background-position: center;
 			}
 		}
 	}
@@ -281,29 +283,31 @@
 	.about-us {
 		padding-top: 0px;
 		display: flex;
-		align-items: center;
 
 		.images-about-us {
-			max-width: 640px;
 
-			img {
-				width: 50vw;
-				max-width: 640px;
-				display: block;
-				@media all and (max-width: 1277px) {
-					max-width: 620px;
-					padding: 0px 0px 10px 20px;
-				}
+			display: flex;
+			flex-basis: 50%;
+			flex-direction: column;
+			@media all and (max-width: 831px){
+				display: none;
+			}
 
-				@media all and (max-width: 831px){
-					display: none;
-				}
+			div.img {
+				flex-basis: 100%;
+				height: 100%;
+				background-size: cover;
+				background-position: center;
 			}
 		}
 
 		.right-about-us {
-			margin: 0 auto;
 			padding: 30px 30px;
+			flex-basis: calc(50% - 60px);
+			@media all and (max-width: 831px){
+				flex-basis: 80%;
+				margin: 0 auto;
+			}
 			@media all and (max-width: 330px) {
 				padding: 30px 12px;
 			}
@@ -460,18 +464,34 @@
 
 				.square-orange {
 					background-color: rgb(243, 131, 49);
+
+					&:hover {
+						background-color: darken(rgb(243, 131, 49), 10%);
+					}
 				}
 
 				.square-blue {
 					background-color: rgb(27, 121, 167);
+
+					&:hover {
+						background-color: darken(rgb(27, 121, 167), 10%);
+					}
 				}
 
 				.square-aqua {
 					background-color: rgb(99, 171, 181);
+
+					&:hover {
+						background-color: darken(rgb(99, 171, 181), 10%);
+					}
 				}
 
 				.square-green {
 					background-color: rgb(96, 191, 59);
+
+					&:hover {
+						background-color: darken(rgb(96, 191, 59), 10%);
+					}
 				}
 
 				.description {

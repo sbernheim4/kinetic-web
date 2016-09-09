@@ -1,0 +1,19 @@
+section.calendar {
+	.calendar-container {
+		display: flex;
+		justify-content: center;
+		margin: 20px auto;
+		#mobile {
+			display: none;
+		}
+		@media all and (max-width: 767px) {
+			margin: 20px 10px;
+			#desktop {
+				display: none;
+			}
+			#mobile {
+				display: block;
+			}
+		}
+	}
+}
