@@ -14,11 +14,27 @@
 
 		.box {
 			max-width: 600px;
-			height: 200px;
+			height: 250px;
 			margin: 15px;
 			background-color: rgb(27, 121, 167);
 			border-radius: 5px;
 			flex-basis: calc(50% - 30px);
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			img {
+				width: 500px;
+			}
+
+			.tag {
+				font-size: 25pt;
+				font-weight: bold;
+				text-align: center;
+				color: white;
+			}
 		}
 	}
 }
