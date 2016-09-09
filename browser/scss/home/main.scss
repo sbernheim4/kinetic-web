@@ -148,13 +148,14 @@
 		background-color: white;
 		color: black;
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
 
 		.header-container {
 			margin: 0 auto;
-			padding: 0 20px;
-
+			padding: 30px 20px;
+			display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+			flex-basis: calc(50% - 40px);
 			p {
 				text-align: center;
 			}
@@ -170,17 +171,18 @@
 
 
 		.right-container {
-			@media all and (max-width: 1165px) {
-				padding: 20px
-			}
-
+			display: flex;
+			flex-basis: 50%;
+			flex-direction: column;
 			@media all and (max-width: 640px) {
 				display: none;
 			}
 
-			img {
-				width: calc(50vw - 74px);
-				display: block;
+			div.img {
+				flex-basis: 100%;
+				height: 100%;
+				background-size: cover;
+				background-position: center;
 			}
 		}
 	}
