@@ -99,8 +99,70 @@
 </nav>
 
 
-<!--<div class='mobile-nav-bar'>
-	<div class='mobile-container'>
-		<button type='button'>CLICK ME </button>
+<div class='mobile-nav-bar'>
+	<button class="fa fa-bars" ng-click='toggleMenu()' aria-hidden="true"> </button>
+
+	<div ng-class='class'>
+		<div class='dropdown-lists'>
+
+			<div class='dropdown'>
+				<div class='dropdown-title' ng-click='goToSection(".overview", "home")'>What is Kinetic</div>
+				<div class='dropdown-content'>
+					<div class='list-container'>
+						<a ng-click='goToSection(".problem", "home")'>The Problem</a>
+						<a ng-click='goToSection(".solution", "home")'>Our Solution</a>
+						<a ng-click='goToSection(".what-is", "home")'>What We Do</a>
+						<a ng-click='goToSection(".about-us", "home")'>About Us</a>
+						<a ng-click='goToSection(".sponsored", "home")'>Key Issues</a>
+						<a ng-click='goToSection(".get-involved", "home")'>Get Involved</a>
+					</div>
+				</div>
+			</div>
+
+			<div class='dropdown'>
+				<div class='dropdown-title'>
+					Get Involved
+				</div>
+				<div class='dropdown-content'>
+					<div class='list-container'>
+						<a ng-click='goToSection(".launch", "launch")'>Launch a Chapter</a>
+						<!--<a ng-click='goToSection(".mentor")'>Become a Mentor</a>-->
+						<!--<a ng-click='goToSection(".nominate")'>Nominate an Expert</a>-->
+						<a ng-click='goToSection(".support", "support")'>Support Kinetic</a>
+					</div>
+				</div>
+			</div>
+
+			<div class='dropdown'>
+				<div class='dropdown-title'>
+					Resources
+				</div>
+				<div class='dropdown-content'>
+					<div class='list-container'>
+						<a ng-click='goToSection(".mentors", "mentors")'>Team Mentors</a>
+						<a ng-click='goToSection(".advisors", "advisors")'>Advisors</a>
+						<a ng-click='goToSection(".template", "template")'>Kinetic Templates</a>
+						<a ng-click='goToSection(".calendar", "calendar")'>Calendar</a>
+						<a ng-click='goToSection(".handbook", "handbook")'>Get a Handbook</a>
+					</div>
+				</div>
+			</div>
+
+			<div class='dropdown'>
+				<div class='dropdown-title'>
+					Our Team
+				</div>
+				<div class='dropdown-content'>
+					<div class='list-container'>
+						<a ng-click='goToSection(".supporters", "supporters")'>Supporters</a>
+						<a ng-click='goToSection(".campuses", "campuses")'>Campuses</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
 	</div>
-</div>-->
+
+
+
+</div>

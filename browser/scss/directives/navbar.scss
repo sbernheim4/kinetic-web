@@ -119,19 +119,64 @@
 		display: none;
 	}
 
+
 	.mobile-nav-bar {
-		height: 58px;
 		color: black;
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
 
-		.mobile-container {
-			padding-right: 30px;
+		.fa-bars {
+			padding: 15px;
+			background-color: white;
+			border: 0px;
+			font-size: 27pt;
+		}
 
-			button {
-				cursor: pointer;
+		.show-menu {
+			width: 200px;
+			margin: 0 auto;
+
+			.dropdown-lists {
+				display: block;
+				margin: 0 auto;
+
+				.dropdown {
+					padding: 5px 0px;
+
+					.dropdown-content {
+						display: none;
+					}
+
+					&:hover {
+						.dropdown-content {
+							display: block;
+							border-top: 2px solid #fdb23b;
+
+							.list-container {
+								width: 200px;
+								margin: 0 auto;
+								text-align: center;
+								display: flex;
+								flex-direction: column;
+
+								a {
+									padding: 3px 0px;
+									cursor: pointer;
+								}
+
+							}
+						}
+					}
+
+					.dropdown-title {
+						text-align: center;
+						font-size: 18pt;
+					}
+				}
 			}
+		}
+
+		.hide-menu {
+			display: none;
+
 		}
 	}
 }

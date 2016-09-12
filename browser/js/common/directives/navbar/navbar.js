@@ -7,6 +7,16 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state, 
 
 		link: function (scope) {
 			scope.goToSection = GoToSectionFactory.goToSection;
+			scope.class = 'hide-menu';
+
+			scope.toggleMenu = function () {
+				console.log('toggle-menu pressed');
+				if (scope.class == 'hide-menu') {
+					scope.class = 'show-menu';
+				} else {
+					scope.class='hide-menu';
+				}
+			}
 
 			scope.user = null;
 
