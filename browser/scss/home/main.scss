@@ -173,12 +173,15 @@
 		display: flex;
 
 		.header-container {
-			margin: 0 auto;
 			padding: 30px 20px;
 			display: flex;
-    	flex-direction: column;
-    	justify-content: center;
+	    	flex-direction: column;
+	    	justify-content: center;
 			flex-basis: calc(50% - 40px);
+			@media all and (max-width: 640px) {
+				flex-basis: 100%;
+			}
+
 			p {
 				text-align: center;
 			}
