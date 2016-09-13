@@ -68,7 +68,9 @@
 				}
 
 				.dropdown-content {
+					width: 173px;
 					margin-top: 51px;
+					-webkit-margin-start: -140px;
 					display: none;
 					position: absolute;
 					background-color: #f9f9f9;
@@ -81,7 +83,6 @@
 
 					.list-container {
 						padding: 0px 10px;
-						width: 164px;
 						display: flex;
 						justify-content: center;
 						flex-direction: column;
