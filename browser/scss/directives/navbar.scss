@@ -29,7 +29,6 @@
 			align-items: flex-start;
 
 			.btn-logo {
-
 				width: 145px;
 				height: 30px;
 				border-radius: 5px;
@@ -83,6 +82,7 @@
 						padding: 0px 10px;
 						width: 164px;
 						display: flex;
+
 						justify-content: center;
 						flex-direction: column;
 
@@ -108,13 +108,13 @@
 	}
 }
 
-@media all and (min-width: 649px) {
+@media all and (min-width: 700px) {
 	.mobile-nav-bar {
 		display: none;
 	}
 }
 
-@media all and (max-width: 650px) {
+@media all and (max-width: 700px) {
 	.navbar {
 		display: none;
 	}
