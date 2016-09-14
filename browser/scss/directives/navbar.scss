@@ -36,18 +36,23 @@
 		}
 
 		.dropdown-lists {
-			margin-right: 41px;
 			display: flex;
 			align-items: flex-end;
 
 			.dropdown {
-				margin: 0px 10px;
+				width: 184px;
 				position: relative;
-				display: flex;
-				justify-content: center;
+				display: inline-block;
 				z-index: 100;
 
 				&:hover {
+					.dropdown-content {
+						display: block;
+						border-top: 2px solid #fdb23b;
+					}
+				}
+
+				&:focus {
 					.dropdown-content {
 						display: block;
 						border-top: 2px solid #fdb23b;
@@ -67,7 +72,6 @@
 				}
 
 				.dropdown-content {
-					margin-top: 51px;
 					display: none;
 					position: absolute;
 					background-color: #f9f9f9;
@@ -78,11 +82,14 @@
 						border-top: 2px solid #fdb23b;
 					}
 
+					&:focus {
+						border-top: 2px solid #fdb23b;
+					}
+
 					.list-container {
 						padding: 0px 10px;
 						width: 164px;
 						display: flex;
-
 						justify-content: center;
 						flex-direction: column;
 
@@ -97,6 +104,11 @@
 							cursor: pointer;
 
 							&:hover {
+								color: rgb(253,178,59);
+								transition: color .05s linear;
+							}
+
+							&:focus {
 								color: rgb(253,178,59);
 								transition: color .05s linear;
 							}
@@ -146,6 +158,27 @@
 					}
 
 					&:hover {
+						.dropdown-content {
+							display: block;
+							border-top: 2px solid #fdb23b;
+
+							.list-container {
+								width: 200px;
+								margin: 0 auto;
+								text-align: center;
+								display: flex;
+								flex-direction: column;
+
+								a {
+									padding: 5px 0px;
+									cursor: pointer;
+								}
+
+							}
+						}
+					}
+
+					&:focus {
 						.dropdown-content {
 							display: block;
 							border-top: 2px solid #fdb23b;
