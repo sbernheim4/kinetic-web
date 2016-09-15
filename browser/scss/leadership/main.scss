@@ -19,14 +19,21 @@
 			}
 
 			.img-container {
+
 				img {
+					width: 250px;
+					height: 250px;
 				}
 			}
 
 			.text-container {
 				width: 75%;
 				max-width: 600px;
-				padding: 15px;
+				padding: 30px;
+				@media all and (max-width: 889px) {
+					text-align: center;
+					padding: 15px;
+				}
 
 				.title {
 					font-weight: bold;
