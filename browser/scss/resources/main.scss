@@ -13,6 +13,10 @@
 		justify-content: center;
 		flex-direction: row;
 		flex-wrap: wrap;
+		@media all and (max-width: 662px) {
+			flex-direction: column;
+			align-items: center;
+		}
 
 		.box {
 			max-width: 600px;
@@ -20,16 +24,24 @@
 			margin: 15px;
 			background-color: rgb(27, 121, 167);
 			border-radius: 5px;
-
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+			@media all and (max-width: 662px) {
+				width: 300px;
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+			}
 
 			img {
 				width: 500px;
 				padding: 30px 15px 15px 15px;
 				cursor: pointer;
+				@media all and (max-width: 662px) {
+					width: 260px;
+				}
 			}
 
 			.tag {
