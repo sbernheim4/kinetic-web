@@ -17,6 +17,10 @@ app.factory('FormFactory', function($http) {
     submitGetHandbookForm: (info) => {
       return $http.post('/api/forms/get-the-handbook', info)
       .then(res => res.data);
+    },
+    submitAdvisorQuestion: (info) => {
+      return $http.post('/api/forms/ask-advisor-question', info)
+      .then(res => res.data);
     }
   };
 });
