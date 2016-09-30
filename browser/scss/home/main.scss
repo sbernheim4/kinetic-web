@@ -138,9 +138,8 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				&:hover {
-					background-color: rgb(253, 178, 59);
-				}
+				background: white;
+				color: black;
 				@media all and (max-width: 780px) {
 					margin: 0 40px;
 					width: 150px;

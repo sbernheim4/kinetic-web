@@ -32,9 +32,22 @@ a {
 	cursor: pointer;
 	font-size: 12pt;
 	text-decoration: none;
+	transition: .25s;
 
 	&:hover {
 		background-color: darken(rgb(253, 178, 59), 10%)
+	}
+}
+
+.btn-transparent {
+	background-color: rgba(0, 0, 0, 0);
+	border: 2px #fc9e09 solid;
+	color: #fc9e09;
+	transition:.5s;
+
+	&:hover {
+		background-color: #fc9e09;
+		color: white;
 	}
 }
 
