@@ -62,7 +62,7 @@ function sendClientEmail(doc) {
     <p>Best,</p>
     <p>The team at Kinetic Global</p>`
   };
-  
+
   if(nomineeName.toLowerCase() === nominatorName.toLowerCase() && doc.relationship === 'isNominee'){
     emailInfo.content = `<p>Hi ${nominatorNameShortened},</p>
 
@@ -93,7 +93,7 @@ function sendAdminEmail(doc) {
 
   const emailInfo = {
     from: 'noreply-nomination@kineticglobal.org',
-    to: 'daniel@kineticglobal.org',
+    to: ['general@kineticglobal.org', 'bryan.jones@kineticglobal.org', 'jessica.bernheim@kineticglobal.org', 'katie.swoap@kineticglobal.org'],
     subject: 'New nomination for Kinetic Global!',
     content: `<p>Hi,</p>
 
