@@ -37,6 +37,10 @@ a {
 	&:hover {
 		background-color: darken(rgb(253, 178, 59), 10%)
 	}
+
+	&:focus {
+		outline: none;
+	}
 }
 
 .btn-transparent {
