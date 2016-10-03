@@ -25,7 +25,7 @@
 			height: 45px;
 			margin-left: 10px;
 			margin-right: 10px;
-			background-color: #1b79a7;
+			background-color: $kinetic-blue;
 			@media all and (max-width: 650px) {
 				margin: 0 10px;
 			}
@@ -35,7 +35,7 @@
 			}
 
 			&:hover {
-				background-color: darken(#1b79a7, 10%);
+				background-color: darken($kinetic-blue, 10%);
 			}
 		}
 	}
@@ -67,6 +67,10 @@
 		.fa {
 			padding: 0 15px;
 			color: rgb(66, 66, 66);
+
+			&:hover {
+				color: darken(rgb(66,66,66), 10%);
+			}
 		}
 	}
 }

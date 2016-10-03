@@ -24,7 +24,7 @@ a {
 }
 
 .btn {
-	background-color: rgb(253, 178, 59);
+	background-color: $kinetic-yellow;
 	border-radius: 5px;
 	border: none;
 	text-align: center;
@@ -35,7 +35,7 @@ a {
 	transition: .25s;
 
 	&:hover {
-		background-color: darken(rgb(253, 178, 59), 10%)
+		background-color: darken($kinetic-yellow, 10%)
 	}
 
 	&:focus {
@@ -45,12 +45,12 @@ a {
 
 .btn-transparent {
 	background-color: rgba(0, 0, 0, 0);
-	border: 2px #fc9e09 solid;
-	color: #fc9e09;
+	border: 2px darken($kinetic-yellow, 10%) solid;
+	color: darken($kinetic-yellow, 10%);
 	transition:.5s;
 
 	&:hover {
-		background-color: #fc9e09;
+		background-color: darken($kinetic-yellow, 10%);
 		color: white;
 	}
 }

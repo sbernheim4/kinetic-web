@@ -1,3 +1,4 @@
+$navbar-height: 100px;
 
 // Each section uses a default tag-line with some modifications
 .tag-line {
@@ -45,11 +46,12 @@
 			justify-content: space-around;
 			flex-direction: row;
 			@media all and (min-width: 1200px) {
-				width: 80%;
+				width: 50%;
 			}
 
 			@media all and (max-width: 1199px) and (min-width: 826px) {
-				width: 100%;
+				min-width: 605px;
+				width: 50%;
 			}
 
 			@media all and (max-width: 825px) {
@@ -81,12 +83,14 @@
 				margin: 20px 5px;
 			}
 		}
+
 		.video-container { // shout out to https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
 			position: relative;
 			padding-bottom: 56.25%; /* 16:9 */
 			padding-top: 25px;
 			height: 0;
 		}
+
 		.video-container iframe {
 			position: absolute;
 			top: 0;
@@ -100,7 +104,7 @@
 	.problem {
 		position: relative;
 		height: 350px;
-		background-color: rgb(27, 121, 167);
+		background-color: $kinetic-blue;
 		text-align: center;
 		color: white;
 		display: flex;
@@ -216,7 +220,7 @@
 	.what-is {
 		color: white;
 		text-align: center;
-		background-color: rgb(27, 121, 167);
+		background-color: $kinetic-blue;
 
 		.tag-line-what-is {
 			margin: 0 auto;
@@ -338,7 +342,7 @@
 	/*********** Section 6 -- Sponsored Causes ***********/
 	.sponsored {
 		padding-bottom: 30px;
-		background-color: rgb(27, 121, 167);
+		background-color: $kinetic-blue;
 		text-align: center;
 		color: white;
 		display: flex;
@@ -473,10 +477,10 @@
 				}
 
 				.square-blue {
-					background-color: rgb(27, 121, 167);
+					background-color: $kinetic-blue;
 
 					&:hover {
-						background-color: darken(rgb(27, 121, 167), 10%);
+						background-color: darken($kinetic-blue, 10%);
 					}
 				}
 
