@@ -144,11 +144,6 @@ $navbar-height: 100px;
 				align-items: center;
 				background: white;
 				color: black;
-				@media all and (max-width: 780px) {
-					margin: 0 40px;
-					width: 150px;
-					height: 70px;
-				}
 			}
 
 			img {
@@ -167,7 +162,7 @@ $navbar-height: 100px;
 	}
 
 
-	/*********** Section 3 -- The Solution ***************/
+	/*********** Section 3 -- Our Solution ***************/
 	.solution {
 		min-height: 340px;;
 		padding: 0px;
@@ -178,8 +173,8 @@ $navbar-height: 100px;
 		.header-container {
 			padding: 30px 20px;
 			display: flex;
-	    	flex-direction: column;
-	    	justify-content: center;
+			flex-direction: column;
+			justify-content: center;
 			flex-basis: calc(50% - 40px);
 			@media all and (max-width: 667px) {
 				flex-basis: 100%;
@@ -208,8 +203,9 @@ $navbar-height: 100px;
 			}
 
 			div.img {
-				flex-basis: 100%;
-				height: 100%;
+				background-image: url('https://s3.amazonaws.com/kineticglobal-prod/about-us-photo-2.jpg');
+				// flex-basis: 100%;
+				height: 383px;
 				background-size: cover;
 				background-position: center;
 			}
@@ -289,32 +285,42 @@ $navbar-height: 100px;
 	.about-us {
 		padding-top: 0px;
 		display: flex;
+		// align-items: center;
 
-		.images-about-us {
-
+		.left-about-us {
 			display: flex;
-			flex-basis: 50%;
-			flex-direction: column;
-			@media all and (max-width: 831px){
-				display: none;
+ 			flex-basis: 50%;
+ 			flex-direction: column;
+ 			@media all and (max-width: 831px){
+ 				display: none;
+ 			}
+
+			.imgs {
+ 				min-height: 362px;
+				height: 100%;
+ 				background-size: cover;
+ 				background-position: center;
 			}
 
-			div.img {
-				flex-basis: 100%;
-				height: 100%;
-				background-size: cover;
-				background-position: center;
+			.images-about-us-one {
+				background-image: url("https://s3.amazonaws.com/kineticglobal-prod/about-us-photo-1.jpg");
 			}
+
+			.images-about-us-two {
+				background-image: url("https://s3.amazonaws.com/kineticglobal-prod/about-us-photo-3.jpg");
+			}
+
 		}
 
 		.right-about-us {
+			width: calc(50% - 60px);
 			padding: 30px 30px;
-			flex-basis: calc(50% - 60px);
 			@media all and (max-width: 831px){
 				flex-basis: 80%;
 				margin: 0 auto;
 			}
 			@media all and (max-width: 330px) {
+				width: 85%;
 				padding: 30px 12px;
 			}
 
