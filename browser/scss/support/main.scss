@@ -51,7 +51,7 @@
 			&-blue {
 				width: 500px;
 				height: 200px;
-				background-color: rgb(27, 121, 167);
+				background-color: $kinetic-blue;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -80,7 +80,7 @@
 						width: 270px;
 						height: 60px;
 						font-size: 16pt;
-						background-color: rgb(253, 178, 59);
+						background-color: $kinetic-yellow;
 						border-radius: 5px;
 						border: 1px solid white;
 						text-align: center;
@@ -92,7 +92,7 @@
 						align-items: center;
 
 						&:hover {
-							background-color: darken(rgb(253, 178, 59), 10%)
+							background-color: darken($kinetic-yellow, 10%)
 						}
 					}
 				}
