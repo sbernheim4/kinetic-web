@@ -1,0 +1,26 @@
+.slack {
+	margin: 0 auto;
+	padding: 30px;
+	width: 70%;
+
+	.header {
+		padding: 30px 30px 15px 30px;
+	}
+
+	.sub-header {
+		padding: 15px 30px 15px 30px;
+		text-align: center;
+		font-size: 20pt;
+	}
+
+	.padding {
+		padding-top: 30px;
+		padding-bottom: 15px;
+		font-weight: bold;
+	}
+
+	.emphasize {
+		font-weight: bold;
+		text-decoration: underline;
+	}
+}
