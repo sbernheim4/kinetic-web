@@ -1,5 +1,15 @@
 .support {
-	background-image: url('https://s3.amazonaws.com/kineticglobal-prod/support-kinetic-background.jpg');
+
+	background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url('https://s3.amazonaws.com/kineticglobal-prod/support-kinetic-background.jpg');
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	color: white;
 
 	.header {
 		padding: 15px;
