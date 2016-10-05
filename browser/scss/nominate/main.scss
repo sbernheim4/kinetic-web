@@ -16,7 +16,7 @@ section.nominate {
       @media all and (max-width: 767px) {
         order: 2;
       }
-      background: #1b79a7;
+      background: $kinetic-blue;
       h1 {
         color: white;
 
@@ -39,7 +39,7 @@ section.nominate {
         @media all and (max-width: 767px) {
           width: 80%;
         }
-        background: #1b79a7;
+        background: $kinetic-blue;
         text-align: center;
         border-radius: 5px;
 
@@ -63,7 +63,7 @@ section.nominate {
           width: 80%;
           height: 50px;
           margin: 15px 0px 30px 0px;
-          background-color: #fdb23b;
+          background-color: $kinetic-yellow;
           border-radius: 5px;
           border: 1px solid white;
           text-align: center;
