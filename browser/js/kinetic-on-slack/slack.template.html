@@ -2,13 +2,13 @@
 	<h1 class='header'>Kinetic On Slack</h1>
 	<h3 class='sub-header'>Join 200+ student social innovators and advisors across the US to develop projects making real change in your community.</h3>
 
-	<form>
+	<form ng-submit='submitJoinSlack(user)'>
 		<div>
-          <input type='text' ng-model='slack.name' placeholder='Name'>
+          <input type='text' ng-model='user.name' placeholder='Name'>
 	  </div>
 
 		<div>
-			<input type='text' ng-model='slack.email' placeholder='Email'>
+			<input type='text' ng-model='user.email' placeholder='Email'>
 		</div>
 
 		<div class='btns'>

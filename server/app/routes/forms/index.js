@@ -9,6 +9,7 @@ const Questions = mongoose.model('Questions');
 const GetTheHandbook = mongoose.model('GetTheHandbook');
 const ContactRequest = mongoose.model('ContactRequest');
 const Nominate = mongoose.model('Nominate');
+const JoinSlack = mongoose.model('JoinSlack');
 const Bluebird = require('bluebird');
 
 module.exports = router;
@@ -90,7 +91,6 @@ router.post('/nominate-expert', (req, res, next) => {
   });
 });
 
-
 router.post('/contact-us', (req, res, next) => {
   //adds form data to dbs, emails the client and admins, and send back a 200 if successful
   //throws a 500 and sends back the error if unsuccessful
@@ -103,6 +103,21 @@ router.post('/contact-us', (req, res, next) => {
   })
   .then((e) => {
     return ContactRequest.create(req.body);
+  })
+  // When everything has completed we should redirect them to a page saying so
+  // or add a confirmation popup or something dynamic like this
+  .then(() => res.send())
+  .catch(err => res.status(500).send(err));
+});
+
+router.post('/kinetic-on-slack', (req, res, next) => {
+
+  Bluebird.resolve()
+  .then(() => {
+	  if (req.body.email && req.body.name) {
+  		return JoinSlack.create(req.body);
+  	}
+    return;
   })
   // When everything has completed we should redirect them to a page saying so
   // or add a confirmation popup or something dynamic like this

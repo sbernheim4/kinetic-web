@@ -8,3 +8,4 @@ require('./launch');
 require('./nominate');
 require('./question');
 require('./user');
+require('./kinetic-on-slack');
