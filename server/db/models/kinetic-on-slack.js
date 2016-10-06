@@ -77,9 +77,8 @@ function sendClientEmailTwo(doc) {
 		content: `<p>Hi ${name},</p>
 
 		<p>Thank you for expressing interest in joining the Kinetic Slack group.</p>
-		<p>We noticed the email you entered is from a school not affiliated with Kinetic. If you used a email different from your school email and you are part of a kinetic team please visit https://kineticglobal.slack.com/messages to get started with slack.</p>
-		<p>Just be sure to sign up with your school email</p>
-		<p>If you are from a school that is not yet partnered with Kinetic, please email EMAIL EMAILPLACEHOLDER to look into starting a chapter at your College or University or visit https://www.kineticglobal.org/launch-a-chapter and thank you for your interest.</p>
+		<p>We noticed the email you entered is from a school not affiliated with Kinetic. If you used a email different from your school email and you are part of a kinetic team please visit https://kineticglobal.slack.com/messages to get started with slack. Just be sure to sign up with your school email</p>
+		<p>If you are from a school that is not yet partnered with Kinetic, please email katie.swoap@kineticglobal.org to look into starting a chapter at your College or University or visit https://www.kineticglobal.org/launch-a-chapter. Thank you for your interest!</p>
 
 		<p>Best,</p>
 		<p>The team at Kinetic Global</p>`
