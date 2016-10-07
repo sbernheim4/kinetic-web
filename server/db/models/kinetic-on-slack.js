@@ -24,6 +24,8 @@ SlackSchema.post('save', function (doc, next) {
 
 	var valid = false;
 
+	// TODO: use this as a temporary way to see if the email the user enters is
+	// an email from a partnered college or university
 	const domains = ['@amherst.edu', '@brandeis.edu', '@columbia.edu', '@duke.edu', '@nyu.edu', '@skidmore.edu', '@swarthmore.edu', '@swarthmore.edu', '@upenn.edu', '@usc.edu', '@vanderbilt.edu', '@wustl.edu','@williams.edu'];
 
 	const indexOfAt = doc.email.indexOf("@");
@@ -92,8 +94,8 @@ function sendAdminEmail(doc) {
 
 	const emailInfo = {
 		from: 'noreply@kineticglobal.org',
-		to: 'admin@kineticglobal.org',
-		subject: 'New Request to Join the Slack Organization',
+		to: 'general@kineticglobal.org',
+		subject: 'New Person Joining Slack',
 		content: `<p> Hi, </p>
 		<p>${clientName} has just requested to join the Kinetic Slack Group.</p>
 
