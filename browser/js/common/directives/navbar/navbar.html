@@ -99,7 +99,7 @@
 		<div class='dropdown-lists'>
 
 			<div class='dropdown' ng-init='whatIs = true'>
-				<div class='dropdown-title' ng-click="whatIs = !whatIs">What is Kinetic</div>
+				<div class='dropdown-title' ng-click="whatIs = !whatIs; getInvolved = true; resources = true; ourTeam = true">What is Kinetic</div>
 				<div ng-class="{hide: whatIs, show: !whatIs}">
 					<div class='list-container'>
 						<a ng-click='goToSection(".problem", "home")'>The Problem</a>
@@ -113,7 +113,7 @@
 			</div>
 
 			<div class='dropdown' ng-init='getInvolved = true'>
-				<div class='dropdown-title' ng-click="getInvolved = !getInvolved">Get Involved</div>
+				<div class='dropdown-title' ng-click="getInvolved = !getInvolved; whatIs = true; resources = true; ourTeam = true">Get Involved</div>
 				<div ng-class="{hide: getInvolved, show: !getInvolved}">
 					<div class='list-container'>
 						<a ng-click='goToSection(".launch", "launch")'>Launch a Chapter</a>
@@ -125,7 +125,7 @@
 			</div>
 
 			<div class='dropdown' ng-init='resources = true'>
-				<div class='dropdown-title' ng-click="resources = !resources">Resources</div>
+				<div class='dropdown-title' ng-click="resources = !resources; whatIs = true; getInvolved = true; ourTeam = true">Resources</div>
 				<div ng-class="{hide: resources, show: !resources}">
 					<div class='list-container'>
 						<a ng-click='goToSection(".mentors", "mentors")'>Team Mentors</a>
@@ -138,7 +138,7 @@
 			</div>
 
 			<div class='dropdown' ng-init='ourTeam = true'>
-				<div class='dropdown-title' ng-click="ourTeam = !ourTeam">Our Team</div>
+				<div class='dropdown-title' ng-click="ourTeam = !ourTeam; whatIs = true; getInvolved = true; resources = true;">Our Team</div>
 				<div ng-class="{hide: ourTeam, show: !ourTeam}">
 					<div class='list-container'>
 						<a ng-click='goToSection(".leadership", "leadership")'>Leadership</a>
