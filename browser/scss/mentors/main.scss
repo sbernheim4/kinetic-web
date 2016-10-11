@@ -1,4 +1,6 @@
 .mentors {
+	margin: 0 auto;
+	max-width: 1280px;
 
 	.header {
 		padding: 30px;
@@ -32,6 +34,10 @@
 			padding: 15px 30px;
 			text-align: center;
 			flex-basis: calc(50% - 60px);
+
+			@media all and (max-width: 669px) {
+				flex-basis: 100%;
+			}
 
 			img {
 				width: 200px;
