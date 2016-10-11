@@ -9,12 +9,43 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state, 
 			scope.goToSection = GoToSectionFactory.goToSection;
 			scope.class = 'hide-menu';
 
+			scope.displayWhatIs = true;
+			scope.displayGetInvolved = true;
+			scope.displayResources = true;
+			scope.displayOurTeam = true;
+
+			// This toggle menu is used for the hamburger icon and when to
+			// display the titles of the dropdown menus
 			scope.toggleMenu = function () {
-				console.log('toggle-menu pressed');
 				if (scope.class == 'hide-menu') {
 					scope.class = 'show-menu';
 				} else {
 					scope.class='hide-menu';
+				}
+			}
+
+			// This toggle function is used for the mobile nav-bar lists
+			scope.toggle = function (val) {
+				if (val == "displayWhatIs") {
+					scope.displayWhatIs = !scope.displayWhatIs;
+					scope.displayGetInvolved = true;
+					scope.displayResources = true;
+					scope.displayOurTeam = true;
+				} else if (val == "displayGetInvolved") {
+					scope.displayGetInvolved = !scope.displayGetInvolved;
+					scope.displayWhatIs = true;
+					scope.displayResources = true;
+					scope.displayOurTeam = true;
+				} else if (val == "displayResources") {
+					scope.displayResources = !scope.displayResources;
+					scope.displayWhatIs = true;
+					scope.displayGetInvolved = true;
+					scope.displayOurTeam = true;
+				} else if (val == "displayOurTeam") {
+					scope.displayOurTeam = !scope.displayOurTeam;
+					scope.displayWhatIs = true;
+					scope.displayGetInvolved = true;
+					scope.displayResources = true;
 				}
 			}
 
