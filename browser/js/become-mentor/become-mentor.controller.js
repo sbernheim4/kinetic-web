@@ -1,5 +1,15 @@
 'use strict'
 
-app.controller('BecomeMentorCtrl', function ($scope, GoToSectionFactory) {
-	$scope.goToSection = GoToSectionFactory.goToSection;
+app.controller('BecomeMentorCtrl', function ($scope, FormFactory) {
+	$scope.wasFormSubmitted = false;
+
+	$scope.submitForm = function (user) {
+		FormFactory.submitBecomeAMentorForm(user)
+		.then ( res => {
+			$scope.wasFormSubmitted = true;
+		})
+		.catch ( err => {
+			console.error(err);
+		})
+	}
 });

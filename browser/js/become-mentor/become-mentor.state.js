@@ -1,12 +1,12 @@
 'use strict';
 
-app.config(function ($stateprovider) {
+app.config(function ($stateProvider) {
 
     // register our *campuses* state.
-    $stateprovider.state('become-mentor', {
+    $stateProvider.state('become-mentor', {
         url: '/become-a-mentor',
-        controller: 'BecomeMentorCtrl',
-        templateurl: 'js/become-mentor/become-mentor.template.html'
+        templateUrl: 'js/become-mentor/become-mentor.template.html',
+        controller: 'BecomeMentorCtrl'
     });
 
 });
