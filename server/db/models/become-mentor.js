@@ -1,10 +1,11 @@
+'use strict'
+
 const mongoose = require('mongoose');
 const _ = require('lodash');
 const Bluebird = require('bluebird');
 const sendEmail = require('../../modules/sendAnEmail.js').formatAndSendEmail;
 
-const BecomeMentorSchema = new mongoose.Schema({
-
+const BecomeAMentorSchema = new mongoose.Schema({
 	name: {
 		type: String
 	},
@@ -27,15 +28,15 @@ const BecomeMentorSchema = new mongoose.Schema({
 	newsletter: {
 		type: Boolean
 	}
-})
+});
 
-BecomeMentorSchema.post('save', function (doc, next) {
+BecomeAMentorSchema.post('save', function (doc, next) {
 	Bluebird.all([sendClientEmail(this), sendAdminEmail(this)])
 	.then(() => {
 		next();
 	})
 	.catch(next);
-})
+});
 
 function sendClientEmail(doc) {
 	const name = doc.name.split(' ')[0];
@@ -71,11 +72,14 @@ function sendAdminEmail(doc) {
 
 		<p>You can reach out to them at ${clientEmail}.</p>
 
+		<p>Here is the information they provided</p>
+		<p>${almaMater}</p>
+		<p>${profession}</p>
+
 		<p>Best,</p>
 		<p>The team at Kinetic Global</p>`
 	};
 	return sendEmail(emailInfo);
 }
 
-
-mongoose.model('BecomeMentor', 'BecomeMentorSchema');
+mongoose.model('BecomeAMentor', BecomeAMentorSchema);

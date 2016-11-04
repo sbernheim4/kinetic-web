@@ -9,7 +9,7 @@ const Questions = mongoose.model('Questions');
 const GetTheHandbook = mongoose.model('GetTheHandbook');
 const ContactRequest = mongoose.model('ContactRequest');
 const Nominate = mongoose.model('Nominate');
-const BecomeMentor = mongoose.model('BecomeMentor');
+// const BecomeAMentor = mongoose.model('BecomeAMentor');
 const Bluebird = require('bluebird');
 
 module.exports = router;
@@ -112,6 +112,10 @@ router.post('/contact-us', (req, res, next) => {
 });
 
 router.post('/become-a-mentor', (req, res, next) => {
+	console.log('------------------------------------------');
+	console.log('INFORMATION');
+	console.log(req.body.information);
+	console.log('------------------------------------------');
 	Bluebird.resolve()
 	.then (() => {
 		if (req.body.email && req.body.newsletter) {
@@ -129,7 +133,7 @@ router.post('/become-a-mentor', (req, res, next) => {
 	})
 	.then (() => {
 		if (req.body.email && req.body.mentor) {
-			return BecomeMentor.create(req.body);
+			return BecomeAMentor.create(req.body);
 		}
 		return;
 	})
