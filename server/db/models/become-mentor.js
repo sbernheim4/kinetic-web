@@ -1,5 +1,3 @@
-'use strict'
-
 const mongoose = require('mongoose');
 const _ = require('lodash');
 const Bluebird = require('bluebird');
