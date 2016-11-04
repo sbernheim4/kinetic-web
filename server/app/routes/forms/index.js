@@ -139,4 +139,4 @@ router.post('/become-a-mentor', (req, res, next) => {
 	})
 	.then(() => res.send())
 	.catch(err => res.status(500).send(err));
-})
+});

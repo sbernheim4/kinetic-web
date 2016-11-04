@@ -7,5 +7,5 @@ require('./handbook');
 require('./launch');
 require('./nominate');
 require('./question');
-require('./become-mentor.js');
 require('./user');
+require('./become-mentor.js');
