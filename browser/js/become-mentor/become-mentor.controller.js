@@ -2,6 +2,7 @@
 
 app.controller('BecomeMentorCtrl', function ($scope, FormFactory) {
 	$scope.wasFormSubmitted = false;
+	$scope.requiredForForm = true;
 
 	$scope.submitForm = function (user) {
 		FormFactory.submitBecomeAMentorForm(user)

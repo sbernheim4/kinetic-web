@@ -15,22 +15,22 @@
 
 			<div>
 				Name: <br>
-				<input type='text' ng-required ng-model='user.name' name='name' placeholder='John Doe'>
+				<input type='text' ng-required='requiredForForm'='myVar' ng-model='user.name' name='name' placeholder='John Doe'>
 			</div>
 
 			<div>
 				E-mail: <br>
-				<input type='email' ng-required ng-model='user.email' name='email' placeholder='john.doe@gmail.com'>
+				<input type='email' ng-required='requiredForForm' ng-model='user.email' name='email' placeholder='john.doe@gmail.com'>
 			</div>
 
 			<div>
 				Profession: <br>
-				<input type='text' ng-required ng-model='user.profession' name='profession' placeholder='Student'>
+				<input type='text' ng-required='requiredForForm' ng-model='user.profession' name='profession' placeholder='Student'>
 			</div>
 
 			<div>
 				Alma Mater (and class year): <br>
-				<input type='text' ng-required ng-model='user.almaMater' name='almaMater' placeholder='Brandeis University 2018'>
+				<input type='text' ng-required='requiredForForm' ng-model='user.almaMater' name='almaMater' placeholder='Brandeis University 2018'>
 			</div>
 
 			<div class='checkboxes'>
