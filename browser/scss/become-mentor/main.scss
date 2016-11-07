@@ -12,6 +12,7 @@ $mobile-navbar-change: 860px;
 			width: 50vw;
 			@media all and (max-width: 1000px) {
 				width: 100vw;
+				min-height: calc(100vh - 70px);
 			}
 
 			.header {
