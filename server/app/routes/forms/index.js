@@ -112,10 +112,6 @@ router.post('/contact-us', (req, res, next) => {
 });
 
 router.post('/become-a-mentor', (req, res, next) => {
-	console.log('------------------------------------------');
-	console.log('INFORMATION');
-	console.log(req.body.information);
-	console.log('------------------------------------------');
 	Bluebird.resolve()
 	.then (() => {
 		if (req.body.email && req.body.newsletter) {
