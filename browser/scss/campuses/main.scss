@@ -42,7 +42,7 @@
             width: 450px;
             max-width: 90%;
             height: 60px;
-            background-color: rgb(253, 178, 59);
+            background-color: $kinetic-yellow;
             border-radius: 5px;
             border: 1px solid white;
             text-align: center;
@@ -52,7 +52,7 @@
             text-decoration: none;
 
             &:hover {
-                background-color: darken(rgb(253, 178, 59), 10%)
+                background-color: darken($kinetic-yellow, 10%)
             }
         }
     }

@@ -4,7 +4,12 @@
 		min-height: calc(100vh - 70px);
 	}
 }
-@import 'global';
+
+// MAIN COLORS USED ACROSS MULTIPLE PAGES
+$kinetic-blue: rgb(27, 121, 167);
+$kinetic-yellow: rgb(253, 178, 59);
+
+@import './global';
 @import 'directives/main';
 @import 'home/main';
 @import 'about/main';
@@ -23,6 +28,7 @@
 @import 'template/main';
 @import 'supporters/main';
 @import 'mentors/main';
+@import 'leadership/main';
 @import 'calendar/main';
 @import 'resources/main';
 @import 'webinars/main';

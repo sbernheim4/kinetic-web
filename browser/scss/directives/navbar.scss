@@ -29,9 +29,11 @@
 			align-items: flex-start;
 
 			.btn-logo {
-				width: 145px;
+				width: 160px;
 				height: 30px;
 				border-radius: 5px;
+				background-color: $kinetic-blue;
+				text-transform: uppercase;
 			}
 		}
 
@@ -48,14 +50,14 @@
 				&:hover {
 					.dropdown-content {
 						display: block;
-						border-top: 2px solid #fdb23b;
+						border-top: 2px solid $kinetic-yellow;
 					}
 				}
 
 				&:focus {
 					.dropdown-content {
 						display: block;
-						border-top: 2px solid #fdb23b;
+						border-top: 2px solid $kinetic-yellow;
 					}
 				}
 
@@ -79,11 +81,11 @@
 					box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 
 					&:hover {
-						border-top: 2px solid #fdb23b;
+						border-top: 2px solid $kinetic-yellow;
 					}
 
 					&:focus {
-						border-top: 2px solid #fdb23b;
+						border-top: 2px solid $kinetic-yellow;
 					}
 
 					.list-container {
@@ -104,12 +106,12 @@
 							cursor: pointer;
 
 							&:hover {
-								color: rgb(253,178,59);
+								color: $kinetic-yellow;
 								transition: color .05s linear;
 							}
 
 							&:focus {
-								color: rgb(253,178,59);
+								color: $kinetic-yellow;
 								transition: color .05s linear;
 							}
 						}
@@ -153,55 +155,32 @@
 				.dropdown {
 					padding: 8px 0px;
 
-					.dropdown-content {
-						display: none;
-					}
-
-					&:hover {
-						.dropdown-content {
-							display: block;
-							border-top: 2px solid #fdb23b;
-
-							.list-container {
-								width: 200px;
-								margin: 0 auto;
-								text-align: center;
-								display: flex;
-								flex-direction: column;
-
-								a {
-									padding: 5px 0px;
-									cursor: pointer;
-								}
-
-							}
-						}
-					}
-
-					&:focus {
-						.dropdown-content {
-							display: block;
-							border-top: 2px solid #fdb23b;
-
-							.list-container {
-								width: 200px;
-								margin: 0 auto;
-								text-align: center;
-								display: flex;
-								flex-direction: column;
-
-								a {
-									padding: 5px 0px;
-									cursor: pointer;
-								}
-
-							}
-						}
-					}
-
 					.dropdown-title {
 						text-align: center;
 						font-size: 18pt;
+					}
+
+					.hide {
+						display: none;
+					}
+
+					.show {
+						display: block;
+						border-top: 2px solid $kinetic-yellow;
+
+						.list-container {
+							width: 200px;
+							margin: 0 auto;
+							text-align: center;
+							display: flex;
+							flex-direction: column;
+
+							a {
+								padding: 5px 0px;
+								cursor: pointer;
+							}
+
+						}
 					}
 				}
 			}
