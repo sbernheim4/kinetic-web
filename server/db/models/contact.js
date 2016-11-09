@@ -55,7 +55,7 @@ function sendAdminEmail(doc) {
   const role = doc.role ? fullRole : emptyRole;
   const clientEmail = doc.email;
   const emailInfo = {
-    from: 'noreply-contact-us@kineticglobal.org',	
+    from: 'noreply-contact-us@kineticglobal.org',
     to: ['general@kineticglobal.org', 'bryan.jones@kineticglobal.org', 'katie.swoap@kineticglobal.org'],
     subject: 'New Question/Comment from Contact Us Page',
     content: `<p>Hi,</p>

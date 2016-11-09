@@ -1,0 +1,57 @@
+<section class='become-mentor'>
+	<title>Become a Mentor for Kinetic</title>
+	<meta name='description' content='Kinetic mentors help guide current Kinetic members providing support and expertise to speed up the process.'>
+
+	<div class='left-side'>
+		<h1 class='header'>Become a<br>Kinetic Mentor</h1>
+		<br>
+		<p>Are you a young alum (35& under) from an accredited undergradute institution in the United States</p>
+		<br>
+		<p>Are you interested in joining a network of passionate future leaders who are coming together to design and implement solutions to social issues?</p>
+		<br>
+		<p>If so, contact us for more information on how to become a Kinetic Mentor!</p>
+
+		<form ng-submit='submitForm(user)' ng-hide='wasFormSubmitted'>
+
+			<div>
+				Name: <br>
+				<input type='text' ng-required='requiredForForm'='myVar' ng-model='user.name' name='name' placeholder='John Doe'>
+			</div>
+
+			<div>
+				E-mail: <br>
+				<input type='email' ng-required='requiredForForm' ng-model='user.email' name='email' placeholder='john.doe@gmail.com'>
+			</div>
+
+			<div>
+				Profession: <br>
+				<input type='text' ng-required='requiredForForm' ng-model='user.profession' name='profession' placeholder='Student'>
+			</div>
+
+			<div>
+				Alma Mater (and class year): <br>
+				<input type='text' ng-required='requiredForForm' ng-model='user.almaMater' name='almaMater' placeholder='Brandeis University 2018'>
+			</div>
+
+			<div class='checkboxes'>
+				<label> <input type='checkbox' ng-model='user.information'> <span>I would like to receive more information about becoming a Kinetic team mentor</span> </label>
+				<label> <input type='checkbox' ng-model='user.mentor'> <span>I would like to be a mentor. Sign me up!</span> </label>
+				<label> <input type='checkbox' ng-model='user.newsletter'> <span>I would like to receive the Kinetic Newsletter.</span> </label>
+			</div>
+
+			<div class='btns' ng-hide='wasFormSubmitted'>
+				<input type='submit' class='btn' value='Submit'>
+			</div>
+		</form>
+
+		<div class='message' ng-show='wasFormSubmitted'>
+			<h1>Thank you for your interest!</h1>
+			<h1>You can expect to hear back from us within the next two weeks.</h1>
+		</div>
+	</div>
+
+	<div class='right-side'>
+		<div class='img-one'> </div>
+		<div class='img-two'> </div>
+	</div>
+</section>
