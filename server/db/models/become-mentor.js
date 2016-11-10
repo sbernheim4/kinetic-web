@@ -62,7 +62,8 @@ function sendAdminEmail(doc) {
 
 	const emailInfo = {
 		from: 'noreply-become-a-mentor@kineticglobal.org',
-		to: ['general@kineticglobal.org', 'bryan.jones@kineticglobal.org', 'katie.swoap@kineticglobal.org'],
+		//to: ['general@kineticglobal.org', 'bryan.jones@kineticglobal.org', 'katie.swoap@kineticglobal.org'],
+		to: 'sambernheim@gmail.com',
 		subject: `<p>${clientName} wants to become a Mentor</p>`,
 		content: `<p>Hi,</p>
 
