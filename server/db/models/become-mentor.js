@@ -55,7 +55,7 @@ function sendClientEmail(doc) {
 }
 
 function sendAdminEmail(doc) {
-	const clientName = doc.name ? doc.name : 'A user';
+	const clientName = doc.name;
 	const clientEmail = doc.email;
 	const profession = doc.profession;
 	const almaMater = doc.almaMater;
