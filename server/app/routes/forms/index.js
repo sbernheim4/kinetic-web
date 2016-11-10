@@ -120,14 +120,6 @@ router.post('/become-a-mentor', (req, res, next) => {
 		return;
 	})
 	.then (() => {
-		if (req.body.email && req.body.information) {
-			//TODO: Build MentorInformation Schema and uncomment next line
-			//return MentorInformation.create(req.body);
-			return;
-		}
-		return;
-	})
-	.then (() => {
 		if (req.body.email && req.body.mentor) {
 			return BecomeAMentor.create(req.body);
 		}
