@@ -50,7 +50,6 @@ function sendClientEmail(doc) {
 		<p>Best,</p>
 		<p>The team at Kinetic Global</p>`
 	};
-
 	return sendEmail(emailInfo);
 }
 
@@ -60,24 +59,49 @@ function sendAdminEmail(doc) {
 	const profession = doc.profession;
 	const almaMater = doc.almaMater;
 
-	const emailInfo = {
-		from: 'noreply-become-a-mentor@kineticglobal.org',
-		//to: ['general@kineticglobal.org', 'bryan.jones@kineticglobal.org', 'katie.swoap@kineticglobal.org'],
-		to: 'sambernheim@gmail.com',
-		subject: `<p>${clientName} wants to become a Mentor</p>`,
-		content: `<p>Hi,</p>
+	const wantsMoreInfo = doc.information;
+	const becomeMentor = doc.mentor;
 
-		<p>${clientName} has expressed interest in becoming a mentor for Kinetic</p>
+	if (becomeMentor) {
+		// If the user expressed interest in becoming a mentor
+		const emailInfo = {
+			from: 'noreply-become-a-mentor@kineticglobal.org',
+			to: ['general@kineticglobal.org', 'bryan.jones@kineticglobal.org', 'katie.swoap@kineticglobal.org'],
+			subject: `${clientName} wants to become a Mentor`,
+			content: `<p>Hi,</p>
 
-		<p>You can reach out to them at ${clientEmail}.</p>
+			<p>${clientName} wants to become a mentor for Kinetic</p>
 
-		<p>Here is the information they provided</p>
-		<p>${almaMater}</p>
-		<p>${profession}</p>
+			<p>You can reach out to them at ${clientEmail}.</p>
 
-		<p>Best,</p>
-		<p>The team at Kinetic Global</p>`
-	};
+			<p>Here is the information they provided</p>
+			<p>${almaMater}</p>
+			<p>${profession}</p>
+
+			<p>Best,</p>
+			<p>The team at Kinetic Global</p>`
+		};
+	} else {
+		// If the user expressed interest in learning more or did not check any of the boxes
+		const emailInfo = {
+			from: 'noreply-become-a-mentor@kineticglobal.org',
+			to: ['general@kineticglobal.org', 'bryan.jones@kineticglobal.org', 'katie.swoap@kineticglobal.org'],
+			subject: `${clientName} wants to become a Mentor`,
+			content: `<p>Hi,</p>
+
+			<p>${clientName} has expressed interest in learning more about/becoming a mentor for Kinetic</p>
+
+			<p>You can reach out to them at ${clientEmail}.</p>
+
+			<p>Here is the information they provided</p>
+			<p>${almaMater}</p>
+			<p>${profession}</p>
+
+			<p>Best,</p>
+			<p>The team at Kinetic Global</p>`
+		};
+	}
+
 	return sendEmail(emailInfo);
 }
 
