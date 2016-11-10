@@ -60,7 +60,7 @@ function sendAdminEmail(doc) {
     subject: 'New Question/Comment from Contact Us Page',
     content: `<p>Hi,</p>
 
-    <p>${clientName} ${role}has just requested that a member of the Kinetic Global team contact them.</p>
+    <p>${clientName} ${role} has just requested that a member of the Kinetic Global team contact them.</p>
 
     <p>The user had the following message:</p>
 
