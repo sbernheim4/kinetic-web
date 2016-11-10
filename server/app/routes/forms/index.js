@@ -111,20 +111,23 @@ router.post('/contact-us', (req, res, next) => {
   .catch(err => res.status(500).send(err));
 });
 
+
 router.post('/become-a-mentor', (req, res, next) => {
-	Bluebird.resolve()
-	.then (() => {
-		if (req.body.email && req.body.newsletter) {
-			return EmailSignup.create(req.body);
-		}
-		return;
-	})
-	.then (() => {
-		if (req.body.email && req.body.mentor) {
-			return BecomeAMentor.create(req.body);
-		}
-		return;
-	})
-	.then(() => res.send())
-	.catch(err => res.status(500).send(err));
+  Bluebird.resolve()
+  .then (() => {
+  })
+  .then(() => {
+    if (req.body.email && req.body.newsletter) {
+      return EmailSignup.create(req.body);
+    }
+    return;
+  })
+  .then (() => {
+	  if (req.body.email) {
+		  return BecomeAMentor.create(req.body);
+	  }
+	  return;
+  })
+  .then(() => res.send())
+  .catch(err => res.status(500).send(err));
 });
