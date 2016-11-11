@@ -95,26 +95,23 @@ $mobile-navbar-change: 860px;
 				flex-basis: 0%;
 			}
 
-			.img-one {
+			.img {
+				height: 418px;
 				flex-basis: 50%;
 				background-size: cover;
 				background-position: center;
-				background-image: url('https://s3.amazonaws.com/kineticglobal-prod/about-us-photo-1.jpg');
 				@media all and (max-width: 1000px) {
 					display: none;
 					flex-basis: 0%;
 				}
 			}
 
+			.img-one {
+				background-image: url('https://s3.amazonaws.com/kineticglobal-prod/about-us-photo-1.jpg');
+			}
+
 			.img-two {
-				flex-basis: 50%;
-				background-size: cover;
-				background-position: center;
 				background-image: url(https://s3.amazonaws.com/kineticglobal-prod/about-us-photo-2.jpg);
-				@media all and (max-width: 1000px) {
-					display: none;
-					flex-basis: 0%;
-				}
 			}
 		}
 	}
