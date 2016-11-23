@@ -5,10 +5,6 @@
 	}
 }
 
-// MAIN COLORS USED ACROSS MULTIPLE PAGES
-$kinetic-blue: rgb(27, 121, 167);
-$kinetic-yellow: rgb(253, 178, 59);
-
 @import './global';
 @import 'directives/main';
 @import 'home/main';
@@ -32,3 +28,4 @@ $kinetic-yellow: rgb(253, 178, 59);
 @import 'calendar/main';
 @import 'resources/main';
 @import 'become-mentor/main';
+@import 'payment/main';

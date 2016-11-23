@@ -1,0 +1,55 @@
+<section class='payment'>
+
+	<h3 ng-hide='wasFormSubmitted'>Thank you for wanting to make a donation! Please enter your credit or debit card information below.</h3>
+	<h3 ng-show='wasFormSubmitted'>Thank you for your donation! We greatly appreciate your efforts to support Kinetic's ongoing work</h3>
+
+	<form ng-submit='submitForm(user)' ng-hide='wasFormSubmitted'>
+
+		<div>
+			Name:<br>
+			<label>
+				<input type='text'  ng-model='user.name' data-stripe='name'>
+			</label>
+		</div>
+
+		<div>
+			Card Number:<br>
+			<label>
+				<input type='text' maxlength='16' size='16'  ng-model='user.cardNumber' data-stripe='number'>
+			</label>
+		</div>
+
+		<div>
+			Expiration (MM/YY):<br>
+			<div>
+				<label>
+					<input type='text' maxlength='2' size='2'  ng-model='user.expirationMonth' data-stripe='exp_month'>
+				</label>
+				<span class='white-space'></span>/<span class='white-space'></span>
+				<label>
+					<input type='text' maxlength='2' size='2'  ng-model='user.expirationYear' data-stripe='exp_year'>
+				</label>
+			</div>
+		</div>
+
+		<div>
+			CVC:<br>
+			<label>
+				<input type='text' maxlength='3' size='3' ng-require='true' ng-model='user.cvc' data-stripe='cvc'>
+			</label>
+		</div>
+
+		<div>
+			Amount (in USD):<br>
+			<label>
+				<input type='text'  ng-model='user.amount' data-stripe='amount'>
+			</label>
+		</div>
+
+		<div class='btns' ng-hide='wasFormSubmitted'>
+			<input type='submit' class='btn' value='Donate'>
+		</div>
+
+	</form>
+
+</section>

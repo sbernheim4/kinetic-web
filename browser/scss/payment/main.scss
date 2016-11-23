@@ -1,0 +1,57 @@
+.payment {
+
+	background-color: $kinetic-blue;
+	color: white;
+
+	h3 {
+		text-align: center;
+	}
+
+	form {
+		padding: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;;
+
+		div {
+			padding-bottom: 7px;
+
+			label {
+				display: flex;
+				justify-content: flex-start;
+
+				input {
+					border: 1px solid black;
+					border-radius: 5px;
+					font-size: 14pt;
+				}
+			}
+
+			div {
+				display: flex;
+				justify-content: flex-start;
+
+				span.white-space {
+					padding: 0 2px;
+					color: white;
+				}
+			}
+
+		}
+
+		div.btns {
+			width: 100%;
+			padding-top: 5px;
+			justify-content: flex-start;
+
+			input.btn {
+				max-width: 200px;
+				width: 80%;
+				height: 40px;
+				font-size: 22pt;
+			}
+
+		}
+	}
+
+}
