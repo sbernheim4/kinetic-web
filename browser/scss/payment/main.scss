@@ -1,52 +1,74 @@
 .payment {
-
+	min-height: calc(100vh - 170px);
 	background-color: $kinetic-blue;
 	color: white;
+	@media all and (max-width: 957px) {
+		min-height: calc(100vh - 100px);
+	}
 
 	h3 {
 		text-align: center;
 	}
 
 	form {
-		padding: 30px;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;;
 
-		div {
-			padding-bottom: 7px;
-
-			label {
-				display: flex;
-				justify-content: flex-start;
-
-				input {
-					border: 1px solid black;
-					border-radius: 5px;
-					font-size: 14pt;
-				}
-			}
+		.credit-card {
+			margin: 30px auto;
+			width: 450px;
+			height: 250px;
+			border-radius: 5px;
+			background-color: $kinetic-yellow;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
 
 			div {
-				display: flex;
-				justify-content: flex-start;
 
-				span.white-space {
-					padding: 0 2px;
-					color: white;
+				input {
+					max-height: 30px;
+					padding: 5px;
+					font-size: 15pt;
+					border: 1px solid black;
+					border-radius: 5px;
+					box-sizing: border-box;
 				}
 			}
 
+			&__top, &__bottom {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			&__top {
+				padding: 15px 30px;
+
+				&--zip, &--cvc {
+					width: 30%;
+				}
+			}
+
+			&__middle {
+
+				label {
+					margin: 0 auto;
+					width: 85%;
+					padding: 5px;
+					display: flex;
+					flex-direction: column;
+
+				}
+			}
+
+			&__bottom {
+				padding: 15px 30px;
+			}
 		}
 
 		div.btns {
-			width: 100%;
-			padding-top: 5px;
-			justify-content: flex-start;
 
 			input.btn {
 				max-width: 200px;
-				width: 80%;
+				width: 70%;
 				height: 40px;
 				font-size: 22pt;
 			}

@@ -4,46 +4,32 @@
 	<h3 ng-show='wasFormSubmitted'>Thank you for your donation! We greatly appreciate your efforts to support Kinetic's ongoing work</h3>
 
 	<form ng-submit='submitForm(user)' ng-hide='wasFormSubmitted'>
+		<div class='credit-card'>
 
-		<div>
-			Name:<br>
-			<label>
-				<input type='text'  ng-model='user.name' data-stripe='name'>
-			</label>
-		</div>
+			<div class='credit-card__top'>
+				<input class='credit-card__top--zip' type='text' maxlength='5' size='5' ng-model='user.zipCode' data-stripe='address_zip' placeholder='ZIP Code'>
+				<input class='credit-card__top--cvc' type='text' maxlength='3' size='3' ng-require='true' ng-model='user.cvc' data-stripe='cvc' placeholder='CVC'>
+			</div>
 
-		<div>
-			Card Number:<br>
-			<label>
-				<input type='text' maxlength='16' size='16'  ng-model='user.cardNumber' data-stripe='number'>
-			</label>
-		</div>
-
-		<div>
-			Expiration (MM/YY):<br>
-			<div>
+			<div class='credit-card__middle'>
 				<label>
-					<input type='text' maxlength='2' size='2'  ng-model='user.expirationMonth' data-stripe='exp_month'>
+					<input class='credit-card__middle--amount' type='text'  ng-model='user.amount' data-stripe='amount' placeholder='Amount'>
 				</label>
-				<span class='white-space'></span>/<span class='white-space'></span>
 				<label>
-					<input type='text' maxlength='2' size='2'  ng-model='user.expirationYear' data-stripe='exp_year'>
+					<input class='credit-card__middle--number' type='text' maxlength='16' size='16'  ng-model='user.cardNumber' data-stripe='number' placeholder='Credit Card Number'>
 				</label>
 			</div>
-		</div>
 
-		<div>
-			CVC:<br>
-			<label>
-				<input type='text' maxlength='3' size='3' ng-require='true' ng-model='user.cvc' data-stripe='cvc'>
-			</label>
-		</div>
+			<div class='credit-card__bottom'>
+				<input class='credit-card__bottom--name' type='text'  ng-model='user.name' data-stripe='name' placeholder='Name on Card'>
 
-		<div>
-			Amount (in USD):<br>
-			<label>
-				<input type='text'  ng-model='user.amount' data-stripe='amount'>
-			</label>
+				<div class='container'>
+					<input type='text' maxlength='2' size='3'  ng-model='user.expirationMonth' data-stripe='exp_month' placeholder='MM'>
+					/
+					<input type='text' maxlength='2' size='3'  ng-model='user.expiratioYear' data-stripe='exp_year' placeholder='YY'>
+				</div>
+			</div>
+
 		</div>
 
 		<div class='btns' ng-hide='wasFormSubmitted'>
