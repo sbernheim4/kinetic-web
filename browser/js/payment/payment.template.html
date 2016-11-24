@@ -13,10 +13,10 @@
 
 			<div class='credit-card__middle'>
 				<label>
-					<input class='credit-card__middle--amount' type='text'  ng-model='user.amount' data-stripe='amount' placeholder='Amount'>
+					<input class='credit-card__middle--number' type='text' maxlength='16' size='16'  ng-model='user.cardNumber' data-stripe='number' placeholder='Credit Card Number'>
 				</label>
 				<label>
-					<input class='credit-card__middle--number' type='text' maxlength='16' size='16'  ng-model='user.cardNumber' data-stripe='number' placeholder='Credit Card Number'>
+					<input class='credit-card__middle--amount' type='text'  ng-model='user.amount' data-stripe='amount' placeholder='$ Amount'>
 				</label>
 			</div>
 
