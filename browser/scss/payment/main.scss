@@ -1,9 +1,9 @@
 .payment {
-	min-height: calc(100vh - 170px);
+	min-height: calc(100vh - 200px);
 	background-color: $kinetic-blue;
 	color: white;
-	@media all and (max-width: 957px) {
-		min-height: calc(100vh - 100px);
+	@media all and (max-width: 860px) {
+		min-height: calc(100vh - 166px);
 	}
 
 	h3 {
@@ -11,7 +11,6 @@
 	}
 
 	form {
-
 		.credit-card {
 			margin: 30px auto;
 			width: 450px;
