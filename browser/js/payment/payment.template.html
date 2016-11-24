@@ -6,21 +6,21 @@
 	<form ng-submit='submitForm(user)' ng-hide='wasFormSubmitted'>
 
 		<div>
-			Name:<br>
+			<p>Name:<p>
 			<label>
 				<input type='text'  ng-model='user.name' data-stripe='name'>
 			</label>
 		</div>
 
 		<div>
-			Card Number:<br>
+			<p>Card Number:</p>
 			<label>
 				<input type='text' maxlength='16' size='16'  ng-model='user.cardNumber' data-stripe='number'>
 			</label>
 		</div>
 
 		<div>
-			Expiration (MM/YY):<br>
+			<p>Expiration (MM/YY):</p>
 			<div>
 				<label>
 					<input type='text' maxlength='2' size='2'  ng-model='user.expirationMonth' data-stripe='exp_month'>
@@ -33,14 +33,21 @@
 		</div>
 
 		<div>
-			CVC:<br>
+			<p>Zip Code:</p>
+			<label>
+				<input type='text' maxlength='5' size='5' ng-model='user.zipCode' data-stripe='address_zip'>
+			</label>
+		</div>
+
+		<div>
+			<p>CVC:</p>
 			<label>
 				<input type='text' maxlength='3' size='3' ng-require='true' ng-model='user.cvc' data-stripe='cvc'>
 			</label>
 		</div>
 
 		<div>
-			Amount (in USD):<br>
+			<p>Amount (in USD):</p>
 			<label>
 				<input type='text'  ng-model='user.amount' data-stripe='amount'>
 			</label>
