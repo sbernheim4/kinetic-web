@@ -163,7 +163,12 @@
 					.dropdown-title {
 						text-align: center;
 						font-size: 18pt;
+
+						&:hover {
+							cursor: pointer;
+						}
 					}
+
 
 					.hide {
 						display: none;
