@@ -9,3 +9,4 @@ require('./nominate');
 require('./question');
 require('./user');
 require('./webinarQuestion.js')
+require('./become-mentor.js');

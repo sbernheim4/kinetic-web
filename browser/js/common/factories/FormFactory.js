@@ -20,6 +20,8 @@ app.factory('FormFactory', function($http) {
     },
     submitAdvisorQuestion: (info) => {
       return $http.post('/api/forms/ask-advisor-question', info)
+    submitBecomeAMentorForm: (info) => {
+      return $http.post('/api/forms/become-a-mentor', info)
       .then(res => res.data);
     }
   };

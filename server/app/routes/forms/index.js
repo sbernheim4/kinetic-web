@@ -10,6 +10,7 @@ const GetTheHandbook = mongoose.model('GetTheHandbook');
 const ContactRequest = mongoose.model('ContactRequest');
 const Nominate = mongoose.model('Nominate');
 const WebinarQuestion = mongoose.model('WebinarQuestion');
+const BecomeAMentor = mongoose.model('BecomeAMentor');
 const Bluebird = require('bluebird');
 
 module.exports = router;
@@ -120,4 +121,24 @@ router.post('/ask-advisor-question', (req, res, next)  => {
     console.error(err);
     res.status(500).send(err);
   });
+});
+
+router.post('/become-a-mentor', (req, res, next) => {
+  Bluebird.resolve()
+  .then (() => {
+  })
+  .then(() => {
+    if (req.body.email && req.body.newsletter) {
+      return EmailSignup.create(req.body);
+    }
+    return;
+  })
+  .then (() => {
+	  if (req.body.email) {
+		  return BecomeAMentor.create(req.body);
+	  }
+	  return;
+  })
+  .then(() => res.send())
+  .catch(err => res.status(500).send(err));
 });

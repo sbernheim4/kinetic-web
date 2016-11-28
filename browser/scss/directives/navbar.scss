@@ -137,11 +137,16 @@
 	.mobile-nav-bar {
 		color: black;
 
-		.fa-bars {
-			padding: 15px;
-			background-color: white;
-			border: 0px;
-			font-size: 27pt;
+		.btns-container {
+			display: flex;
+			justify-content: space-between;
+
+			.fa {
+				padding: 15px;
+				background-color: white;
+				border: 0px;
+				font-size: 27pt;
+			}
 		}
 
 		.show-menu {
@@ -158,7 +163,12 @@
 					.dropdown-title {
 						text-align: center;
 						font-size: 18pt;
+
+						&:hover {
+							cursor: pointer;
+						}
 					}
+
 
 					.hide {
 						display: none;

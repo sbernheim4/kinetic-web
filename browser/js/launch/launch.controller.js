@@ -16,9 +16,6 @@ app.controller('LaunchCtrl', function($scope, FormFactory) {
     .then( () => {
       $scope.show = false;
     })
-    .then( data => {
-      console.log(data)
-    })
     .catch( e => {
       console.error(e);
     });
