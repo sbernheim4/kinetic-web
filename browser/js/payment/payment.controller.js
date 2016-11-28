@@ -1,6 +1,6 @@
 'use strict'
 
-app.controller('PaymentCtrl', function ($scope, FormFactory) {
+app.controller('PaymentCtrl', function ($scope) {
 
 	$scope.wasFormSubmitted = false;
 
