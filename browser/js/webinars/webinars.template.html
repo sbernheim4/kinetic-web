@@ -1,6 +1,7 @@
 <title>Kinetic Global Webinars</title>
 <section class='webinars'>
 	<h1 class='header'>Advisor Webinars</h1>
+
 	<div class='container'>
 		<div class='side-container' id='right-side'>
 			<h2>Upcoming Webinars</h2>
@@ -19,10 +20,12 @@
 						<label>Name</label>
 						<input ng-required ng-model='question.name' placeholder='Jane Doe'>
 					</div>
+
 					<div class='input-group'>
 						<label>Email</label>
 						<input type='email' ng-required ng-model='question.email' placeholder='jane.doe@email.com'>
 					</div>
+
 					<div class='input-group'>
 						<label>School</label>
 						<select ng-required ng-model='question.school'>
@@ -39,6 +42,7 @@
 							<option value='Williams College'>Williams College</option>
 						</select>
 					</div>
+
 					<div class='input-group'>
 						<label>Advisor</label>
 						<select ng-required ng-model='question.advisor'>
@@ -49,13 +53,24 @@
 							<option value='Ali Bloch'>Ali Bloch</option>
 						</select>
 					</div>
+
 					<div class='input-group text-input'>
 						<textarea ng-required ng-model='question.question' placeholder='Enter your question here...'></textarea>
 					</div>
+
 					<button ng-show='!submitted' type='submit' class='btn'>Submit Question</button>
+
 					<h3 ng-show='submitted'>Thank you for your question! We'll pass it on to the advisor.</h3>
 				</form>
 			</div>
 		</div>
 	</div>
+
+	<div class='youtube'>
+		<h3 class='youtube--header'>Archived Webinars</h3>
+		<iframe class='youtube--player' width="640" height="360" src="https://www.youtube.com/v/videoseries?list=PLGDTe6JKF2XCLdzJqCVDVDOfcbYzLlWr4" showinfo=1 frameborder="0" allowfullscreen></iframe>
+	</div>
+
+
+
 </section>
