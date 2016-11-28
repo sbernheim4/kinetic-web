@@ -83,6 +83,11 @@ section.webinars {
 								margin-bottom: 5px;
 							}
 							input, textarea {
+								box-sizing: border-box;
+								border: none;
+								border-radius: 5px;
+								height: 25px;
+								padding: 5px;
 								line-height: 20px;
 								font-size: 14px;
 							}
