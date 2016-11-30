@@ -9,6 +9,7 @@ const Questions = mongoose.model('Questions');
 const GetTheHandbook = mongoose.model('GetTheHandbook');
 const ContactRequest = mongoose.model('ContactRequest');
 const Nominate = mongoose.model('Nominate');
+const WebinarQuestion = mongoose.model('WebinarQuestion');
 const BecomeAMentor = mongoose.model('BecomeAMentor');
 const Bluebird = require('bluebird');
 
@@ -111,6 +112,16 @@ router.post('/contact-us', (req, res, next) => {
   .catch(err => res.status(500).send(err));
 });
 
+router.post('/ask-advisor-question', (req, res, next)  => {
+  WebinarQuestion.create(req.body)
+  .then(doc => {
+    res.status(200).send();
+  })
+  .catch(err => {
+    console.error(err);
+    res.status(500).send(err);
+  });
+});
 
 router.post('/become-a-mentor', (req, res, next) => {
   Bluebird.resolve()
