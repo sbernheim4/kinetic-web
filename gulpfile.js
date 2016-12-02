@@ -16,6 +16,8 @@ var mocha = require('gulp-mocha');
 var karma = require('karma').server;
 var istanbul = require('gulp-istanbul');
 var notify = require('gulp-notify');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
 
 // Development tasks
 // --------------------------------------------------------------
@@ -87,12 +89,17 @@ gulp.task('buildCSS', function () {
     var sassCompilation = sass();
     sassCompilation.on('error', console.error.bind(console));
 
+    var processors = [
+        autoprefixer({browsers: ['last 4 versions']})
+    ];
+
     return gulp.src('./browser/scss/main.scss')
         .pipe(plumber({
             errorHandler: notify.onError('SASS processing failed! Check your gulp process.')
         }))
         .pipe(sassCompilation)
         .pipe(rename('style.css'))
+        .pipe(postcss(processors))
         .pipe(gulp.dest('./public'));
 });
 
@@ -100,11 +107,15 @@ gulp.task('buildCSS', function () {
 // --------------------------------------------------------------
 
 gulp.task('buildCSSProduction', function () {
+    var processors = [
+        autoprefixer({browsers: ['last 4 versions']})
+    ];
     return gulp.src('./browser/scss/main.scss')
         .pipe(sass())
         .pipe(rename('style.css'))
         .pipe(minifyCSS())
-        .pipe(gulp.dest('./public'))
+        .pipe(postcss(processors))
+        .pipe(gulp.dest('./public'));
 });
 
 gulp.task('buildJSProduction', function () {
