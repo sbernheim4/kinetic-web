@@ -151,7 +151,7 @@ router.post('/make-a-donation', (req, res, next) => {
 	})
 	.then(() => {
 		const centValue = req.body.amount * 100;
-		const donnerName = req.body.name;
+		const donorName = req.body.name;
 
 		//TODO: make sure stripeToken is getting passed to the server
 		const token = req.body.stripeToken;
@@ -160,7 +160,7 @@ router.post('/make-a-donation', (req, res, next) => {
 			amount: centValue, // amount in cents
 			currency: "usd",
 			source: token,
-			description: "Donation from " + donnerName;
+			description: "Donation from " + donorName
 		}, function (err, charge) {
 			if (err && err.type === 'StripeCardError') {
 				// Card has been declined
