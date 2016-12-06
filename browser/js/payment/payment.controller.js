@@ -2,10 +2,17 @@
 
 app.controller('PaymentCtrl', function ($scope) {
 
-	$scope.wasFormSubmitted = false;
+	$scope.cardProcessingError = false;
 
 	$scope.submitForm = function (user) {
-		$scope.wasFormSubmitted = true;
+		FormFactory.submitDonation(user)
+		.then(() => {
+			$scope.wasFormSubmitted = true;
+		})
+		.catch(e => {
+			$scope.cardProcessingError = true;
+			console.error(e);
+		})
 	};
 
 });

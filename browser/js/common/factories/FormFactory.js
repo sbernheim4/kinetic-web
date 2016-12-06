@@ -21,6 +21,10 @@ app.factory('FormFactory', function($http) {
     submitBecomeAMentorForm: (info) => {
       return $http.post('/api/forms/become-a-mentor', info)
       .then(res => res.data);
+    },
+    submitDonation: (info) => {
+      return $http.post('/api/forms/make-a-donation', info)
+      .then (res => res.data);
     }
   };
 });
