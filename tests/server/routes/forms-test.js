@@ -6,7 +6,7 @@ const LaunchAChapter = mongoose.model('LaunchAChapter');
 const Questions = mongoose.model('Questions');
 const EmailSignup = mongoose.model('EmailSignup');
 const Nominate = mongoose.model('Nominate');
-
+const WebinarQuestion = mongoose.model('WebinarQuestion');
 const expect = require('chai').expect;
 
 const dbURI = 'mongodb://localhost:27017/testingDB';
@@ -237,4 +237,57 @@ describe('Form routes', function () {
 
   });
 
+  describe('/ask-advisor-question', function() {
+    let userAgent;
+
+    beforeEach('Create guest agent', function () {
+      userAgent = supertest.agent(app);
+    });
+
+    const validForm = {
+      name: 'Jane Doe',
+      email: 'janedoe@email.com',
+      question: 'Why do i need to test this??',
+      advisor: 'Barack Obama',
+      school: 'University of Phoenix'
+    };
+
+    const invalidForm = { //missing `question` field
+      name: 'Jane Doe',
+      email: 'janedoe@email.com',
+      advisor: 'Barack Obama',
+      school: 'University of Phoenix'
+    };
+
+    it('should create an entry in the WebinarQuestion collection', function (done) {
+      userAgent.post('/api/forms/ask-advisor-question')
+      .send(validForm)
+      .expect(200)
+      .end(function (err, response) {
+        if (err) return done(err);
+        WebinarQuestion.find()
+        .then(function(results) {
+          expect(results.length).to.equal(1);
+          expect(results[0].email).to.equal('janedoe@email.com');
+          done();
+        })
+        .catch(done);
+      });
+    });
+
+    it('should not create an entry in the nominate db', function(done) {
+      userAgent.post('/api/forms/ask-advisor-question')
+      .send(invalidForm)
+      .expect(500)
+      .end(function (err, response) {
+        if (err) return done(err);
+        WebinarQuestion.find()
+        .then(function(results) {
+          expect(results.length).to.equal(0);
+          done();
+        })
+        .catch(done);
+      });
+    });
+  });
 });
