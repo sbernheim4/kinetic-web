@@ -13,7 +13,7 @@ const WebinarQuestion = mongoose.model('WebinarQuestion');
 const BecomeAMentor = mongoose.model('BecomeAMentor');
 const Bluebird = require('bluebird');
 //TODO: Figure out proper way to reference API Key
-const stripe = require('stripe')(STRIPE_API_KEY);
+const stripe = require('stripe');//(STRIPE_API_KEY);
 
 module.exports = router;
 
