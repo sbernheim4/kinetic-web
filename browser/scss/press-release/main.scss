@@ -1,0 +1,9 @@
+.press-release {
+	min-height: calc(100vh - 170px);
+
+	@media all and (max-width: 860px) {
+		min-height: calc(100vh - 70px);
+	}
+
+	background-color: $kinetic-blue;
+}
