@@ -1,12 +1,14 @@
 'use strict';
 
 app.factory('GoToSectionFactory', function($state) {
-	return {
-		goToSection: (val, state) => {
+	return { goToSection: (val, state) => {
 			Promise.resolve()
 			.then( () => {
 				if (!state) {
 					state = 'home';
+				}
+				if (!val || val === "null") {
+					val = 'main';
 				}
 				if($state.current.name === state) {
 					return;
