@@ -8,7 +8,6 @@
 	background-color: $kinetic-blue;
 
 	h2 {
-		max-width: 800px;
 		margin: 0 auto;
 		text-align: center;
 		padding: 30px;
@@ -22,6 +21,7 @@
 		flex-wrap: wrap;
 
 		&--release {
+			padding: 15px;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
