@@ -36,6 +36,8 @@ app.use(function (req, res, next) {
 	} else {
 		if (path.extname(req.path).length > 0 || (req.path !== "/" &&  !validDomains.includes(req.path.substring(1)))) {
 	        res.status(404);
+			// TODO: We can just create a basic html 404 page rather than just send the
+			// plain text below
 			res.send("404 Error. Page does not exist").end;
 	    } else {
 	        next(null);
