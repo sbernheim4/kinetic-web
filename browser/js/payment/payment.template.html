@@ -4,7 +4,7 @@
 	<h3 ng-show='wasFormSubmitted'>Thank you for your donation! We greatly appreciate your efforts to support Kinetic's ongoing work</h3>
 	<h3 ng-show='cardProcessingError'>There was a problem with your credit or debit card and your donation did not go through. We would advise you contact your bank to ensure everything is in working order.</h3>
 
-	<form ng-submit='submitForm(user)' ng-hide='wasFormSubmitted'>
+	<!--<form ng-submit='submitForm(user)' ng-hide='wasFormSubmitted'>
 		<div class='credit-card'>
 
 			<div class='credit-card__top'>
@@ -37,6 +37,26 @@
 			<input type='submit' class='btn' value='Donate'>
 		</div>
 
+	</form>-->
+
+	<form ng-submit='submitForm(user)' ng-hide='wasFormSubmitted'>
+		<script
+			src="https://checkout.stripe.com/checkout.js"
+			class="stripe-button"
+			data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+			data-name="Stripe.com"
+			data-description="Donation"
+			data-image="https://s3.amazonaws.com/kineticglobal-prod/kinetic-logo.png"
+			data-locale="auto"
+			data-zip-code="true">
+		</script>
+
+		<div class='amount'>
+			<p>Enter in the amount you would like to donate</p>
+			<input type='text' id='donationAmount'>
+			<button ng-click="showStripe()">Proceed to donation</button>
+		</div>
 	</form>
+
 
 </section>

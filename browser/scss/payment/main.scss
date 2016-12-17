@@ -11,6 +11,15 @@
 	}
 
 	form {
+		.amount {
+			width: 600px;
+			margin: 0 auto;
+			padding: 30px;
+			text-align: center;
+		}
+	}
+
+	form {
 		.credit-card {
 			margin: 30px auto;
 			width: 450px;
@@ -74,5 +83,7 @@
 
 		}
 	}
+
+
 
 }
