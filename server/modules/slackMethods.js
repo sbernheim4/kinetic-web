@@ -1,5 +1,5 @@
 const rp = require('request-promise');
-const token = 'abc123';
+const token = 'xoxp-18976440672-62566622880-87993078356-eb8bf03751c819d762e4e0551f3ee694';
 
 module.exports = {
 	findSlackUser: (id) => {
