@@ -11,12 +11,11 @@ const Bluebird = require('bluebird');
 module.exports = router;
 
 router.post('/', (req, res, next) => {
-	// console.log(req.body)
-	res.status(200).send();
 	
-	if(req.body.challenge) {
-		// console.log('sending back', req.body.challenge)
+	if (req.body.challenge) {
 		return res.send(req.body.challenge)
+	} else {
+		res.status(200).send(); // send back a 200 to acknowledge receipt/prevent duplicate requests
 	}
 	let promise;
 	switch(req.body.event.type) {
