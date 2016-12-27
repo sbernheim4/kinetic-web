@@ -1,0 +1,80 @@
+section.forum {
+	h2 {
+		text-decoration: underline;
+		text-align: center;
+	}
+
+	.text-container {
+		width: 80%;
+		margin: 0 auto;
+		text-align: center;
+		p {
+			width: 80%;
+			margin: 20px auto;
+		}
+		div {
+			width: 100%;
+			input {
+				width: 80%;
+				height: 20px;
+				// border: none;
+				border-width: 1px 0 1px 1px;
+				border-color: black;
+				border-style: solid;
+			}
+			button {
+				width: 19%;
+				height: 26px;
+				border-width: 1px 1px 1px 0;
+				border-color: black;
+				border-style: solid;
+			}
+		}
+	}
+	.cause-images {
+		margin: 0 auto;
+		width: 80%;
+		display: flex;
+		flex-direction: row;
+		@media all and (max-width: 930px) {
+			width: 100%;
+		}
+		@media all and (max-width: 780px) {
+			width: 100%;
+			flex-direction: column;
+		}
+		.cause {
+			text-align: center;
+			width: 33%;
+			@media all and (max-width: 780px) {
+				width: auto;
+			}
+
+			.sub-container {
+				background-color: blue;
+				width: 80%;
+				margin: 0 auto;
+				img {
+					max-width: 250px;
+					max-height: 193px;
+				}
+				h3 {
+					color: white;
+				}
+			}
+
+		}
+	}
+	.new-discussions {
+		width: 80%;
+		margin: 0 auto;
+		table {
+			width: 100%;
+			text-align: center;
+			.title-column {
+				text-align: left;
+				width: 40%;
+			}
+		}
+	}
+}

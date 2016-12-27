@@ -1,0 +1,59 @@
+<title>Kinetic Global Discussions</title>
+<section class='forum'>
+
+	<h1 class='header'>Kinetic Forum</h1>
+	<div class='text-container'>
+		<p class='content'>The Kinetic forum is the perfect place to post questions about your projects. Looking for a key piece of info and don’t know where to start? Stuck on a roadblock and curious how other teams addressed it? Or found an amazing resource to share? Post it here!</p>
+		<p class='content'>To take full advantage of the Kinetic forum, access channels through the Kinetic Global Slack account. Otherwise, check out the threads below!</p>
+		<!-- <div class='inline-block'>
+			<input type='text'><button type='submit' class='btn'>Search Discussions</button>
+		</div> -->
+	</div>
+
+	<h2>Key Issue Areas</h2>
+
+	<div class='cause-images'>
+		<div class='cause'>
+			<div class='sub-container'>
+				<img ng-src='https://s3.amazonaws.com/kineticglobal-prod/homelessness-graphic.png'>
+				<h3>Homelessness</h3>
+				<div id='homelessness'> </div>
+			</div>
+		</div>
+
+		<div class='cause'>
+			<div class='sub-container'>
+				<img ng-src='https://s3.amazonaws.com/kineticglobal-prod/food-insecurity-graphic.png'>
+				<h3>Food Insecurity</h3>
+				<div id='food-insecurity'> </div>
+			</div>
+		</div>
+
+		<div class='cause'>
+			<div class='sub-container'>
+				<img ng-src='https://s3.amazonaws.com/kineticglobal-prod/tree-graphic.png'>
+				<h3>Environmental Sustainability</h3>
+				<div id='environment'> </div>
+			</div>
+		</div>
+	</div>
+	<div class='new-discussions'>
+		<table>
+			<thead>
+	      <th>Title</th>
+	      <th>Number of Comments</th>
+	      <th>Most Recent Comment</th>
+	  	</thead>
+	  	<tbody>
+		    <tr discussion-row discussion='discussion' ng-repeat="discussion in discussions"></tr>
+		  </tbody>
+		</table>
+	</div>
+	
+	<form ng-submit='createDiscussion(discussion)'>
+		<h3>Create New Discussion</h3>
+		<input type='text' ng-model='discussion.title' placeholder='Description'>
+		<input type='text' ng-model='discussion.description' placeholder='Description'>
+		<input type='submit' value='Create Discussion'>
+	</form>
+</section>

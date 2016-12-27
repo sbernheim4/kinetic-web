@@ -1,0 +1,7 @@
+<h1>{{discussion.title}}</h1>
+<form ng-submit='createComment(comment)'>
+<div comment-row comment='comment' ng-repeat="comment in discussion.comments"></div>
+<h3>Add Comment</h3>
+	<input type='text' ng-model='comment.message' placeholder='Add a comment'>
+	<input type='submit' value='Send'>
+</form>
