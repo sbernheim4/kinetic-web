@@ -35,10 +35,8 @@ app.use(function (req, res, next) {
 		res.sendFile(path.join(__dirname + '/sitemap.xml'));
 	} else {
 		if (path.extname(req.path).length > 0 || (req.path !== "/" &&  !validDomains.includes(req.path.substring(1)))) {
-	        res.status(404);
-			// TODO: We can just create a basic html 404 page rather than just send the
-			// plain text below
-			res.send("404 Error. Page does not exist").end;
+			res.sendFile(path.join(__dirname, './views/404.html'));
+			res.status(404);
 	    } else {
 	        next(null);
 	    }
