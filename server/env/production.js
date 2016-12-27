@@ -26,5 +26,9 @@ module.exports = {
     },
     "SENDGRID": {
         "API_KEY": process.env.SENDGRID_API_KEY
+    },
+    "SLACK": {
+        "CLIENT_ID": process.env.CLIENT_ID,
+        "CLIENT_SECRET": process.env.CLIENT_SECRET
     }
 };

@@ -18,5 +18,9 @@ module.exports = {
   },
   "SENDGRID": {
     "API_KEY": "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"
+  },
+  "SLACK": {
+    "CLIENT_ID": "abc123 ",
+    "CLIENT_SECRET": "abc123"
   }
 };
