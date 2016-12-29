@@ -65,11 +65,11 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state, 
 						keepBigActive--;
 					}
 				})
-				
-				if (keepBigActive === -2) {
-					menu.style.height = '380px';
-				} else {
-					menu.style.height = '190px';
+
+				if (keepBigActive === -2 && menu.classList.contains('active')) {
+					menu.classList.add('big-active')
+				} else if (menu.classList.contains('active')){
+					menu.classList.remove('big-active');
 				}
 
 				console.log(menu.classList);
