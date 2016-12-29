@@ -19,8 +19,26 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state, 
 			* added which contains the animation and display css
 			*/
 			scope.toggleMenu = function() {
+
+				const dropdownOne = document.querySelector('.what-is-kinetic');
+				const dropdownTwo = document.querySelector('.get-involved');
+				const dropdownThree = document.querySelector('.resources');
+				const dropdownFour = document.querySelector('.our-team');
+
+				const vals = [dropdownOne, dropdownTwo, dropdownThree, dropdownFour];
+
 				const menu = document.querySelector('.big-container');
 				menu.classList.toggle('active');
+
+				if (menu.classList.contains('big-active') && !menu.classList.contains('active')) {
+					menu.classList.toggle('big-active');
+				}
+
+				for (var i = 0; i < vals.length; i++) {
+					if (vals[i].classList.contains('display') && menu.classList.contains('active') && !menu.classList.contains('big-active')) {
+						menu.classList.toggle('big-active');
+					}
+				}
 			}
 
 			// This toggle function is used for the mobile nav-bar lists
