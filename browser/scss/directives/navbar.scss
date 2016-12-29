@@ -184,27 +184,29 @@
 						}
 					}
 
+					.list-container {
+						transition: height .25s;
+						height: 0px;
 
-					.hide {
-						display: none;
+						* {
+							display: none;
+						}
 					}
 
-					.show {
-						display: block;
+					.list-container.display {
+						transition: height .25s;
 						border-top: 2px solid $kinetic-yellow;
+						width: 200px;
+						height: 195px;
+						margin: 0 auto;
+						text-align: center;
+						display: flex;
+						flex-direction: column;
 
-						.list-container {
-							width: 200px;
-							margin: 0 auto;
-							text-align: center;
-							display: flex;
-							flex-direction: column;
-
-							a {
-								padding: 5px 0px;
-								cursor: pointer;
-							}
-
+						a {
+							display: inline;
+							padding: 5px 0px;
+							cursor: pointer;
 						}
 					}
 				}
