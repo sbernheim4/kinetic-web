@@ -71,8 +71,6 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state, 
 				} else if (menu.classList.contains('active')){
 					menu.classList.remove('big-active');
 				}
-
-				console.log(menu.classList);
 			}
 
 			scope.user = null;
