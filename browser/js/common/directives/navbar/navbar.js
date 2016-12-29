@@ -13,7 +13,7 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state, 
 			scope.displayResources = true;
 			scope.displayOurTeam = true;
 
-			/* Toggle the menu button to display the nav bar headers
+			/* Toggle the menu button to display the nav bar headers when han
 			*
 			* When the hamburger icon is clicked, this function runs and the class 'active' is
 			* added which contains the animation and display css
@@ -55,6 +55,24 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state, 
 					dropdownThree.classList.remove('display');
 					dropdownFour.classList.toggle('display');
 				}
+
+				var keepBigActive = 0;
+
+				vals.map(item => {
+					if (item.classList.contains('display')) {
+						keepBigActive++;
+					} else {
+						keepBigActive--;
+					}
+				})
+				
+				if (keepBigActive === -2) {
+					menu.style.height = '380px';
+				} else {
+					menu.style.height = '190px';
+				}
+
+				console.log(menu.classList);
 			}
 
 			scope.user = null;

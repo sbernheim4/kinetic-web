@@ -158,24 +158,22 @@
 			}
 		}
 
-		.active {
+		.big-container.active {
 			transition: height .5s;
 			width: 200px;
 			height: 190px;
 			margin: 0 auto;
-
-			* {
-				display: block;
-			}
 
 			.dropdown-lists {
 				display: block;
 				margin: 0 auto;
 
 				.dropdown {
+					display: block;
 					padding: 8px 0px;
 
 					.dropdown-title {
+						display: block;
 						text-align: center;
 						font-size: 18pt;
 
@@ -187,10 +185,7 @@
 					.list-container {
 						transition: height .25s;
 						height: 0px;
-
-						* {
-							display: none;
-						}
+						display: block;
 					}
 
 					.list-container.display {
@@ -205,6 +200,7 @@
 
 						a {
 							display: inline;
+							height: 34px;
 							padding: 5px 0px;
 							cursor: pointer;
 						}
