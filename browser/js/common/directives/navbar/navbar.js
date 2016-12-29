@@ -14,14 +14,9 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state, 
 			scope.displayResources = true;
 			scope.displayOurTeam = true;
 
-			// This toggle menu is used for the hamburger icon and when to
-			// display the titles of the dropdown menus
-			scope.toggleMenu = function () {
-				if (scope.class == 'hide-menu') {
-					scope.class = 'show-menu';
-				} else {
-					scope.class='hide-menu';
-				}
+			scope.toggleMenu = function() {
+				const menu = document.querySelector('.big-container');
+				menu.classList.toggle('active');
 			}
 
 			// This toggle function is used for the mobile nav-bar lists

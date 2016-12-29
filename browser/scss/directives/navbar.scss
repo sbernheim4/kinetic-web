@@ -149,9 +149,24 @@
 			}
 		}
 
-		.show-menu {
+		.big-container {
+			transition: height .25s;
+			height: 0px;
+
+			* {
+				display: none;
+			}
+		}
+
+		.active {
+			transition: height .5s;
 			width: 200px;
+			height: 190px;
 			margin: 0 auto;
+
+			* {
+				display: block;
+			}
 
 			.dropdown-lists {
 				display: block;
@@ -194,11 +209,6 @@
 					}
 				}
 			}
-		}
-
-		.hide-menu {
-			display: none;
-
 		}
 	}
 }
