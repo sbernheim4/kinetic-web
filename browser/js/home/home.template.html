@@ -11,7 +11,7 @@
 
 		<div class='btns btns-main'>
 			<button ng-click='goToSection(".get-involved", "home")' type='button' class='btn btn-main'>Get Involved</button>
-			<button ng-click='goToSection(".resources", "resources")' type='button' class='btn btn-main btn-transparent'>Access Resources</button>
+			<button ui-sref='resources' type='button' class='btn btn-main btn-transparent'>Access Resources</button>
 		</div>
 
 	</section>
@@ -49,7 +49,7 @@
 			</p>
 
 			<div class='btns btns-solution'>
-				<button ng-click='goToSection(".resources", "resources")' class='btn btn-solution'>Our Resources</button>
+				<button ui-sref='resources' class='btn btn-solution'>Our Resources</button>
 			</div>
 		</div>
 
@@ -103,7 +103,7 @@
 		</div>
 
 		<div class='btns btns-what-is'>
-			<button ng-click='goToSection(".handbook", "handbook")' class='btn btn-what-is'>Get the Kinetic Handbook</button>
+			<button ui-sref='handbook' class='btn btn-what-is'>Get the Kinetic Handbook</button>
 		</div>
 	</section>
 
@@ -131,8 +131,8 @@
 			</p>
 
 			<div class='btns btns-about-us'>
-				<button ng-click='goToSection(".history", "history")' type='button' class='btn btn-about-us'>History</button>
-				<button ng-click='goToSection(".mission", "mission")' type='button' class='btn btn-about-us'>Mission & Vision</button>
+				<button ui-sref='history' type='button' class='btn btn-about-us'>History</button>
+				<button ui-sref='mission' type='button' class='btn btn-about-us'>Mission & Vision</button>
 			</div>
 		</div>
 
@@ -176,7 +176,7 @@
 				</div>
 			</div>
 
-			<button ng-click='goToSection(".advisory", "advisors")' type="button" class='btn btn-sponsored'>Our Advisory Network</button>
+			<button ui-sref='advisors' type="button" class='btn btn-sponsored'>Our Advisory Network</button>
 		</div>
 
 	</section>
@@ -193,7 +193,7 @@
 		<div class='square-container'>
 
 			<div>
-				<button ng-click='goToSection(".launch", "launch")' class='square square-orange'>
+				<button ui-sref='launch' class='square square-orange'>
 					<p>Launch a Chapter</p>
 				</button>
 				<p>Start a chapter on your campus!</p>
@@ -201,7 +201,7 @@
 			</div>
 
 			<div>
-				<button ng-click='goToSection(".become-mentor", "become-mentor")' class='square square-blue'>
+				<button ui-sref='become-mentor' class='square square-blue'>
 					<p>Become a Mentor</p>
 				</button>
 				<p>Are you a young college alum looking to get involved?</p>
@@ -210,7 +210,7 @@
 			</div>
 
 			<div>
-				<button ng-click='goToSection(".nominate", "nominate")' class='square square-aqua'>
+				<button ui-sref='nominate' class='square square-aqua'>
 					<p>Nominate an<br>Issue Advisor</p>
 				</button>
 				<p>Do you know a great advisor for the network?</p>
@@ -220,7 +220,7 @@
 
 
 			<div>
-				<button ng-click='goToSection(".support", "support")' class='square square-green'>
+				<button ui-sref='support' class='square square-green'>
 					<p>Support Kinetic Global</p>
 				</button>
 				<p>Support college students making change in your community!</p>

@@ -31,10 +31,10 @@
 				<div class='dropdown-title'>Get Involved</div>
 				<div class='dropdown-content'>
 					<div class='list-container'>
-						<a ng-click='goToSection(".launch", "launch")'>Launch a Chapter</a>
-						<a ng-click='goToSection(".become-mentor", "become-mentor")'>Become a Mentor</a>
-						<a ng-click='goToSection(".nominate", "nominate")'>Nominate an Expert</a>
-						<a ng-click='goToSection(".support", "support")'>Support Kinetic</a>
+						<a ui-sref='launch'>Launch a Chapter</a>
+						<a ui-sref='become-mentor'>Become a Mentor</a>
+						<a ui-sref='nominate'>Nominate an Expert</a>
+						<a ui-sref='support'>Support Kinetic</a>
 					</div>
 				</div>
 			</div>
@@ -43,13 +43,13 @@
 				<div class='dropdown-title'>Resources</div>
 				<div class='dropdown-content'>
 					<div class='list-container'>
-						<a ng-click='goToSection(".mentors", "mentors")'>Team Mentors</a>
-						<a ng-click='goToSection(".advisory", "advisors")'>Advisors</a>
-						<a ng-click='goToSection(".webinars", "webinars")'>Advisor Webinars</a>
-						<a ng-click='goToSection(".template", "template")'>Kinetic Templates</a>
-						<a ng-click='goToSection(".calendar", "calendar")'>Calendar</a>
-						<a ng-click='goToSection(".handbook", "handbook")'>Get a Handbook</a>
-						<a ng-click='goToSection(".press", "press")'>News</a>
+						<a ui-sref='mentors'>Team Mentors</a>
+						<a ui-sref='advisors'>Advisors</a>
+						<a ui-sref='webinars'>Advisor Webinars</a>
+						<a ui-sref='template'>Kinetic Templates</a>
+						<a ui-sref='calendar'>Calendar</a>
+						<a ui-sref='handbook'>Get a Handbook</a>
+						<a ui-sref='press'>News</a>
 					</div>
 				</div>
 			</div>
@@ -58,22 +58,25 @@
 				<div class='dropdown-title'>Our Team</div>
 				<div class='dropdown-content'>
 					<div class='list-container'>
-						<a ng-click='goToSection(".leadership", "leadership")'>Leadership</a>
-						<a ng-click='goToSection(".supporters", "supporters")'>Supporters</a>
-						<a ng-click='goToSection(".campuses", "campuses")'>Campuses</a>
+						<a ui-sref='leadership'>Leadership</a>
+						<a ui-sref='supporters'>Supporters</a>
+						<a ui-sref='campuses'>Campuses</a>
 					</div>
 				</div>
 			</div>
-
-			<!-- <div class='dropdown'>
-			<div class='dropdown-title'>
-			Stories
 		</div>
-		<div class='dropdown-content'>
-		<div class='list-container'>
-		<a ng-click='goToSection(".projects")'>Projects</a>
-		<a ng-click='goToSection(".blog")'>KG Blog</a>
 	</div>
+</nav>
+
+<!-- <div class='dropdown'>
+<div class='dropdown-title'>
+Stories
+</div>
+<div class='dropdown-content'>
+<div class='list-container'>
+<a ng-click='goToSection(".projects")'>Projects</a>
+<a ng-click='goToSection(".blog")'>KG Blog</a>
+</div>
 </div>
 </div>
 
@@ -89,9 +92,7 @@ Login
 </div>
 </div> -->
 
-</div>
-</div>
-</nav>
+
 
 
 <div class='mobile-nav-bar'>
