@@ -367,6 +367,7 @@ $navbar-height: 100px;
 		.cause-images {
 			margin: 0 auto;
 			width: 80%;
+			min-height: 246px;
 			display: flex;
 			flex-direction: row;
 			@media all and (max-width: 930px) {
@@ -374,6 +375,7 @@ $navbar-height: 100px;
 			}
 			@media all and (max-width: 780px) {
 				width: 100%;
+				min-height: 738px;
 				flex-direction: column;
 			}
 
