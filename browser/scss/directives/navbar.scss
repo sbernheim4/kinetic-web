@@ -200,13 +200,11 @@
 						display: block;
 
 						opacity: 0;
-						height: 0px;
-						transform: translateY(-10px);
+						transform: translateY(-30px);
 						transition:
 									height .3s ease,
 									opacity .5s ease,
 									transform .3s ease;
-						transition-delay: 0s 0s 0s;
 					}
 
 					.list-container.display {
