@@ -67,6 +67,7 @@
     "serve-favicon": "^2.2.0",
     "sinon": "^1.13.0",
     "smoothscroll": "^0.2.2",
+    "smoothscroll-offset": "^1.0.1",
     "socket.io": "^1.3.4",
     "socket.io-client": "^1.3.5",
     "stripe": "^4.14.0",

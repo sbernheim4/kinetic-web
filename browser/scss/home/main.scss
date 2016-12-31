@@ -10,15 +10,20 @@ $navbar-height: 100px;
 .home {
 	padding: 0px;
 
-	.main {
-		padding-top: 0px;
+	.main-section {
+		padding-top: 100px;
 		min-height: 100vh;
 		background-image: url('https://s3.amazonaws.com/kineticglobal-prod/implementation-photo.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
+		background-position-y: $navbar-height;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		@media all and (max-width: 861px) {
+			background-position-y: 0px;
+			padding: 0px;
+		}
 
 		.text-container {
 
