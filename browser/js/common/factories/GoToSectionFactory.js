@@ -40,11 +40,9 @@ app.factory('GoToSectionFactory', function($state) {
 				if (window.innerWidth >= 861) {
 					// the - 100 is for the height of the nav-bar on desktop view
 					var amt = el.getBoundingClientRect().top + window.pageYOffset - 100;
-					console.log(amt);
 				} else {
 					// the - 66 is for the height of the nav-bar on mobile view
 					var amt = el.getBoundingClientRect().top + window.pageYOffset;
-					console.log("MOBILE ----");
 				}
 				smoothScroll(amt);
 			}
