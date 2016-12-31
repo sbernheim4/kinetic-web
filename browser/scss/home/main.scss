@@ -449,8 +449,8 @@ $navbar-height: 100px;
 				align-items: center;
 				flex-wrap: wrap;
 
-				p {
-					width: 100%;
+				.fix-ie-11 {
+					width: 95%;
 				}
 
 				@media all and (max-width: 1079px) {
