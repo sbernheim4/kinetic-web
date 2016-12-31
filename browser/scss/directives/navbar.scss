@@ -196,18 +196,29 @@
 					}
 
 					.list-container {
-						transition: height .25s;
 						height: 0px;
 						display: block;
+
+						opacity: 0;
+						height: 0px;
+						transform: translateY(-10px);
+						transition:
+									height .3s ease,
+									opacity .5s ease,
+									transform .3s ease;
+						transition-delay: 0s 0s 0s;
 					}
 
 					.list-container.display {
-						transition: height .25s;
 						border-top: 2px solid $kinetic-yellow;
 						width: 200px;
 						height: 195px;
 						margin: 0 auto;
 						text-align: center;
+
+						opacity: 1;
+						transform: translateY(0);
+
 						display: flex;
 						flex-direction: column;
 
