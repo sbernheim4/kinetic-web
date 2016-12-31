@@ -1,6 +1,9 @@
 .handbook {
 	padding-top: 100px;
 	display: flex;
+	@media all and (max-width: $mobile-navbar-change) {
+		padding-top: 0px;
+	}
 
 	.left-half {
 		background-color: rgb(17,121,167);

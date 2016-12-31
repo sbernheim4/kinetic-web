@@ -1,5 +1,3 @@
-$mobile-navbar-change: 860px;
-
 #main {
 
 	.become-mentor {
@@ -7,6 +5,9 @@ $mobile-navbar-change: 860px;
 		color: white;
 		background-color: $kinetic-blue;
 		display: flex;
+		@media all and (max-width: $mobile-navbar-change) {
+			padding-top: 0;
+		}
 
 		.left-side {
 			width: 50vw;
