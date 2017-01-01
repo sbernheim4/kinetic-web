@@ -2,13 +2,13 @@
 	<div class='container'>
 
 		<div class='logo'>
-			<a ng-click='goToSection(".home", "home")'>
+			<a ui-sref='home'>
 				<img alt='Kinetic Global Logo' src="https://s3.amazonaws.com/kineticglobal-prod/kinetic-logo.png">
 			</a>
 		</div>
 
 		<div class='btns btns-logo'>
-			<button ng-click='goToSection(".support", "support")' class='btn btn-logo' type="button">Support Kinetic</button>
+			<button ui-sref='support' class='btn btn-logo' type="button">Support Kinetic</button>
 		</div>
 
 		<div class='dropdown-lists'>
@@ -22,7 +22,7 @@
 						<a ng-click='goToSection(".what-is", "home")'>What We Do</a>
 						<a ng-click='goToSection(".about-us", "home")'>About Us</a>
 						<a ng-click='goToSection(".sponsored", "home")'>Key Issues</a>
-						<a ng-click='goToSection(".get-involved", "home")'>Get Involved</a>
+						<a ng-click='goToSection(".get-involved-home", "home")'>Get Involved</a>
 					</div>
 				</div>
 			</div>
@@ -31,10 +31,10 @@
 				<div class='dropdown-title'>Get Involved</div>
 				<div class='dropdown-content'>
 					<div class='list-container'>
-						<a ng-click='goToSection(".launch", "launch")'>Launch a Chapter</a>
-						<a ng-click='goToSection(".become-mentor", "become-mentor")'>Become a Mentor</a>
-						<a ng-click='goToSection(".nominate", "nominate")'>Nominate an Expert</a>
-						<a ng-click='goToSection(".support", "support")'>Support Kinetic</a>
+						<a ui-sref='launch'>Launch a Chapter</a>
+						<a ui-sref='become-mentor'>Become a Mentor</a>
+						<a ui-sref='nominate'>Nominate an Expert</a>
+						<a ui-sref='support'>Support Kinetic</a>
 					</div>
 				</div>
 			</div>
@@ -43,13 +43,13 @@
 				<div class='dropdown-title'>Resources</div>
 				<div class='dropdown-content'>
 					<div class='list-container'>
-						<a ng-click='goToSection(".mentors", "mentors")'>Team Mentors</a>
-						<a ng-click='goToSection(".advisors", "advisors")'>Advisors</a>
-						<a ng-click='goToSection(".webinars", "webinars")'>Advisor Webinars</a>
-						<a ng-click='goToSection(".template", "template")'>Kinetic Templates</a>
-						<a ng-click='goToSection(".calendar", "calendar")'>Calendar</a>
-						<a ng-click='goToSection(".handbook", "handbook")'>Get a Handbook</a>
-						<a ng-click='goToSection(".press", "press")'>News</a>
+						<a ui-sref='mentors'>Team Mentors</a>
+						<a ui-sref='advisors'>Advisors</a>
+						<a ui-sref='webinars'>Advisor Webinars</a>
+						<a ui-sref='template'>Kinetic Templates</a>
+						<a ui-sref='calendar'>Calendar</a>
+						<a ui-sref='handbook'>Get a Handbook</a>
+						<a ui-sref='press'>News</a>
 					</div>
 				</div>
 			</div>
@@ -58,104 +58,95 @@
 				<div class='dropdown-title'>Our Team</div>
 				<div class='dropdown-content'>
 					<div class='list-container'>
-						<a ng-click='goToSection(".leadership", "leadership")'>Leadership</a>
-						<a ng-click='goToSection(".supporters", "supporters")'>Supporters</a>
-						<a ng-click='goToSection(".campuses", "campuses")'>Campuses</a>
+						<a ui-sref='leadership'>Leadership</a>
+						<a ui-sref='supporters'>Supporters</a>
+						<a ui-sref='campuses'>Campuses</a>
 					</div>
 				</div>
 			</div>
-
-			<!-- <div class='dropdown'>
-				<div class='dropdown-title'>
-					Stories
-				</div>
-				<div class='dropdown-content'>
-					<div class='list-container'>
-						<a ng-click='goToSection(".projects")'>Projects</a>
-						<a ng-click='goToSection(".blog")'>KG Blog</a>
-					</div>
-				</div>
-			</div>
-
-			<div class='dropdown'>
-				<div class='dropdown-title'>
-					Login
-				</div>
-				<div class='dropdown-content'>
-					<div class='list-container'>
-						<a ui-sref="login"> Login</a>
-						<a ui-sref="signup"> Create Account</a>
-					</div>
-				</div>
-			</div> -->
-
 		</div>
 	</div>
 </nav>
 
+<!-- <div class='dropdown'>
+<div class='dropdown-title'>
+Stories
+</div>
+<div class='dropdown-content'>
+<div class='list-container'>
+<a ng-click='goToSection(".projects")'>Projects</a>
+<a ng-click='goToSection(".blog")'>KG Blog</a>
+</div>
+</div>
+</div>
+
+<div class='dropdown'>
+<div class='dropdown-title'>
+Login
+</div>
+<div class='dropdown-content'>
+<div class='list-container'>
+<a ui-sref="login"> Login</a>
+<a ui-sref="signup"> Create Account</a>
+</div>
+</div>
+</div> -->
+
+
+
 
 <div class='mobile-nav-bar'>
 	<div class='btns-container'>
-		<a class='fa fa-home' href='https://www.kineticglobal.org'> </a>
+		<button class='fa fa-home' href='https://www.kineticglobal.org'> </button>
 		<button class="fa fa-bars custom-color" ng-click='toggleMenu()' aria-hidden="true"> </button>
 	</div>
 
-	<div ng-class='class'>
+	<div class='big-container'>
 		<div class='dropdown-lists'>
 
 			<div class='dropdown'>
 				<div class='dropdown-title' ng-click='toggle("displayWhatIs")'>What is Kinetic</div>
-				<div ng-class='{hide: displayWhatIs, show: !displayWhatIs}'>
-					<div class='list-container'>
-						<a ng-click='goToSection(".problem", "home")'>The Problem</a>
-						<a ng-click='goToSection(".solution", "home")'>Our Solution</a>
-						<a ng-click='goToSection(".what-is", "home")'>What We Do</a>
-						<a ng-click='goToSection(".about-us", "home")'>About Us</a>
-						<a ng-click='goToSection(".sponsored", "home")'>Key Issues</a>
-						<a ng-click='goToSection(".get-involved", "home")'>Get Involved</a>
-					</div>
+				<div class='list-container what-is-kinetic'>
+					<a ng-click='goToSection(".problem", "home")'>The Problem</a>
+					<a ng-click='goToSection(".solution", "home")'>Our Solution</a>
+					<a ng-click='goToSection(".what-is", "home")'>What We Do</a>
+					<a ng-click='goToSection(".about-us", "home")'>About Us</a>
+					<a ng-click='goToSection(".sponsored", "home")'>Key Issues</a>
+					<a ng-click='goToSection(".get-involved-home", "home")'>Get Involved</a>
 				</div>
 			</div>
 
 			<div class='dropdown'>
 				<div class='dropdown-title' ng-click='toggle("displayGetInvolved")'>Get Involved</div>
-				<div ng-class='{hide: displayGetInvolved, show: !displayGetInvolved}'>
-					<div class='list-container'>
-						<a ng-click='goToSection(".launch", "launch")'>Launch a Chapter</a>
-						<a ng-click='goToSection(".become-mentor", "become-mentor")'>Become a Mentor</a>
-						<a ng-click='goToSection(".nominate", "nominate")'>Nominate an Expert</a>
-						<a ng-click='goToSection(".support", "support")'>Support Kinetic</a>
-					</div>
+				<div class='list-container get-involved'>
+					<a ng-click='goToSection(".launch", "launch")'>Launch a Chapter</a>
+					<a ng-click='goToSection(".become-mentor", "become-mentor")'>Become a Mentor</a>
+					<a ng-click='goToSection(".nominate", "nominate")'>Nominate an Expert</a>
+					<a ng-click='goToSection(".support", "support")'>Support Kinetic</a>
 				</div>
 			</div>
 
 			<div class='dropdown'>
 				<div class='dropdown-title' ng-click='toggle("displayResources")'>Resources</div>
-				<div ng-class='{hide: displayResources, show: !displayResources}'>
-					<div class='list-container'>
-						<a ng-click='goToSection(".mentors", "mentors")'>Team Mentors</a>
-						<a ng-click='goToSection(".advisors", "advisors")'>Advisors</a>
-						<a ng-click='goToSection(".template", "template")'>Kinetic Templates</a>
-						<a ng-click='goToSection(".calendar", "calendar")'>Calendar</a>
-						<a ng-click='goToSection(".handbook", "handbook")'>Get a Handbook</a>
-						<a ng-click='goToSection(".press", "press")'>News</a>
-					</div>
+				<div class='list-container resources'>
+					<a ng-click='goToSection(".mentors", "mentors")'>Team Mentors</a>
+					<a ng-click='goToSection(".advisory", "advisors")'>Advisors</a>
+					<a ng-click='goToSection(".template", "template")'>Kinetic Templates</a>
+					<a ng-click='goToSection(".calendar", "calendar")'>Calendar</a>
+					<a ng-click='goToSection(".handbook", "handbook")'>Get a Handbook</a>
+					<a ng-click='goToSection(".press", "press")'>News</a>
 				</div>
 			</div>
 
 			<div class='dropdown'>
 				<div class='dropdown-title' ng-click='toggle("displayOurTeam")'>Our Team</div>
-				<div ng-class='{hide: displayOurTeam, show: !displayOurTeam}'>
-					<div class='list-container'>
-						<a ng-click='goToSection(".leadership", "leadership")'>Leadership</a>
-						<a ng-click='goToSection(".supporters", "supporters")'>Supporters</a>
-						<a ng-click='goToSection(".campuses", "campuses")'>Campuses</a>
-					</div>
+				<div class='list-container our-team'>
+					<a ng-click='goToSection(".leadership", "leadership")'>Leadership</a>
+					<a ng-click='goToSection(".supporters", "supporters")'>Supporters</a>
+					<a ng-click='goToSection(".campuses", "campuses")'>Campuses</a>
 				</div>
 			</div>
 		</div>
 	</div>
-
-
 
 </div>

@@ -13,9 +13,9 @@ app.run(function ($rootScope, AuthService, $state) {
     var destinationStateRequiresAuth = function (state) {
         return state.data && state.data.authenticate;
     };
-	
-	// if the $stateNotFound event is broadcasted either as the result of either 
-	// a ui-sref call or $state.go from anywhere, then redirect the user to the 
+
+	// if the $stateNotFound event is broadcasted either as the result of either
+	// a ui-sref call or $state.go from anywhere, then redirect the user to the
 	// under construction page
 	$rootScope.$on('$stateNotFound', function() {
 		$state.go('construction');
@@ -52,5 +52,10 @@ app.run(function ($rootScope, AuthService, $state) {
         });
 
     });
+
+	// on a successful state change, have the browser scroll to the top of the page
+	$rootScope.$on('$stateChangeSuccess', function() {
+	   document.body.scrollTop = document.documentElement.scrollTop = 0;
+	});
 
 });

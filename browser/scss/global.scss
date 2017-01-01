@@ -1,4 +1,15 @@
-// Resseters and standards for the entire website
+#main {
+	min-height: calc(100vh - 170px);
+	@media all and (max-width: 870px) {
+		min-height: calc(100vh - 70px);
+	}
+}
+
+// MAIN COLORS USED ACROSS MULTIPLE PAGES
+$kinetic-blue: rgb(27, 121, 167);
+$kinetic-yellow: rgb(253, 178, 59);
+
+$mobile-navbar-change: 861px;
 
 * {
 	margin: 0;
@@ -6,7 +17,12 @@
 }
 
 section {
-	padding-top: 30px;
+	padding-top: 130px;
+}
+@media all and (max-width: 861px) {
+	section {
+		padding-top: 30px;
+	}
 }
 
 a {
