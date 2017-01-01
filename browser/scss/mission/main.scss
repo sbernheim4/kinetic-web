@@ -1,8 +1,8 @@
-section.mission {
-	padding-top: 0;
-	section {
-		padding-top: 0;
-	}
+.mission {
+		padding-top: 100px;
+		@media all and(max-width: $mobile-navbar-change) {
+			padding-top: 0px;
+		}
   .img-container {
     position: relative;
     width: 100%;
@@ -21,7 +21,7 @@ section.mission {
 	      flex-direction: column;
 	      justify-content: center;
 	    h1 {
-	      color: white; 
+	      color: white;
 	      font-size: 36px;
 	    }
     }

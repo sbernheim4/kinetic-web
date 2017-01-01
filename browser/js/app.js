@@ -55,4 +55,9 @@ app.run(function ($rootScope, AuthService, $state) {
 
     });
 
+	// on a successful state change, have the browser scroll to the top of the page
+	$rootScope.$on('$stateChangeSuccess', function() {
+	   document.body.scrollTop = document.documentElement.scrollTop = 0;
+	});
+
 });
