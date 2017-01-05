@@ -8,7 +8,6 @@
 'use strict';
 
 const mongoose = require('mongoose');
-const _ = require('lodash');
 const Bluebird = require('bluebird');
 const sendEmail = require('../../modules/sendAnEmail.js').formatAndSendEmail;
 
@@ -33,14 +32,6 @@ const WebinarQuestionSchema = new mongoose.Schema({
   }
 });
 
-WebinarQuestionSchema.post('save', function (doc, next) {
-
-  Bluebird.all([sendClientEmail(this), sendAdminEmail(this)])
-  .then(() => {
-    next();
-  })
-  .catch(next);
-});
 
 function sendClientEmail(doc) {
   const name = doc.name.split(' ')[0];
@@ -82,5 +73,14 @@ function sendAdminEmail(doc) {
   };
   return sendEmail(emailInfo);
 }
+
+WebinarQuestionSchema.post('save', function (doc, next) {
+
+  Bluebird.all([sendClientEmail(this), sendAdminEmail(this)])
+  .then(() => {
+    next();
+  })
+  .catch(next);
+});
 
 mongoose.model('WebinarQuestion', WebinarQuestionSchema);

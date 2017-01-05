@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const _ = require('lodash');
 const Bluebird = require('bluebird');
 const sendEmail = require('../../modules/sendAnEmail.js').formatAndSendEmail;
 
@@ -28,14 +27,6 @@ const BecomeAMentorSchema = new mongoose.Schema({
 	}
 });
 
-BecomeAMentorSchema.post('save', function (doc, next) {
-	Bluebird.all([sendClientEmail(this), sendAdminEmail(this)])
-	.then(() => {
-		next();
-	})
-	.catch(next);
-});
-
 function sendClientEmail(doc) {
 	const name = doc.name.split(' ')[0];
 
@@ -59,12 +50,13 @@ function sendAdminEmail(doc) {
 	const profession = doc.profession;
 	const almaMater = doc.almaMater;
 
-	const wantsMoreInfo = doc.information;
 	const becomeMentor = doc.mentor;
+
+	var emailInfo = {};
 
 	if (becomeMentor) {
 		// If the user expressed interest in becoming a mentor
-		const emailInfo = {
+		emailInfo = {
 			from: 'noreply-become-a-mentor@kineticglobal.org',
 			to: ['general@kineticglobal.org', 'bryan.jones@kineticglobal.org', 'katie.swoap@kineticglobal.org'],
 			subject: `${clientName} wants to become a Mentor`,
@@ -83,7 +75,7 @@ function sendAdminEmail(doc) {
 		};
 	} else {
 		// If the user expressed interest in learning more or did not check any of the boxes
-		const emailInfo = {
+		emailInfo = {
 			from: 'noreply-become-a-mentor@kineticglobal.org',
 			to: ['general@kineticglobal.org', 'bryan.jones@kineticglobal.org', 'katie.swoap@kineticglobal.org'],
 			subject: `${clientName} wants to become a Mentor`,
@@ -104,5 +96,13 @@ function sendAdminEmail(doc) {
 
 	return sendEmail(emailInfo);
 }
+
+BecomeAMentorSchema.post('save', function (doc, next) {
+	Bluebird.all([sendClientEmail(this), sendAdminEmail(this)])
+	.then(() => {
+		next();
+	})
+	.catch(next);
+});
 
 mongoose.model('BecomeAMentor', BecomeAMentorSchema);

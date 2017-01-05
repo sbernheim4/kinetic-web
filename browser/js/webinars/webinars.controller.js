@@ -10,6 +10,7 @@ app.controller('WebinarsCtrl', function($scope, FormFactory) {
 		FormFactory.submitAdvisorQuestion(question)
 		.catch(err => {
 			$scope.submitted = false;
+			console.log(err);
 		});
 	};
 });

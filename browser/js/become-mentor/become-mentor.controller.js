@@ -10,7 +10,7 @@ app.controller('BecomeMentorCtrl', function ($scope, FormFactory) {
 		user.newsletter = !!user.newsletter;
 
 		FormFactory.submitBecomeAMentorForm(user)
-		.then ( res => {
+		.then ( () => {
 			$scope.wasFormSubmitted = true;
 		})
 		.catch ( err => {
