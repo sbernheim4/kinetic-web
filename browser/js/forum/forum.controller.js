@@ -27,7 +27,6 @@ app.controller('ForumCtrl', function ($scope, $state, loggedInUser, discussions,
     ForumFactory.createDiscussion(discussion)
     .then(createdDiscussion => {
       $scope.discussions.unshift(createdDiscussion);
-      socket.emit('discussion_created', createdDiscussion);
     })
     .catch(err => {
       console.error(err);
