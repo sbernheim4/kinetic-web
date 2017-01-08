@@ -21,13 +21,14 @@ router.post('/', (req, res, next) => {
 	switch(req.body.event.type) {
 		case 'message': 
 			if (req.body.event.subtype) {
+				//@TODO handle the subtype for uploads
 				break;
 			}
 			promise = slackFunctions.createCommentFromSlack(req.body);
-			break
+			break;
 		case 'channel_created': 
 			promise = slackFunctions.createDiscussionFromSlack(req.body);
-			break
+			break;
 	}
 	Bluebird.resolve(promise)
 	.then(response => {

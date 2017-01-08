@@ -20,20 +20,11 @@ module.exports = function (server) {
     const discussionNamespace = io.of(`/${comment.discussionId.toString()}`);
     discussionNamespace.emit('comment_created', comment);
   });
-
-  emitter.on('discussion_created_from_slack', (discussion) => {
-    io.emit('discussion_created', discussion)
-  });
   
   io.on('connection', function (socket) {
-    socket.on('discussion_created', (discussion) => {
-      socket.broadcast.emit('discussion_created', discussion);
-    });
-
     socket.on('comment_created', (comment) => {
       forumHomeNamespace.emit('comment_created', comment)
       const discussionNamespace = io.of(`/${comment.discussionId.toString()}`);
-      // User.find
       discussionNamespace.emit('comment_created', comment);
     });
   });

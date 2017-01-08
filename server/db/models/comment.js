@@ -85,11 +85,14 @@ CommentSchema.post('save', (doc) => {
       console.error(err);
     })
   } else { // doc.origin should be 'slack'
-    User.findById(doc.authorId)
+    return User.findById(doc.authorId)
     .then((foundUser) => {
       doc.authorId = foundUser;
       emitter.emit('comment_created_from_slack', doc);
     })
+    .catch((err) => {
+      console.error(err);
+    });
   }
 })
 

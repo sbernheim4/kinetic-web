@@ -37,8 +37,6 @@ module.exports = {
     });
   },
   createMessage: (comment, userName) => {
-    console.log('COMMENT IS!!!!!')
-    console.log(comment)
     const options = {
       uri: 'https://slack.com/api/chat.postMessage',
       qs: {

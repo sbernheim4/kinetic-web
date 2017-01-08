@@ -13,10 +13,8 @@ module.exports = {
 			slackChannelName: req.event.channel.name
 		}
 		return Discussion.create(newDiscussion)
-		.then(createdDiscussion => {
-			emitter.emit('discussion_created_from_slack', createdDiscussion);
-		});
 	},
+	
 	createCommentFromSlack: (req) => {
 		const newComment = {
 			message: req.event.text,

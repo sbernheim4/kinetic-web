@@ -5,10 +5,9 @@ app.controller('DiscussionCtrl', function ($scope, $state, loggedInUser, ForumFa
     return $state.go('home');
   }
   $scope.discussion = discussion;
+  
   const socket = io(`/${$scope.discussion._id.toString()}`); 
   socket.on('comment_created', function(newComment) {
-    debugger;
-    console.log('comment created!', newComment)
     if(isCommentNew(newComment)) {
       $scope.discussion.comments.push(newComment);
       $scope.$digest();

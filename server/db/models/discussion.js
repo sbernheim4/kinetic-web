@@ -70,6 +70,14 @@ DiscussionSchema.post('save', (doc) => {
       doc.slackChannelId = slackResponse.channel.id;
       return doc.save();
     });
+  } else { // doc.origin should be 'slack'
+    return User.findById(doc.authorId)
+    .then((foundUser) => {
+      doc.authorId = foundUser;
+    })
+    .catch((err) => {
+      console.error(err)
+    });
   }
 });
 
