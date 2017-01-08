@@ -9,16 +9,18 @@ app.config(function ($urlRouterProvider, $locationProvider) {
 // This app.run is for controlling access to specific states.
 app.run(function ($rootScope, AuthService, $state) {
 
+	console.log($state);
+
     // The given state requires an authenticated user.
     var destinationStateRequiresAuth = function (state) {
         return state.data && state.data.authenticate;
     };
-	
-	// if the $stateNotFound event is broadcasted either as the result of either 
-	// a ui-sref call or $state.go from anywhere, then redirect the user to the 
-	// under construction page
+
+	// if the $stateNotFound event is broadcasted either as the result of either
+	// a ui-sref call or $state.go from anywhere, then redirect the user to the
+	// 404 page
 	$rootScope.$on('$stateNotFound', function() {
-		$state.go('construction');
+		$state.go('404');
 	});
 
     // $stateChangeStart is an event fired
@@ -52,5 +54,10 @@ app.run(function ($rootScope, AuthService, $state) {
         });
 
     });
+
+	// on a successful state change, have the browser scroll to the top of the page
+	$rootScope.$on('$stateChangeSuccess', function() {
+		document.body.scrollTop = document.documentElement.scrollTop = 0;
+	});
 
 });

@@ -8,7 +8,6 @@
 'use strict';
 
 const mongoose = require('mongoose');
-const _ = require('lodash');
 const Bluebird = require('bluebird');
 const sendEmail = require('../../modules/sendAnEmail.js').formatAndSendEmail;
 
@@ -37,15 +36,6 @@ const NominateSchema = new mongoose.Schema({
   }
 });
 
-NominateSchema.post('save', function (doc, next) {
-
-  Bluebird.all([sendClientEmail(this), sendAdminEmail(this)])
-  .then(() => {
-    next();
-  })
-  .catch(next);
-});
-
 function sendClientEmail(doc) {
   const nominatorName = doc.nominatorName;
   const nominatorNameShortened = nominatorName.split(' ')[0];
@@ -62,7 +52,7 @@ function sendClientEmail(doc) {
     <p>Best,</p>
     <p>The team at Kinetic Global</p>`
   };
-  
+
   if(nomineeName.toLowerCase() === nominatorName.toLowerCase() && doc.relationship === 'isNominee'){
     emailInfo.content = `<p>Hi ${nominatorNameShortened},</p>
 
@@ -93,7 +83,7 @@ function sendAdminEmail(doc) {
 
   const emailInfo = {
     from: 'noreply-nomination@kineticglobal.org',
-    to: 'daniel@kineticglobal.org',
+    to: ['general@kineticglobal.org', 'bryan.jones@kineticglobal.org', 'jessica.bernheim@kineticglobal.org', 'katie.swoap@kineticglobal.org'],
     subject: 'New nomination for Kinetic Global!',
     content: `<p>Hi,</p>
 
@@ -118,5 +108,14 @@ function sendAdminEmail(doc) {
 
   return sendEmail(emailInfo);
 }
+
+NominateSchema.post('save', function (doc, next) {
+
+  Bluebird.all([sendClientEmail(this), sendAdminEmail(this)])
+  .then(() => {
+    next();
+  })
+  .catch(next);
+});
 
 mongoose.model('Nominate', NominateSchema);

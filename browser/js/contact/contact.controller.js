@@ -11,7 +11,7 @@ app.controller('ContactCtrl', function ($scope, FormFactory) {
     user.newsletter = !!user.newsletter;
 
     FormFactory.submitContactUsForm(user)
-    .then( res => {
+    .then( () => {
       $scope.wasFormSubmitted = true;
     })
     .catch( err => {

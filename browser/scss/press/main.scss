@@ -1,0 +1,42 @@
+.press {
+	min-height: calc(100vh - 170px);
+	color: white;
+
+	@media all and (max-width: 860px) {
+		min-height: calc(100vh - 70px);
+	}
+
+	background-color: $kinetic-blue;
+
+	h2 {
+		margin: 0 auto;
+		text-align: center;
+		padding: 30px;
+	}
+
+	.reports {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+
+		&--release {
+			padding: 15px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			&--pdf {
+				width: 300px;
+				height: 380px;
+				padding: 15px;
+				border: none;
+			}
+
+			&--text {
+			}
+		}
+	}
+}

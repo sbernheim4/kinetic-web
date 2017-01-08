@@ -4,6 +4,7 @@
 	<base href="/" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<meta name="theme-color" content="#1b79a7">
 	<link rel="stylesheet" type="text/css" href="/style.css" />
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -39,7 +40,7 @@
 	<script src="/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="/angular-ui-bootstrap/ui-bootstrap.min.js"></script>
 	<script src="/angular-ui-bootstrap/ui-bootstrap-tpls.min.js"></script>
-	<script src="/smoothscroll/smoothscroll.min.js"></script>
+	<script src="/smoothscroll/smoothscroll.js"></script>
 	<script src="/bluebird/js/browser/bluebird.min.js"></script>
 	<script src="/moment/min/moment.min.js"></script>
   <script src="/main.js"></script>
@@ -49,7 +50,7 @@
 
 <body ng-app="KineticApp">
 	<navbar></navbar>
-	<div id="main" ui-view> </div>
+	<div class="main" id="main" ui-view> </div>
 	<footer style='display: inline-block; width: 100%;'> </footer>
 </body>
 

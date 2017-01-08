@@ -10,7 +10,7 @@ app.controller('SignupCtrl', function($scope, UserFactory, $state, AuthService) 
 		If any part of this breaks, the error will be shown to the user
 		**/
 		UserFactory.createUser(account)
-		.then(data => {
+		.then(() => {
 			return AuthService.login(account);
 		})
 		.then( () => {
