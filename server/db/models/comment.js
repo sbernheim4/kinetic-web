@@ -72,27 +72,26 @@ CommentSchema.pre('validate', function(next) {
 });
 
 CommentSchema.post('save', (doc) => {
-  if (doc.originCreated === 'website') {
-    return User.findById(doc.authorId)
-    .then(user => {
-      // TODO: find user in slack and post the message with their name and icon
-      return slackMethods.createMessage(doc, `${user.firstName} ${user.lastName}`)
-    })
-    .then(response => {
-      console.log(response)
-    })
-    .catch(err => {
-      console.error(err);
-    })
-  } else { // doc.origin should be 'slack'
-    return User.findById(doc.authorId)
-    .then((foundUser) => {
-      doc.authorId = foundUser;
-      emitter.emit('comment_created_from_slack', doc);
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+  if(doc.isNew) {
+    if (doc.originCreated === 'website') {
+      return User.findById(doc.authorId)
+      .then(user => {
+        // TODO: find user in slack and post the message with their icon
+        return slackMethods.createMessage(doc, `${user.firstName} ${user.lastName}`)
+      })
+      .catch(err => {
+        console.error(err);
+      })
+    } else { // doc.origin should be 'slack'
+      return User.findById(doc.authorId)
+      .then((foundUser) => {
+        doc.authorId = foundUser;
+        emitter.emit('comment_created_from_slack', doc);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+    }
   }
 })
 
