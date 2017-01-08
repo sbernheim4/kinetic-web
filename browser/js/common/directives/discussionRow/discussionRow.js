@@ -12,9 +12,9 @@ app.directive('discussionRow', function () {
       scope.comments = scope.discussion.comments;
       scope.mostRecentComment = () => {
         if (scope.discussion.comments.length) {
-          moment(scope.discussion.comments[scope.discussion.comments.length-1].createdAt).fromNow();
+          return moment(scope.discussion.comments[scope.discussion.comments.length-1].createdAt).fromNow();
         } else {
-          "No comments yet...";
+          return "No comments yet...";
         }
       }
     }
