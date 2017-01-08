@@ -28,6 +28,7 @@ const DiscussionSchema = new mongoose.Schema({
   },
   authorId: {
     type: mongoose.Schema.Types.ObjectId, ref: 'User',
+    required: true
   },
   authorSlackId: {
     type: String
@@ -53,41 +54,34 @@ DiscussionSchema.pre('validate', function(next) {
     let slackChannelName = this.title.replace(/[^\w\s]/gi, ''); // remove special chars
     slackChannelName = slackChannelName.split(' ').join('-').slice(0,21).toLowerCase(); // swap whitespace for -, slice 21 chars, lowercase
     this.slackChannelName = slackChannelName;
-  } else if (this.originCreated === 'slack') {
+    return slackMethods.createSlackChannel(this.slackChannelName)
+    .then(slackResponse => {
+      this.slackChannelId = slackResponse.channel.id;
+      next();
+    })
+    .catch((err) => {
+      console.error(err);
+      next(err);
+    });
+  } else {
     // this will fire erroneously because creating a discussion from the website creates a channel on slack, which will
     // hit our server saying that a new channel and try to add a record to our db. the save (or validate) will fail
     // because it won't be a unique slack channel id
     let title = this.slackChannelName.replace(/[_-]/g, " ");
     title = title.toTitleCase();
     this.title = title;
-  }
-  next();
-});
-
-DiscussionSchema.post('save', (doc) => {
-  if (doc.isNew) { 
-    if(doc.originCreated === 'website') {
-      return slackMethods.createSlackChannel(doc.slackChannelName)
-      .then(slackResponse => {
-        doc.slackChannelId = slackResponse.channel.id;
-        return doc.save();
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-    } else {
-      return slackMethods.findSlackUser(doc.authorSlackId)
-      .then(slackResponse => {
-        return User.find({email: slackResponse.user.profile.email})
-      })
-      .then((foundUser) => {
-        doc.authorId = foundUser._id;
-        return doc.save();
-      })
-      .catch((err) => {
-        console.error(err)
-      });
-    }
+    return slackMethods.findSlackUser(this.authorSlackId)
+    .then(slackResponse => {
+      return User.findOne({email: slackResponse.user.profile.email})
+    })
+    .then((foundUser) => {
+      this.authorId = foundUser._id;
+      next();
+    })
+    .catch((err) => {
+      console.error(err);
+      next(err);
+    });
   }
 });
 
