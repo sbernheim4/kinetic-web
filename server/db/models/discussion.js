@@ -71,6 +71,9 @@ DiscussionSchema.post('save', (doc) => {
       .then(slackResponse => {
         doc.slackChannelId = slackResponse.channel.id;
         return doc.save();
+      })
+      .catch((err) => {
+        console.error(err);
       });
     } else {
       return slackMethods.findSlackUser(doc.authorSlackId)
