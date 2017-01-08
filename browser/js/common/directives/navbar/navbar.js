@@ -52,22 +52,22 @@ app.directive('navbar', function ($rootScope, AuthService, AUTH_EVENTS, $state, 
 
 				const menu = document.querySelector('.big-container');
 
-				if (val == "displayWhatIs") {
+				if (val === "displayWhatIs") {
 					dropdownTwo.classList.remove('display');
 					dropdownThree.classList.remove('display');
 					dropdownFour.classList.remove('display');
 					dropdownOne.classList.toggle('display');
-				} else if (val == "displayGetInvolved") {
+				} else if (val === "displayGetInvolved") {
 					dropdownOne.classList.remove('display');
 					dropdownThree.classList.remove('display');
 					dropdownFour.classList.remove('display');
 					dropdownTwo.classList.toggle('display');
-				} else if (val == "displayResources") {
+				} else if (val === "displayResources") {
 					dropdownOne.classList.remove('display');
 					dropdownTwo.classList.remove('display');
 					dropdownFour.classList.remove('display');
 					dropdownThree.classList.toggle('display');
-				} else if (val == "displayOurTeam") {
+				} else if (val === "displayOurTeam") {
 					dropdownOne.classList.remove('display');
 					dropdownTwo.classList.remove('display');
 					dropdownThree.classList.remove('display');
