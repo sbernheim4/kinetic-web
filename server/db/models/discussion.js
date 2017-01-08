@@ -5,6 +5,7 @@ const _ = require('lodash');
 const Bluebird = require('bluebird');
 const titleCase = require('../../modules/titleCaseMonkeyPatch');
 const slackMethods = require('../../modules/slackMethods.js');
+const User = require('./user.js');
 
 const DiscussionSchema = new mongoose.Schema({
   title: {
@@ -64,20 +65,26 @@ DiscussionSchema.pre('validate', function(next) {
 });
 
 DiscussionSchema.post('save', (doc) => {
-  if(doc.originCreated === 'website') {
-    return slackMethods.createSlackChannel(doc.slackChannelName)
-    .then(slackResponse => {
-      doc.slackChannelId = slackResponse.channel.id;
-      return doc.save();
-    });
-  } else { // doc.origin should be 'slack'
-    return User.findById(doc.authorId)
-    .then((foundUser) => {
-      doc.authorId = foundUser;
-    })
-    .catch((err) => {
-      console.error(err)
-    });
+  if (doc.isNew) { 
+    if(doc.originCreated === 'website') {
+      return slackMethods.createSlackChannel(doc.slackChannelName)
+      .then(slackResponse => {
+        doc.slackChannelId = slackResponse.channel.id;
+        return doc.save();
+      });
+    } else {
+      return slackMethods.findSlackUser(doc.authorSlackId)
+      .then(slackResponse => {
+        return User.find({email: slackResponse.user.profile.email})
+      })
+      .then((foundUser) => {
+        doc.authorId = foundUser._id;
+        return doc.save();
+      })
+      .catch((err) => {
+        console.error(err)
+      });
+    }
   }
 });
 
