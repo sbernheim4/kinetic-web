@@ -40,6 +40,10 @@ const CommentSchema = new mongoose.Schema({
     unique: true,
     sparse: true
   },
+  edited: {
+    type: Boolean,
+    default: false
+  },
   originCreated: {
     type: String,
     enum: ['slack', 'website'],
@@ -71,12 +75,23 @@ CommentSchema.pre('validate', function(next) {
   }
 });
 
+CommentSchema.pre('save', function (next) {
+  this.wasNew = this.isNew;
+  next();
+});
+
 CommentSchema.post('save', (doc) => {
-  if (doc.originCreated === 'website') {
+  if (!doc.wasNew) {
+    return;
+  } else if (doc.originCreated === 'website') {
     return User.findById(doc.authorId)
     .then(user => {
       // TODO: find user in slack and post the message with their icon
       return slackMethods.createMessage(doc, `${user.firstName} ${user.lastName}`)
+    })
+    .then( slackResponse => {
+      doc.slackTimeStamp = slackResponse.ts;
+      return doc.save();
     })
     .catch(err => {
       console.error(err);

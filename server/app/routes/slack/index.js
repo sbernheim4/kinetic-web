@@ -19,25 +19,32 @@ router.post('/', (req, res, next) => {
 	}
 	let promise;
 	switch(req.body.event.type) {
-		case 'message': 
+		case 'message':
 			if (req.body.event.subtype) {
 				//@TODO handle the subtype for uploads
-				break;
+				if (req.body.event.subtype === 'message_changed') {
+					const newMessage = req.body.event.message;
+					promise = slackFunctions.updateCommentFromSlack(newMessage);
+				}
+
+			} else {
+				promise = slackFunctions.createCommentFromSlack(req.body);
 			}
-			promise = slackFunctions.createCommentFromSlack(req.body);
 			break;
 		case 'channel_created': 
 			promise = slackFunctions.createDiscussionFromSlack(req.body);
 			break;
 	}
-	Bluebird.resolve(promise)
-	.then(response => {
-		console.log(response)
-	})
-	.catch(err => {
-		console.log('error during', req.body)
-		console.error(err)
-	})
+	if (promise) {
+		Bluebird.resolve(promise)
+		.then(response => {
+			console.log(response)
+		})
+		.catch(err => {
+			console.log('error during', req.body)
+			console.error(err)
+		})
+	}
 
 })
 

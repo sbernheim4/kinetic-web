@@ -10,9 +10,9 @@ module.exports = {
 			slackChannelId: req.event.channel.id,
 			originCreated: 'slack',
 			authorSlackId: req.event.channel.creator,
-			slackChannelName: req.event.channel.name
+			slackChannelName: req.event.channel.name,
 		}
-		return Discussion.create(newDiscussion)
+		return Discussion.create(newDiscussion);
 	},
 	
 	createCommentFromSlack: (req) => {
@@ -23,6 +23,18 @@ module.exports = {
 			authorSlackId: req.event.user,
 			slackChannelId: req.event.channel
 		}
-		return Comment.create(newComment)
+		return Comment.create(newComment);
+	},
+
+	updateCommentFromSlack: (newMessage) => {
+		return Comment.findOne({slackTimeStamp: newMessage.ts})
+		.then(comment => {
+			comment.message = newMessage.text;
+			comment.edited = true;
+			return comment.save();
+		})
+		.catch(err => {
+			console.error(err)
+		});
 	}
 }
