@@ -40,7 +40,7 @@ const CommentSchema = new mongoose.Schema({
     unique: true,
     sparse: true
   },
-  edited: {
+  isEdited: {
     type: Boolean,
     default: false
   },
@@ -48,6 +48,13 @@ const CommentSchema = new mongoose.Schema({
     type: String,
     enum: ['slack', 'website'],
     required: true
+  },
+  isFileUpload: {
+    type: Boolean,
+    default: false
+  },
+  fileName: {
+    type: String
   }
 });
 
@@ -75,6 +82,21 @@ CommentSchema.pre('validate', function(next) {
   }
 });
 
+CommentSchema.pre('validate', function(next) {
+  if (this.isFileUpload) {
+    return User.findById(this.authorId)
+    .then( author => {
+      this.message = `${author.firstName} ${author.lastName} uploaded "${this.fileName}."
+      You can see it here: ${this.message}`;
+      next();
+    })
+    .catch( err => {
+      console.error(err);
+      next(err);
+    });
+  }
+});
+
 CommentSchema.pre('save', function (next) {
   this.wasNew = this.isNew;
   next();
@@ -82,24 +104,45 @@ CommentSchema.pre('save', function (next) {
 
 CommentSchema.post('save', (doc) => {
   if (!doc.wasNew) {
+    if (doc.isEdited) {
+      emitter.emit('comment_edited_from_slack', doc);
+    }
     return;
-  } else if (doc.originCreated === 'website') {
-    return User.findById(doc.authorId)
-    .then(user => {
-      // TODO: find user in slack and post the message with their icon
-      return slackMethods.createMessage(doc, `${user.firstName} ${user.lastName}`)
-    })
-    .then( slackResponse => {
-      doc.slackTimeStamp = slackResponse.ts;
-      return doc.save();
-    })
-    .catch(err => {
-      console.error(err);
-    })
-  } else { // doc.origin should be 'slack'
-    emitter.emit('comment_created_from_slack', doc);
+  } else {
+    if (doc.originCreated === 'website') {
+      return User.findById(doc.authorId)
+      .then(user => {
+        // TODO: find user in slack and post the message with their icon
+        return slackMethods.createMessage(doc, `${user.firstName} ${user.lastName}`)
+      })
+      .then( slackResponse => {
+        doc.slackTimeStamp = slackResponse.ts;
+        // no recursive error from saving again in a post save hook since when the post 
+        // save hook runs a second time the first if statment is executed
+        return doc.save();
+      })
+      .catch(err => {
+        console.error(err);
+      })
+    } else { // doc.origin should be 'slack'
+      return User.findById(doc.authorId)
+      .then( (user) => {
+        doc.authorId = user;
+        emitter.emit('comment_created_from_slack', doc);
+      })
+    }
   }
-})
+});
+
+// CommentSchema.methods.populateUser = function(done) {
+//   const comment = this.toObject();
+//   return this.populate('authorId').sort({createdAt: 1})
+//   .then(comments => {
+//     discussion.comments = comments;
+//     return discussion;
+//   })
+//   .catch(done)
+// };
 
 const Comment = mongoose.model('Comment', CommentSchema);
 module.exports = Comment;

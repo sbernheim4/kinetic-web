@@ -29,6 +29,11 @@ module.exports = function (server) {
     });
   });
 
+  emitter.on('comment_edited_from_slack', (comment) => {
+    const discussionNamespace = io.of(`/${comment.discussionId.toString()}`);
+    discussionNamespace.emit('comment_edited', comment);
+  });
+
   Discussion.find()
   .then((discussions) => {
     discussions.forEach((discussion) => {

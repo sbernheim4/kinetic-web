@@ -20,7 +20,7 @@ module.exports = {
     "API_KEY": "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"
   },
   "SLACK": {
-    "CLIENT_ID": "abc123 ",
-    "CLIENT_SECRET": "abc123"
+    "CLIENT_ID": "18976440672.84770801218 ",
+    "CLIENT_SECRET": "54b5371ab8ac3e033f757ca05b815d36"
   }
 };

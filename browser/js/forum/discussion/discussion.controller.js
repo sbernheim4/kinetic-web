@@ -8,10 +8,19 @@ app.controller('DiscussionCtrl', function ($scope, $state, loggedInUser, ForumFa
   
   const socket = io(`/${$scope.discussion._id.toString()}`); 
   socket.on('comment_created', function(newComment) {
+    // using isCommentNew for when comment originates on the web and is sent back to the 
+    // original sender as well as everyone else 
     if(isCommentNew(newComment)) {
       $scope.discussion.comments.push(newComment);
       $scope.$digest();
     }
+  });
+
+  socket.on('comment_edited', (comment) => {
+    const commentIndex = $scope.discussion.comments.findIndex((cmt) => cmt._id === comment._id );
+    comment.authorId = $scope.discussion.comments[commentIndex].authorId;
+    $scope.discussion.comments[commentIndex] = comment;
+    $scope.$digest();
   });
  
   $scope.createComment = (comment) => {
