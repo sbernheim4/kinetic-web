@@ -23,6 +23,9 @@ const schema = new mongoose.Schema({
     year: {
         type: String
     },
+    slackIconUrl: {
+        type: String
+    },
     salt: {
         type: String
     },

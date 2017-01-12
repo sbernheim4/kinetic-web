@@ -36,14 +36,16 @@ module.exports = {
       return slackResponse;
     });
   },
-  createMessage: (comment, userName) => {
+  createMessage: (comment, userName, iconUrl) => {
     const options = {
       uri: 'https://slack.com/api/chat.postMessage',
       qs: {
         token: token,
         channel: comment.slackChannelId,
         text: comment.message,
-        username: userName
+        username: userName,
+        icon_url: iconUrl,
+        as_user: true
       }
     }
     return rp(options)
@@ -53,6 +55,24 @@ module.exports = {
         throw new Error(slackResponse.error); 
       }
       return slackResponse;
+    });
+  },
+
+  getSlackProfile: (id) => {
+    const options = {
+      uri: 'https://slack.com/api/users.profile.get',
+      qs: {
+        token: token,
+        user: id
+      }
+    }
+    return rp(options)
+    .then(slackResponse => {
+      slackResponse = JSON.parse(slackResponse);
+      if(!slackResponse.ok) {
+        throw new Error(slackResponse.error); 
+      }
+      return slackResponse.profile.image_48;
     });
   }
 }
