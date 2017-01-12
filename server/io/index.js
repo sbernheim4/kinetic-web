@@ -29,22 +29,6 @@ module.exports = function (server) {
     });
   });
 
-  Discussion.find()
-  .then((discussions) => {
-    discussions.forEach((discussion) => {
-      const nsp = io.of('' + discussion._id + '');
-      // console.log(nsp)
-      nsp.on('connection', (socket) => {
-        // console.log('connected!')
-      });
-      nsp.on('comment_created', function(comment) {
-        // console.log('????')
-        // console.log(comment)
-      });
-    })
-  })
-
-
   return io;
 
 };
