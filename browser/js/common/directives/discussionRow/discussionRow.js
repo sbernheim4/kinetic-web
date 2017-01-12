@@ -5,7 +5,7 @@ app.directive('discussionRow', function () {
     },
     restrict: 'A',
     templateUrl: 'js/common/directives/discussionRow/discussionRow.html',
-    link: function (scope, element, attributes) {
+    link: function (scope) {
       scope.id = scope.discussion._id;
       scope.title = scope.discussion.title;
       scope.discussion.comments = scope.discussion.comments || [];

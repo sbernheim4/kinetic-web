@@ -43,6 +43,7 @@ router.post('/', (req, res, next) => {
 		.catch(err => {
 			console.log('error during', req.body)
 			console.error(err)
+			next(err);
 		})
 	}
 
@@ -61,10 +62,11 @@ router.get('/authorize', (req, res, next) => {
 	.then(response => {
 		const parsedResponse = JSON.parse(response);
 		console.log(parsedResponse)
-		res.send('<h1>success!</h1>')
+		res.send('<h1>success!</h1>');
 	})
 	.catch(err => {
-		console.error(err)
-		res.status(500).send(err)
+		console.error(err);
+		res.status(500).send(err);
+		next(err);
 	})
 })

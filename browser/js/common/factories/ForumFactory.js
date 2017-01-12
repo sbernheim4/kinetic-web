@@ -6,7 +6,7 @@ app.factory('ForumFactory', function($http) {
       return $http.post('/api/forum/discussions', info)
       .then(res => res.data);
     },
-    getAllDiscussions: (info) => {
+    getAllDiscussions: () => {
       return $http.get('/api/forum/discussions')
       .then(res => res.data);
     },

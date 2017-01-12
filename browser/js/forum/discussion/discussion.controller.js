@@ -6,6 +6,11 @@ app.controller('DiscussionCtrl', function ($scope, $state, loggedInUser, ForumFa
   }
   $scope.discussion = discussion;
   
+  function isCommentNew(newComment) {
+    const idx = $scope.discussion.comments.findIndex((comment) => newComment._id === comment._id);
+    return idx === -1;
+  }
+  
   const socket = io(`/${$scope.discussion._id.toString()}`); 
   socket.on('comment_created', function(newComment) {
     if(isCommentNew(newComment)) {
@@ -31,10 +36,5 @@ app.controller('DiscussionCtrl', function ($scope, $state, loggedInUser, ForumFa
     .catch(err => {
       console.error(err)
     });
-  }
-
-  function isCommentNew(newComment) {
-    const idx = $scope.discussion.comments.findIndex((comment) => newComment._id === comment._id);
-    return idx === -1;
   }
 });

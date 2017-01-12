@@ -5,7 +5,7 @@ app.directive('commentRow', function () {
     },
     restrict: 'A',
   	templateUrl: 'js/common/directives/commentRow/commentRow.html',
-  	link: function (scope, element, attributes) {
+  	link: function (scope) {
       scope.message = scope.comment.message;
       scope.name = `${scope.comment.authorId.firstName} ${scope.comment.authorId.lastName}`
   	}

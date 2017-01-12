@@ -1,8 +1,6 @@
 'use strict';
 
 const mongoose = require('mongoose');
-const _ = require('lodash');
-const Bluebird = require('bluebird');
 const titleCase = require('../../modules/titleCaseMonkeyPatch');
 const slackMethods = require('../../modules/slackMethods.js');
 const User = require('./user.js');

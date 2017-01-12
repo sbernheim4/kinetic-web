@@ -1,7 +1,5 @@
-const mongoose = require('mongoose');
 const Discussion = require('../db/models/discussion.js');
 const Comment = require('../db/models/comment.js');
-const emitter = require('./eventEmitter.js');
 
 module.exports = {
 	createDiscussionFromSlack: (req) => {
