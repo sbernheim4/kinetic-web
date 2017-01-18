@@ -74,5 +74,25 @@ module.exports = {
       }
       return slackResponse.profile.image_48;
     });
+  },
+
+  inviteUserToSlack: (email) => {
+    const options = {
+      uri: "https://kineticglsobal.slack.com/api/users.admin.invite",
+      method: 'POST',
+      form: {
+        email: email,
+        token: token,
+        set_active: true
+      }
+    };
+    return rp(options)
+    .then(slackResponse => {
+      slackResponse = JSON.parse(slackResponse);
+      if(!slackResponse.ok) {
+        throw new Error(slackResponse.error); 
+      }
+      return slackResponse;
+    })
   }
 }
