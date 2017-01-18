@@ -92,6 +92,8 @@ CommentSchema.pre('validate', function(next) {
       console.error(err);
       next(err);
     });
+  } else {
+    next();
   }
 });
 

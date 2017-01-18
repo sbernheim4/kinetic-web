@@ -1,5 +1,6 @@
 const rp = require('request-promise');
 const token = require('../env/').SLACK.CLIENT_TOKEN;
+const Bluebird = require('bluebird');
 
 module.exports = {
 	findSlackUser: (id) => {
@@ -89,6 +90,9 @@ module.exports = {
     return rp(options)
     .then(slackResponse => {
       slackResponse = JSON.parse(slackResponse);
+      if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'staging') {
+        return Bluebird.resolve();
+      }
       if(!slackResponse.ok) {
         throw new Error(slackResponse.error); 
       }
