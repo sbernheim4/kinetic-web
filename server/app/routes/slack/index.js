@@ -27,6 +27,12 @@ router.post('/', (req, res, next) => {
 					promise = slackFunctions.updateCommentFromSlack(newMessage);
 				}
 
+				if (req.body.event.subtype === 'file_share') {
+					req.body.event.text = req.body.event.file.permalink
+					req.body.event.fileName = req.body.event.file.name
+					promise = slackFunctions.createCommentFromSlack(req.body);
+				}
+
 			} else {
 				promise = slackFunctions.createCommentFromSlack(req.body);
 			}

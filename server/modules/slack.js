@@ -19,7 +19,9 @@ module.exports = {
 			slackTimeStamp: req.event.ts,
 			originCreated: 'slack',
 			authorSlackId: req.event.user,
-			slackChannelId: req.event.channel
+			slackChannelId: req.event.channel,
+			isFileUpload: !!req.event.upload,
+			fileName: !!req.event.fileName ? req.event.fileName : ''
 		}
 		return Comment.create(newComment);
 	},
@@ -28,7 +30,7 @@ module.exports = {
 		return Comment.findOne({slackTimeStamp: newMessage.ts})
 		.then(comment => {
 			comment.message = newMessage.text;
-			comment.edited = true;
+			comment.isEdited = true;
 			return comment.save();
 		})
 		.catch(err => {
