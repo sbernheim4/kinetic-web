@@ -17,7 +17,7 @@ app.controller('SignupCtrl', function($scope, UserFactory, $state, AuthService) 
 			$state.go('home');
 		})
 		.catch(err => {
-			$scope.error = err;
+			$scope.error = err.data;
 			console.log(err);
 		});
 	};
