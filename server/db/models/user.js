@@ -6,16 +6,24 @@ const _ = require('lodash');
 
 const schema = new mongoose.Schema({
     email: {
-        type: String
+        type: String,
+        trim: true,
+        unique: true,
+        sparse: true,
+        required: [true, 'Email is required']
     },
     password: {
-        type: String
+        type: String,
+        required: [true, 'Password is required'],
+        minlength: [8, 'Password must be at least 8 characters'] 
     },
     firstName: {
-        type: String
+        type: String,
+        required: [true, 'You must enter your first name'] 
     },
     lastName: {
-        type: String
+        type: String,
+        required: [true, 'You must enter your last name'] 
     },
     school: {
         type: String
