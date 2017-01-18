@@ -21,6 +21,7 @@ module.exports = {
   },
   "SLACK": {
     "CLIENT_ID": "abc123 ",
-    "CLIENT_SECRET": "abc123"
+    "CLIENT_SECRET": "abc123",
+    "CLIENT_TOKEN": "abc123"
   }
 };
