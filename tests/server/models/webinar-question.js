@@ -19,34 +19,35 @@ describe('WebinarQuestion model', function () {
 	afterEach('Clear test database', function (done) {
 		clearDB(done);
 	});
+
 	it('should exist', function () {
 		expect(WebinarQuestion).to.be.a('function');
 	});
 
 	describe('model validation', function () {
 
-		describe('invalid entry', function () {
-			it('should not add document to collection', function (done) {
-		    const invalidForm = { //missing `question` field
-		      name: 'Jane Doe',
-		      email: 'janedoe@email.com',
-		      advisor: 'Barack Obama',
-		      school: 'University of Phoenix'
-		    };
+		// describe('invalid entry', function () {
+		// 	it('should not add document to collection', function (done) {
+		//     const invalidForm = { //missing `question` field
+		//       name: 'Jane Doe',
+		//       email: 'janedoe@email.com',
+		//       advisor: 'Barack Obama',
+		//       school: 'University of Phoenix'
+		//     };
 
-				WebinarQuestion.create(invalidForm)
-				.then(done)
-				.catch((err) => {
-					expect(err.message).to.equal('WebinarQuestion validation failed');
-					return WebinarQuestion.find() //this is really weird putting a promise in a .catch. really not sure if this is the right way to do that
-					.then(results => {
-						expect(results.length).to.equal(0);
-						done();
-					})
-					.catch(done);
-				});
-			});
-		});
+		// 		WebinarQuestion.create(invalidForm)
+		// 		.then(done)
+		// 		.catch((err) => {
+		// 			expect(err.message).to.equal('WebinarQuestion validation failed');
+		// 			return WebinarQuestion.find() //this is really weird putting a promise in a .catch. really not sure if this is the right way to do that
+		// 			.then(results => {
+		// 				expect(results.length).to.equal(0);
+		// 				done();
+		// 			})
+		// 			.catch(done);
+		// 		});
+		// 	});
+		// });
 
 		describe('valid entry', function () {
 			it('should add document to collection', function (done) {

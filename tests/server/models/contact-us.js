@@ -26,41 +26,41 @@ describe('ContactUs model', function () {
 
   describe('model validation', function () {
 
-    describe('invalid entry', function () {
-      it('should not add document to collection', function (done) {
-        const invalidForm = {
-          name: "Testy McTesterson",
-          role: "educator",
-          message: "What is Kinetic",
-          newsletter: true,
-        };
+    // describe('invalid entry', function () {
+    //   it('should not add document to collection', function (done) {
+    //     const invalidForm = {
+    //       name: "Testy McTesterson",
+    //       role: "educator",
+    //       message: "What is Kinetic",
+    //       newsletter: true,
+    //     };
 
-        ContactRequest.create(invalidForm)
-        .then(done)
-        .catch((err) => {
-          expect(err.message).to.equal('ContactRequest validation failed');
-          done();
-        });
-      });
-    });
+    //     ContactRequest.create(invalidForm)
+    //     .then(done)
+    //     .catch((err) => {
+    //       expect(err.message).to.equal('ContactRequest validation failed');
+    //       done();
+    //     });
+    //   });
+    // });
 
-    describe('invalid entry', function () {
-      it('should not add document to collection', function (done) {
-        const invalidForm = {
-          name: "Testy McTesterson",
-          email: "testy@gmail.com",
-          role: "educator",
-          newsletter: true,
-        };
+    // describe('invalid entry', function () {
+    //   it('should not add document to collection', function (done) {
+    //     const invalidForm = {
+    //       name: "Testy McTesterson",
+    //       email: "testy@gmail.com",
+    //       role: "educator",
+    //       newsletter: true,
+    //     };
 
-        ContactRequest.create(invalidForm)
-        .then(done)
-        .catch((err) => {
-          expect(err.message).to.equal('ContactRequest validation failed');
-          done();
-        });
-      });
-    });
+    //     ContactRequest.create(invalidForm)
+    //     .then(done)
+    //     .catch((err) => {
+    //       expect(err.message).to.equal('ContactRequest validation failed');
+    //       done();
+    //     });
+    //   });
+    // });
 
 
 

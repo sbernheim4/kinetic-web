@@ -25,24 +25,24 @@ describe('LaunchAChapter model', function () {
 
   describe('model validation', function () {
 
-    describe('invalid entry', function () {
-      it('should not add document to collection', function (done) {
-        const invalidForm = {
-          classYear: "2018",
-          name: "Testy McTesterson",
-          newsletter: true,
-          questions: "",
-          school: "Saul University"
-        };
+    // describe('invalid entry', function () {
+    //   it('should not add document to collection', function (done) {
+    //     const invalidForm = {
+    //       classYear: "2018",
+    //       name: "Testy McTesterson",
+    //       newsletter: true,
+    //       questions: "",
+    //       school: "Saul University"
+    //     };
 
-        LaunchAChapter.create(invalidForm)
-        .then(done)
-        .catch((err) => {
-          expect(err.message).to.equal('LaunchAChapter validation failed');
-          done();
-        });
-      });
-    });
+    //     LaunchAChapter.create(invalidForm)
+    //     .then(done)
+    //     .catch((err) => {
+    //       expect(err.message).to.equal('LaunchAChapter validation failed');
+    //       done();
+    //     });
+    //   });
+    // });
 
     describe('valid entry', function () {
       it('should add document to collection', function (done) {
