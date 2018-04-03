@@ -22,11 +22,12 @@ Adding in two exceptions for /sitemap.xml and /robots.txt since both should be
 accessible to bots and crawlers for SEO purposes
 */
 
+// Stupid way of keeping track of when to throw a 404 error - List all the valid domains in an array
 const validDomains = ['issue-advisors', 'become-a-mentor', 'calendar', 'campuses',
 'contact-us', 'get-the-kinetic-handbook', 'history', 'launch-a-chapter',
 'kinetic-global-leadership', 'login', 'issue-mentors', 'mission',
 'nominamte-an-expert', 'press', 'kinetic-global-resources', 'signup',
-'support', 'our-supporters', 'kinetic-template', 'webinars'];
+'support', 'our-supporters', 'kinetic-template', 'webinars', 'initiatives'];
 
 app.use(function (req, res, next) {
 	if (req.path === '/robots.txt'){

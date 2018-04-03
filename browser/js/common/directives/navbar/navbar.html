@@ -55,6 +55,15 @@
 			</div>
 
 			<div class='dropdown'>
+				<div class='dropdown-title'>Initiatives</div>
+				<div class='dropdown-content'>
+					<div class='list-container'>
+						<a ui-sref='initiatives'>Past and Present Initiatives</a>
+					</div>
+				</div>
+			</div>
+
+			<div class='dropdown'>
 				<div class='dropdown-title'>Our Team</div>
 				<div class='dropdown-content'>
 					<div class='list-container'>
@@ -136,6 +145,10 @@ Login
 					<a ng-click='goToSection(".handbook", "handbook")'>Get a Handbook</a>
 					<a ng-click='goToSection(".press", "press")'>News</a>
 				</div>
+			</div>
+
+			<div class='dropdown'>
+				<div class='dropdown-title' ng-click='goToSection(".initiatives", "initiatives")'>Initiatives</div>
 			</div>
 
 			<div class='dropdown'>
