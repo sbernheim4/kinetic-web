@@ -3,8 +3,8 @@
 .initiatives {
 	margin: 0 auto;
 	width: 100vw;
-	background-color: $kinetic-blue;
-	color: white;
+	background-color: white;
+	color: $kinetic-blue;
 
 
 	&--main {
@@ -43,41 +43,59 @@
 		}
 
 	}
-
 	&--list {
 		margin: 0 auto;
 		padding: 30px;
-		max-width: 80%;
-		width: 850px;
-		background-color: $kinetic-blue;
+		max-width: 1100px;
+		background-color: white;
+		font-size: 20px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
 
-		div {
+		.main {
 			margin-bottom: 30px;
 			padding: 40px;
-			border: 1px solid white;
+			border: 1px solid $kinetic-blue;
 			margin-top: 30px;
+			display: flex;
+			align-items: center;
 
-			h2 {
-				text-align: center;
-				margin-bottom: 10px;
-				text-decoration: underline;
+			@media all and (max-width: 1000px) {
+				flex-direction: column;
+				justify-content: center;
 			}
 
-			p {
-				text-align: center;
-				font-size: 21px;
-				line-height: 1.5em;
+			div {
+				width: 80%;
+				float: left;
 
-				a {
-					color: white;
+				h2 {
+					text-align: center;
+					margin-bottom: 10px;
 					text-decoration: underline;
 				}
 
+				a {
+					curosr: pointer;
+					text-decoration: none;
+
+					p {
+						width: 100%;
+						text-align: center;
+						font-size: 21px;
+						line-height: 1.5em;
+					}
+				}
+
 			}
+
+			img {
+				padding: 60px;
+				max-width: 250px;
+			}
+
 		}
 	}
 
