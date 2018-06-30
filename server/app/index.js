@@ -23,9 +23,9 @@ accessible to bots and crawlers for SEO purposes
 */
 
 // Stupid way of keeping track of when to throw a 404 error - List all the valid domains in an array
-const validDomains = ['issue-advisors', 'become-a-mentor', 'calendar', 'campuses',
+const validDomains = ['become-a-mentor', 'calendar', 'campuses',
 'contact-us', 'get-the-kinetic-handbook', 'history', 'launch-a-chapter',
-'kinetic-global-leadership', 'login', 'issue-mentors', 'mission',
+'kinetic-global-leadership', 'login', 'mission',
 'nominamte-an-expert', 'press', 'kinetic-global-resources', 'signup',
 'support', 'our-supporters', 'kinetic-template', 'webinars', 'initiatives'];
 
