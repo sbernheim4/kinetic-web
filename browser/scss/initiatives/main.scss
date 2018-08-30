@@ -28,10 +28,10 @@
 	&--toc {
 		margin: 0 auto;
 		width: 438px;
+		color: $kinetic-blue;
 		display: flex;
 		justify-content: flex-start;
 		flex-direction: column;
-
 
 		p {
 			&:before {
