@@ -41,6 +41,7 @@
 				<div class='dropdown-title'>Resources</div>
 				<div class='dropdown-content'>
 					<div class='list-container'>
+                        <a ui-sref='news'>Press</a>
 						<!--<a ui-sref='webinars'>Advisor Webinars</a>-->
 						<a ui-sref='template'>Kinetic Templates</a>
 						<a ui-sref='calendar'>Calendar</a>
@@ -132,6 +133,7 @@ Login
 			<div class='dropdown'>
 				<div class='dropdown-title' ng-click='toggle("displayResources")'>Resources</div>
 				<div class='list-container resources'>
+                    <a ng-click='goToSection(".news", "news")'>Press</a>
 					<a ng-click='goToSection(".template", "template")'>Kinetic Templates</a>
 					<a ng-click='goToSection(".calendar", "calendar")'>Calendar</a>
 					<a ng-click='goToSection(".handbook", "handbook")'>Get a Handbook</a>

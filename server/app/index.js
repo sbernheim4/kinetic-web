@@ -27,7 +27,7 @@ const validDomains = ['become-a-mentor', 'calendar', 'campuses',
 'contact-us', 'get-the-kinetic-handbook', 'history', 'launch-a-chapter',
 'kinetic-global-leadership', 'login', 'mission',
 'nominamte-an-expert', 'press', 'kinetic-global-resources', 'signup',
-'support', 'our-supporters', 'kinetic-template', 'webinars', 'initiatives'];
+'support', 'our-supporters', 'kinetic-template', 'webinars', 'initiatives', 'news'];
 
 app.use(function (req, res, next) {
 	if (req.path === '/robots.txt'){
